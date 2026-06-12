@@ -7,7 +7,7 @@ const SOCIALS = [
   { name: "Instagram", url: "https://instagram.com", Icon: Instagram, handle: "@multiplikator_institut" },
   { name: "TikTok", url: "https://tiktok.com", Icon: MessageCircle, handle: "@multiplikator.bj" },
   { name: "YouTube", url: "https://youtube.com", Icon: Youtube, handle: "@MULTIPLIKATOR" },
-  { name: "WhatsApp", url: "https://wa.me/22900000000", Icon: MessageCircle, handle: "+229 00 00 00 00" },
+  { name: "WhatsApp", url: "https://wa.me/2290196593866", Icon: MessageCircle, handle: "+229 01 96 59 38 66" },
 ];
 
 export default function Social() {

@@ -13,7 +13,11 @@
   --mpk-white: #FFFFFF;
   --mpk-off: #FAFAFA;
   --mpk-text: #4A4A4A;
+  --mpk-periwinkle: #C4D2ED;
 }
+
+.bg-tint { background-color: rgba(196, 210, 237, 0.08); }
+.bg-tint-soft { background-color: rgba(196, 210, 237, 0.05); }
 
 html, body, #root { background: #FFFFFF; color: var(--mpk-text); }
 

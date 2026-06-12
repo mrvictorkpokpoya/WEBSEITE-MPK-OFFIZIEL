@@ -3,7 +3,7 @@ import { PageHero } from "@/components/Common";
 import { GALLERY } from "@/lib/data";
 import { X } from "lucide-react";
 
-const CAMPUS_FILTERS = ["Tous", "Godomey PK14", "Akpakpa", "Porto Novo", "Lokossa", "Djougou", "Parakou", "Cours en ligne"];
+const CAMPUS_FILTERS = ["Tous", "GODOMEY PK 14", "AKPAKPA", "PORTO-NOVO", "LOKOSSA", "DJOUGOU", "PARAKOU", "EN LIGNE"];
 const TYPE_FILTERS = ["Tous", "Vie de campus", "Événements", "Remises de certificats"];
 
 export default function Gallery() {

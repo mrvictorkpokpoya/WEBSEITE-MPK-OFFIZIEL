@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { useAuth } from "@/contexts/AuthContext";
+import { LOGO_MARK } from "@/lib/data";
 
 const navGroups = [
   { label: "L'Institut", items: [
@@ -9,6 +10,11 @@ const navGroups = [
     { to: "/a-propos", label: "À propos" },
     { to: "/team", label: "La Team MPK" },
     { to: "/campus", label: "Nos Campus" },
+    { divider: true, label: "Communauté" },
+    { to: "/galerie", label: "Galerie photos & vidéos" },
+    { to: "/temoignages", label: "Témoignages" },
+    { to: "/actualites", label: "Actualités & Concours" },
+    { to: "/reseaux", label: "Nos réseaux sociaux" },
   ]},
   { label: "Formations & Services", items: [
     { to: "/departements/training-plus", label: "MPK Training Plus" },
@@ -19,12 +25,6 @@ const navGroups = [
     { to: "/departements/extra-services", label: "MPK Extra Services" },
     { to: "/cours-en-ligne", label: "Cours en ligne" },
     { to: "/boutique", label: "Boutique & Cartes Cadeaux" },
-  ]},
-  { label: "Communauté", items: [
-    { to: "/galerie", label: "Galerie photos & vidéos" },
-    { to: "/temoignages", label: "Témoignages" },
-    { to: "/actualites", label: "Actualités & Concours" },
-    { to: "/reseaux", label: "Nos réseaux sociaux" },
   ]},
   { label: "Contact", to: "/contact" },
 ];
@@ -38,8 +38,8 @@ export default function Header() {
     <header className="fixed top-0 inset-x-0 z-50 bg-white/95 backdrop-blur border-b border-[#580505]/10">
       <div className="max-w-[1400px] mx-auto px-5 lg:px-10 h-16 lg:h-20 flex items-center justify-between">
         <Link to="/" data-testid="header-logo" className="flex items-center gap-3">
-          <div className="w-10 h-10 bg-[#580505] text-white grid place-items-center font-medium text-xl tracking-tight">M</div>
-          <div className="leading-tight">
+          <img src={LOGO_MARK} alt="MPK — Institut de Langues MULTIPLIKATOR" className="h-10 lg:h-12 w-auto" />
+          <div className="leading-tight hidden sm:block">
             <div className="text-[#2F0808] text-lg font-semibold tracking-tight">MULTIPLIKATOR</div>
             <div className="text-[10px] tracking-[0.25em] uppercase text-[#550000]">Institut de Langues</div>
           </div>
@@ -53,7 +53,9 @@ export default function Header() {
               </button>
               {active === g.label && (
                 <div className="absolute top-full left-0 min-w-[260px] bg-white border border-[#580505]/15 shadow-lg py-2">
-                  {g.items.map((it) => (
+                  {g.items.map((it) => it.divider ? (
+                    <div key={it.label} className="px-4 pt-3 pb-1 mt-1 border-t border-[#580505]/10 text-[10px] tracking-[0.2em] uppercase text-[#580505]/70 font-medium">{it.label}</div>
+                  ) : (
                     <Link key={it.to} to={it.to} data-testid={`nav-sub-${it.to}`} className="block px-4 py-2.5 text-sm text-[#2F0808] hover:bg-[#FAFAFA] hover:text-[#580505]">
                       {it.label}
                     </Link>

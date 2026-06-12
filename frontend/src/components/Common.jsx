@@ -33,7 +33,7 @@ export function Stat({ value, label }) {
 
 export function PageHero({ eyebrow, title, kicker }) {
   return (
-    <section className="bg-[#FAFAFA] border-b border-[#580505]/10">
+    <section className="bg-tint border-b border-[#580505]/10">
       <div className="max-w-[1400px] mx-auto px-5 lg:px-10 py-16 lg:py-24">
         <Eyebrow>{eyebrow}</Eyebrow>
         <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl mt-3 text-[#2F0808] leading-[1.05] max-w-4xl">{title}</h1>

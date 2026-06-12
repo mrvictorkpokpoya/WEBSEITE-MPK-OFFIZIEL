@@ -64,7 +64,7 @@ export default function Home() {
           <div className="grid lg:grid-cols-12 gap-6">
             {[
               { t: "Encadrement personnalisé", d: "Suivi pédagogique individuel sur tout le parcours. Petits effectifs, attention soutenue.", span: "lg:col-span-7" },
-              { t: "6 campus actifs", d: "Cotonou, Porto Novo, Lokossa, Djougou, Parakou — proximité géographique réelle.", span: "lg:col-span-5" },
+              { t: "6 campus actifs", d: "GODOMEY PK 14, AKPAKPA, PORTO-NOVO, LOKOSSA, DJOUGOU, PARAKOU — proximité géographique réelle.", span: "lg:col-span-5" },
               { t: "Certifications officielles", d: "Goethe, ÖSD, TestDaF, IELTS, TOEFL, DELF/DALF.", span: "lg:col-span-5" },
               { t: "Présentiel & 100% en ligne", d: "Une qualité identique, peu importe où vous êtes — diaspora incluse.", span: "lg:col-span-7" },
               { t: "Mobilité internationale", d: "Études, FSJ/BFD, Au Pair, regroupement familial, visa touriste.", span: "lg:col-span-6" },

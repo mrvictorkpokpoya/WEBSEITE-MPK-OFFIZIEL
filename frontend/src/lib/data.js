@@ -1,13 +1,34 @@
 // Static data for MULTIPLIKATOR site
 
+export const LOGO_MARK = "https://customer-assets.emergentagent.com/job_langues-benin/artifacts/aypm0qmc_MPK%27.png";
+export const LOGO_FULL = "https://customer-assets.emergentagent.com/job_langues-benin/artifacts/oc9tuxyg_g309.png";
+
+export const CONTACT_INFO = {
+  email: "contact@multiplikator-world.com",
+  phones: ["+229 01 96 59 38 66", "+229 01 99 93 33 33"],
+  phoneNorth: "+229 01 67 46 44 04",
+  whatsapp: "2290196593866",
+  website: "www.multiplikator-world.com",
+};
+
 export const CAMPUSES = [
-  { id: "godomey", name: "MPK Campus Godomey PK14", city: "Cotonou", area: "Godomey PK14", img: "https://images.unsplash.com/photo-1759299615947-bc798076b479?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHwzfHxtb2Rlcm4lMjBjYW1wdXMlMjBidWlsZGluZyUyMGV4dGVyaW9yfGVufDB8fHx8MTc4MTI5ODQ3OXww&ixlib=rb-4.1.0&q=85", flagship: true },
-  { id: "akpakpa", name: "MPK Campus Akpakpa", city: "Cotonou", area: "Akpakpa", img: "https://images.pexels.com/photos/8197554/pexels-photo-8197554.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" },
-  { id: "porto-novo", name: "MPK Campus Porto Novo", city: "Porto-Novo", area: "Centre-ville", img: "https://images.pexels.com/photos/9158715/pexels-photo-9158715.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" },
-  { id: "lokossa", name: "MPK Campus Lokossa", city: "Lokossa", area: "Mono", img: "https://images.unsplash.com/photo-1754485115881-b956ddcbd4ee?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjh8MHwxfHNlYXJjaHwzfHxhZnJpY2FuJTIwdW5pdmVyc2l0eSUyMHN0dWRlbnRzJTIwc3R1ZHlpbmclMjBwcmVtaXVtfGVufDB8fHx8MTc4MTI5ODQ3OXww&ixlib=rb-4.1.0&q=85" },
-  { id: "djougou", name: "MPK Campus Djougou", city: "Djougou", area: "Donga", img: "https://images.unsplash.com/photo-1714974528737-3e6c7e4d11af?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzB8MHwxfHNlYXJjaHwyfHxidXNpbmVzcyUyMHByb2Zlc3Npb25hbCUyMG1lZXRpbmclMjB0cmFuc2xhdGlvbnxlbnwwfHx8fDE3ODEyOTg0ODB8MA&ixlib=rb-4.1.0&q=85" },
-  { id: "parakou", name: "MPK Campus Parakou", city: "Parakou", area: "Borgou", img: "https://images.pexels.com/photos/8197554/pexels-photo-8197554.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" },
+  { id: "godomey", name: "MPK CAMPUS GODOMEY PK 14", city: "Cotonou", area: "GODOMEY PK 14", address: "Tronçon Cotonou-Ouidah, 2ème vons avant le CARREFOUR PK 14", phones: ["+229 01 96 59 38 66", "+229 01 99 93 33 33"], email: "contact@multiplikator-world.com", whatsapp: "2290196593866", map: "https://customer-assets.emergentagent.com/job_langues-benin/artifacts/sdyctve7_WhatsApp%20Image%202026-06-13%20at%2000.18.42.jpeg", img: "https://images.unsplash.com/photo-1759299615947-bc798076b479?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHwzfHxtb2Rlcm4lMjBjYW1wdXMlMjBidWlsZGluZyUyMGV4dGVyaW9yfGVufDB8fHx8MTc4MTI5ODQ3OXww&ixlib=rb-4.1.0&q=85", flagship: true },
+  { id: "akpakpa", name: "MPK CAMPUS AKPAKPA", city: "Cotonou", area: "AKPAKPA", address: "Dans la vons Les BAGNOLES MOTORS, à 200 m du SUPERMARCHÉ EREVAN", phones: ["+229 01 96 59 38 66", "+229 01 99 93 33 33"], email: "contact@multiplikator-world.com", whatsapp: "2290196593866", img: "https://images.pexels.com/photos/8197554/pexels-photo-8197554.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" },
+  { id: "porto-novo", name: "MPK CAMPUS PORTO-NOVO", city: "Porto-Novo", area: "PORTO-NOVO", address: "Quartier Tokpota, en face de l'HÔTEL AYELAWADJE", phones: ["+229 01 96 59 38 66", "+229 01 99 93 33 33"], email: "contact@multiplikator-world.com", whatsapp: "2290196593866", img: "https://images.pexels.com/photos/9158715/pexels-photo-9158715.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" },
+  { id: "lokossa", name: "MPK CAMPUS LOKOSSA", city: "Lokossa", area: "LOKOSSA", address: "Ahouamey-Zone cité, immeuble jouxtant la vons de « chez madame ADJOVI »", phones: ["+229 01 96 59 38 66", "+229 01 99 93 33 33"], email: "contact@multiplikator-world.com", whatsapp: "2290196593866", img: "https://images.unsplash.com/photo-1754485115881-b956ddcbd4ee?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjh8MHwxfHNlYXJjaHwzfHxhZnJpY2FuJTIwdW5pdmVyc2l0eSUyMHN0dWRlbnRzJTIwc3R1ZHlpbmclMjBwcmVtaXVtfGVufDB8fHx8MTc4MTI5ODQ3OXww&ixlib=rb-4.1.0&q=85" },
+  { id: "djougou", name: "MPK CAMPUS DJOUGOU", city: "Djougou", area: "DJOUGOU", address: "Quartier Sassirou, RUE TOLEBA, 5ème vons à droite en venant du Goudron", phones: ["+229 01 67 46 44 04", "+229 01 96 59 38 66"], email: "contact@multiplikator-world.com", whatsapp: "2290167464404", img: "https://images.unsplash.com/photo-1714974528737-3e6c7e4d11af?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzB8MHwxfHNlYXJjaHwyfHxidXNpbmVzcyUyMHByb2Zlc3Npb25hbCUyMG1lZXRpbmclMjB0cmFuc2xhdGlvbnxlbnwwfHx8fDE3ODEyOTg0ODB8MA&ixlib=rb-4.1.0&q=85" },
+  { id: "parakou", name: "MPK CAMPUS PARAKOU", city: "Parakou", area: "PARAKOU", address: "Face campus de Parakou, à côté de l'immeuble de l'HÔTEL GATEWAY", phones: ["+229 01 67 46 44 04", "+229 01 96 59 38 66"], email: "contact@multiplikator-world.com", whatsapp: "2290167464404", img: "https://images.pexels.com/photos/8197554/pexels-photo-8197554.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" },
 ];
+
+export const ONLINE_CAMPUS = {
+  id: "en-ligne",
+  name: "MPK EN LIGNE",
+  desc: "Cours en ligne pour toutes les villes du Bénin et la diaspora.",
+  hours: ["8h – 11h", "11h30 – 14h30", "15h – 18h", "19h – 22h"],
+  email: "contact@multiplikator-world.com",
+  phones: ["+229 01 96 59 38 66", "+229 01 99 93 33 33"],
+  whatsapp: "2290196593866",
+};
 
 export const DEPARTMENTS = [
   { id: "training-plus", slug: "/departements/training-plus", title: "MPK Training Plus", tagline: "Formation linguistique", desc: "Cours d'allemand, anglais, FLE et chinois — du semi-intensif au Premium VIP accéléré.", icon: "GraduationCap" },
@@ -19,23 +40,23 @@ export const DEPARTMENTS = [
 ];
 
 export const TEAM = [
-  { name: "Dr. Komi A.", role: "Directeur Général", campus: "Godomey PK14", spec: "Direction académique", category: "Direction" },
-  { name: "Mme Sandrine D.", role: "Directrice Pédagogique", campus: "Akpakpa", spec: "Allemand", category: "Direction" },
-  { name: "M. Justin K.", role: "Formateur Sénior", campus: "Porto Novo", spec: "Allemand B2-C1", category: "Formateurs" },
-  { name: "Mme Aïcha B.", role: "Formatrice", campus: "Lokossa", spec: "Allemand A1-B1", category: "Formateurs" },
-  { name: "M. Pascal O.", role: "Formateur Anglais", campus: "Djougou", spec: "IELTS / TOEFL", category: "Formateurs" },
-  { name: "Mme Léa T.", role: "Coordinatrice Campus", campus: "Parakou", spec: "Coordination", category: "Coordinateurs" },
-  { name: "M. Hervé S.", role: "Conseiller Mobilité", campus: "Godomey PK14", spec: "Consulting Pro", category: "Coordinateurs" },
-  { name: "Mme Clarisse N.", role: "Administration", campus: "Akpakpa", spec: "Inscriptions", category: "Administration" },
+  { name: "Dr. Komi A.", role: "Directeur Général", campus: "GODOMEY PK 14", spec: "Direction académique", category: "Direction" },
+  { name: "Mme Sandrine D.", role: "Directrice Pédagogique", campus: "AKPAKPA", spec: "Allemand", category: "Direction" },
+  { name: "M. Justin K.", role: "Formateur Sénior", campus: "PORTO-NOVO", spec: "Allemand B2-C1", category: "Formateurs" },
+  { name: "Mme Aïcha B.", role: "Formatrice", campus: "LOKOSSA", spec: "Allemand A1-B1", category: "Formateurs" },
+  { name: "M. Pascal O.", role: "Formateur Anglais", campus: "DJOUGOU", spec: "IELTS / TOEFL", category: "Formateurs" },
+  { name: "Mme Léa T.", role: "Coordinatrice Campus", campus: "PARAKOU", spec: "Coordination", category: "Coordinateurs" },
+  { name: "M. Hervé S.", role: "Conseiller Mobilité", campus: "GODOMEY PK 14", spec: "Consulting Pro", category: "Coordinateurs" },
+  { name: "Mme Clarisse N.", role: "Administration", campus: "AKPAKPA", spec: "Inscriptions", category: "Administration" },
 ];
 
 export const TESTIMONIALS = [
-  { name: "Inès G.", campus: "Akpakpa", program: "Allemand Semi-Intensif B1", text: "Le suivi pédagogique m'a permis d'obtenir mon visa étudiant pour l'Allemagne en moins d'un an. Encadrement très professionnel." , rating: 5 },
-  { name: "Yves K.", campus: "Godomey PK14", program: "Premium VIP A1-B1", text: "Programme intensif vraiment exigeant mais payant. J'ai passé le Goethe B1 avec succès." , rating: 5 },
-  { name: "Mariam D.", campus: "Cours en ligne", program: "Préparation TestDaF", text: "Depuis Berlin, j'ai pu suivre les cours MPK avec la même qualité qu'en présentiel. Excellent." , rating: 5 },
-  { name: "Christ A.", campus: "Porto Novo", program: "Allemand A2", text: "Formateurs disponibles, méthode claire, ambiance studieuse. Je recommande vivement." , rating: 5 },
-  { name: "Stéphanie B.", campus: "Parakou", program: "Anglais IELTS", text: "Préparation très ciblée, je suis passée de 5.5 à 7.5 en quatre mois." , rating: 5 },
-  { name: "Olivier P.", campus: "Lokossa", program: "Allemand B2", text: "Le découpage en sous-niveaux m'a permis de progresser à mon rythme sans pression." , rating: 5 },
+  { name: "Inès G.", campus: "AKPAKPA", program: "Allemand Semi-Intensif B1", text: "Le suivi pédagogique m'a permis d'obtenir mon visa étudiant pour l'Allemagne en moins d'un an. Encadrement très professionnel." , rating: 5 },
+  { name: "Yves K.", campus: "GODOMEY PK 14", program: "Premium VIP A1-B1", text: "Programme intensif vraiment exigeant mais payant. J'ai passé le Goethe B1 avec succès." , rating: 5 },
+  { name: "Mariam D.", campus: "EN LIGNE", program: "Préparation TestDaF", text: "Depuis Berlin, j'ai pu suivre les cours MPK avec la même qualité qu'en présentiel. Excellent." , rating: 5 },
+  { name: "Christ A.", campus: "PORTO-NOVO", program: "Allemand A2", text: "Formateurs disponibles, méthode claire, ambiance studieuse. Je recommande vivement." , rating: 5 },
+  { name: "Stéphanie B.", campus: "PARAKOU", program: "Anglais IELTS", text: "Préparation très ciblée, je suis passée de 5.5 à 7.5 en quatre mois." , rating: 5 },
+  { name: "Olivier P.", campus: "LOKOSSA", program: "Allemand B2", text: "Le découpage en sous-niveaux m'a permis de progresser à mon rythme sans pression." , rating: 5 },
 ];
 
 export const NEWS = [
@@ -46,14 +67,14 @@ export const NEWS = [
 ];
 
 export const GALLERY = [
-  { id: 1, campus: "Godomey PK14", type: "Vie de campus", img: "https://images.pexels.com/photos/9158715/pexels-photo-9158715.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" },
-  { id: 2, campus: "Akpakpa", type: "Remises de certificats", img: "https://images.unsplash.com/photo-1714974528737-3e6c7e4d11af?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzB8MHwxfHNlYXJjaHwyfHxidXNpbmVzcyUyMHByb2Zlc3Npb25hbCUyMG1lZXRpbmclMjB0cmFuc2xhdGlvbnxlbnwwfHx8fDE3ODEyOTg0ODB8MA&ixlib=rb-4.1.0&q=85" },
-  { id: 3, campus: "Porto Novo", type: "Événements", img: "https://images.unsplash.com/photo-1754485115881-b956ddcbd4ee?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjh8MHwxfHNlYXJjaHwzfHxhZnJpY2FuJTIwdW5pdmVyc2l0eSUyMHN0dWRlbnRzJTIwc3R1ZHlpbmclMjBwcmVtaXVtfGVufDB8fHx8MTc4MTI5ODQ3OXww&ixlib=rb-4.1.0&q=85" },
-  { id: 4, campus: "Lokossa", type: "Vie de campus", img: "https://images.pexels.com/photos/8197554/pexels-photo-8197554.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" },
-  { id: 5, campus: "Djougou", type: "Événements", img: "https://images.unsplash.com/photo-1759299615947-bc798076b479?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHwzfHxtb2Rlcm4lMjBjYW1wdXMlMjBidWlsZGluZyUyMGV4dGVyaW9yfGVufDB8fHx8MTc4MTI5ODQ3OXww&ixlib=rb-4.1.0&q=85" },
-  { id: 6, campus: "Parakou", type: "Remises de certificats", img: "https://images.pexels.com/photos/9158715/pexels-photo-9158715.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" },
-  { id: 7, campus: "Cours en ligne", type: "Vie de campus", img: "https://images.unsplash.com/photo-1714974528737-3e6c7e4d11af?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzB8MHwxfHNlYXJjaHwyfHxidXNpbmVzcyUyMHByb2Zlc3Npb25hbCUyMG1lZXRpbmclMjB0cmFuc2xhdGlvbnxlbnwwfHx8fDE3ODEyOTg0ODB8MA&ixlib=rb-4.1.0&q=85" },
-  { id: 8, campus: "Godomey PK14", type: "Événements", img: "https://images.pexels.com/photos/8197554/pexels-photo-8197554.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" },
+  { id: 1, campus: "GODOMEY PK 14", type: "Vie de campus", img: "https://images.pexels.com/photos/9158715/pexels-photo-9158715.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" },
+  { id: 2, campus: "AKPAKPA", type: "Remises de certificats", img: "https://images.unsplash.com/photo-1714974528737-3e6c7e4d11af?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzB8MHwxfHNlYXJjaHwyfHxidXNpbmVzcyUyMHByb2Zlc3Npb25hbCUyMG1lZXRpbmclMjB0cmFuc2xhdGlvbnxlbnwwfHx8fDE3ODEyOTg0ODB8MA&ixlib=rb-4.1.0&q=85" },
+  { id: 3, campus: "PORTO-NOVO", type: "Événements", img: "https://images.unsplash.com/photo-1754485115881-b956ddcbd4ee?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjh8MHwxfHNlYXJjaHwzfHxhZnJpY2FuJTIwdW5pdmVyc2l0eSUyMHN0dWRlbnRzJTIwc3R1ZHlpbmclMjBwcmVtaXVtfGVufDB8fHx8MTc4MTI5ODQ3OXww&ixlib=rb-4.1.0&q=85" },
+  { id: 4, campus: "LOKOSSA", type: "Vie de campus", img: "https://images.pexels.com/photos/8197554/pexels-photo-8197554.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" },
+  { id: 5, campus: "DJOUGOU", type: "Événements", img: "https://images.unsplash.com/photo-1759299615947-bc798076b479?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHwzfHxtb2Rlcm4lMjBjYW1wdXMlMjBidWlsZGluZyUyMGV4dGVyaW9yfGVufDB8fHx8MTc4MTI5ODQ3OXww&ixlib=rb-4.1.0&q=85" },
+  { id: 6, campus: "PARAKOU", type: "Remises de certificats", img: "https://images.pexels.com/photos/9158715/pexels-photo-9158715.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" },
+  { id: 7, campus: "EN LIGNE", type: "Vie de campus", img: "https://images.unsplash.com/photo-1714974528737-3e6c7e4d11af?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzB8MHwxfHNlYXJjaHwyfHxidXNpbmVzcyUyMHByb2Zlc3Npb25hbCUyMG1lZXRpbmclMjB0cmFuc2xhdGlvbnxlbnwwfHx8fDE3ODEyOTg0ODB8MA&ixlib=rb-4.1.0&q=85" },
+  { id: 8, campus: "GODOMEY PK 14", type: "Événements", img: "https://images.pexels.com/photos/8197554/pexels-photo-8197554.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" },
 ];
 
 export const SEMI_SUBLEVELS = [

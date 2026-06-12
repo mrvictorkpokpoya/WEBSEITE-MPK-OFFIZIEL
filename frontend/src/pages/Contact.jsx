@@ -61,9 +61,9 @@ export default function Contact() {
           <div className="mpk-card p-6">
             <Eyebrow>Contact direct</Eyebrow>
             <ul className="mt-4 space-y-3 text-[#2F0808]">
-              <li className="flex items-center gap-3"><Mail size={16} className="text-[#580505]"/> contact@multiplikator.bj</li>
-              <li className="flex items-center gap-3"><Phone size={16} className="text-[#580505]"/> +229 00 00 00 00</li>
-              <li><a href="https://wa.me/22900000000" target="_blank" rel="noreferrer" data-testid="contact-whatsapp" className="inline-flex items-center gap-2 mt-2 btn-primary text-sm"><MessageCircle size={14}/> WhatsApp direct</a></li>
+              <li className="flex items-center gap-3"><Mail size={16} className="text-[#580505]"/> contact@multiplikator-world.com</li>
+              <li className="flex items-start gap-3"><Phone size={16} className="text-[#580505] mt-0.5"/> <span>+229 01 96 59 38 66 | +229 01 99 93 33 33<br/><span className="text-xs text-[#4A4A4A]">Parakou / Djougou : +229 01 67 46 44 04</span></span></li>
+              <li><a href="https://wa.me/2290196593866" target="_blank" rel="noreferrer" data-testid="contact-whatsapp" className="inline-flex items-center gap-2 mt-2 btn-primary text-sm"><MessageCircle size={14}/> WhatsApp direct</a></li>
             </ul>
           </div>
           <div className="mpk-card p-6">

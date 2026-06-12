@@ -22,7 +22,7 @@ export default function News() {
         <div className="lg:col-span-8">
           <Eyebrow><span className="text-white/70">Concours en cours</span></Eyebrow>
           <h2 className="font-serif text-3xl lg:text-4xl mt-3">Bourse MULTIPLIKATOR 2026 — 5 formations A1 offertes.</h2>
-          <p className="mt-3 text-white/80 font-light">Participez avant le 28 février. Tirage au sort le 1er mars sur le campus de Godomey PK14.</p>
+          <p className="mt-3 text-white/80 font-light">Participez avant le 28 février. Tirage au sort le 1er mars sur le campus de GODOMEY PK 14.</p>
         </div>
         <div className="lg:col-span-4 lg:text-right"><CTA to="/contact" label="Participer au concours" testid="news-cta-concours"/></div>
       </div></section>
