@@ -1,0 +1,101 @@
+{
+  "theme": "Light",
+  "archetype": "Archetype 4 (Swiss & High-Contrast) + Archetype 5 (Luxury) Hybrid",
+  "design_philosophy": "Institutional prestige, academic seriousness, premium quality. Elegant, highly readable, no generic AI templates. Deep Bordeaux anchors the visual weight over expansive pristine white space.",
+  "color_palette": {
+    "primary": "#580505",
+    "primary_hover": "#540000",
+    "secondary_deep": "#450000",
+    "accent": "#550000",
+    "text_heading": "#2F0808",
+    "text_body": "#4A4A4A",
+    "background_main": "#FFFFFF",
+    "background_alt": "#FAFAFA",
+    "forbidden_colors": ["blue", "purple", "green", "orange"]
+  },
+  "typography": {
+    "font_pairings": {
+      "headings": "Cormorant Garamond",
+      "body": "Outfit"
+    },
+    "hierarchy": {
+      "h1": "text-5xl sm:text-6xl tracking-tight leading-none text-[#2F0808] font-medium",
+      "h2": "text-3xl sm:text-4xl tracking-tight leading-tight text-[#2F0808] font-medium",
+      "h3": "text-2xl sm:text-3xl text-[#580505]",
+      "body": "text-base sm:text-lg leading-relaxed text-[#4A4A4A] font-light",
+      "labels": "text-xs tracking-[0.2em] uppercase text-[#550000] font-medium"
+    },
+    "forbidden_fonts": ["Inter", "Roboto", "Open Sans", "Syne"]
+  },
+  "spacing_and_layout": {
+    "philosophy": "Generous spacing. Use p-8 to p-16 for internal containers to allow content to breathe and exude luxury.",
+    "grid_system": "Bento Grid Protocol (Control Room & Tetris Mix). Asymmetric layouts for marketing pages, strict functional grids for pricing and dashboard. NO 3-identical-icon grids.",
+    "containers": "No heavy shadows. Use flat, solid shapes with 1px border (#580505/10) or pure white overlapping sections.",
+    "breakpoints": {
+      "mobile": "375px",
+      "tablet": "768px",
+      "desktop": "1280px+"
+    }
+  },
+  "components": {
+    "header": {
+      "style": "Fixed top, solid white background with subtle bottom border. Logo left, Nav center, CTA ('S\\'inscrire') right. z-50."
+    },
+    "hero": {
+      "style": "Full-width photography. Max overlay bg-black/40. Headline in pure white. Key metrics (6 campus, 850+ candidats, depuis 2021) in a floating glassmorphism or solid bordeaux block overlapping the bottom edge."
+    },
+    "pricing_tables": {
+      "style": "Complex, multi-level tables (A1 to C1). Desktop: Wide, comparative bento-style layout or traditional clean data tables using Shadcn UI Table. Mobile: Horizontal scroll container (overflow-x-auto) to maintain structure without breaking. Use #580505 for highlights and bundles."
+    },
+    "campus_cards": {
+      "style": "Large photography-led cards. Aspect ratio 4:3 or 16:9. Subtle 1px border, no box-shadow. Hover effect: slight scale of image, text remains static. Include map/location pin."
+    },
+    "department_cards": {
+      "style": "Varied bento grid. Span-2 for main departments, Span-1 for others. Do NOT use identical repeating columns."
+    },
+    "buttons": {
+      "primary": "bg-[#580505] text-white hover:bg-[#540000] px-6 py-3 rounded-none transition-all duration-300",
+      "secondary": "bg-transparent border-2 border-[#580505] text-[#580505] hover:bg-[#FAFAFA] transition-all duration-300"
+    },
+    "footer": {
+      "style": "Deep background (#450000 or #2F0808) with white text. Clean columns, MULTIPLIKATOR logo, prominent."
+    }
+  },
+  "motion_and_interactions": {
+    "hover": "Text color shifts slightly, background dims. Explicitly define hover states.",
+    "transitions": "Subtle, 0.3s ease-in-out. Fade-in for content on scroll."
+  },
+  "testing_guidelines": {
+    "attributes": "ALL interactive elements must use role-based kebab-case `data-testid` (e.g., `data-testid=\"hero-register-btn\"`)"
+  },
+  "media_urls": {
+    "hero_institutional": {
+      "url": "https://images.unsplash.com/photo-1759299615947-bc798076b479?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHwzfHxtb2Rlcm4lMjBjYW1wdXMlMjBidWlsZGluZyUyMGV4dGVyaW9yfGVufDB8fHx8MTc4MTI5ODQ3OXww&ixlib=rb-4.1.0&q=85",
+      "description": "Modern brick campus building for hero or campus section"
+    },
+    "students_library": {
+      "url": "https://images.pexels.com/photos/9158715/pexels-photo-9158715.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "African students studying in a premium library setting"
+    },
+    "lecture_hall": {
+      "url": "https://images.pexels.com/photos/8197554/pexels-photo-8197554.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Student in a lecture hall"
+    },
+    "professional_meeting": {
+      "url": "https://images.unsplash.com/photo-1714974528737-3e6c7e4d11af?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzB8MHwxfHNlYXJjaHwyfHxidXNpbmVzcyUyMHByb2Zlc3Npb25hbCUyMG1lZXRpbmclMjB0cmFuc2xhdGlvbnxlbnwwfHx8fDE3ODEyOTg0ODB8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Business meeting for Consulting/Translation departments"
+    },
+    "professional_students": {
+      "url": "https://images.unsplash.com/photo-1754485115881-b956ddcbd4ee?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjh8MHwxfHNlYXJjaHwzfHxhZnJpY2FuJTIwdW5pdmVyc2l0eSUyMHN0dWRlbnRzJTIwc3R1ZHlpbmclMjBwcmVtaXVtfGVufDB8fHx8MTc4MTI5ODQ3OXww&ixlib=rb-4.1.0&q=85",
+      "description": "Professionals in suits"
+    }
+  },
+  "instructions_to_main_agent": [
+    "STRICT ADHERENCE to the bordeaux/white palette. No blue, green, purple, orange.",
+    "Do NOT use Inter or Roboto. Apply Cormorant Garamond for headings and Outfit for body.",
+    "Implement pricing tables with strict attention to mobile UX (use horizontal scroll if needed to prevent breaking the table).",
+    "Avoid generic 3-column layouts. Use varied, bento-style grids for features and departments.",
+    "Ensure the hero section displays the 3 key metrics prominently.",
+    "Use data-testid on every clickable element."
+  ]
+}
