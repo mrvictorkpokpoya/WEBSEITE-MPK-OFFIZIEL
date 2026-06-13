@@ -79,10 +79,12 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="max-w-[1400px] mx-auto px-5 lg:px-10 py-5 text-xs text-white/60 flex flex-col sm:flex-row sm:justify-between gap-2">
           <div data-testid="footer-copyright">© MULTIPLIKATOR START UP GROUP</div>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3 sm:gap-4 flex-wrap">
             <Link to="/confidentialite" className="hover:text-white">Politique de confidentialité</Link>
             <span className="text-white/30">·</span>
             <Link to="/traitement-donnees" className="hover:text-white">Traitement des données</Link>
+            <span className="text-white/30">·</span>
+            <Link to="/conditions-utilisation" className="hover:text-white">CGU</Link>
           </div>
         </div>
       </div>

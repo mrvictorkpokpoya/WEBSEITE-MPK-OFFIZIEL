@@ -24,6 +24,7 @@ const navGroups = [
     { to: "/boutique", label: "Boutique M" },
   ]},
   { label: "Communauté", items: [
+    { to: "/alumnis", label: "MPK World Alumnis" },
     { to: "/galerie", label: "Galerie photos & vidéos" },
     { to: "/temoignages", label: "Témoignages" },
     { to: "/actualites", label: "Actualités & Concours" },

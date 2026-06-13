@@ -10,8 +10,6 @@ import {
   VIP_INTENSIVE,
   BUNDLES,
   LANGUAGE_COURSES,
-  PREP_COURSES,
-  PREP_PRICING,
 } from "@/lib/data";
 import { Star, Lock, ShoppingCart, GraduationCap, Award, Loader2 } from "lucide-react";
 
@@ -75,7 +73,7 @@ function ComingSoon({ title }) {
   );
 }
 
-function CourseProductCard({ course, tone = "primary" }) {
+function CourseProductCard({ course }) {
   const isQuote = course.priceFcfa === "sur devis";
   const [loading, setLoading] = useState(false);
 
@@ -86,82 +84,41 @@ function CourseProductCard({ course, tone = "primary" }) {
   };
 
   return (
-    <div className="mpk-card p-6 flex flex-col h-full hover:border-[#580505] transition" data-testid={`course-card-${course.id}`}>
+    <div className="bg-white rounded-sm p-5 sm:p-6 shadow-[0_8px_24px_-12px_rgba(88,5,5,0.18)] hover:shadow-[0_14px_36px_-12px_rgba(88,5,5,0.28)] transition-shadow duration-300 flex flex-col h-full" data-testid={`course-card-${course.id}`}>
       <div className="flex items-start justify-between gap-3">
-        <div className={`inline-flex items-center justify-center min-w-[56px] h-10 px-3 font-serif text-lg font-semibold ${tone === "prep" ? "bg-[#580505] text-white" : "bg-[#C4D2ED] text-[#580505] border border-[#580505]"}`}>
-          {course.level || course.short}
+        <div className="inline-flex items-center justify-center min-w-[56px] h-10 px-3 font-serif text-lg font-semibold bg-[#C4D2ED] text-[#580505] border border-[#580505]">
+          {course.level}
         </div>
-        {course.exam && (
-          <span className="text-[10px] tracking-[0.18em] uppercase text-[#580505]/80 font-medium">{course.exam}</span>
-        )}
       </div>
       <h3 className="font-serif text-lg text-[#2F0808] mt-4 leading-snug">{course.title}</h3>
-      <p className="text-sm text-[#4A4A4A] mt-2 font-light leading-relaxed flex-grow">{course.desc}</p>
+      <div className="mt-3 mb-3 h-px bg-[#580505]/15 w-full" />
+      <p className="text-sm text-[#4A4A4A] font-light leading-relaxed flex-grow">{course.desc}</p>
       <div className="text-xs text-[#580505] mt-3 tracking-wider uppercase font-medium">{course.duration}</div>
 
-      {tone === "prep" ? (
-        <>
-          <div className="mt-4 grid grid-cols-2 gap-2 text-xs">
-            <div className="bg-[#FAFAFA] px-3 py-2 border border-[#580505]/15">
-              <div className="text-[#580505]/70 uppercase tracking-wider text-[10px]">Interne</div>
-              <div className="font-serif text-[#2F0808] text-sm font-semibold mt-0.5">{PREP_PRICING[course.level].interne} F</div>
-            </div>
-            <div className="bg-[#FAFAFA] px-3 py-2 border border-[#580505]/15">
-              <div className="text-[#580505]/70 uppercase tracking-wider text-[10px]">Externe</div>
-              <div className="font-serif text-[#2F0808] text-sm font-semibold mt-0.5">{PREP_PRICING[course.level].externe} F</div>
-            </div>
-            <div className="bg-[#FAFAFA] px-3 py-2 border border-[#580505]/15 col-span-2">
-              <div className="text-[#580505]/70 uppercase tracking-wider text-[10px]">Volume horaire</div>
-              <div className="font-serif text-[#2F0808] text-sm font-semibold mt-0.5">{PREP_PRICING[course.level].temps}</div>
-            </div>
-          </div>
-          <div className="mt-4 grid grid-cols-2 gap-2">
-            <button
-              onClick={() => onBuy(`${course.id}_int`)}
-              disabled={loading}
-              data-testid={`course-buy-${course.id}-int`}
-              className="inline-flex items-center justify-center gap-1.5 px-3 py-2 bg-[#C4D2ED] text-[#580505] border-[1.5px] border-[#580505] text-xs font-semibold hover:bg-[#DCE5F2] transition disabled:opacity-60"
-            >
-              {loading ? <Loader2 size={12} className="animate-spin" /> : <ShoppingCart size={12} />} Acheter Interne
-            </button>
-            <button
-              onClick={() => onBuy(`${course.id}_ext`)}
-              disabled={loading}
-              data-testid={`course-buy-${course.id}-ext`}
-              className="inline-flex items-center justify-center gap-1.5 px-3 py-2 bg-white text-[#580505] border-[1.5px] border-[#580505] text-xs font-semibold hover:bg-[#FAFAFA] transition disabled:opacity-60"
-            >
-              {loading ? <Loader2 size={12} className="animate-spin" /> : <ShoppingCart size={12} />} Acheter Externe
-            </button>
-          </div>
-        </>
+      <div className="mt-4">
+        <div className="text-[10px] tracking-[0.18em] uppercase text-[#580505]/70">Tarif Bénin</div>
+        <div className="font-serif text-2xl text-[#580505] mt-0.5">
+          {isQuote ? "Sur devis" : `${course.priceFcfa} F`}
+        </div>
+      </div>
+      {isQuote ? (
+        <Link
+          to="/contact"
+          data-testid={`course-buy-${course.id}`}
+          className="mt-5 inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-white text-[#580505] border-[1.5px] border-[#580505] text-sm font-semibold hover:bg-[#FAFAFA] transition"
+        >
+          <ShoppingCart size={14} /> Demander un devis
+        </Link>
       ) : (
-        <>
-          <div className="mt-4">
-            <div className="text-[10px] tracking-[0.18em] uppercase text-[#580505]/70">Tarif Bénin</div>
-            <div className="font-serif text-2xl text-[#580505] mt-0.5">
-              {isQuote ? "Sur devis" : `${course.priceFcfa} F`}
-            </div>
-          </div>
-          {isQuote ? (
-            <Link
-              to="/contact"
-              data-testid={`course-buy-${course.id}`}
-              className="mt-5 inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-white text-[#580505] border-[1.5px] border-[#580505] text-sm font-semibold hover:bg-[#FAFAFA] transition"
-            >
-              <ShoppingCart size={14} /> Demander un devis
-            </Link>
-          ) : (
-            <button
-              onClick={() => onBuy(course.id)}
-              disabled={loading}
-              data-testid={`course-buy-${course.id}`}
-              className="mt-5 inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-[#C4D2ED] text-[#580505] border-[1.5px] border-[#580505] text-sm font-semibold hover:bg-[#DCE5F2] transition disabled:opacity-60"
-            >
-              {loading ? <Loader2 size={14} className="animate-spin" /> : <ShoppingCart size={14} />}
-              {loading ? "Redirection..." : "Acheter ce cours"}
-            </button>
-          )}
-        </>
+        <button
+          onClick={() => onBuy(course.id)}
+          disabled={loading}
+          data-testid={`course-buy-${course.id}`}
+          className="mt-5 inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-[#C4D2ED] text-[#580505] border-[1.5px] border-[#580505] text-sm font-semibold hover:bg-[#DCE5F2] transition disabled:opacity-60"
+        >
+          {loading ? <Loader2 size={14} className="animate-spin" /> : <ShoppingCart size={14} />}
+          {loading ? "Redirection..." : "Acheter ce cours"}
+        </button>
       )}
     </div>
   );
@@ -191,7 +148,7 @@ export default function TrainingPlus() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-10">
           {LANGUAGE_COURSES.map((c) => (
-            <CourseProductCard key={c.id} course={c} tone="primary" />
+            <CourseProductCard key={c.id} course={c} />
           ))}
         </div>
 
@@ -200,29 +157,21 @@ export default function TrainingPlus() {
         </p>
       </section>
 
-      {/* COURS PRÉPARATOIRES — Goethe + ÖSD */}
+      {/* COURS PRÉPARATOIRES — redirection vers MPK Exam Prep */}
       <section className="bg-[#2F0808] text-white">
-        <div className="max-w-[1400px] mx-auto px-5 lg:px-10 py-16">
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-5 lg:px-10 py-12 lg:py-16">
           <div className="flex items-center gap-3 mb-3">
-            <Award className="text-[#C4D2ED]" size={28} strokeWidth={1.5} />
-            <div className="text-[11px] tracking-[0.22em] uppercase font-semibold text-[#C4D2ED]">Cours préparatoires · Goethe & ÖSD</div>
+            <Award className="text-[#C4D2ED]" size={26} strokeWidth={1.5} />
+            <div className="text-[11px] tracking-[0.22em] uppercase font-semibold text-[#C4D2ED]">Préparation aux certifications</div>
           </div>
-          <h2 className="font-serif text-3xl lg:text-4xl uppercase tracking-tight">
-            Préparation aux certifications — produits par certification
-          </h2>
-          <p className="mt-3 text-white/75 max-w-3xl font-light">
-            Cours intensifs courts (03 semaines par niveau) pour décrocher le Goethe-Zertifikat ou l'ÖSD. Tarifs apprenants <strong>internes</strong> (MPK) et <strong>externes</strong> (candidats libres).
+          <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl uppercase tracking-tight">Goethe-Zertifikat &amp; ÖSD — voir MPK Exam Prep.</h2>
+          <p className="mt-3 text-white/75 max-w-3xl font-light text-sm sm:text-base">
+            Les cours préparatoires (Goethe A1 → B2 et ÖSD A1 → B2) sont gérés par notre département dédié <strong>MPK Exam Prep</strong>, avec tarifs apprenants internes/externes et durée de 03 semaines par niveau.
           </p>
-
-          <div className="bg-white p-6 lg:p-8 mt-10 -mx-1 lg:mx-0">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-              {PREP_COURSES.map((c) => (
-                <CourseProductCard key={c.id} course={c} tone="prep" />
-              ))}
-            </div>
-            <p className="mt-6 text-xs text-[#580505] font-medium tracking-wide">
-              NB · Chaque niveau de cours préparatoires dure 03 semaines.
-            </p>
+          <div className="mt-6">
+            <Link to="/departements/exam-prep" data-testid="link-to-examprep" className="inline-flex items-center gap-2 px-5 py-3 bg-[#C4D2ED] text-[#580505] border-[1.5px] border-[#C4D2ED] text-sm font-semibold hover:bg-white transition">
+              Voir les cours préparatoires →
+            </Link>
           </div>
         </div>
       </section>

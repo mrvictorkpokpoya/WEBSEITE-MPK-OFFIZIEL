@@ -1,0 +1,26 @@
+{
+  "summary": "Frontend-only iteration 3 testing complete for MULTIPLIKATOR site. All 10 requested checks pass. Verified: (1) /appel-a-investissement: NO forbidden FCFA amounts (370 M, 85 M, 210 M, 45 M, 32 M not present in DOM); each of 4 project cards displays 'EN COURS DE CONCEPTION' (uppercase via CSS — source 'En cours de conception' appears 4 times); CTA section dark burgundy with h2 'Contactez-nous pour discuter des modalités.' (rendered uppercase); 3 CTA buttons present (Nous contacter, Email direct, WhatsApp). (2) /alumnis: hero 'Ils ont rejoint l'Europe avec MULTIPLIKATOR.' loads; stats 150+, Allemagne, 92, 2021 all visible; 3 filter testids (alumni-filter-Tous/Allemagne/Autriche) present and clickable; all 8 alumni-card-al-01..08 testids found; clicking 'Autriche' filter narrows the list to exactly 1 card containing 'Christ A.'. (3) /departements/exam-prep: all 8 prep-card testids (prep_goethe_a1..b2, prep_osd_a1..b2) present; prep-buy-prep_goethe_a1-int and -ext buttons present; clicking int button triggers POST /api/payments/checkout/session with payload package_id='prep_goethe_a1_int' (verified via network capture), backend returns 200 with Stripe URL, browser successfully navigates to checkout.stripe.com (sandbox showing F CFA 3,500,000 payment form — confirmed visually). (4) /departements/training-plus: NO prep-card testids present; link-to-examprep testid found with href='/departements/exam-prep'. (5) /confidentialite: all 12 required section keywords present (Responsable du traitement, Données collectées, Finalités, Bases légales, Durée de conservation, Destinataires, Transferts internationaux, Sécurité, droits, Cookies, Mineurs, Modifications); 'juin 2026' mention found. (6) /conditions-utilisation: all 15 section keywords present (Objet, Éditeur, Accès au site, Compte utilisateur, Inscription aux formations, Boutique en ligne, Propriété intellectuelle, Engagements, Responsabilités, Liens externes, Données personnelles, Cookies, Modification, Droit applicable, Contact). (7) Header COMMUNAUTÉ dropdown contains 'MPK World Alumnis' item linking to /alumnis. (8) Footer legal line shows all 3 links (Politique de confidentialité→/confidentialite, Traitement des données→/traitement-donnees, CGU→/conditions-utilisation) separated by '·'. (9) /campus: PARAKOU card now shows campus-map-parakou image with src on customer-assets.emergentagent.com (verified URL: https://customer-assets.emergentagent.com/job_langues-benin/artifacts/1mxtvkgx_WhatsApp%20Image%202026-06-14%20at%2000.09.43.jpeg); placeholder testid campus-map-placeholder-parakou no longer exists. (10) Backend sanity: POST /api/payments/checkout/session with package_id='prep_goethe_a1_int' returns 200 and valid checkout.stripe.com URL (catalog reuse working). 36/36 effective assertions PASS.",
+  "backend_issues": {"critical": [], "minor": []},
+  "frontend_issues": {
+    "ui_bugs": [],
+    "integration_issues": [],
+    "design_issues": []
+  },
+  "test_report_links": ["/app/test_reports/iteration_3.json"],
+  "action_items": [],
+  "critical_code_review_comments": [
+    "Investment.jsx now uses CleanCard with 'EN COURS DE CONCEPTION' uppercase via CSS — content visible to assistive tech as 'En cours de conception', good.",
+    "Alumni.jsx filter logic works correctly with data-testid pattern alumni-filter-{label} and alumni-card-{id}. Consider adding aria-pressed on active filter for a11y.",
+    "ExamPrep.jsx integrates well with /api/payments/checkout/session reusing the existing catalog (prep_goethe_a1_int → 3,500,000 FCFA verified on Stripe).",
+    "Privacy.jsx and Terms.jsx are now dense legal pages — consider extracting section content to /lib/data.js for future i18n if needed, but acceptable for v1.",
+    "Footer legal line correctly uses '·' separator for 3 links; renders fine on desktop and mobile."
+  ],
+  "updated_files": [],
+  "success_rate": {"backend": "100% (1/1 endpoint)", "frontend": "100% (36/36 assertions)"},
+  "test_credentials": "admin@multiplikator.bj / Multiplikator2026! (not used this iteration, frontend only)",
+  "seed_data_creation": "None",
+  "retest_needed": false,
+  "main_agent_can_self_test": true,
+  "context_for_next_testing_agent": "Text content rendered with Tailwind 'uppercase' class returns uppercase via inner_text. When asserting French sentences like 'En cours de conception' or 'Contactez-nous pour discuter des modalités.', either match case-insensitively or check HTML source. /api/payments/checkout/session redirects browser away quickly — to verify the response body, capture via page.expect_response BEFORE click and read .text() inside the with block; or simply confirm navigation to checkout.stripe.com via screenshot/URL check. All 6 campus map images now load successfully from customer-assets.emergentagent.com (no more placeholders).",
+  "rca of the issue": "N/A — no real issues found. All iteration-6 features (Investment cleanup, Alumni page, Privacy/CGU pages, ExamPrep migration, TrainingPlus teaser, Header item, Footer CGU link, Parakou map) verified working end-to-end."
+}

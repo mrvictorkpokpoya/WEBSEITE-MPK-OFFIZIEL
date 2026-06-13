@@ -31,6 +31,8 @@ import Privacy from "@/pages/Privacy";
 import DataPolicy from "@/pages/DataPolicy";
 import History from "@/pages/History";
 import Investment from "@/pages/Investment";
+import Terms from "@/pages/Terms";
+import Alumni from "@/pages/Alumni";
 
 function Protected({ children }) {
   const { user, loading } = useAuth();
@@ -68,6 +70,8 @@ function AppRouter() {
       <Route path="/traitement-donnees" element={<Layout><DataPolicy /></Layout>} />
       <Route path="/notre-histoire" element={<Layout><History /></Layout>} />
       <Route path="/appel-a-investissement" element={<Layout><Investment /></Layout>} />
+      <Route path="/conditions-utilisation" element={<Layout><Terms /></Layout>} />
+      <Route path="/alumnis" element={<Layout><Alumni /></Layout>} />
       <Route path="/connexion" element={<Layout><Login /></Layout>} />
       <Route path="/inscription" element={<Layout><Register /></Layout>} />
       <Route path="/espace-apprenant" element={<Protected><Layout><Dashboard /></Layout></Protected>} />

@@ -79,6 +79,7 @@ export default function Contact() {
             <ul className="mt-3 space-y-2 text-sm">
               <li><Link to="/confidentialite" className="inline-flex items-center gap-2 text-[#580505] hover:underline"><Shield size={14}/> Politique de confidentialité</Link></li>
               <li><Link to="/traitement-donnees" className="inline-flex items-center gap-2 text-[#580505] hover:underline"><FileTextIcon size={14}/> Traitement des données</Link></li>
+              <li><Link to="/conditions-utilisation" className="inline-flex items-center gap-2 text-[#580505] hover:underline"><FileTextIcon size={14}/> Conditions générales d'utilisation</Link></li>
             </ul>
           </div>
         </aside>

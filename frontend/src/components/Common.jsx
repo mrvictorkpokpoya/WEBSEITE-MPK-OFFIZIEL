@@ -32,6 +32,22 @@ export function Stat({ value, label, note }) {
   );
 }
 
+export function CleanCard({ icon: Icon, title, children, accent }) {
+  return (
+    <div className="bg-white rounded-sm p-6 sm:p-7 shadow-[0_8px_24px_-12px_rgba(88,5,5,0.18)] hover:shadow-[0_14px_36px_-12px_rgba(88,5,5,0.28)] transition-shadow duration-300 flex flex-col h-full">
+      {Icon && (
+        <div className="w-14 h-14 rounded-full bg-[#F4F0F0] grid place-items-center mb-5 sm:mb-6">
+          <Icon className="text-[#580505]" size={22} strokeWidth={1.5} />
+        </div>
+      )}
+      <h3 className="font-serif text-lg sm:text-xl text-[#2F0808] leading-snug">{title}</h3>
+      <div className="mt-3 sm:mt-4 mb-3 sm:mb-4 h-px bg-[#580505]/15 w-full" />
+      {accent && <div className="absolute h-0.5 bg-[#580505] mt-[-1.5rem]" style={{width: "60px"}} />}
+      <div className="text-sm text-[#4A4A4A] font-light leading-relaxed flex-grow">{children}</div>
+    </div>
+  );
+}
+
 export function PageHero({ eyebrow, title, kicker }) {
   return (
     <section className="bg-tint border-b border-[#580505]/10">
