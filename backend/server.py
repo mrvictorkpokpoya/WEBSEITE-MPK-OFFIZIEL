@@ -345,6 +345,25 @@ async def contact_list(user: dict = Depends(require_user)):
 async def get_catalog():
     return [{"id": k, **v} for k, v in CATALOG.items()]
 
+# Stripe zero-decimal currencies (no fractional unit) - amount must NOT be multiplied by 100
+# https://stripe.com/docs/currencies#zero-decimal
+ZERO_DECIMAL_CURRENCIES = {
+    "bif", "clp", "djf", "gnf", "jpy", "kmf", "krw", "mga",
+    "pyg", "rwf", "ugx", "vnd", "vuv", "xaf", "xof", "xpf",
+}
+
+
+def stripe_amount(major_amount: float, currency: str) -> float:
+    """
+    The emergentintegrations.StripeCheckout wrapper multiplies the amount by 100
+    (assuming 2-decimal currencies). For zero-decimal currencies like XOF/FCFA,
+    we divide by 100 to compensate so Stripe receives the exact major-unit amount.
+    """
+    if currency.lower() in ZERO_DECIMAL_CURRENCIES:
+        return float(major_amount) / 100.0
+    return float(major_amount)
+
+
 @api.post("/payments/checkout/session")
 async def create_checkout(req: CheckoutRequest, http_request: Request):
     if req.package_id not in CATALOG:
@@ -367,7 +386,7 @@ async def create_checkout(req: CheckoutRequest, http_request: Request):
     }
 
     checkout_req = CheckoutSessionRequest(
-        amount=float(item["amount"]),
+        amount=stripe_amount(item["amount"], item["currency"]),
         currency=item["currency"],
         success_url=success_url,
         cancel_url=cancel_url,
