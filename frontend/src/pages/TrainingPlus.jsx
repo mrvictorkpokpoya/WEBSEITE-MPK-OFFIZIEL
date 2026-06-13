@@ -114,7 +114,7 @@ function CourseProductCard({ course }) {
           onClick={() => onBuy(course.id)}
           disabled={loading}
           data-testid={`course-buy-${course.id}`}
-          className="mt-5 inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-[#C4D2ED] text-[#580505] border-[1.5px] border-[#580505] text-sm font-semibold hover:bg-[#DCE5F2] transition disabled:opacity-60"
+          className="mt-5 inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-[#580505] text-[#C4D2ED] border-[1.5px] border-[#580505] text-sm font-semibold hover:bg-[#2F0808] transition disabled:opacity-60"
         >
           {loading ? <Loader2 size={14} className="animate-spin" /> : <ShoppingCart size={14} />}
           {loading ? "Redirection..." : "Acheter ce cours"}
@@ -169,7 +169,7 @@ export default function TrainingPlus() {
             Les cours préparatoires (Goethe A1 → B2 et ÖSD A1 → B2) sont gérés par notre département dédié <strong>MPK Exam Prep</strong>, avec tarifs apprenants internes/externes et durée de 03 semaines par niveau.
           </p>
           <div className="mt-6">
-            <Link to="/departements/exam-prep" data-testid="link-to-examprep" className="inline-flex items-center gap-2 px-5 py-3 bg-[#C4D2ED] text-[#580505] border-[1.5px] border-[#C4D2ED] text-sm font-semibold hover:bg-white transition">
+            <Link to="/departements/exam-prep" data-testid="link-to-examprep" className="inline-flex items-center gap-2 px-5 py-3 bg-[#580505] text-[#C4D2ED] border-[1.5px] border-[#C4D2ED] text-sm font-semibold hover:bg-[#2F0808] transition">
               Voir les cours préparatoires →
             </Link>
           </div>
@@ -219,7 +219,7 @@ export default function TrainingPlus() {
                   <span className="text-[#580505] font-serif text-2xl">{b.discounted} F</span>
                 </div>
                 <div className="text-xs text-[#580505] mt-1">Économie de {b.save}</div>
-                <Link to="/boutique" data-testid={`bundle-${b.id}`} className="mt-5 inline-flex items-center gap-2 px-4 py-2.5 bg-[#C4D2ED] text-[#580505] border-[1.5px] border-[#580505] text-sm font-semibold hover:bg-[#DCE5F2] transition">
+                <Link to="/boutique" data-testid={`bundle-${b.id}`} className="mt-5 inline-flex items-center gap-2 px-4 py-2.5 bg-[#580505] text-[#C4D2ED] border-[1.5px] border-[#580505] text-sm font-semibold hover:bg-[#2F0808] transition">
                   Choisir ce bundle
                 </Link>
               </div>

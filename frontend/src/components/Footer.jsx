@@ -52,6 +52,7 @@ export default function Footer() {
             <li><Link to="/departements/training-plus" className="hover:text-white">Formations</Link></li>
             <li><Link to="/cours-en-ligne" className="hover:text-white">Cours en ligne</Link></li>
             <li><Link to="/boutique" className="hover:text-white">Boutique M</Link></li>
+            <li><Link to="/telechargements" className="hover:text-white">Téléchargements</Link></li>
             <li><Link to="/actualites" className="hover:text-white">Actualités</Link></li>
             <li><Link to="/contact" className="hover:text-white">Contact</Link></li>
           </ul>
@@ -72,7 +73,7 @@ export default function Footer() {
             <li className="flex items-center gap-2"><Mail size={14} className="flex-shrink-0" /> <span className="break-all">{CONTACT_INFO.email}</span></li>
             <li className="flex items-center gap-2"><FaWhatsapp size={14} className="flex-shrink-0 text-[#25D366]" /> <span className="whitespace-nowrap">{CONTACT_INFO.phones[0]}</span></li>
             <li className="flex items-center gap-2"><FaTelegramPlane size={14} className="flex-shrink-0 text-[#C4D2ED]" /> <span className="whitespace-nowrap">{CONTACT_INFO.phones[1]}</span></li>
-            <li><a href={`https://wa.me/${CONTACT_INFO.whatsapp}`} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 mt-2 px-3 py-2 bg-[#C4D2ED] text-[#580505] border border-[#580505] text-xs font-semibold" data-testid="footer-wa-cta"><MessageCircle size={14} /> WhatsApp direct</a></li>
+            <li><a href={`https://wa.me/${CONTACT_INFO.whatsapp}`} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 mt-2 px-3 py-2 bg-[#580505] text-[#C4D2ED] border border-[#580505] text-xs font-semibold hover:bg-[#2F0808] transition" data-testid="footer-wa-cta"><MessageCircle size={14} /> WhatsApp direct</a></li>
           </ul>
         </div>
       </div>

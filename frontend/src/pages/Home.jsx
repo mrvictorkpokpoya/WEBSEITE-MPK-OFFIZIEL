@@ -26,8 +26,8 @@ export default function Home() {
               Formation linguistique premium, préparation aux certifications internationales et accompagnement complet vers la mobilité — 6 campus actifs au Bénin, ouverts au monde.
             </p>
             <div className="mt-6 sm:mt-10 flex flex-wrap gap-3 sm:gap-4">
-              <Link to="/departements/training-plus" data-testid="hero-cta-formations" className="inline-flex items-center gap-2 px-4 sm:px-6 py-3 sm:py-3.5 bg-[#C4D2ED] text-[#580505] border-[1.5px] border-[#580505] text-sm sm:text-base font-semibold tracking-wide hover:bg-[#DCE5F2] transition shadow-lg">Découvrir nos formations <ArrowRight size={16} /></Link>
-              <Link to="/contact" data-testid="hero-cta-contact" className="inline-flex items-center gap-2 px-4 sm:px-6 py-3 sm:py-3.5 bg-white text-[#580505] border-[1.5px] border-[#580505] text-sm sm:text-base font-semibold tracking-wide hover:bg-[#F5F5F5] transition shadow-lg">Nous contacter <ArrowRight size={16} /></Link>
+              <Link to="/departements/training-plus" data-testid="hero-cta-formations" className="inline-flex items-center gap-2 px-4 sm:px-6 py-3 sm:py-3.5 bg-[#580505] text-[#C4D2ED] border-[1.5px] border-[#580505] text-sm sm:text-base font-semibold tracking-wide hover:bg-[#2F0808] transition shadow-lg">Découvrir nos formations <ArrowRight size={16} /></Link>
+              <Link to="/contact" data-testid="hero-cta-contact" className="inline-flex items-center gap-2 px-4 sm:px-6 py-3 sm:py-3.5 bg-transparent text-[#C4D2ED] border-[1.5px] border-[#C4D2ED] text-sm sm:text-base font-semibold tracking-wide hover:bg-[#C4D2ED]/10 transition">Nous contacter <ArrowRight size={16} /></Link>
             </div>
           </div>
         </div>

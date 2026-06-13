@@ -32,6 +32,37 @@ export const ALUMNIS = [
   { id: "al-08", name: "Jean-Baptiste H.", program: "Allemand B1.1 Semi-Intensif", arrived: "Février 2025", destination: "Dresde (Allemagne)", path: "Études techniques — TU Dresden", quote: "Une école sérieuse qui respecte ses promesses pédagogiques." },
 ];
 
+// Foire aux téléchargements — PDFs, dépliants, visuels
+export const DOWNLOADS = [
+  {
+    category: "Brochures & PDFs",
+    items: [
+      { id: "dl-brochure-mpk", title: "Brochure institutionnelle MPK", desc: "Présentation complète du réseau MULTIPLIKATOR (16 pages, couleurs).", format: "PDF", size: "À venir", url: "#" },
+      { id: "dl-syllabus-allemand", title: "Syllabus Allemand A1 → C2", desc: "Programme pédagogique détaillé par sous-niveau (CECRL).", format: "PDF", size: "À venir", url: "#" },
+      { id: "dl-tarifs-2026", title: "Grille tarifaire 2026", desc: "Tous nos tarifs : semi-intensif, VIP, bundles, cartes cadeaux.", format: "PDF", size: "À venir", url: "#" },
+      { id: "dl-faq-visa", title: "FAQ Visa Allemagne — édition 2026", desc: "Réponses aux 50 questions les plus posées sur la mobilité Bénin → Allemagne.", format: "PDF", size: "À venir", url: "#" },
+    ],
+  },
+  {
+    category: "Dépliants",
+    items: [
+      { id: "dl-flyer-prep-goethe", title: "Dépliant Préparation Goethe", desc: "Format A5 plié — argumentaire pour les candidats.", format: "PDF", size: "À venir", url: "#" },
+      { id: "dl-flyer-osd", title: "Dépliant ÖSD Bénin", desc: "Format A5 plié — préparation aux examens autrichiens.", format: "PDF", size: "À venir", url: "#" },
+      { id: "dl-flyer-tourism", title: "Dépliant MPK Tourism", desc: "Formation des guides touristiques multilingues.", format: "PDF", size: "À venir", url: "#" },
+      { id: "dl-flyer-campus", title: "Dépliant Carte des 6 Campus", desc: "Plans d'accès et coordonnées de tous nos campus.", format: "PDF", size: "À venir", url: "#" },
+    ],
+  },
+  {
+    category: "Visuels & Réseaux sociaux",
+    items: [
+      { id: "dl-logo-pack", title: "Pack logos MPK (haute résolution)", desc: "Logo blanc, noir, couleur, vertical, horizontal. PNG + SVG.", format: "ZIP", size: "À venir", url: "#" },
+      { id: "dl-charte-graphique", title: "Charte graphique 2026", desc: "Polices, couleurs, typographies, règles d'usage.", format: "PDF", size: "À venir", url: "#" },
+      { id: "dl-wallpapers", title: "Fonds d'écran motivation", desc: "Citations linguistiques en HD pour mobile et desktop.", format: "ZIP", size: "À venir", url: "#" },
+      { id: "dl-posters-rentree", title: "Posters de rentrée", desc: "Affiches A3 imprimables — annonce des prochaines sessions.", format: "PDF", size: "À venir", url: "#" },
+    ],
+  },
+];
+
 // Liens officiels des réseaux sociaux
 export const SOCIAL_URLS = {
   facebook: "https://web.facebook.com/institutmultiplikator/",

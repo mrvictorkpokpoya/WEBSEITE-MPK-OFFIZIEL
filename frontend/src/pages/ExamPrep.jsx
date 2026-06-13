@@ -62,7 +62,7 @@ function PrepCard({ course }) {
           onClick={() => onBuy("int")}
           disabled={loading}
           data-testid={`prep-buy-${course.id}-int`}
-          className="inline-flex items-center justify-center gap-1.5 px-3 py-2 bg-[#C4D2ED] text-[#580505] border-[1.5px] border-[#580505] text-xs font-semibold hover:bg-[#DCE5F2] transition disabled:opacity-60"
+          className="inline-flex items-center justify-center gap-1.5 px-3 py-2 bg-[#580505] text-[#C4D2ED] border-[1.5px] border-[#580505] text-xs font-semibold hover:bg-[#2F0808] transition disabled:opacity-60"
         >
           {loading ? <Loader2 size={12} className="animate-spin" /> : <ShoppingCart size={12} />} Acheter Interne
         </button>

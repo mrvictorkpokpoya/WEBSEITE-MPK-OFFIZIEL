@@ -28,6 +28,7 @@ const navGroups = [
     { to: "/galerie", label: "Galerie photos & vidéos" },
     { to: "/temoignages", label: "Témoignages" },
     { to: "/actualites", label: "Actualités & Concours" },
+    { to: "/telechargements", label: "Foire aux téléchargements" },
     { to: "/reseaux", label: "Nos réseaux sociaux" },
   ]},
   { label: "Contact", to: "/contact" },

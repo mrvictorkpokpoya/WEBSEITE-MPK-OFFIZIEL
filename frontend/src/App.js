@@ -33,6 +33,7 @@ import History from "@/pages/History";
 import Investment from "@/pages/Investment";
 import Terms from "@/pages/Terms";
 import Alumni from "@/pages/Alumni";
+import Downloads from "@/pages/Downloads";
 
 function Protected({ children }) {
   const { user, loading } = useAuth();
@@ -72,6 +73,7 @@ function AppRouter() {
       <Route path="/appel-a-investissement" element={<Layout><Investment /></Layout>} />
       <Route path="/conditions-utilisation" element={<Layout><Terms /></Layout>} />
       <Route path="/alumnis" element={<Layout><Alumni /></Layout>} />
+      <Route path="/telechargements" element={<Layout><Downloads /></Layout>} />
       <Route path="/connexion" element={<Layout><Login /></Layout>} />
       <Route path="/inscription" element={<Layout><Register /></Layout>} />
       <Route path="/espace-apprenant" element={<Protected><Layout><Dashboard /></Layout></Protected>} />

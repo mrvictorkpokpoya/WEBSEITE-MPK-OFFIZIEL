@@ -64,21 +64,20 @@ Créer le site web officiel, premium et institutionnel de MULTIPLIKATOR Institut
   - Frontend : 4 onglets UPPERCASE, hero CTAs, footer complet, TrainingPlus grilles, Stripe redirect, /contact toast, /team 3 catégories, /confidentialite, /traitement-donnees
   - Régression backend pytest disponible à `/app/backend/tests/backend_test.py`
 
+### Session 6 (14 juin 2026 — Cards rebrandées + Alumnis + CGU + Migration prep)
+- **Cards style image 3** : nouveau composant `CleanCard` (Common.jsx) avec fond blanc, cercle gris icône, titre serif, ligne séparatrice, ombre douce (shadow-[0_8px_24px_-12px_rgba(88,5,5,0.18)] + hover renforcé). Utilisé dans Investment.jsx, Alumni.jsx, ExamPrep.jsx, et CourseProductCard
+- **Refonte /appel-a-investissement** : SUPPRESSION de tous les montants (370M, 85M, 210M, 45M, 32M) et stats de croissance ; chaque projet affiche "En cours de conception" avec pastille pulsante ; titre CTA final = "Contactez-nous pour discuter des modalités." ; 3 boutons (Nous contacter, Email direct, WhatsApp)
+- **Nouvelle page `/alumnis`** (Alumni.jsx — MPK World Alumnis) : 8 alumnis fictifs avec destination/parcours/citation, stats résumé (150+, Allemagne, 92%, 2021), filtres Tous/Allemagne/Autriche, item ajouté au dropdown COMMUNAUTÉ du Header
+- **Politique de confidentialité enrichie** (Privacy.jsx) : 12 sections détaillées (Responsable, Données, Finalités, Bases légales RGPD, Durée 10 ans comptable, Destinataires Goethe/ÖSD/Stripe/Resend, Transferts internationaux, Sécurité, Droits, Cookies, Mineurs, Modifications)
+- **Nouvelles CGU** (`/conditions-utilisation` — Terms.jsx) : 15 sections (Objet, Éditeur MPK Start Up Group, Accès, Compte apprenant, Inscription, Boutique avec règles annulation/remboursement, PI, Engagements, Responsabilités, Liens externes, Données perso, Cookies, Modification, Droit béninois Cotonou, Contact)
+- **Migration des cours préparatoires** : retirés de `/departements/training-plus`, intégrés dans `/departements/exam-prep` avec PrepCard (style image 3) et Stripe direct pour les 16 package_id (Goethe/ÖSD A1-B2 × Interne/Externe). TrainingPlus affiche maintenant un teaser dark burgundy "Voir les cours préparatoires" vers ExamPrep
+- **Plan d'accès campus Parakou** intégré (1mxtvkgx_WhatsApp Image 2026-06-14 at 00.09.43.jpeg) — 6/6 campus avec leur vrai plan
+- **Footer** : 3 liens légaux en bas (Confidentialité · Traitement des données · CGU)
+- **Testing E2E v3** — 36/36 assertions PASS (frontend + Stripe backend sanity)
+
 ### Session 5 (14 juin 2026 — Responsive + Réseaux sociaux + Notre histoire + Appel à investissement)
-- **Responsive tablet + mobile** : Hero, CTAs, stats, paddings adaptés (text-3xl sm:text-5xl, py-16 sm:py-20 lg:py-36, gap-3 sm:gap-4) ; Campus card map en aspect-square avec object-contain pour adapter les vrais plans carrés ; Stat component avec tailles fluides
-- **Vrais liens réseaux sociaux** intégrés depuis SOCIAL_URLS dans data.js :
-  - Facebook : https://web.facebook.com/institutmultiplikator/
-  - Instagram : https://www.instagram.com/institut_multiplikator?igsh=ZnF6MHc1eWtwYXE0
-  - TikTok : https://vm.tiktok.com/ZS9jBcFnV7JXj-07VCb/
-  - LinkedIn : https://www.linkedin.com/company/institut-multiplikator/
-  - YouTube : https://youtube.com/@multiplikator_institut?si=hOi1qNraJYO-VE3c
-  - Utilisés dans Footer.jsx + Social.jsx (page /reseaux)
-- **Nouvelles pages** :
-  - `/notre-histoire` (History.jsx) : section origine du mot « Multiplikator » allemand, chronologie 2021→2026 (6 jalons), 4 valeurs fondatrices, CTA final vers formations + investissement
-  - `/appel-a-investissement` (Investment.jsx) : 4 stats clés (370M FCFA recherchés, +340%, 90%+, 4-6 ans ROI), 4 projets ouverts au financement (Campus régionaux 85M, Académie résidentielle 210M, Plateforme e-learning 45M, MPK Tourism 32M), 3 formes de partenariat (Equity, Prêt convertible, Mécène), CTAs dossier + email + WhatsApp
-- **Header** : items "Notre histoire" et "Appel à investissement" ajoutés au dropdown L'INSTITUT (6 items au total)
-- **Plans d'accès campus** : 5/6 campus avec vrai plan (Godomey, Akpakpa, Porto-Novo, Lokossa, Djougou). Parakou reste en attente
-- **Testing E2E v3 — 68/70 assertions PASS** (les 2 "échecs" étaient des faux négatifs CSS-uppercase). Aucun bug réel détecté.
+- **Responsive tablet + mobile** : Hero, CTAs, stats, paddings adaptés
+- **Vrais liens réseaux sociaux** (SOCIAL_URLS dans data.js) — Facebook, Instagram, TikTok, LinkedIn, YouTube
 
 ## Backlog priorisé
 ### P0

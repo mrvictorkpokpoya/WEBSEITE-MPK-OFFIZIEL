@@ -67,7 +67,7 @@ export default function Contact() {
               <li className="flex items-center gap-3"><Mail size={16} className="text-[#580505] flex-shrink-0"/> <span>contact@multiplikator-world.com</span></li>
               <li className="flex items-center gap-3"><FaWhatsapp size={16} className="text-[#25D366] flex-shrink-0"/> <span>+229 01 96 59 38 66</span></li>
               <li className="flex items-center gap-3"><FaTelegramPlane size={16} className="text-[#0088CC] flex-shrink-0"/> <span>+229 01 99 93 33 33</span></li>
-              <li><a href="https://wa.me/2290196593866" target="_blank" rel="noreferrer" data-testid="contact-whatsapp" className="inline-flex items-center gap-2 mt-3 px-4 py-2.5 bg-[#C4D2ED] text-[#580505] border-[1.5px] border-[#580505] text-sm font-semibold"><MessageCircle size={14}/> WhatsApp direct</a></li>
+              <li><a href="https://wa.me/2290196593866" target="_blank" rel="noreferrer" data-testid="contact-whatsapp" className="inline-flex items-center gap-2 mt-3 px-4 py-2.5 bg-[#580505] text-[#C4D2ED] border-[1.5px] border-[#580505] text-sm font-semibold hover:bg-[#2F0808] transition"><MessageCircle size={14}/> WhatsApp direct</a></li>
             </ul>
           </div>
           <div className="mpk-card p-6">

@@ -40,14 +40,14 @@ h1, h2, h3, h4, h5, .font-serif { font-family: 'Poppins', sans-serif; font-weigh
 .eyebrow { letter-spacing: 0.2em; text-transform: uppercase; font-size: 0.72rem; font-weight: 500; color: var(--mpk-bordeaux-intense); }
 
 .btn-primary {
-  background: var(--mpk-periwinkle);
-  color: var(--mpk-bordeaux);
+  background: var(--mpk-bordeaux);
+  color: var(--mpk-periwinkle);
   padding: 0.85rem 1.6rem;
   display: inline-flex; align-items: center; gap: 0.5rem;
   transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
   border: 1.5px solid var(--mpk-bordeaux); cursor: pointer; font-weight: 600; letter-spacing: 0.02em;
 }
-.btn-primary:hover { background: #DCE5F2; transform: translateY(-1px); box-shadow: 0 6px 18px -10px rgba(88,5,5,0.4); }
+.btn-primary:hover { background: var(--mpk-bordeaux-dark); transform: translateY(-1px); box-shadow: 0 6px 18px -10px rgba(88,5,5,0.5); }
 
 .btn-ghost {
   border: 1.5px solid var(--mpk-bordeaux);
@@ -57,19 +57,19 @@ h1, h2, h3, h4, h5, .font-serif { font-family: 'Poppins', sans-serif; font-weigh
   background: #fff; cursor: pointer; transition: background 0.3s ease;
   font-weight: 600; letter-spacing: 0.02em;
 }
-.btn-ghost:hover { background: rgba(196, 210, 237, 0.4); }
+.btn-ghost:hover { background: rgba(196, 210, 237, 0.18); }
 
 /* CTA framed style (matches "Voir bundles & cartes cadeaux") */
 .btn-cta-framed {
-  background: var(--mpk-periwinkle);
-  color: var(--mpk-bordeaux);
+  background: var(--mpk-bordeaux);
+  color: var(--mpk-periwinkle);
   padding: 0.95rem 1.8rem;
   display: inline-flex; align-items: center; gap: 0.5rem;
   border: 1.5px solid var(--mpk-bordeaux);
   font-weight: 600; letter-spacing: 0.02em;
   transition: background 0.3s ease, transform 0.3s ease;
 }
-.btn-cta-framed:hover { background: #DCE5F2; transform: translateY(-1px); }
+.btn-cta-framed:hover { background: var(--mpk-bordeaux-dark); transform: translateY(-1px); }
 
 .hairline { height: 1px; background: linear-gradient(90deg, transparent, rgba(88,5,5,0.4), transparent); }
 

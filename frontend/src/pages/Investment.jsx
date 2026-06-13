@@ -110,13 +110,13 @@ export default function Investment() {
           </p>
 
           <div className="mt-8 lg:mt-10 flex flex-wrap justify-center gap-3 sm:gap-4">
-            <Link to="/contact" className="inline-flex items-center gap-2 px-5 sm:px-6 py-3 sm:py-3.5 bg-[#C4D2ED] text-[#580505] border-[1.5px] border-[#C4D2ED] font-semibold tracking-wide hover:bg-white transition text-sm sm:text-base">
+            <Link to="/contact" className="inline-flex items-center gap-2 px-5 sm:px-6 py-3 sm:py-3.5 bg-[#580505] text-[#C4D2ED] border-[1.5px] border-[#C4D2ED] font-semibold tracking-wide hover:bg-[#2F0808] transition text-sm sm:text-base">
               <Mail size={16} /> Nous contacter
             </Link>
-            <a href={`mailto:${CONTACT_INFO.email}?subject=Discussion%20investissement%20%E2%80%94%20MULTIPLIKATOR`} className="inline-flex items-center gap-2 px-5 sm:px-6 py-3 sm:py-3.5 bg-transparent text-white border-[1.5px] border-white font-semibold tracking-wide hover:bg-white/10 transition text-sm sm:text-base">
+            <a href={`mailto:${CONTACT_INFO.email}?subject=Discussion%20investissement%20%E2%80%94%20MULTIPLIKATOR`} className="inline-flex items-center gap-2 px-5 sm:px-6 py-3 sm:py-3.5 bg-transparent text-[#C4D2ED] border-[1.5px] border-[#C4D2ED] font-semibold tracking-wide hover:bg-[#C4D2ED]/10 transition text-sm sm:text-base">
               <Mail size={16} /> Email direct
             </a>
-            <a href={`https://wa.me/${CONTACT_INFO.whatsapp}?text=Bonjour,%20je%20souhaite%20discuter%20d'un%20investissement%20MULTIPLIKATOR`} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 px-5 sm:px-6 py-3 sm:py-3.5 bg-transparent text-white border-[1.5px] border-white font-semibold tracking-wide hover:bg-white/10 transition text-sm sm:text-base">
+            <a href={`https://wa.me/${CONTACT_INFO.whatsapp}?text=Bonjour,%20je%20souhaite%20discuter%20d'un%20investissement%20MULTIPLIKATOR`} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 px-5 sm:px-6 py-3 sm:py-3.5 bg-transparent text-[#C4D2ED] border-[1.5px] border-[#C4D2ED] font-semibold tracking-wide hover:bg-[#C4D2ED]/10 transition text-sm sm:text-base">
               <FaWhatsapp size={16} /> WhatsApp
             </a>
           </div>

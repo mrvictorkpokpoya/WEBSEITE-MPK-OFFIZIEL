@@ -84,7 +84,7 @@ export default function History() {
         <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#2F0808] uppercase tracking-tight">Faites partie de la suite.</h2>
         <p className="mt-5 sm:mt-6 max-w-2xl mx-auto text-[#4A4A4A] font-light text-base sm:text-lg">L'histoire de MULTIPLIKATOR continue à s'écrire — et votre niveau pourrait être le prochain chapitre.</p>
         <div className="mt-8 lg:mt-10 flex flex-wrap justify-center gap-4">
-          <Link to="/departements/training-plus" className="inline-flex items-center gap-2 px-5 sm:px-6 py-3 sm:py-3.5 bg-[#C4D2ED] text-[#580505] border-[1.5px] border-[#580505] font-semibold tracking-wide hover:bg-[#DCE5F2] transition">Découvrir nos formations <ArrowRight size={16} /></Link>
+          <Link to="/departements/training-plus" className="inline-flex items-center gap-2 px-5 sm:px-6 py-3 sm:py-3.5 bg-[#580505] text-[#C4D2ED] border-[1.5px] border-[#580505] font-semibold tracking-wide hover:bg-[#2F0808] transition">Découvrir nos formations <ArrowRight size={16} /></Link>
           <Link to="/appel-a-investissement" className="inline-flex items-center gap-2 px-5 sm:px-6 py-3 sm:py-3.5 bg-white text-[#580505] border-[1.5px] border-[#580505] font-semibold tracking-wide hover:bg-[#FAFAFA] transition">Soutenir notre développement <ArrowRight size={16} /></Link>
         </div>
       </section>
