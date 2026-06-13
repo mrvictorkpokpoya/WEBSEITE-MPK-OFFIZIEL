@@ -29,6 +29,8 @@ import AuthCallback from "@/pages/AuthCallback";
 import PaymentSuccess from "@/pages/PaymentSuccess";
 import Privacy from "@/pages/Privacy";
 import DataPolicy from "@/pages/DataPolicy";
+import History from "@/pages/History";
+import Investment from "@/pages/Investment";
 
 function Protected({ children }) {
   const { user, loading } = useAuth();
@@ -64,6 +66,8 @@ function AppRouter() {
       <Route path="/payment/success" element={<Layout><PaymentSuccess /></Layout>} />
       <Route path="/confidentialite" element={<Layout><Privacy /></Layout>} />
       <Route path="/traitement-donnees" element={<Layout><DataPolicy /></Layout>} />
+      <Route path="/notre-histoire" element={<Layout><History /></Layout>} />
+      <Route path="/appel-a-investissement" element={<Layout><Investment /></Layout>} />
       <Route path="/connexion" element={<Layout><Login /></Layout>} />
       <Route path="/inscription" element={<Layout><Register /></Layout>} />
       <Route path="/espace-apprenant" element={<Protected><Layout><Dashboard /></Layout></Protected>} />

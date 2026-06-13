@@ -8,8 +8,10 @@ const navGroups = [
   { label: "L'Institut", items: [
     { to: "/", label: "Accueil" },
     { to: "/a-propos", label: "À propos" },
+    { to: "/notre-histoire", label: "Notre histoire" },
     { to: "/team", label: "La Team MPK" },
     { to: "/campus", label: "Nos Campus" },
+    { to: "/appel-a-investissement", label: "Appel à investissement" },
   ]},
   { label: "Service", items: [
     { to: "/departements/training-plus", label: "MPK Training Plus" },

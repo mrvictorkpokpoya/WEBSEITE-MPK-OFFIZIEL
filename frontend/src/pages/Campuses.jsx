@@ -35,17 +35,17 @@ function CampusCard({ c }) {
         </a>
       </div>
 
-      <div className="px-6 pb-6">
+      <div className="px-5 sm:px-6 pb-6">
         <div className="text-[10px] tracking-[0.2em] uppercase text-[#550000] font-medium mb-2 flex items-center gap-2"><MapIcon size={12} /> Plan d'accès</div>
         {c.map ? (
           <a href={c.map} target="_blank" rel="noreferrer" data-testid={`campus-map-${c.id}`} className="block group">
-            <div className="aspect-[16/9] overflow-hidden border border-[#580505]/15 bg-tint">
-              <img src={c.map} alt={`Plan d'accès — ${c.name}`} className="w-full h-full object-cover object-top group-hover:scale-[1.02] transition-transform duration-300" />
+            <div className="aspect-square overflow-hidden border border-[#580505]/15 bg-white">
+              <img src={c.map} alt={`Plan d'accès — ${c.name}`} className="w-full h-full object-contain group-hover:scale-[1.02] transition-transform duration-300" />
             </div>
             <div className="text-xs text-[#580505] mt-1.5 inline-flex items-center gap-1">Agrandir le plan <ArrowRight size={11} /></div>
           </a>
         ) : (
-          <div data-testid={`campus-map-placeholder-${c.id}`} className="aspect-[16/9] border border-dashed border-[#580505]/25 bg-tint-soft grid place-items-center text-xs text-[#550000]/70 px-4 text-center">
+          <div data-testid={`campus-map-placeholder-${c.id}`} className="aspect-square border border-dashed border-[#580505]/25 bg-tint-soft grid place-items-center text-xs text-[#550000]/70 px-4 text-center">
             Plan d'accès — bientôt disponible
           </div>
         )}

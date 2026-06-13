@@ -25,9 +25,9 @@ export function CTA({ to, label, variant = "primary", testid, external = false }
 export function Stat({ value, label, note }) {
   return (
     <div className="text-center">
-      {note && <div className="text-[10px] tracking-[0.2em] uppercase text-[#550000]/80 mb-2 font-medium">{note}</div>}
-      <div className="font-serif text-4xl sm:text-5xl text-[#580505]">{value}</div>
-      <div className="text-xs tracking-[0.18em] uppercase text-[#550000] mt-2 leading-relaxed">{label}</div>
+      {note && <div className="text-[9px] sm:text-[10px] tracking-[0.2em] uppercase text-[#550000]/80 mb-1 sm:mb-2 font-medium">{note}</div>}
+      <div className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#580505]">{value}</div>
+      <div className="text-[10px] sm:text-xs tracking-[0.18em] uppercase text-[#550000] mt-1 sm:mt-2 leading-relaxed">{label}</div>
     </div>
   );
 }

@@ -15,25 +15,25 @@ export default function Home() {
           <img src="https://customer-assets.emergentagent.com/job_langues-benin/artifacts/au40q6vj_WhatsApp%20Image%202026-06-13%20at%2001.24.36.jpeg" alt="L'équipe MULTIPLIKATOR célèbre la réussite" className="w-full h-full object-cover" />
         </div>
         <div className="absolute inset-0" style={{background: "linear-gradient(180deg, rgba(47,8,8,0.85) 0%, rgba(88,5,5,0.75) 100%)"}} />
-        <div className="relative max-w-[1400px] mx-auto px-5 lg:px-10 py-24 lg:py-36 text-white">
+        <div className="relative max-w-[1400px] mx-auto px-4 sm:px-5 lg:px-10 py-16 sm:py-20 lg:py-36 text-white">
           <div className="max-w-4xl fade-up">
             <Eyebrow><span className="text-white/70">Réseau multi-campus · depuis 2021</span></Eyebrow>
-            <h1 className="font-serif text-4xl sm:text-5xl lg:text-7xl mt-4 leading-[1.02] font-medium">
+            <h1 className="font-serif text-3xl sm:text-5xl lg:text-7xl mt-3 sm:mt-4 leading-[1.05] font-medium">
               MULTIPLIKATOR<br/>
               <span className="text-white/85">Institut de Langues</span>
             </h1>
-            <p className="mt-8 text-lg sm:text-xl text-white/85 max-w-2xl font-light leading-relaxed">
+            <p className="mt-5 sm:mt-8 text-base sm:text-lg lg:text-xl text-white/85 max-w-2xl font-light leading-relaxed">
               Formation linguistique premium, préparation aux certifications internationales et accompagnement complet vers la mobilité — 6 campus actifs au Bénin, ouverts au monde.
             </p>
-            <div className="mt-10 flex flex-wrap gap-4">
-              <Link to="/departements/training-plus" data-testid="hero-cta-formations" className="inline-flex items-center gap-2 px-6 py-3.5 bg-[#C4D2ED] text-[#580505] border-[1.5px] border-[#580505] font-semibold tracking-wide hover:bg-[#DCE5F2] transition shadow-lg">Découvrir nos formations <ArrowRight size={16} /></Link>
-              <Link to="/contact" data-testid="hero-cta-contact" className="inline-flex items-center gap-2 px-6 py-3.5 bg-white text-[#580505] border-[1.5px] border-[#580505] font-semibold tracking-wide hover:bg-[#F5F5F5] transition shadow-lg">Nous contacter <ArrowRight size={16} /></Link>
+            <div className="mt-6 sm:mt-10 flex flex-wrap gap-3 sm:gap-4">
+              <Link to="/departements/training-plus" data-testid="hero-cta-formations" className="inline-flex items-center gap-2 px-4 sm:px-6 py-3 sm:py-3.5 bg-[#C4D2ED] text-[#580505] border-[1.5px] border-[#580505] text-sm sm:text-base font-semibold tracking-wide hover:bg-[#DCE5F2] transition shadow-lg">Découvrir nos formations <ArrowRight size={16} /></Link>
+              <Link to="/contact" data-testid="hero-cta-contact" className="inline-flex items-center gap-2 px-4 sm:px-6 py-3 sm:py-3.5 bg-white text-[#580505] border-[1.5px] border-[#580505] text-sm sm:text-base font-semibold tracking-wide hover:bg-[#F5F5F5] transition shadow-lg">Nous contacter <ArrowRight size={16} /></Link>
             </div>
           </div>
         </div>
         {/* Stats overlap */}
-        <div className="relative max-w-[1400px] mx-auto px-5 lg:px-10 -mb-20">
-          <div className="bg-white border border-[#580505]/10 grid grid-cols-2 md:grid-cols-4 gap-y-8 gap-x-4 p-8 lg:p-12 shadow-[0_30px_60px_-30px_rgba(88,5,5,0.4)]">
+        <div className="relative max-w-[1400px] mx-auto px-4 sm:px-5 lg:px-10 -mb-16 sm:-mb-20">
+          <div className="bg-white border border-[#580505]/10 grid grid-cols-2 md:grid-cols-4 gap-y-6 sm:gap-y-8 gap-x-3 sm:gap-x-4 p-5 sm:p-8 lg:p-12 shadow-[0_30px_60px_-30px_rgba(88,5,5,0.4)]">
             <Stat note="Implantations" value="6" label="Campus actifs au Bénin" />
             <Stat note="Communauté" value="850+" label="Apprenants formés" />
             <Stat note="Depuis" value="2021" label="Année de fondation" />
@@ -42,7 +42,7 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="h-32" />
+      <div className="h-20 sm:h-32" />
 
       {/* About */}
       <section className="max-w-[1400px] mx-auto px-5 lg:px-10 py-16 grid lg:grid-cols-12 gap-12">

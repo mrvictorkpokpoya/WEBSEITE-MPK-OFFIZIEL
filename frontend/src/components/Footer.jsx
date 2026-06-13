@@ -2,16 +2,16 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Mail, MessageCircle } from "lucide-react";
 import { FaFacebookF, FaInstagram, FaYoutube, FaTiktok, FaLinkedinIn, FaTelegramPlane, FaWhatsapp } from "react-icons/fa";
-import { CAMPUSES, CONTACT_INFO, LOGO_MARK } from "@/lib/data";
+import { CAMPUSES, CONTACT_INFO, LOGO_MARK, SOCIAL_URLS } from "@/lib/data";
 
 const SOCIAL_LINKS = [
-  { name: "facebook", url: "https://facebook.com", Icon: FaFacebookF },
-  { name: "instagram", url: "https://instagram.com", Icon: FaInstagram },
-  { name: "youtube", url: "https://youtube.com", Icon: FaYoutube },
-  { name: "tiktok", url: "https://tiktok.com", Icon: FaTiktok },
-  { name: "linkedin", url: "https://linkedin.com", Icon: FaLinkedinIn },
-  { name: "telegram", url: "https://t.me", Icon: FaTelegramPlane },
-  { name: "whatsapp", url: "https://wa.me/2290196593866", Icon: FaWhatsapp },
+  { name: "facebook", url: SOCIAL_URLS.facebook, Icon: FaFacebookF },
+  { name: "instagram", url: SOCIAL_URLS.instagram, Icon: FaInstagram },
+  { name: "youtube", url: SOCIAL_URLS.youtube, Icon: FaYoutube },
+  { name: "tiktok", url: SOCIAL_URLS.tiktok, Icon: FaTiktok },
+  { name: "linkedin", url: SOCIAL_URLS.linkedin, Icon: FaLinkedinIn },
+  { name: "telegram", url: SOCIAL_URLS.telegram, Icon: FaTelegramPlane },
+  { name: "whatsapp", url: SOCIAL_URLS.whatsapp, Icon: FaWhatsapp },
 ];
 
 function FooterTitle({ children }) {
