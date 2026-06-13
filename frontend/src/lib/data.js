@@ -137,19 +137,20 @@ export const SEMI_SUBLEVELS = [
 ];
 
 // Cours de langues — affichage produit individuel (cartes achat)
+// id = package_id côté backend (CATALOG dans server.py)
 export const LANGUAGE_COURSES = [
-  { id: "lang-a11", level: "A1.1", title: "Allemand A1.1", desc: "Premier contact, structures de base, présentation, vie quotidienne.", priceFcfa: "46 000", duration: "4 semaines · 64 UE" },
-  { id: "lang-a12", level: "A1.2", title: "Allemand A1.2", desc: "Renforcement A1 — interactions simples, voyages, environnement proche.", priceFcfa: "46 000", duration: "4 semaines · 64 UE" },
-  { id: "lang-a21", level: "A2.1", title: "Allemand A2.1", desc: "Communication courante, expériences personnelles et habitudes.", priceFcfa: "50 000", duration: "4 semaines · 64 UE" },
-  { id: "lang-a22", level: "A2.2", title: "Allemand A2.2", desc: "Consolidation A2 — descriptions, narration au passé, opinions.", priceFcfa: "50 000", duration: "4 semaines · 64 UE" },
-  { id: "lang-b11", level: "B1.1", title: "Allemand B1.1", desc: "Autonomie linguistique — études, travail, vie sociale en allemand.", priceFcfa: "60 000", duration: "4 semaines · 64 UE" },
-  { id: "lang-b12", level: "B1.2", title: "Allemand B1.2", desc: "Préparation au seuil Goethe B1 — argumentation et compréhension fine.", priceFcfa: "60 000", duration: "4 semaines · 64 UE" },
-  { id: "lang-b21", level: "B2.1", title: "Allemand B2.1", desc: "Niveau universitaire — textes complexes, débats, expression abstraite.", priceFcfa: "67 500", duration: "4 semaines · 64 UE" },
-  { id: "lang-b22", level: "B2.2", title: "Allemand B2.2", desc: "Préparation TestDaF/DSH — maîtrise académique avancée.", priceFcfa: "67 500", duration: "4 semaines · 64 UE" },
-  { id: "lang-c11", level: "C1.1", title: "Allemand C1.1", desc: "Niveau supérieur — nuances, registres, productions structurées.", priceFcfa: "sur devis", duration: "4 semaines · 64 UE" },
-  { id: "lang-c12", level: "C1.2", title: "Allemand C1.2", desc: "Maîtrise quasi-native — préparation Goethe C1 / TestDaF 5x5.", priceFcfa: "sur devis", duration: "4 semaines · 64 UE" },
-  { id: "lang-c21", level: "C2.1", title: "Allemand C2.1", desc: "Niveau d'excellence — interprétation, traduction, enseignement.", priceFcfa: "sur devis", duration: "4 semaines · 64 UE" },
-  { id: "lang-c22", level: "C2.2", title: "Allemand C2.2", desc: "Niveau natif certifié — Goethe C2 / Großes Deutsches Sprachdiplom.", priceFcfa: "sur devis", duration: "4 semaines · 64 UE" },
+  { id: "semi_a1_1", level: "A1.1", title: "Allemand A1.1", desc: "Premier contact, structures de base, présentation, vie quotidienne.", priceFcfa: "46 000", duration: "4 semaines · 64 UE" },
+  { id: "semi_a1_2", level: "A1.2", title: "Allemand A1.2", desc: "Renforcement A1 — interactions simples, voyages, environnement proche.", priceFcfa: "46 000", duration: "4 semaines · 64 UE" },
+  { id: "semi_a2_1", level: "A2.1", title: "Allemand A2.1", desc: "Communication courante, expériences personnelles et habitudes.", priceFcfa: "50 000", duration: "4 semaines · 64 UE" },
+  { id: "semi_a2_2", level: "A2.2", title: "Allemand A2.2", desc: "Consolidation A2 — descriptions, narration au passé, opinions.", priceFcfa: "50 000", duration: "4 semaines · 64 UE" },
+  { id: "semi_b1_1", level: "B1.1", title: "Allemand B1.1", desc: "Autonomie linguistique — études, travail, vie sociale en allemand.", priceFcfa: "60 000", duration: "4 semaines · 64 UE" },
+  { id: "semi_b1_2", level: "B1.2", title: "Allemand B1.2", desc: "Préparation au seuil Goethe B1 — argumentation et compréhension fine.", priceFcfa: "60 000", duration: "4 semaines · 64 UE" },
+  { id: "semi_b2_1", level: "B2.1", title: "Allemand B2.1", desc: "Niveau universitaire — textes complexes, débats, expression abstraite.", priceFcfa: "67 500", duration: "4 semaines · 64 UE" },
+  { id: "semi_b2_2", level: "B2.2", title: "Allemand B2.2", desc: "Préparation TestDaF/DSH — maîtrise académique avancée.", priceFcfa: "67 500", duration: "4 semaines · 64 UE" },
+  { id: "lang_c1_1", level: "C1.1", title: "Allemand C1.1", desc: "Niveau supérieur — nuances, registres, productions structurées.", priceFcfa: "sur devis", duration: "4 semaines · 64 UE" },
+  { id: "lang_c1_2", level: "C1.2", title: "Allemand C1.2", desc: "Maîtrise quasi-native — préparation Goethe C1 / TestDaF 5x5.", priceFcfa: "sur devis", duration: "4 semaines · 64 UE" },
+  { id: "lang_c2_1", level: "C2.1", title: "Allemand C2.1", desc: "Niveau d'excellence — interprétation, traduction, enseignement.", priceFcfa: "sur devis", duration: "4 semaines · 64 UE" },
+  { id: "lang_c2_2", level: "C2.2", title: "Allemand C2.2", desc: "Niveau natif certifié — Goethe C2 / Großes Deutsches Sprachdiplom.", priceFcfa: "sur devis", duration: "4 semaines · 64 UE" },
 ];
 
 // Cours préparatoires — prix interne/externe + temps/jour
@@ -161,15 +162,16 @@ export const PREP_PRICING = {
   B2: { interne: "65 000", externe: "70 000", temps: "07h/jour" },
 };
 
+// id = base ; ajouter suffixe _int / _ext pour le package_id Stripe
 export const PREP_COURSES = [
-  { id: "prep-goethe-a1", title: "Prepa Goethe Zertifikat A1", short: "Goethe A1", level: "A1", exam: "Goethe-Institut", desc: "Préparation ciblée à l'examen Goethe-Zertifikat A1 — compréhension orale/écrite et productions.", duration: "03 semaines" },
-  { id: "prep-goethe-a2", title: "Prepa Goethe Zertifikat A2", short: "Goethe A2", level: "A2", exam: "Goethe-Institut", desc: "Entraînement complet sur les 4 compétences du Goethe-Zertifikat A2.", duration: "03 semaines" },
-  { id: "prep-goethe-b1", title: "Prepa Goethe Zertifikat B1", short: "Goethe B1", level: "B1", exam: "Goethe-Institut", desc: "Préparation intensive B1 — examen modulaire (lire, écouter, écrire, parler).", duration: "03 semaines" },
-  { id: "prep-goethe-b2", title: "Prepa Goethe Zertifikat B2", short: "Goethe B2", level: "B2", exam: "Goethe-Institut", desc: "Préparation rigoureuse B2 — exigences universitaires et professionnelles.", duration: "03 semaines" },
-  { id: "prep-osd-a1", title: "Prepa ÖSD Benin A1", short: "ÖSD A1", level: "A1", exam: "ÖSD Autriche", desc: "Préparation ÖSD A1 — adapté aux candidats visant l'Autriche.", duration: "03 semaines" },
-  { id: "prep-osd-a2", title: "Prepa ÖSD Benin A2", short: "ÖSD A2", level: "A2", exam: "ÖSD Autriche", desc: "Entraînement ÖSD A2 — situations quotidiennes et productions guidées.", duration: "03 semaines" },
-  { id: "prep-osd-b1", title: "Prepa ÖSD Benin B1", short: "ÖSD B1", level: "B1", exam: "ÖSD Autriche", desc: "Préparation ÖSD B1 — passage clé pour les visas et études en Autriche.", duration: "03 semaines" },
-  { id: "prep-osd-b2", title: "Prepa ÖSD Benin B2", short: "ÖSD B2", level: "B2", exam: "ÖSD Autriche", desc: "Préparation ÖSD B2 — niveau professionnel et universitaire.", duration: "03 semaines" },
+  { id: "prep_goethe_a1", title: "Prepa Goethe Zertifikat A1", short: "Goethe A1", level: "A1", exam: "Goethe-Institut", desc: "Préparation ciblée à l'examen Goethe-Zertifikat A1 — compréhension orale/écrite et productions.", duration: "03 semaines" },
+  { id: "prep_goethe_a2", title: "Prepa Goethe Zertifikat A2", short: "Goethe A2", level: "A2", exam: "Goethe-Institut", desc: "Entraînement complet sur les 4 compétences du Goethe-Zertifikat A2.", duration: "03 semaines" },
+  { id: "prep_goethe_b1", title: "Prepa Goethe Zertifikat B1", short: "Goethe B1", level: "B1", exam: "Goethe-Institut", desc: "Préparation intensive B1 — examen modulaire (lire, écouter, écrire, parler).", duration: "03 semaines" },
+  { id: "prep_goethe_b2", title: "Prepa Goethe Zertifikat B2", short: "Goethe B2", level: "B2", exam: "Goethe-Institut", desc: "Préparation rigoureuse B2 — exigences universitaires et professionnelles.", duration: "03 semaines" },
+  { id: "prep_osd_a1", title: "Prepa ÖSD Benin A1", short: "ÖSD A1", level: "A1", exam: "ÖSD Autriche", desc: "Préparation ÖSD A1 — adapté aux candidats visant l'Autriche.", duration: "03 semaines" },
+  { id: "prep_osd_a2", title: "Prepa ÖSD Benin A2", short: "ÖSD A2", level: "A2", exam: "ÖSD Autriche", desc: "Entraînement ÖSD A2 — situations quotidiennes et productions guidées.", duration: "03 semaines" },
+  { id: "prep_osd_b1", title: "Prepa ÖSD Benin B1", short: "ÖSD B1", level: "B1", exam: "ÖSD Autriche", desc: "Préparation ÖSD B1 — passage clé pour les visas et études en Autriche.", duration: "03 semaines" },
+  { id: "prep_osd_b2", title: "Prepa ÖSD Benin B2", short: "ÖSD B2", level: "B2", exam: "ÖSD Autriche", desc: "Préparation ÖSD B2 — niveau professionnel et universitaire.", duration: "03 semaines" },
 ];
 
 export const SEMI_FULL = [

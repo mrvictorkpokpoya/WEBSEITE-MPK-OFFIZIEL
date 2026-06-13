@@ -188,6 +188,24 @@ CATALOG: Dict[str, Dict[str, Any]] = {
     "gift_25k": {"label": "Carte cadeau 25.000 FCFA", "amount": 25000.0, "currency": "xof"},
     "gift_50k": {"label": "Carte cadeau 50.000 FCFA", "amount": 50000.0, "currency": "xof"},
     "gift_100k": {"label": "Carte cadeau 100.000 FCFA", "amount": 100000.0, "currency": "xof"},
+    # Prepa Goethe — interne / externe
+    "prep_goethe_a1_int": {"label": "Prepa Goethe A1 — Interne MPK", "amount": 35000.0, "currency": "xof"},
+    "prep_goethe_a1_ext": {"label": "Prepa Goethe A1 — Externe", "amount": 40000.0, "currency": "xof"},
+    "prep_goethe_a2_int": {"label": "Prepa Goethe A2 — Interne MPK", "amount": 45000.0, "currency": "xof"},
+    "prep_goethe_a2_ext": {"label": "Prepa Goethe A2 — Externe", "amount": 50000.0, "currency": "xof"},
+    "prep_goethe_b1_int": {"label": "Prepa Goethe B1 — Interne MPK", "amount": 60000.0, "currency": "xof"},
+    "prep_goethe_b1_ext": {"label": "Prepa Goethe B1 — Externe", "amount": 65000.0, "currency": "xof"},
+    "prep_goethe_b2_int": {"label": "Prepa Goethe B2 — Interne MPK", "amount": 65000.0, "currency": "xof"},
+    "prep_goethe_b2_ext": {"label": "Prepa Goethe B2 — Externe", "amount": 70000.0, "currency": "xof"},
+    # Prepa ÖSD — interne / externe (mêmes tarifs)
+    "prep_osd_a1_int": {"label": "Prepa ÖSD A1 — Interne MPK", "amount": 35000.0, "currency": "xof"},
+    "prep_osd_a1_ext": {"label": "Prepa ÖSD A1 — Externe", "amount": 40000.0, "currency": "xof"},
+    "prep_osd_a2_int": {"label": "Prepa ÖSD A2 — Interne MPK", "amount": 45000.0, "currency": "xof"},
+    "prep_osd_a2_ext": {"label": "Prepa ÖSD A2 — Externe", "amount": 50000.0, "currency": "xof"},
+    "prep_osd_b1_int": {"label": "Prepa ÖSD B1 — Interne MPK", "amount": 60000.0, "currency": "xof"},
+    "prep_osd_b1_ext": {"label": "Prepa ÖSD B1 — Externe", "amount": 65000.0, "currency": "xof"},
+    "prep_osd_b2_int": {"label": "Prepa ÖSD B2 — Interne MPK", "amount": 65000.0, "currency": "xof"},
+    "prep_osd_b2_ext": {"label": "Prepa ÖSD B2 — Externe", "amount": 70000.0, "currency": "xof"},
 }
 
 # ---------- Auth endpoints ----------

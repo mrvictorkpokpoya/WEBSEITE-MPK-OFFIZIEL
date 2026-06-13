@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
+import { toast } from "sonner";
 import { PageHero, Eyebrow, CTA, SectionTitle } from "@/components/Common";
 import {
   SEMI_FULL,
@@ -11,7 +13,27 @@ import {
   PREP_COURSES,
   PREP_PRICING,
 } from "@/lib/data";
-import { Star, Lock, ShoppingCart, GraduationCap, Award } from "lucide-react";
+import { Star, Lock, ShoppingCart, GraduationCap, Award, Loader2 } from "lucide-react";
+
+const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
+
+async function startCheckout(packageId) {
+  const origin = window.location.origin;
+  try {
+    const res = await axios.post(`${API}/payments/checkout/session`, {
+      package_id: packageId,
+      origin_url: origin,
+    });
+    if (res.data?.url) {
+      window.location.href = res.data.url;
+    } else {
+      toast.error("Erreur : URL de paiement introuvable");
+    }
+  } catch (err) {
+    const d = err.response?.data?.detail;
+    toast.error(typeof d === "string" ? d : "Erreur lors de la création du paiement");
+  }
+}
 
 function PricingTable({ headers, rows }) {
   return (
@@ -55,6 +77,14 @@ function ComingSoon({ title }) {
 
 function CourseProductCard({ course, tone = "primary" }) {
   const isQuote = course.priceFcfa === "sur devis";
+  const [loading, setLoading] = useState(false);
+
+  const onBuy = async (packageId) => {
+    setLoading(true);
+    await startCheckout(packageId);
+    setLoading(false);
+  };
+
   return (
     <div className="mpk-card p-6 flex flex-col h-full hover:border-[#580505] transition" data-testid={`course-card-${course.id}`}>
       <div className="flex items-start justify-between gap-3">
@@ -70,37 +100,69 @@ function CourseProductCard({ course, tone = "primary" }) {
       <div className="text-xs text-[#580505] mt-3 tracking-wider uppercase font-medium">{course.duration}</div>
 
       {tone === "prep" ? (
-        <div className="mt-4 grid grid-cols-2 gap-2 text-xs">
-          <div className="bg-[#FAFAFA] px-3 py-2 border border-[#580505]/15">
-            <div className="text-[#580505]/70 uppercase tracking-wider text-[10px]">Interne</div>
-            <div className="font-serif text-[#2F0808] text-sm font-semibold mt-0.5">{PREP_PRICING[course.level].interne} F</div>
+        <>
+          <div className="mt-4 grid grid-cols-2 gap-2 text-xs">
+            <div className="bg-[#FAFAFA] px-3 py-2 border border-[#580505]/15">
+              <div className="text-[#580505]/70 uppercase tracking-wider text-[10px]">Interne</div>
+              <div className="font-serif text-[#2F0808] text-sm font-semibold mt-0.5">{PREP_PRICING[course.level].interne} F</div>
+            </div>
+            <div className="bg-[#FAFAFA] px-3 py-2 border border-[#580505]/15">
+              <div className="text-[#580505]/70 uppercase tracking-wider text-[10px]">Externe</div>
+              <div className="font-serif text-[#2F0808] text-sm font-semibold mt-0.5">{PREP_PRICING[course.level].externe} F</div>
+            </div>
+            <div className="bg-[#FAFAFA] px-3 py-2 border border-[#580505]/15 col-span-2">
+              <div className="text-[#580505]/70 uppercase tracking-wider text-[10px]">Volume horaire</div>
+              <div className="font-serif text-[#2F0808] text-sm font-semibold mt-0.5">{PREP_PRICING[course.level].temps}</div>
+            </div>
           </div>
-          <div className="bg-[#FAFAFA] px-3 py-2 border border-[#580505]/15">
-            <div className="text-[#580505]/70 uppercase tracking-wider text-[10px]">Externe</div>
-            <div className="font-serif text-[#2F0808] text-sm font-semibold mt-0.5">{PREP_PRICING[course.level].externe} F</div>
+          <div className="mt-4 grid grid-cols-2 gap-2">
+            <button
+              onClick={() => onBuy(`${course.id}_int`)}
+              disabled={loading}
+              data-testid={`course-buy-${course.id}-int`}
+              className="inline-flex items-center justify-center gap-1.5 px-3 py-2 bg-[#C4D2ED] text-[#580505] border-[1.5px] border-[#580505] text-xs font-semibold hover:bg-[#DCE5F2] transition disabled:opacity-60"
+            >
+              {loading ? <Loader2 size={12} className="animate-spin" /> : <ShoppingCart size={12} />} Acheter Interne
+            </button>
+            <button
+              onClick={() => onBuy(`${course.id}_ext`)}
+              disabled={loading}
+              data-testid={`course-buy-${course.id}-ext`}
+              className="inline-flex items-center justify-center gap-1.5 px-3 py-2 bg-white text-[#580505] border-[1.5px] border-[#580505] text-xs font-semibold hover:bg-[#FAFAFA] transition disabled:opacity-60"
+            >
+              {loading ? <Loader2 size={12} className="animate-spin" /> : <ShoppingCart size={12} />} Acheter Externe
+            </button>
           </div>
-          <div className="bg-[#FAFAFA] px-3 py-2 border border-[#580505]/15 col-span-2">
-            <div className="text-[#580505]/70 uppercase tracking-wider text-[10px]">Volume horaire</div>
-            <div className="font-serif text-[#2F0808] text-sm font-semibold mt-0.5">{PREP_PRICING[course.level].temps}</div>
-          </div>
-        </div>
+        </>
       ) : (
-        <div className="mt-4">
-          <div className="text-[10px] tracking-[0.18em] uppercase text-[#580505]/70">Tarif Bénin</div>
-          <div className="font-serif text-2xl text-[#580505] mt-0.5">
-            {isQuote ? "Sur devis" : `${course.priceFcfa} F`}
+        <>
+          <div className="mt-4">
+            <div className="text-[10px] tracking-[0.18em] uppercase text-[#580505]/70">Tarif Bénin</div>
+            <div className="font-serif text-2xl text-[#580505] mt-0.5">
+              {isQuote ? "Sur devis" : `${course.priceFcfa} F`}
+            </div>
           </div>
-        </div>
+          {isQuote ? (
+            <Link
+              to="/contact"
+              data-testid={`course-buy-${course.id}`}
+              className="mt-5 inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-white text-[#580505] border-[1.5px] border-[#580505] text-sm font-semibold hover:bg-[#FAFAFA] transition"
+            >
+              <ShoppingCart size={14} /> Demander un devis
+            </Link>
+          ) : (
+            <button
+              onClick={() => onBuy(course.id)}
+              disabled={loading}
+              data-testid={`course-buy-${course.id}`}
+              className="mt-5 inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-[#C4D2ED] text-[#580505] border-[1.5px] border-[#580505] text-sm font-semibold hover:bg-[#DCE5F2] transition disabled:opacity-60"
+            >
+              {loading ? <Loader2 size={14} className="animate-spin" /> : <ShoppingCart size={14} />}
+              {loading ? "Redirection..." : "Acheter ce cours"}
+            </button>
+          )}
+        </>
       )}
-
-      <Link
-        to={isQuote ? "/contact" : `/boutique?course=${course.id}`}
-        data-testid={`course-buy-${course.id}`}
-        className="mt-5 inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-[#C4D2ED] text-[#580505] border-[1.5px] border-[#580505] text-sm font-semibold hover:bg-[#DCE5F2] transition"
-      >
-        <ShoppingCart size={14} />
-        {isQuote ? "Demander un devis" : "Acheter ce cours"}
-      </Link>
     </div>
   );
 }

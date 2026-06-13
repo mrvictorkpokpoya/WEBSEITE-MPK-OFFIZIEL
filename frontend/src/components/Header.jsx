@@ -19,7 +19,7 @@ const navGroups = [
     { to: "/departements/tourism", label: "MPK Tourism Programm" },
     { to: "/departements/extra-services", label: "MPK Extra Services" },
     { to: "/cours-en-ligne", label: "Cours en ligne" },
-    { to: "/boutique", label: "Boutique & Cartes Cadeaux" },
+    { to: "/boutique", label: "Boutique M" },
   ]},
   { label: "Communauté", items: [
     { to: "/galerie", label: "Galerie photos & vidéos" },
