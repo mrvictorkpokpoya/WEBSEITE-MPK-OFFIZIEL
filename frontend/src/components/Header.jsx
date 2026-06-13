@@ -10,13 +10,8 @@ const navGroups = [
     { to: "/a-propos", label: "À propos" },
     { to: "/team", label: "La Team MPK" },
     { to: "/campus", label: "Nos Campus" },
-    { divider: true, label: "Communauté" },
-    { to: "/galerie", label: "Galerie photos & vidéos" },
-    { to: "/temoignages", label: "Témoignages" },
-    { to: "/actualites", label: "Actualités & Concours" },
-    { to: "/reseaux", label: "Nos réseaux sociaux" },
   ]},
-  { label: "Formations & Services", items: [
+  { label: "Service", items: [
     { to: "/departements/training-plus", label: "MPK Training Plus" },
     { to: "/departements/exam-prep", label: "MPK Exam Prep" },
     { to: "/departements/translation-pro", label: "MPK Translation Pro" },
@@ -25,6 +20,12 @@ const navGroups = [
     { to: "/departements/extra-services", label: "MPK Extra Services" },
     { to: "/cours-en-ligne", label: "Cours en ligne" },
     { to: "/boutique", label: "Boutique & Cartes Cadeaux" },
+  ]},
+  { label: "Communauté", items: [
+    { to: "/galerie", label: "Galerie photos & vidéos" },
+    { to: "/temoignages", label: "Témoignages" },
+    { to: "/actualites", label: "Actualités & Concours" },
+    { to: "/reseaux", label: "Nos réseaux sociaux" },
   ]},
   { label: "Contact", to: "/contact" },
 ];
@@ -48,7 +49,7 @@ export default function Header() {
         <nav className="hidden lg:flex items-center gap-2">
           {navGroups.map((g) => g.items ? (
             <div key={g.label} className="relative" onMouseEnter={() => setActive(g.label)} onMouseLeave={() => setActive(null)}>
-              <button data-testid={`nav-${g.label}`} className="flex items-center gap-1 px-4 py-2 text-sm font-medium text-[#2F0808] hover:text-[#580505]">
+              <button data-testid={`nav-${g.label}`} className="flex items-center gap-1 px-4 py-2 text-sm font-medium uppercase tracking-wider text-[#2F0808] hover:text-[#580505]">
                 {g.label} <ChevronDown size={14} />
               </button>
               {active === g.label && (
@@ -64,7 +65,7 @@ export default function Header() {
               )}
             </div>
           ) : (
-            <NavLink key={g.to} to={g.to} data-testid={`nav-${g.label}`} className={({isActive}) => `px-4 py-2 text-sm font-medium ${isActive ? 'text-[#580505]' : 'text-[#2F0808] hover:text-[#580505]'}`}>
+            <NavLink key={g.to} to={g.to} data-testid={`nav-${g.label}`} className={({isActive}) => `px-4 py-2 text-sm font-medium uppercase tracking-wider ${isActive ? 'text-[#580505]' : 'text-[#2F0808] hover:text-[#580505]'}`}>
               {g.label}
             </NavLink>
           ))}

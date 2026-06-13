@@ -30,10 +30,31 @@ Créer le site web officiel, premium et institutionnel de MULTIPLIKATOR Institut
 - Image hero de la page d'accueil remplacée par la photo d'équipe fournie par le client (asset au40q6vj)
 - Réseaux sociaux étendus : TikTok, LinkedIn, Telegram ajoutés au footer et à la page Réseaux sociaux (icônes de marque via react-icons)
 
+### Session 3 (13 juin 2026 — itération UX/contenu majeure)
+- **Header** : 4 onglets définitifs en MAJUSCULES — L'INSTITUT · SERVICE · COMMUNAUTÉ · CONTACT (Communauté ressortie comme top-level)
+- **Footer** : alignement MULTIPLIKATOR sur ligne sup. du logo ; titres NAVIGATION / NOS CAMPUS / CONTACT agrandis et alignés ; colonne Contact élargie pour éviter retour à la ligne ; icône WhatsApp sur 1er numéro, Telegram sur 2ème ; bouton WhatsApp direct stylé C4D2ED ; liens Politique de confidentialité + Traitement des données
+- **CTAs globaux** : tous reformatés en fond #C4D2ED + bordure bordeaux 1.5px + texte bordeaux semi-bold (style "Voir bundles & cartes cadeaux")
+- **Hero Home** : CTAs "Découvrir nos formations" et "Nous contacter" maintenant visibles avec contraste fort + ombre
+- **Stats Home** : ajout de labels descriptifs au-dessus des chiffres (IMPLANTATIONS · COMMUNAUTÉ · DEPUIS · COUVERTURE)
+- **Titres sections Home** : tous en MAJUSCULES (Nos points forts, Nos départements, Témoignages, Nos campus, Votre prochain niveau, Cours en ligne)
+- **Contact direct (page Contact)** : simplifié — lieu GODOMEY PK14 + email + WhatsApp 1er numéro + Telegram 2ème numéro ; suppression Parakou/Djougou et du 3ème numéro ; ajout bloc Conformité avec liens politiques
+- **TrainingPlus.jsx — Cours produit individuel** :
+  - Grille 4 colonnes pour cours de langues (A1.1, A1.2, A2.1, A2.2 / B1.1...B2.2 / C1.1...C2.2)
+  - Grille 4 colonnes pour cours préparatoires (Goethe A1-B2 / ÖSD A1-B2) avec prix interne/externe/temps
+  - CTA "Acheter ce cours" → redirige vers /boutique?course={id}
+  - NB : 03 semaines par niveau préparatoire
+- **Team.jsx** : refonte complète en 3 catégories
+  - Administration actuelle (Dr. Lambert Amagnon SEHOUBO, Charles ABI OBOSSOU, Directeur du Tourisme à venir)
+  - Équipe technique (6 personnes : Fructueux JEFFERSON, Mariam SIMPORE, Julien KOLOBH, Karim Narcisse DJAKPO, Quirin DOSSOU, Gildas DOSSOU)
+  - Collègues résidant en Allemagne (14 anciens collaborateurs avec alternance H/F dans le tri)
+  - Tous les noms de famille en MAJUSCULES
+- **Nouvelles pages** : `/confidentialite` (Privacy.jsx) et `/traitement-donnees` (DataPolicy.jsx) — contenu institutionnel complet
+
 ## Backlog priorisé
 ### P0
 - E2E testing_agent jamais exécuté sur l'app (auth JWT/Google, Stripe checkout, formulaire contact + Resend) — À FAIRE
-- Vérifier l'affichage des tarifs complexes dans TrainingPlus.jsx (A1.1 vs A1 complet vs bundles)
+- Validation client des **prix temporaires des cours de langues** (A1.1=46k, A1.2=46k, A2.1=50k, A2.2=50k, B1.1=60k, B1.2=60k, B2.1=67.5k, B2.2=67.5k, C1-C2 = sur devis)
+- Intégrer le **flux d'achat Stripe par cours individuel** (/boutique?course=ID) — actuellement redirige vers Shop générique sans pré-sélection
 
 ### P1
 - Blocs « En construction » pour cours Anglais, FLE, Chinois

@@ -6,11 +6,11 @@ export function Eyebrow({ children }) {
   return <div className="eyebrow">{children}</div>;
 }
 
-export function SectionTitle({ eyebrow, title, kicker, center, light }) {
+export function SectionTitle({ eyebrow, title, kicker, center, light, caps }) {
   return (
     <div className={`${center ? 'text-center mx-auto max-w-3xl' : 'max-w-3xl'} mb-12`}>
       {eyebrow && <Eyebrow>{eyebrow}</Eyebrow>}
-      <h2 className={`font-serif text-3xl sm:text-4xl lg:text-5xl mt-3 ${light ? 'text-white' : 'text-[#2F0808]'} leading-tight`}>{title}</h2>
+      <h2 className={`font-serif text-3xl sm:text-4xl lg:text-5xl mt-3 ${light ? 'text-white' : 'text-[#2F0808]'} leading-tight ${caps ? 'uppercase tracking-tight' : ''}`}>{title}</h2>
       {kicker && <p className={`mt-4 text-base sm:text-lg ${light ? 'text-white/70' : 'text-[#4A4A4A]'} font-light leading-relaxed`}>{kicker}</p>}
     </div>
   );
@@ -22,11 +22,12 @@ export function CTA({ to, label, variant = "primary", testid, external = false }
   return <Link to={to} className={cls} data-testid={testid}>{label} <ArrowRight size={16} /></Link>;
 }
 
-export function Stat({ value, label }) {
+export function Stat({ value, label, note }) {
   return (
-    <div>
+    <div className="text-center">
+      {note && <div className="text-[10px] tracking-[0.2em] uppercase text-[#550000]/80 mb-2 font-medium">{note}</div>}
       <div className="font-serif text-4xl sm:text-5xl text-[#580505]">{value}</div>
-      <div className="text-xs tracking-[0.2em] uppercase text-[#550000] mt-2">{label}</div>
+      <div className="text-xs tracking-[0.18em] uppercase text-[#550000] mt-2 leading-relaxed">{label}</div>
     </div>
   );
 }

@@ -26,18 +26,18 @@ export default function Home() {
               Formation linguistique premium, préparation aux certifications internationales et accompagnement complet vers la mobilité — 6 campus actifs au Bénin, ouverts au monde.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
-              <Link to="/departements/training-plus" data-testid="hero-cta-formations" className="btn-primary bg-white text-[#580505] hover:bg-white/90">Découvrir nos formations <ArrowRight size={16} /></Link>
-              <Link to="/contact" data-testid="hero-cta-contact" className="btn-ghost border-white text-white hover:bg-white/10">Nous contacter</Link>
+              <Link to="/departements/training-plus" data-testid="hero-cta-formations" className="inline-flex items-center gap-2 px-6 py-3.5 bg-[#C4D2ED] text-[#580505] border-[1.5px] border-[#580505] font-semibold tracking-wide hover:bg-[#DCE5F2] transition shadow-lg">Découvrir nos formations <ArrowRight size={16} /></Link>
+              <Link to="/contact" data-testid="hero-cta-contact" className="inline-flex items-center gap-2 px-6 py-3.5 bg-white text-[#580505] border-[1.5px] border-[#580505] font-semibold tracking-wide hover:bg-[#F5F5F5] transition shadow-lg">Nous contacter <ArrowRight size={16} /></Link>
             </div>
           </div>
         </div>
         {/* Stats overlap */}
         <div className="relative max-w-[1400px] mx-auto px-5 lg:px-10 -mb-20">
           <div className="bg-white border border-[#580505]/10 grid grid-cols-2 md:grid-cols-4 gap-y-8 gap-x-4 p-8 lg:p-12 shadow-[0_30px_60px_-30px_rgba(88,5,5,0.4)]">
-            <Stat value="6" label="Campus actifs" />
-            <Stat value="850+" label="Candidat.e.s formé.e.s" />
-            <Stat value="2021" label="Année de fondation" />
-            <Stat value="100%" label="Présentiel & En ligne" />
+            <Stat note="Implantations" value="6" label="Campus actifs au Bénin" />
+            <Stat note="Communauté" value="850+" label="Apprenants formés" />
+            <Stat note="Depuis" value="2021" label="Année de fondation" />
+            <Stat note="Couverture" value="100%" label="Présentiel & En ligne" />
           </div>
         </div>
       </section>
@@ -48,7 +48,7 @@ export default function Home() {
       <section className="max-w-[1400px] mx-auto px-5 lg:px-10 py-16 grid lg:grid-cols-12 gap-12">
         <div className="lg:col-span-5">
           <Eyebrow>Qui sommes-nous</Eyebrow>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl mt-3 text-[#2F0808] leading-tight">Un réseau institutionnel pensé pour la réussite linguistique.</h2>
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl mt-3 text-[#2F0808] leading-tight uppercase tracking-tight">Un réseau institutionnel pensé pour la réussite linguistique.</h2>
         </div>
         <div className="lg:col-span-7 space-y-5 text-[#4A4A4A] leading-relaxed font-light">
           <p>Fondé en 2021, MULTIPLIKATOR est devenu en quelques années un réseau d'instituts de langues de référence au Bénin. Six campus actifs, un programme pédagogique structuré et une équipe de formateurs spécialisés accompagnent nos candidat.e.s vers les certifications internationales et la mobilité.</p>
@@ -60,7 +60,7 @@ export default function Home() {
       {/* Strengths */}
       <section className="bg-[#FAFAFA] border-y border-[#580505]/10">
         <div className="max-w-[1400px] mx-auto px-5 lg:px-10 py-20">
-          <SectionTitle eyebrow="Nos points forts" title="Une exigence académique au service de votre mobilité." />
+          <SectionTitle eyebrow="Nos points forts" title="Une exigence académique au service de votre mobilité." caps />
           <div className="grid lg:grid-cols-12 gap-6">
             {[
               { t: "Encadrement personnalisé", d: "Suivi pédagogique individuel sur tout le parcours. Petits effectifs, attention soutenue.", span: "lg:col-span-7" },
@@ -82,7 +82,7 @@ export default function Home() {
 
       {/* Departments */}
       <section className="max-w-[1400px] mx-auto px-5 lg:px-10 py-20">
-        <SectionTitle eyebrow="Nos départements" title="Six pôles d'expertise pour répondre à chaque projet." />
+        <SectionTitle eyebrow="Nos départements" title="Six pôles d'expertise pour répondre à chaque projet." caps />
         <div className="grid lg:grid-cols-12 gap-5">
           {DEPARTMENTS.map((d, i) => {
             const Icon = ICONS[d.icon];
@@ -105,7 +105,7 @@ export default function Home() {
         <div className="max-w-[1400px] mx-auto px-5 lg:px-10 py-16 grid lg:grid-cols-12 gap-8 items-center">
           <div className="lg:col-span-7">
             <Eyebrow><span className="text-white/60">Cours en ligne</span></Eyebrow>
-            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl mt-3 leading-tight">Suivre MULTIPLIKATOR depuis n'importe où dans le monde.</h2>
+            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl mt-3 leading-tight uppercase tracking-tight">Suivre MULTIPLIKATOR depuis n'importe où dans le monde.</h2>
             <p className="mt-5 text-white/80 font-light leading-relaxed max-w-2xl">Même encadrement qu'en présentiel, créneaux flexibles adaptables au fuseau horaire, conçu pour la diaspora et les villes sans campus MPK.</p>
           </div>
           <div className="lg:col-span-5 flex lg:justify-end">
@@ -116,7 +116,7 @@ export default function Home() {
 
       {/* Testimonials preview */}
       <section className="max-w-[1400px] mx-auto px-5 lg:px-10 py-20">
-        <SectionTitle eyebrow="Ils ont fait confiance à MULTIPLIKATOR" title="Témoignages." />
+        <SectionTitle eyebrow="Ils ont fait confiance à MULTIPLIKATOR" title="Témoignages." caps />
         <div className="grid md:grid-cols-3 gap-5">
           {TESTIMONIALS.slice(0,3).map((t, i) => (
             <div key={i} className="mpk-card p-7">
@@ -133,7 +133,7 @@ export default function Home() {
       {/* Campuses */}
       <section className="bg-[#FAFAFA] border-y border-[#580505]/10">
         <div className="max-w-[1400px] mx-auto px-5 lg:px-10 py-20">
-          <SectionTitle eyebrow="Nos campus" title="6 implantations au Bénin." />
+          <SectionTitle eyebrow="Nos campus" title="6 implantations au Bénin." caps />
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
             {CAMPUSES.map((c) => (
               <Link key={c.id} to="/campus" className="mpk-card overflow-hidden group">
@@ -152,7 +152,7 @@ export default function Home() {
       {/* Final CTA */}
       <section className="max-w-[1400px] mx-auto px-5 lg:px-10 py-24 text-center">
         <Eyebrow>Rejoignez le réseau</Eyebrow>
-        <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#2F0808] mt-4 leading-[1.05]">Votre prochain niveau commence ici.</h2>
+        <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#2F0808] mt-4 leading-[1.05] uppercase tracking-tight">Votre prochain niveau commence ici.</h2>
         <p className="mt-6 max-w-2xl mx-auto text-[#4A4A4A] font-light text-lg">Inscrivez-vous sur le campus de votre choix ou en ligne. Notre équipe vous accompagne dans la définition du parcours adapté.</p>
         <div className="mt-10 flex flex-wrap justify-center gap-4">
           <CTA to="/contact" label="S'inscrire" testid="final-cta-register" />

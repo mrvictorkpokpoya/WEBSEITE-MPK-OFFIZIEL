@@ -39,6 +39,50 @@ export const DEPARTMENTS = [
   { id: "extra", slug: "/departements/extra-services", title: "MPK Extra Services", tagline: "Services à la carte", desc: "CV, lettre de motivation, admissions universitaires.", icon: "FileText" },
 ];
 
+export const TEAM_CATEGORIES = [
+  {
+    id: "admin",
+    title: "Administration actuelle",
+    members: [
+      { name: "Dr. Lambert Amagnon SEHOUBO", role: "Directeur Exécutif", gender: "M" },
+      { name: "Charles ABI OBOSSOU", role: "Directeur Académique", gender: "M" },
+      { name: "À venir", role: "Directeur du Tourisme", gender: "M", placeholder: true },
+    ],
+  },
+  {
+    id: "technique",
+    title: "Équipe technique",
+    members: [
+      { name: "Fructueux JEFFERSON", role: "Senior IT Consultant", gender: "M" },
+      { name: "Mariam SIMPORE", role: "Assistante IT", gender: "F" },
+      { name: "Julien KOLOBH", role: "Graphiste", gender: "M" },
+      { name: "Karim Narcisse DJAKPO", role: "Senior Consultant Comm Digital", gender: "M" },
+      { name: "Quirin DOSSOU", role: "Social Manager & Growth Tracker", gender: "M" },
+      { name: "Gildas DOSSOU", role: "Community Manager", gender: "M" },
+    ],
+  },
+  {
+    id: "allemagne",
+    title: "Collègues résidant en Allemagne",
+    members: [
+      { name: "Jérémie Mahougnon ZOLLIN", role: "Ancien Directeur", gender: "M" },
+      { name: "Olivia BOSSOU", role: "Ancien Secrétaire-Comptable", gender: "F" },
+      { name: "Prosper ACKAKPO", role: "Ancien Directeur Adjoint", gender: "M" },
+      { name: "Chancelle GLOKPON", role: "Ancienne Coach Formatrice Allemand", gender: "F" },
+      { name: "Ulrich Ungouffo BAKALLA", role: "Ancien Coach Formateur Allemand", gender: "M" },
+      { name: "Annick HOUNTONDJI", role: "Ancienne Coach Formatrice Allemand", gender: "F" },
+      { name: "Azize OKE", role: "Ancien Coach Formateur Allemand", gender: "M" },
+      { name: "Joreine AGOSSOU", role: "Ancienne Coach Formatrice Allemand", gender: "F" },
+      { name: "Nazirou HASSOUMI", role: "Ancien Coach Formateur Allemand", gender: "M" },
+      { name: "Hervé KPATINVO", role: "Ancien Coach Formateur Allemand", gender: "M" },
+      { name: "Osias DADEGNON", role: "Ancien Coach Formateur Allemand", gender: "M" },
+      { name: "Jean-Marc HOUNKPATIN", role: "Ancien Coach Formateur Allemand", gender: "M" },
+      { name: "Franck TONADO", role: "Ancien Coach Formateur Allemand", gender: "M" },
+      { name: "Modeste SOSSOU", role: "Ancien Coach Formateur Allemand", gender: "M" },
+    ],
+  },
+];
+
 export const TEAM = [
   { name: "Dr. Komi A.", role: "Directeur Général", campus: "GODOMEY PK 14", spec: "Direction académique", category: "Direction" },
   { name: "Mme Sandrine D.", role: "Directrice Pédagogique", campus: "AKPAKPA", spec: "Allemand", category: "Direction" },
@@ -88,6 +132,44 @@ export const SEMI_SUBLEVELS = [
   { level: "B2.2", weeks: 4, ue: 64, fcfa: "67 500", eur: "225" },
   { level: "C1.1", weeks: 4, ue: 64, fcfa: "sur devis", eur: "sur devis" },
   { level: "C1.2", weeks: 4, ue: 64, fcfa: "sur devis", eur: "sur devis" },
+  { level: "C2.1", weeks: 4, ue: 64, fcfa: "sur devis", eur: "sur devis" },
+  { level: "C2.2", weeks: 4, ue: 64, fcfa: "sur devis", eur: "sur devis" },
+];
+
+// Cours de langues — affichage produit individuel (cartes achat)
+export const LANGUAGE_COURSES = [
+  { id: "lang-a11", level: "A1.1", title: "Allemand A1.1", desc: "Premier contact, structures de base, présentation, vie quotidienne.", priceFcfa: "46 000", duration: "4 semaines · 64 UE" },
+  { id: "lang-a12", level: "A1.2", title: "Allemand A1.2", desc: "Renforcement A1 — interactions simples, voyages, environnement proche.", priceFcfa: "46 000", duration: "4 semaines · 64 UE" },
+  { id: "lang-a21", level: "A2.1", title: "Allemand A2.1", desc: "Communication courante, expériences personnelles et habitudes.", priceFcfa: "50 000", duration: "4 semaines · 64 UE" },
+  { id: "lang-a22", level: "A2.2", title: "Allemand A2.2", desc: "Consolidation A2 — descriptions, narration au passé, opinions.", priceFcfa: "50 000", duration: "4 semaines · 64 UE" },
+  { id: "lang-b11", level: "B1.1", title: "Allemand B1.1", desc: "Autonomie linguistique — études, travail, vie sociale en allemand.", priceFcfa: "60 000", duration: "4 semaines · 64 UE" },
+  { id: "lang-b12", level: "B1.2", title: "Allemand B1.2", desc: "Préparation au seuil Goethe B1 — argumentation et compréhension fine.", priceFcfa: "60 000", duration: "4 semaines · 64 UE" },
+  { id: "lang-b21", level: "B2.1", title: "Allemand B2.1", desc: "Niveau universitaire — textes complexes, débats, expression abstraite.", priceFcfa: "67 500", duration: "4 semaines · 64 UE" },
+  { id: "lang-b22", level: "B2.2", title: "Allemand B2.2", desc: "Préparation TestDaF/DSH — maîtrise académique avancée.", priceFcfa: "67 500", duration: "4 semaines · 64 UE" },
+  { id: "lang-c11", level: "C1.1", title: "Allemand C1.1", desc: "Niveau supérieur — nuances, registres, productions structurées.", priceFcfa: "sur devis", duration: "4 semaines · 64 UE" },
+  { id: "lang-c12", level: "C1.2", title: "Allemand C1.2", desc: "Maîtrise quasi-native — préparation Goethe C1 / TestDaF 5x5.", priceFcfa: "sur devis", duration: "4 semaines · 64 UE" },
+  { id: "lang-c21", level: "C2.1", title: "Allemand C2.1", desc: "Niveau d'excellence — interprétation, traduction, enseignement.", priceFcfa: "sur devis", duration: "4 semaines · 64 UE" },
+  { id: "lang-c22", level: "C2.2", title: "Allemand C2.2", desc: "Niveau natif certifié — Goethe C2 / Großes Deutsches Sprachdiplom.", priceFcfa: "sur devis", duration: "4 semaines · 64 UE" },
+];
+
+// Cours préparatoires — prix interne/externe + temps/jour
+// Durée par niveau : 03 semaines
+export const PREP_PRICING = {
+  A1: { interne: "35 000", externe: "40 000", temps: "03h/jour" },
+  A2: { interne: "45 000", externe: "50 000", temps: "03h/jour" },
+  B1: { interne: "60 000", externe: "65 000", temps: "07h/jour" },
+  B2: { interne: "65 000", externe: "70 000", temps: "07h/jour" },
+};
+
+export const PREP_COURSES = [
+  { id: "prep-goethe-a1", title: "Prepa Goethe Zertifikat A1", short: "Goethe A1", level: "A1", exam: "Goethe-Institut", desc: "Préparation ciblée à l'examen Goethe-Zertifikat A1 — compréhension orale/écrite et productions.", duration: "03 semaines" },
+  { id: "prep-goethe-a2", title: "Prepa Goethe Zertifikat A2", short: "Goethe A2", level: "A2", exam: "Goethe-Institut", desc: "Entraînement complet sur les 4 compétences du Goethe-Zertifikat A2.", duration: "03 semaines" },
+  { id: "prep-goethe-b1", title: "Prepa Goethe Zertifikat B1", short: "Goethe B1", level: "B1", exam: "Goethe-Institut", desc: "Préparation intensive B1 — examen modulaire (lire, écouter, écrire, parler).", duration: "03 semaines" },
+  { id: "prep-goethe-b2", title: "Prepa Goethe Zertifikat B2", short: "Goethe B2", level: "B2", exam: "Goethe-Institut", desc: "Préparation rigoureuse B2 — exigences universitaires et professionnelles.", duration: "03 semaines" },
+  { id: "prep-osd-a1", title: "Prepa ÖSD Benin A1", short: "ÖSD A1", level: "A1", exam: "ÖSD Autriche", desc: "Préparation ÖSD A1 — adapté aux candidats visant l'Autriche.", duration: "03 semaines" },
+  { id: "prep-osd-a2", title: "Prepa ÖSD Benin A2", short: "ÖSD A2", level: "A2", exam: "ÖSD Autriche", desc: "Entraînement ÖSD A2 — situations quotidiennes et productions guidées.", duration: "03 semaines" },
+  { id: "prep-osd-b1", title: "Prepa ÖSD Benin B1", short: "ÖSD B1", level: "B1", exam: "ÖSD Autriche", desc: "Préparation ÖSD B1 — passage clé pour les visas et études en Autriche.", duration: "03 semaines" },
+  { id: "prep-osd-b2", title: "Prepa ÖSD Benin B2", short: "ÖSD B2", level: "B2", exam: "ÖSD Autriche", desc: "Préparation ÖSD B2 — niveau professionnel et universitaire.", duration: "03 semaines" },
 ];
 
 export const SEMI_FULL = [

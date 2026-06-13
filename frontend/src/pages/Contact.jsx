@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { toast } from "sonner";
-import { Mail, Phone, MessageCircle, Send } from "lucide-react";
+import { Mail, MapPin, Phone, MessageCircle, Send, Shield, FileText as FileTextIcon } from "lucide-react";
+import { Link } from "react-router-dom";
+import { FaWhatsapp, FaTelegramPlane } from "react-icons/fa";
 import { PageHero, Eyebrow } from "@/components/Common";
 import { CAMPUSES, DEPARTMENTS } from "@/lib/data";
 
@@ -60,15 +62,24 @@ export default function Contact() {
         <aside className="lg:col-span-5 space-y-5">
           <div className="mpk-card p-6">
             <Eyebrow>Contact direct</Eyebrow>
-            <ul className="mt-4 space-y-3 text-[#2F0808]">
-              <li className="flex items-center gap-3"><Mail size={16} className="text-[#580505]"/> contact@multiplikator-world.com</li>
-              <li className="flex items-start gap-3"><Phone size={16} className="text-[#580505] mt-0.5"/> <span>+229 01 96 59 38 66 | +229 01 99 93 33 33<br/><span className="text-xs text-[#4A4A4A]">Parakou / Djougou : +229 01 67 46 44 04</span></span></li>
-              <li><a href="https://wa.me/2290196593866" target="_blank" rel="noreferrer" data-testid="contact-whatsapp" className="inline-flex items-center gap-2 mt-2 btn-primary text-sm"><MessageCircle size={14}/> WhatsApp direct</a></li>
+            <ul className="mt-4 space-y-3 text-[#2F0808] text-sm">
+              <li className="flex items-start gap-3"><MapPin size={16} className="text-[#580505] mt-0.5 flex-shrink-0"/> <span className="leading-snug">GODOMEY PK14 — 2ème VONS APRÈS STATION ORYNX</span></li>
+              <li className="flex items-center gap-3"><Mail size={16} className="text-[#580505] flex-shrink-0"/> <span>contact@multiplikator-world.com</span></li>
+              <li className="flex items-center gap-3"><FaWhatsapp size={16} className="text-[#25D366] flex-shrink-0"/> <span>+229 01 96 59 38 66</span></li>
+              <li className="flex items-center gap-3"><FaTelegramPlane size={16} className="text-[#0088CC] flex-shrink-0"/> <span>+229 01 99 93 33 33</span></li>
+              <li><a href="https://wa.me/2290196593866" target="_blank" rel="noreferrer" data-testid="contact-whatsapp" className="inline-flex items-center gap-2 mt-3 px-4 py-2.5 bg-[#C4D2ED] text-[#580505] border-[1.5px] border-[#580505] text-sm font-semibold"><MessageCircle size={14}/> WhatsApp direct</a></li>
             </ul>
           </div>
           <div className="mpk-card p-6">
             <Eyebrow>Vous préférez passer ?</Eyebrow>
             <p className="mt-3 text-sm text-[#4A4A4A]">Tous nos 6 campus sont ouverts du lundi au samedi. Aucun rendez-vous nécessaire pour une visite d'orientation.</p>
+          </div>
+          <div className="mpk-card p-6">
+            <Eyebrow>Conformité</Eyebrow>
+            <ul className="mt-3 space-y-2 text-sm">
+              <li><Link to="/confidentialite" className="inline-flex items-center gap-2 text-[#580505] hover:underline"><Shield size={14}/> Politique de confidentialité</Link></li>
+              <li><Link to="/traitement-donnees" className="inline-flex items-center gap-2 text-[#580505] hover:underline"><FileTextIcon size={14}/> Traitement des données</Link></li>
+            </ul>
           </div>
         </aside>
       </section>
