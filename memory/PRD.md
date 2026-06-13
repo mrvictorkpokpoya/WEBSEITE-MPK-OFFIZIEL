@@ -19,7 +19,7 @@ Créer le site web officiel, premium et institutionnel de MULTIPLIKATOR Institut
 - Scaffolding complet : backend FastAPI (auth JWT + Google, contact, Stripe checkout), 20+ pages React, routing
 - Design system bordeaux/blanc, police Poppins, header simplifié 4 onglets
 
-### Session 2 (12 juin 2026)
+### Session 2 (12-13 juin 2026)
 - Couleur C4D2ED intégrée en tint subtil (PageHero, page Campus, titres footer)
 - Noms de campus en MAJUSCULES partout (data.js, Gallery, Home, News, Campuses)
 - Footer : titres lisibles (périwinkle #C4D2ED au lieu du rouge illisible), logo officiel, copyright « © MULTIPLIKATOR START UP GROUP »
@@ -27,6 +27,8 @@ Créer le site web officiel, premium et institutionnel de MULTIPLIKATOR Institut
 - Page Campus refaite façon Evolanguage : cartes par campus (nom, adresse, tél, email, bouton Communauté WhatsApp, plan d'accès) + carte EN LIGNE avec horaires (8h-11h / 11h30-14h30 / 15h-18h / 19h-22h)
 - Menu « Communauté » déplacé en sous-section de l'onglet « L'Institut »
 - Logo officiel MPK intégré au header et footer
+- Image hero de la page d'accueil remplacée par la photo d'équipe fournie par le client (asset au40q6vj)
+- Réseaux sociaux étendus : TikTok, LinkedIn, Telegram ajoutés au footer et à la page Réseaux sociaux (icônes de marque via react-icons)
 
 ## Backlog priorisé
 ### P0

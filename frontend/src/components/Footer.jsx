@@ -1,7 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Facebook, Instagram, Youtube, MessageCircle, Mail, Phone } from "lucide-react";
+import { Mail, Phone, MessageCircle } from "lucide-react";
+import { FaFacebookF, FaInstagram, FaYoutube, FaTiktok, FaLinkedinIn, FaTelegramPlane, FaWhatsapp } from "react-icons/fa";
 import { CAMPUSES, CONTACT_INFO, LOGO_MARK } from "@/lib/data";
+
+const SOCIAL_LINKS = [
+  { name: "facebook", url: "https://facebook.com", Icon: FaFacebookF },
+  { name: "instagram", url: "https://instagram.com", Icon: FaInstagram },
+  { name: "youtube", url: "https://youtube.com", Icon: FaYoutube },
+  { name: "tiktok", url: "https://tiktok.com", Icon: FaTiktok },
+  { name: "linkedin", url: "https://linkedin.com", Icon: FaLinkedinIn },
+  { name: "telegram", url: "https://t.me", Icon: FaTelegramPlane },
+  { name: "whatsapp", url: "https://wa.me/2290196593866", Icon: FaWhatsapp },
+];
 
 function FooterTitle({ children }) {
   return <div className="text-[11px] tracking-[0.25em] uppercase font-medium text-[#C4D2ED] mb-4">{children}</div>;
@@ -25,11 +36,10 @@ export default function Footer() {
             Réseau d'instituts de langues multi-campus, fondé en 2021 au Bénin.
             Excellence académique, accompagnement vers la mobilité internationale.
           </p>
-          <div className="flex items-center gap-3 mt-6">
-            <a href="https://facebook.com" target="_blank" rel="noreferrer" data-testid="footer-facebook" className="w-9 h-9 grid place-items-center border border-white/30 hover:bg-white hover:text-[#580505] transition"><Facebook size={16} /></a>
-            <a href="https://instagram.com" target="_blank" rel="noreferrer" data-testid="footer-instagram" className="w-9 h-9 grid place-items-center border border-white/30 hover:bg-white hover:text-[#580505] transition"><Instagram size={16} /></a>
-            <a href="https://youtube.com" target="_blank" rel="noreferrer" data-testid="footer-youtube" className="w-9 h-9 grid place-items-center border border-white/30 hover:bg-white hover:text-[#580505] transition"><Youtube size={16} /></a>
-            <a href={`https://wa.me/${CONTACT_INFO.whatsapp}`} target="_blank" rel="noreferrer" data-testid="footer-whatsapp" className="w-9 h-9 grid place-items-center border border-white/30 hover:bg-white hover:text-[#580505] transition"><MessageCircle size={16} /></a>
+          <div className="flex items-center gap-2.5 mt-6 flex-wrap">
+            {SOCIAL_LINKS.map((s) => (
+              <a key={s.name} href={s.url} target="_blank" rel="noreferrer" data-testid={`footer-${s.name}`} className="w-9 h-9 grid place-items-center border border-white/30 hover:bg-white hover:text-[#580505] transition"><s.Icon size={15} /></a>
+            ))}
           </div>
         </div>
 

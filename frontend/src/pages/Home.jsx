@@ -12,7 +12,7 @@ export default function Home() {
       {/* Hero */}
       <section className="relative bg-[#2F0808] overflow-hidden">
         <div className="absolute inset-0 opacity-30">
-          <img src="https://images.unsplash.com/photo-1759299615947-bc798076b479?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHwzfHxtb2Rlcm4lMjBjYW1wdXMlMjBidWlsZGluZyUyMGV4dGVyaW9yfGVufDB8fHx8MTc4MTI5ODQ3OXww&ixlib=rb-4.1.0&q=85" alt="" className="w-full h-full object-cover" />
+          <img src="https://customer-assets.emergentagent.com/job_langues-benin/artifacts/au40q6vj_WhatsApp%20Image%202026-06-13%20at%2001.24.36.jpeg" alt="L'équipe MULTIPLIKATOR célèbre la réussite" className="w-full h-full object-cover" />
         </div>
         <div className="absolute inset-0" style={{background: "linear-gradient(180deg, rgba(47,8,8,0.85) 0%, rgba(88,5,5,0.75) 100%)"}} />
         <div className="relative max-w-[1400px] mx-auto px-5 lg:px-10 py-24 lg:py-36 text-white">
