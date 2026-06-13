@@ -64,10 +64,29 @@ Créer le site web officiel, premium et institutionnel de MULTIPLIKATOR Institut
   - Frontend : 4 onglets UPPERCASE, hero CTAs, footer complet, TrainingPlus grilles, Stripe redirect, /contact toast, /team 3 catégories, /confidentialite, /traitement-donnees
   - Régression backend pytest disponible à `/app/backend/tests/backend_test.py`
 
+### Session 5 (14 juin 2026 — Responsive + Réseaux sociaux + Notre histoire + Appel à investissement)
+- **Responsive tablet + mobile** : Hero, CTAs, stats, paddings adaptés (text-3xl sm:text-5xl, py-16 sm:py-20 lg:py-36, gap-3 sm:gap-4) ; Campus card map en aspect-square avec object-contain pour adapter les vrais plans carrés ; Stat component avec tailles fluides
+- **Vrais liens réseaux sociaux** intégrés depuis SOCIAL_URLS dans data.js :
+  - Facebook : https://web.facebook.com/institutmultiplikator/
+  - Instagram : https://www.instagram.com/institut_multiplikator?igsh=ZnF6MHc1eWtwYXE0
+  - TikTok : https://vm.tiktok.com/ZS9jBcFnV7JXj-07VCb/
+  - LinkedIn : https://www.linkedin.com/company/institut-multiplikator/
+  - YouTube : https://youtube.com/@multiplikator_institut?si=hOi1qNraJYO-VE3c
+  - Utilisés dans Footer.jsx + Social.jsx (page /reseaux)
+- **Nouvelles pages** :
+  - `/notre-histoire` (History.jsx) : section origine du mot « Multiplikator » allemand, chronologie 2021→2026 (6 jalons), 4 valeurs fondatrices, CTA final vers formations + investissement
+  - `/appel-a-investissement` (Investment.jsx) : 4 stats clés (370M FCFA recherchés, +340%, 90%+, 4-6 ans ROI), 4 projets ouverts au financement (Campus régionaux 85M, Académie résidentielle 210M, Plateforme e-learning 45M, MPK Tourism 32M), 3 formes de partenariat (Equity, Prêt convertible, Mécène), CTAs dossier + email + WhatsApp
+- **Header** : items "Notre histoire" et "Appel à investissement" ajoutés au dropdown L'INSTITUT (6 items au total)
+- **Plans d'accès campus** : 5/6 campus avec vrai plan (Godomey, Akpakpa, Porto-Novo, Lokossa, Djougou). Parakou reste en attente
+- **Testing E2E v3 — 68/70 assertions PASS** (les 2 "échecs" étaient des faux négatifs CSS-uppercase). Aucun bug réel détecté.
+
 ## Backlog priorisé
 ### P0
+- Plan d'accès du campus PARAKOU (1 image manquante)
 - Validation client des prix langues (estimations actuelles à confirmer)
 - Fournir le nom du Directeur du Tourisme (placeholder « À venir »)
+- Validation client du contenu de la chronologie /notre-histoire (jalons 2021-2026 actuellement rédigés par l'IA, à corriger si besoin)
+- Validation client du contenu de /appel-a-investissement (montants, projets, formes de partenariat — à ajuster aux vraies orientations stratégiques de la direction)
 
 ### P1
 - Blocs « En construction » pour cours Anglais, FLE, Chinois
