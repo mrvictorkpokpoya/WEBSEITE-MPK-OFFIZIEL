@@ -50,11 +50,24 @@ Créer le site web officiel, premium et institutionnel de MULTIPLIKATOR Institut
   - Tous les noms de famille en MAJUSCULES
 - **Nouvelles pages** : `/confidentialite` (Privacy.jsx) et `/traitement-donnees` (DataPolicy.jsx) — contenu institutionnel complet
 
+### Session 4 (13 juin 2026 — Stripe par cours + footer raffiné + E2E testing)
+- **Footer raffiné** : MULTIPLIKATOR restauré en `font-serif text-2xl` aligné en haut du logo (orthographe initiale) ; campus en noms complets « MPK CAMPUS GODOMEY PK 14 », « MPK CAMPUS AKPAKPA » etc. ; lien navigation « Boutique M » (au lieu de Boutique & Cartes Cadeaux) ; tailles ajustées pour rester lisible (titres 12px, items 13px)
+- **Header** : « Boutique M » aussi dans le dropdown SERVICE
+- **Stripe checkout direct par cours** :
+  - Backend : ajout de 16 package_id `prep_goethe_{a1..b2}_{int|ext}` et `prep_osd_{a1..b2}_{int|ext}` dans CATALOG (server.py)
+  - Frontend : `startCheckout(packageId)` dans TrainingPlus.jsx appelle POST /api/payments/checkout/session et redirige sur l'URL Stripe retournée
+  - Cours de langues (semi_a1_1 → semi_b2_2) : bouton « Acheter ce cours » → Stripe direct
+  - Cours préparatoires : 2 boutons par carte (« Acheter Interne » / « Acheter Externe ») pour la double tarification
+  - Cours C1.1 → C2.2 : « Sur devis » → redirection contact (pas de Stripe)
+- **Testing E2E v3 effectué (première fois) — TOUT PASSE 100% :**
+  - Backend : 16/16 pytest tests (auth, contact + admin gating, catalog 44 items, Stripe création/status/invalid-id, persistence)
+  - Frontend : 4 onglets UPPERCASE, hero CTAs, footer complet, TrainingPlus grilles, Stripe redirect, /contact toast, /team 3 catégories, /confidentialite, /traitement-donnees
+  - Régression backend pytest disponible à `/app/backend/tests/backend_test.py`
+
 ## Backlog priorisé
 ### P0
-- E2E testing_agent jamais exécuté sur l'app (auth JWT/Google, Stripe checkout, formulaire contact + Resend) — À FAIRE
-- Validation client des **prix temporaires des cours de langues** (A1.1=46k, A1.2=46k, A2.1=50k, A2.2=50k, B1.1=60k, B1.2=60k, B2.1=67.5k, B2.2=67.5k, C1-C2 = sur devis)
-- Intégrer le **flux d'achat Stripe par cours individuel** (/boutique?course=ID) — actuellement redirige vers Shop générique sans pré-sélection
+- Validation client des prix langues (estimations actuelles à confirmer)
+- Fournir le nom du Directeur du Tourisme (placeholder « À venir »)
 
 ### P1
 - Blocs « En construction » pour cours Anglais, FLE, Chinois
