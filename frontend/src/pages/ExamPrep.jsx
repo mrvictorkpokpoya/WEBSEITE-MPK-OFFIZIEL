@@ -32,10 +32,10 @@ function PrepCard({ course }) {
   return (
     <div data-testid={`prep-card-${course.id}`} className="bg-white rounded-sm p-5 sm:p-6 shadow-[0_8px_24px_-12px_rgba(88,5,5,0.18)] hover:shadow-[0_14px_36px_-12px_rgba(88,5,5,0.28)] transition-shadow duration-300 flex flex-col h-full">
       <div className="flex items-start justify-between gap-3">
-        <div className="inline-flex items-center justify-center min-w-[56px] h-10 px-3 font-serif text-lg font-semibold bg-[#580505] text-white">
-          {course.short}
+        <div className="inline-flex items-center justify-center min-w-[56px] h-10 px-3 font-serif text-lg font-semibold bg-[#580505] text-white whitespace-nowrap">
+          {course.level}
         </div>
-        <span className="text-[10px] tracking-[0.18em] uppercase text-[#580505]/80 font-medium">{course.exam}</span>
+        <span className="text-[10px] tracking-[0.18em] uppercase text-[#580505]/80 font-medium text-right leading-tight whitespace-nowrap">{course.exam}</span>
       </div>
       <h3 className="font-serif text-lg text-[#2F0808] mt-4 leading-snug">{course.title}</h3>
       <div className="mt-3 mb-3 h-px bg-[#580505]/15 w-full" />
