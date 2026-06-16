@@ -5,11 +5,11 @@ import { PageHero, Eyebrow } from "@/components/Common";
 
 const TIMELINE = [
   { year: "2021", title: "La genèse à Godomey PK 14", desc: "Fondation de MULTIPLIKATOR Institut de Langues à Godomey, dans la banlieue nord de Cotonou. Une vision : offrir un enseignement linguistique premium accessible, ancré au Bénin mais tourné vers le monde." },
-  { year: "2022", title: "Premiers succès Goethe", desc: "Les premières cohortes décrochent le Goethe-Zertifikat A1, A2 et B1 avec un taux de réussite supérieur à 90%. Ouverture du second campus à Akpakpa pour répondre à la demande grandissante." },
+  { year: "2022", title: "Premiers succès aux certifications Goethe", desc: "Premiers succès aux certifications officielles de l'Institut Goethe de Lomé. Les premières cohortes décrochent leurs diplômes A1, A2 et B1. Ouverture du second campus à Akpakpa pour répondre à la demande grandissante." },
   { year: "2023", title: "Expansion régionale", desc: "Ouverture des campus de Porto-Novo et Lokossa. MULTIPLIKATOR couvre désormais le Sud du Bénin et inaugure son département MPK Translation Pro pour répondre aux besoins administratifs des candidats à la mobilité." },
-  { year: "2024", title: "Le réseau prend forme", desc: "Naissance des campus de Djougou et Parakou pour servir le Nord du pays. Lancement du programme Premium VIP Accéléré et structuration des 6 départements de service." },
-  { year: "2025", title: "MPK Tourism Programm", desc: "Lancement de l'Académie de guides touristiques et du département Tourisme. Plus de 600 candidat.e.s déjà accompagné.e.s vers la mobilité internationale, principalement en Allemagne et en Autriche." },
-  { year: "2026", title: "Cap sur l'international", desc: "850+ apprenants formés. Ouverture des cours 100% en ligne pour la diaspora, lancement de la boutique en ligne et de la plateforme d'inscription numérique. Vision : devenir LE référent linguistique d'Afrique de l'Ouest." },
+  { year: "2024", title: "Le réseau prend forme — cap au Nord", desc: "Naissance des campus de Djougou et Parakou pour desservir le Nord du pays. Lancement du programme Premium VIP Accéléré et structuration des pôles de service de l'institut." },
+  { year: "2025", title: "MPK Tourism Programm", desc: "Lancement de l'Académie de formation des guides touristiques et du département Tourisme à travers des phases tests axées sur les sorties récréatives et touristiques sur Ganvié et Grand Popo. Forts de ces expériences de terrain, le département se construit lentement et méthodiquement." },
+  { year: "2026", title: "Cap sur l'international", desc: "Ouverture des cours 100% en ligne pour la diaspora, lancement de la boutique en ligne et de la plateforme d'inscription numérique. Vision : devenir LE référent linguistique d'Afrique de l'Ouest." },
 ];
 
 const VALUES = [
@@ -24,7 +24,7 @@ export default function History() {
     <>
       <PageHero
         eyebrow="Notre histoire"
-        title="De Godomey vers le monde — l'aventure MULTIPLIKATOR."
+        title="Du Bénin vers le monde — l'aventure MULTIPLIKATOR."
         kicker="Cinq ans d'engagement linguistique, six campus actifs, des centaines de réussites — l'histoire d'un réseau béninois qui a fait le pari de l'excellence."
       />
 
@@ -36,7 +36,7 @@ export default function History() {
         </div>
         <div className="lg:col-span-7 space-y-4 text-[#4A4A4A] font-light leading-relaxed">
           <p>« Multiplikator » est un mot allemand qui signifie « multiplicateur » — celui qui transmet, qui amplifie, qui démultiplie. Ce nom traduit notre conviction profonde : <strong className="text-[#580505]">chaque apprenant que nous formons devient à son tour un transmetteur</strong>, un pont entre le Bénin et le monde germanophone, francophone, anglophone.</p>
-          <p>Fondé en 2021 à Godomey PK 14, l'institut est né d'un constat simple : la jeunesse béninoise ambitieuse mérite un accès à un enseignement linguistique exigeant, structuré et certifiant — sans avoir à quitter son pays pour atteindre l'excellence.</p>
+          <p>Fondé en 2021 au Bénin, MULTIPLIKATOR est né d'une conviction simple : <strong className="text-[#580505]">la jeunesse béninoise ambitieuse mérite un accès à un enseignement linguistique exigeant, structuré et certifiant</strong> dans les langues étrangères — sans avoir à quitter son pays pour atteindre l'excellence qui la rend pleinement éligible aux opportunités internationales.</p>
         </div>
       </section>
 

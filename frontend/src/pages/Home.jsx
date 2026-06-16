@@ -23,7 +23,7 @@ export default function Home() {
               <span className="text-white/85">Institut de Langues</span>
             </h1>
             <p className="mt-5 sm:mt-8 text-base sm:text-lg lg:text-xl text-white/85 max-w-2xl font-light leading-relaxed">
-              Formation linguistique premium, préparation aux certifications internationales et accompagnement complet vers la mobilité — 6 campus actifs au Bénin, ouverts au monde.
+              Formation linguistique premium, préparation aux certifications internationales et accompagnement complet vers la mobilité internationale, notamment en Allemagne et vers pleins d'autres destinations — 6 campus actifs au Bénin, ouverts au monde.
             </p>
             <div className="mt-6 sm:mt-10 flex flex-wrap gap-3 sm:gap-4">
               <Link to="/departements/training-plus" data-testid="hero-cta-formations" className="inline-flex items-center gap-2 px-4 sm:px-6 py-3 sm:py-3.5 bg-[#580505] text-[#C4D2ED] border-[1.5px] border-[#580505] text-sm sm:text-base font-semibold tracking-wide hover:bg-[#2F0808] transition shadow-lg">Découvrir nos formations <ArrowRight size={16} /></Link>
