@@ -25,6 +25,7 @@ const navGroups = [
   ]},
   { label: "Communauté", items: [
     { to: "/alumnis", label: "MPK World Alumnis" },
+    { to: "/blog", label: "Blog & Infos" },
     { to: "/galerie", label: "Galerie photos & vidéos" },
     { to: "/temoignages", label: "Témoignages" },
     { to: "/actualites", label: "Actualités & Concours" },
