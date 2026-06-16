@@ -1,0 +1,82 @@
+{
+  "nav": {
+    "institute": "L'Institut",
+    "service": "Service",
+    "community": "Communauté",
+    "contact": "Contact",
+    "home": "Accueil",
+    "about": "À propos",
+    "history": "Notre histoire",
+    "team": "La Team MPK",
+    "campuses": "Nos Campus",
+    "investment": "Appel à investissement",
+    "training_plus": "MPK Training Plus",
+    "exam_prep": "MPK Exam Prep",
+    "translation_pro": "MPK Translation Pro",
+    "consulting_pro": "MPK Consulting Pro",
+    "tourism": "MPK Tourism Programm",
+    "extra_services": "MPK Extra Services",
+    "online_courses": "Cours en ligne",
+    "shop": "Boutique M",
+    "alumnis": "MPK World Alumnis",
+    "blog": "Blog & Infos",
+    "gallery": "Galerie photos & vidéos",
+    "testimonials": "Témoignages",
+    "news": "Actualités & Concours",
+    "downloads": "Foire aux téléchargements",
+    "social": "Nos réseaux sociaux",
+    "register": "S'inscrire",
+    "login": "Connexion",
+    "logout": "Déconnexion",
+    "my_space": "Espace apprenant"
+  },
+  "hero": {
+    "eyebrow": "Réseau multi-campus · depuis 2021",
+    "title_line1": "MULTIPLIKATOR",
+    "title_line2": "Institut de Langues",
+    "subtitle": "Formation linguistique premium, préparation aux certifications internationales et accompagnement complet vers la mobilité internationale, notamment en Allemagne et vers pleins d'autres destinations — 6 campus actifs au Bénin, ouverts au monde.",
+    "cta_formations": "Découvrir nos formations",
+    "cta_contact": "Nous contacter"
+  },
+  "stats": {
+    "implantations": "Implantations",
+    "implantations_label": "Campus actifs au Bénin",
+    "community": "Communauté",
+    "community_label": "Apprenants formés",
+    "since": "Depuis",
+    "since_label": "Année de fondation",
+    "coverage": "Couverture",
+    "coverage_label": "Présentiel & En ligne"
+  },
+  "footer": {
+    "tagline": "Réseau d'instituts de langues multi-campus, fondé en 2021 au Bénin. Excellence académique, accompagnement vers la mobilité internationale.",
+    "navigation": "Navigation",
+    "our_campuses": "Nos Campus",
+    "contact": "Contact",
+    "whatsapp_direct": "WhatsApp direct",
+    "privacy": "Politique de confidentialité",
+    "data": "Traitement des données",
+    "terms": "CGU",
+    "copyright": "© MULTIPLIKATOR START UP GROUP"
+  },
+  "common": {
+    "learn_more": "En savoir plus",
+    "discover": "Découvrir",
+    "register_now": "S'inscrire",
+    "request_quote": "Demander un devis",
+    "buy_course": "Acheter ce cours",
+    "buy_internal": "Acheter Interne",
+    "buy_external": "Acheter Externe",
+    "see_more": "Voir plus",
+    "contact_us": "Nous contacter",
+    "coming_soon": "Bientôt disponible",
+    "on_quote": "Sur devis",
+    "view_all": "Voir tout"
+  },
+  "lang": {
+    "fr": "Français",
+    "en": "English",
+    "de": "Deutsch",
+    "switch": "Langue"
+  }
+}

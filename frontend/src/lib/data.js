@@ -228,6 +228,15 @@ export const PREP_COURSES = [
   { id: "prep_osd_b2", title: "Prepa ÖSD Benin B2", short: "ÖSD B2", level: "B2", exam: "ÖSD Autriche", desc: "Préparation ÖSD B2 — niveau professionnel et universitaire.", duration: "03 semaines" },
 ];
 
+// Modules individuels — entraînement ciblé sur une compétence (Sprechen/Schreiben/Lesen/Hören)
+// Tarifs sur devis selon le niveau ciblé (A1 → C1)
+export const PREP_MODULES = [
+  { id: "module_sprechen", title: "Module Sprechen", short: "Oral", competence: "Expression orale", desc: "Entraînement intensif à la production orale : monologue, dialogue, présentation, examen blanc.", icon: "MessageCircle" },
+  { id: "module_schreiben", title: "Module Schreiben", short: "Écrit", competence: "Expression écrite", desc: "Travail ciblé sur la rédaction : email, lettre formelle, dissertation, correction individualisée.", icon: "Pencil" },
+  { id: "module_lesen", title: "Module Lesen", short: "Lecture", competence: "Compréhension écrite", desc: "Techniques de lecture rapide, repérage d'informations, articles authentiques et textes d'examen.", icon: "BookOpen" },
+  { id: "module_hoeren", title: "Module Hören", short: "Audio", competence: "Compréhension orale", desc: "Entraînement à l'écoute active sur supports authentiques (radio, dialogues, conférences).", icon: "Headphones" },
+];
+
 export const SEMI_FULL = [
   { level: "A1", fcfa: "92 000", eur: "260", pkg: "semi_a1" },
   { level: "A2", fcfa: "100 000", eur: "300", pkg: "semi_a2" },

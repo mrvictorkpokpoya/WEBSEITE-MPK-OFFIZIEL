@@ -1,0 +1,82 @@
+{
+  "nav": {
+    "institute": "The Institute",
+    "service": "Service",
+    "community": "Community",
+    "contact": "Contact",
+    "home": "Home",
+    "about": "About us",
+    "history": "Our Story",
+    "team": "The MPK Team",
+    "campuses": "Our Campuses",
+    "investment": "Investment Call",
+    "training_plus": "MPK Training Plus",
+    "exam_prep": "MPK Exam Prep",
+    "translation_pro": "MPK Translation Pro",
+    "consulting_pro": "MPK Consulting Pro",
+    "tourism": "MPK Tourism Programm",
+    "extra_services": "MPK Extra Services",
+    "online_courses": "Online Courses",
+    "shop": "Shop M",
+    "alumnis": "MPK World Alumnis",
+    "blog": "Blog & News",
+    "gallery": "Photo & Video Gallery",
+    "testimonials": "Testimonials",
+    "news": "News & Contests",
+    "downloads": "Downloads",
+    "social": "Our Social Networks",
+    "register": "Sign up",
+    "login": "Log in",
+    "logout": "Log out",
+    "my_space": "Learner Area"
+  },
+  "hero": {
+    "eyebrow": "Multi-campus network · since 2021",
+    "title_line1": "MULTIPLIKATOR",
+    "title_line2": "Language Institute",
+    "subtitle": "Premium language training, preparation for international certifications and full support toward international mobility — notably to Germany and many other destinations — 6 active campuses in Benin, open to the world.",
+    "cta_formations": "Discover our programs",
+    "cta_contact": "Get in touch"
+  },
+  "stats": {
+    "implantations": "Locations",
+    "implantations_label": "Active campuses in Benin",
+    "community": "Community",
+    "community_label": "Learners trained",
+    "since": "Since",
+    "since_label": "Year of foundation",
+    "coverage": "Coverage",
+    "coverage_label": "On-site & Online"
+  },
+  "footer": {
+    "tagline": "Multi-campus language institute network, founded in 2021 in Benin. Academic excellence and full support toward international mobility.",
+    "navigation": "Navigation",
+    "our_campuses": "Our Campuses",
+    "contact": "Contact",
+    "whatsapp_direct": "Direct WhatsApp",
+    "privacy": "Privacy Policy",
+    "data": "Data Processing",
+    "terms": "Terms",
+    "copyright": "© MULTIPLIKATOR START UP GROUP"
+  },
+  "common": {
+    "learn_more": "Learn more",
+    "discover": "Discover",
+    "register_now": "Sign up",
+    "request_quote": "Request a quote",
+    "buy_course": "Buy this course",
+    "buy_internal": "Buy Internal",
+    "buy_external": "Buy External",
+    "see_more": "See more",
+    "contact_us": "Contact us",
+    "coming_soon": "Coming soon",
+    "on_quote": "On quote",
+    "view_all": "View all"
+  },
+  "lang": {
+    "fr": "Français",
+    "en": "English",
+    "de": "Deutsch",
+    "switch": "Language"
+  }
+}

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { ArrowRight, GraduationCap, Award, Languages, Globe, Map, FileText, Star, MapPin } from "lucide-react";
 import { CAMPUSES, DEPARTMENTS, TESTIMONIALS } from "@/lib/data";
 import { SectionTitle, Eyebrow, Stat, CTA } from "@/components/Common";
@@ -7,6 +8,7 @@ import { SectionTitle, Eyebrow, Stat, CTA } from "@/components/Common";
 const ICONS = { GraduationCap, Award, Languages, Globe, Map, FileText };
 
 export default function Home() {
+  const { t } = useTranslation();
   return (
     <>
       {/* Hero */}
@@ -17,27 +19,27 @@ export default function Home() {
         <div className="absolute inset-0" style={{background: "linear-gradient(180deg, rgba(47,8,8,0.65) 0%, rgba(88,5,5,0.55) 100%)"}} />
         <div className="relative max-w-[1400px] mx-auto px-4 sm:px-5 lg:px-10 py-16 sm:py-20 lg:py-36 text-white">
           <div className="max-w-4xl fade-up">
-            <Eyebrow><span className="text-white/70">Réseau multi-campus · depuis 2021</span></Eyebrow>
+            <Eyebrow><span className="text-white/70">{t("hero.eyebrow")}</span></Eyebrow>
             <h1 className="font-serif text-3xl sm:text-5xl lg:text-7xl mt-3 sm:mt-4 leading-[1.05] font-medium">
-              MULTIPLIKATOR<br/>
-              <span className="text-white/85">Institut de Langues</span>
+              {t("hero.title_line1")}<br/>
+              <span className="text-white/85">{t("hero.title_line2")}</span>
             </h1>
             <p className="mt-5 sm:mt-8 text-base sm:text-lg lg:text-xl text-white/85 max-w-2xl font-light leading-relaxed">
-              Formation linguistique premium, préparation aux certifications internationales et accompagnement complet vers la mobilité internationale, notamment en Allemagne et vers pleins d'autres destinations — 6 campus actifs au Bénin, ouverts au monde.
+              {t("hero.subtitle")}
             </p>
             <div className="mt-6 sm:mt-10 flex flex-wrap gap-3 sm:gap-4">
-              <Link to="/departements/training-plus" data-testid="hero-cta-formations" className="inline-flex items-center gap-2 px-4 sm:px-6 py-3 sm:py-3.5 bg-[#580505] text-[#C4D2ED] border-[1.5px] border-[#580505] text-sm sm:text-base font-semibold tracking-wide hover:bg-[#2F0808] transition shadow-lg">Découvrir nos formations <ArrowRight size={16} /></Link>
-              <Link to="/contact" data-testid="hero-cta-contact" className="inline-flex items-center gap-2 px-4 sm:px-6 py-3 sm:py-3.5 bg-transparent text-[#C4D2ED] border-[1.5px] border-[#C4D2ED] text-sm sm:text-base font-semibold tracking-wide hover:bg-[#C4D2ED]/10 transition">Nous contacter <ArrowRight size={16} /></Link>
+              <Link to="/departements/training-plus" data-testid="hero-cta-formations" className="inline-flex items-center gap-2 px-4 sm:px-6 py-3 sm:py-3.5 bg-[#580505] text-[#C4D2ED] border-[1.5px] border-[#580505] text-sm sm:text-base font-semibold tracking-wide hover:bg-[#2F0808] transition shadow-lg">{t("hero.cta_formations")} <ArrowRight size={16} /></Link>
+              <Link to="/contact" data-testid="hero-cta-contact" className="inline-flex items-center gap-2 px-4 sm:px-6 py-3 sm:py-3.5 bg-transparent text-[#C4D2ED] border-[1.5px] border-[#C4D2ED] text-sm sm:text-base font-semibold tracking-wide hover:bg-[#C4D2ED]/10 transition">{t("hero.cta_contact")} <ArrowRight size={16} /></Link>
             </div>
           </div>
         </div>
         {/* Stats overlap */}
         <div className="relative max-w-[1400px] mx-auto px-4 sm:px-5 lg:px-10 -mb-16 sm:-mb-20">
           <div className="bg-white border border-[#580505]/10 grid grid-cols-2 md:grid-cols-4 gap-y-6 sm:gap-y-8 gap-x-3 sm:gap-x-4 p-5 sm:p-8 lg:p-12 shadow-[0_30px_60px_-30px_rgba(88,5,5,0.4)]">
-            <Stat note="Implantations" value="6" label="Campus actifs au Bénin" />
-            <Stat note="Communauté" value="850+" label="Apprenants formés" />
-            <Stat note="Depuis" value="2021" label="Année de fondation" />
-            <Stat note="Couverture" value="100%" label="Présentiel & En ligne" />
+            <Stat note={t("stats.implantations")} value="6" label={t("stats.implantations_label")} />
+            <Stat note={t("stats.community")} value="850+" label={t("stats.community_label")} />
+            <Stat note={t("stats.since")} value="2021" label={t("stats.since_label")} />
+            <Stat note={t("stats.coverage")} value="100%" label={t("stats.coverage_label")} />
           </div>
         </div>
       </section>

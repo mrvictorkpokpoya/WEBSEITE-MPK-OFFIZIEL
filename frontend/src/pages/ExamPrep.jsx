@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { toast } from "sonner";
-import { Award, ShoppingCart, Loader2, ClipboardCheck, MessageSquareDashed, UsersRound } from "lucide-react";
+import { Award, ShoppingCart, Loader2, ClipboardCheck, MessageSquareDashed, UsersRound, MessageCircle, Pencil, BookOpen, Headphones } from "lucide-react";
+import { Link } from "react-router-dom";
 import { PageHero, Eyebrow, CTA, SectionTitle, CleanCard } from "@/components/Common";
-import { EXAMS, PREP_COURSES, PREP_PRICING } from "@/lib/data";
+import { EXAMS, PREP_COURSES, PREP_PRICING, PREP_MODULES } from "@/lib/data";
+
+const MODULE_ICON = { MessageCircle, Pencil, BookOpen, Headphones };
 
 const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
 
@@ -109,8 +112,52 @@ export default function ExamPrep() {
         </p>
       </section>
 
-      {/* AUTRES EXAMENS */}
+      {/* MODULES INDIVIDUELS */}
       <section className="bg-[#FAFAFA] border-y border-[#580505]/10">
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-5 lg:px-10 py-12 lg:py-16">
+          <Eyebrow>Modules individuels — entraînement ciblé</Eyebrow>
+          <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl mt-3 text-[#2F0808] uppercase tracking-tight">Travaillez une compétence spécifique.</h2>
+          <p className="mt-3 text-[#4A4A4A] max-w-3xl font-light text-sm sm:text-base leading-relaxed">
+            Pour celles et ceux qui veulent renforcer une compétence précise (oral, écrit, lecture, écoute), sans suivre un parcours complet. Tarif au cas par cas selon le niveau visé et la durée souhaitée.
+          </p>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 mt-8 lg:mt-10">
+            {PREP_MODULES.map((m) => {
+              const Icon = MODULE_ICON[m.icon] || MessageCircle;
+              return (
+                <article
+                  key={m.id}
+                  data-testid={`module-card-${m.id}`}
+                  className="bg-white rounded-sm p-5 sm:p-6 shadow-[0_8px_24px_-12px_rgba(88,5,5,0.18)] hover:shadow-[0_14px_36px_-12px_rgba(88,5,5,0.28)] transition-shadow duration-300 flex flex-col h-full"
+                >
+                  <div className="flex items-start justify-between gap-3">
+                    <div className="w-12 h-12 rounded-full bg-[#F4F0F0] grid place-items-center">
+                      <Icon className="text-[#580505]" size={20} strokeWidth={1.5} />
+                    </div>
+                    <span className="text-[10px] tracking-[0.18em] uppercase text-[#580505]/80 font-medium">{m.short}</span>
+                  </div>
+                  <h3 className="font-serif text-lg text-[#2F0808] mt-4 leading-snug">{m.title}</h3>
+                  <div className="mt-3 mb-3 h-px bg-[#580505]/15 w-full" />
+                  <div className="text-[10px] tracking-[0.18em] uppercase text-[#580505]/70 font-medium mb-2">{m.competence}</div>
+                  <p className="text-sm text-[#4A4A4A] font-light leading-relaxed flex-grow">{m.desc}</p>
+                  <div className="mt-4 text-[10px] tracking-[0.18em] uppercase text-[#580505]/70 font-medium">Tarif</div>
+                  <div className="font-serif text-xl text-[#580505] mt-0.5">Sur devis</div>
+                  <Link
+                    to="/contact"
+                    data-testid={`module-quote-${m.id}`}
+                    className="mt-5 inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-white text-[#580505] border-[1.5px] border-[#580505] text-sm font-semibold hover:bg-[#FAFAFA] transition"
+                  >
+                    <ShoppingCart size={14} /> Demander un devis
+                  </Link>
+                </article>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* AUTRES EXAMENS */}
+      <section className="bg-white">
         <div className="max-w-[1400px] mx-auto px-4 sm:px-5 lg:px-10 py-12 lg:py-16">
           <Eyebrow>Autres examens préparés</Eyebrow>
           <h2 className="font-serif text-2xl sm:text-3xl text-[#2F0808] mt-3 uppercase tracking-tight">Tous les principaux examens internationaux.</h2>

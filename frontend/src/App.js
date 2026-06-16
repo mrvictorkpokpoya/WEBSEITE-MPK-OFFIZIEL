@@ -1,9 +1,11 @@
 import React from "react";
 import "@/App.css";
+import "@/i18n";
 import { BrowserRouter, Routes, Route, useLocation, Navigate } from "react-router-dom";
 import { Toaster } from "sonner";
 import { AuthProvider, useAuth } from "@/contexts/AuthContext";
 import Layout from "@/components/Layout";
+import ScrollToTop from "@/components/ScrollToTop";
 
 import Home from "@/pages/Home";
 import About from "@/pages/About";
@@ -49,8 +51,10 @@ function AppRouter() {
     return <AuthCallback />;
   }
   return (
-    <Routes>
-      <Route path="/" element={<Layout><Home /></Layout>} />
+    <>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<Layout><Home /></Layout>} />
       <Route path="/a-propos" element={<Layout><About /></Layout>} />
       <Route path="/team" element={<Layout><Team /></Layout>} />
       <Route path="/campus" element={<Layout><Campuses /></Layout>} />
@@ -80,7 +84,8 @@ function AppRouter() {
       <Route path="/inscription" element={<Layout><Register /></Layout>} />
       <Route path="/espace-apprenant" element={<Protected><Layout><Dashboard /></Layout></Protected>} />
       <Route path="*" element={<Layout><Home /></Layout>} />
-    </Routes>
+      </Routes>
+    </>
   );
 }
 
