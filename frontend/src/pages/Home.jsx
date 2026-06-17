@@ -9,6 +9,7 @@ const ICONS = { GraduationCap, Award, Languages, Globe, Map, FileText };
 
 export default function Home() {
   const { t } = useTranslation();
+  const strengths = t("home.strengths", { returnObjects: true });
   return (
     <>
       {/* Hero */}
@@ -49,53 +50,51 @@ export default function Home() {
       {/* About */}
       <section className="max-w-[1400px] mx-auto px-5 lg:px-10 py-16 grid lg:grid-cols-12 gap-12">
         <div className="lg:col-span-5">
-          <Eyebrow>Qui sommes-nous</Eyebrow>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl mt-3 text-[#2F0808] leading-tight uppercase tracking-tight">Un réseau institutionnel pensé pour la réussite linguistique.</h2>
+          <Eyebrow>{t("home.about_eyebrow")}</Eyebrow>
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl mt-3 text-[#2F0808] leading-tight uppercase tracking-tight">{t("home.about_title")}</h2>
         </div>
         <div className="lg:col-span-7 space-y-5 text-[#4A4A4A] leading-relaxed font-light">
-          <p>Fondé en 2021, MULTIPLIKATOR est devenu en quelques années un réseau d'instituts de langues de référence au Bénin. Six campus actifs, un programme pédagogique structuré et une équipe de formateurs spécialisés accompagnent nos candidat.e.s vers les certifications internationales et la mobilité.</p>
-          <p>Notre approche combine rigueur académique, suivi personnalisé et flexibilité — chaque parcours est conçu pour mener à un résultat concret : intégrer une université, obtenir un visa, réussir un examen officiel ou se professionnaliser à l'international.</p>
-          <Link to="/a-propos" className="inline-flex items-center gap-2 text-[#580505] mt-4 border-b border-[#580505] pb-0.5">En savoir plus sur l'institut <ArrowRight size={14} /></Link>
+          <p>{t("home.about_p1")}</p>
+          <p>{t("home.about_p2")}</p>
+          <Link to="/a-propos" className="inline-flex items-center gap-2 text-[#580505] mt-4 border-b border-[#580505] pb-0.5">{t("home.about_cta")} <ArrowRight size={14} /></Link>
         </div>
       </section>
 
       {/* Strengths */}
       <section className="bg-[#FAFAFA] border-y border-[#580505]/10">
         <div className="max-w-[1400px] mx-auto px-5 lg:px-10 py-20">
-          <SectionTitle eyebrow="Nos points forts" title="Une exigence académique au service de votre mobilité." caps />
+          <SectionTitle eyebrow={t("home.strengths_eyebrow")} title={t("home.strengths_title")} caps />
           <div className="grid lg:grid-cols-12 gap-6">
-            {[
-              { t: "Encadrement personnalisé", d: "Suivi pédagogique individuel sur tout le parcours. Petits effectifs, attention soutenue.", span: "lg:col-span-7" },
-              { t: "6 campus actifs", d: "GODOMEY PK 14, AKPAKPA, PORTO-NOVO, LOKOSSA, DJOUGOU, PARAKOU — proximité géographique réelle.", span: "lg:col-span-5" },
-              { t: "Certifications officielles", d: "Goethe, ÖSD, TestDaF, IELTS, TOEFL, DELF/DALF.", span: "lg:col-span-5" },
-              { t: "Présentiel & 100% en ligne", d: "Une qualité identique, peu importe où vous êtes — diaspora incluse.", span: "lg:col-span-7" },
-              { t: "Mobilité internationale", d: "Études, FSJ/BFD, Au Pair, regroupement familial, visa touriste.", span: "lg:col-span-6" },
-              { t: "Tarification claire", d: "Niveaux complets, sous-niveaux accessibles, bundles avantageux.", span: "lg:col-span-6" },
-            ].map((s, i) => (
-              <div key={i} className={`mpk-card p-8 ${s.span}`}>
-                <div className="text-3xl font-serif text-[#580505]">0{i+1}</div>
-                <h3 className="font-serif text-2xl mt-4 text-[#2F0808]">{s.t}</h3>
-                <p className="mt-3 text-[#4A4A4A] leading-relaxed">{s.d}</p>
-              </div>
-            ))}
+            {strengths.map((s, i) => {
+              const spans = ["lg:col-span-7", "lg:col-span-5", "lg:col-span-5", "lg:col-span-7", "lg:col-span-6", "lg:col-span-6"];
+              return (
+                <div key={i} className={`mpk-card p-8 ${spans[i]}`}>
+                  <div className="text-3xl font-serif text-[#580505]">0{i+1}</div>
+                  <h3 className="font-serif text-2xl mt-4 text-[#2F0808]">{s.t}</h3>
+                  <p className="mt-3 text-[#4A4A4A] leading-relaxed">{s.d}</p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
 
       {/* Departments */}
       <section className="max-w-[1400px] mx-auto px-5 lg:px-10 py-20">
-        <SectionTitle eyebrow="Nos départements" title="Six pôles d'expertise pour répondre à chaque projet." caps />
+        <SectionTitle eyebrow={t("home.departments_eyebrow")} title={t("home.departments_title")} caps />
         <div className="grid lg:grid-cols-12 gap-5">
           {DEPARTMENTS.map((d, i) => {
             const Icon = ICONS[d.icon];
             const span = i === 0 ? "lg:col-span-6 lg:row-span-2" : i === 3 ? "lg:col-span-6" : "lg:col-span-3";
+            const tagline = t(`departments.${d.id}.tagline`, { defaultValue: d.tagline });
+            const desc = t(`departments.${d.id}.desc`, { defaultValue: d.desc });
             return (
               <Link key={d.id} to={d.slug} data-testid={`dept-card-${d.id}`} className={`mpk-card p-7 ${span} group block`}>
                 <Icon className="text-[#580505]" size={28} strokeWidth={1.5} />
-                <Eyebrow><span className="mt-4 block">{d.tagline}</span></Eyebrow>
+                <Eyebrow><span className="mt-4 block">{tagline}</span></Eyebrow>
                 <h3 className="font-serif text-2xl text-[#2F0808] mt-1">{d.title}</h3>
-                <p className="mt-3 text-[#4A4A4A] text-sm leading-relaxed">{d.desc}</p>
-                <span className="inline-flex items-center gap-1 mt-5 text-sm text-[#580505] border-b border-[#580505] pb-0.5">Découvrir <ArrowRight size={14} /></span>
+                <p className="mt-3 text-[#4A4A4A] text-sm leading-relaxed">{desc}</p>
+                <span className="inline-flex items-center gap-1 mt-5 text-sm text-[#580505] border-b border-[#580505] pb-0.5">{t("common.discover")} <ArrowRight size={14} /></span>
               </Link>
             );
           })}
@@ -106,36 +105,39 @@ export default function Home() {
       <section className="bg-[#450000] text-white">
         <div className="max-w-[1400px] mx-auto px-5 lg:px-10 py-16 grid lg:grid-cols-12 gap-8 items-center">
           <div className="lg:col-span-7">
-            <Eyebrow><span className="text-white/60">Cours en ligne</span></Eyebrow>
-            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl mt-3 leading-tight uppercase tracking-tight">Suivre MULTIPLIKATOR depuis n'importe où dans le monde.</h2>
-            <p className="mt-5 text-white/80 font-light leading-relaxed max-w-2xl">Même encadrement qu'en présentiel, créneaux flexibles adaptables au fuseau horaire, conçu pour la diaspora et les villes sans campus MPK.</p>
+            <Eyebrow><span className="text-white/60">{t("home.online_eyebrow")}</span></Eyebrow>
+            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl mt-3 leading-tight uppercase tracking-tight">{t("home.online_title")}</h2>
+            <p className="mt-5 text-white/80 font-light leading-relaxed max-w-2xl">{t("home.online_desc")}</p>
           </div>
           <div className="lg:col-span-5 flex lg:justify-end">
-            <Link to="/cours-en-ligne" data-testid="home-online-cta" className="btn-primary bg-white text-[#580505] hover:bg-white/90">Découvrir les cours en ligne <ArrowRight size={16}/></Link>
+            <Link to="/cours-en-ligne" data-testid="home-online-cta" className="btn-primary bg-white text-[#580505] hover:bg-white/90">{t("home.online_cta")} <ArrowRight size={16}/></Link>
           </div>
         </div>
       </section>
 
       {/* Testimonials preview */}
       <section className="max-w-[1400px] mx-auto px-5 lg:px-10 py-20">
-        <SectionTitle eyebrow="Ils ont fait confiance à MULTIPLIKATOR" title="Témoignages." caps />
+        <SectionTitle eyebrow={t("home.testimonials_eyebrow")} title={t("home.testimonials_title")} caps />
         <div className="grid md:grid-cols-3 gap-5">
-          {TESTIMONIALS.slice(0,3).map((t, i) => (
-            <div key={i} className="mpk-card p-7">
-              <div className="flex items-center gap-1 text-[#580505]">{Array.from({length: t.rating}).map((_,k) => <Star key={k} size={14} fill="#580505" stroke="#580505"/>)}</div>
-              <p className="mt-4 text-[#2F0808] font-serif text-lg leading-snug">"{t.text}"</p>
-              <div className="mt-5 text-sm text-[#550000]"><strong>{t.name}</strong> — {t.program}</div>
-              <div className="text-xs text-[#4A4A4A] mt-1">{t.campus}</div>
-            </div>
-          ))}
+          {TESTIMONIALS.slice(0,3).map((tt, i) => {
+            const text = t(`testimonials_data.${i}.text`, { defaultValue: tt.text });
+            return (
+              <div key={i} className="mpk-card p-7">
+                <div className="flex items-center gap-1 text-[#580505]">{Array.from({length: tt.rating}).map((_,k) => <Star key={k} size={14} fill="#580505" stroke="#580505"/>)}</div>
+                <p className="mt-4 text-[#2F0808] font-serif text-lg leading-snug">"{text}"</p>
+                <div className="mt-5 text-sm text-[#550000]"><strong>{tt.name}</strong> — {tt.program}</div>
+                <div className="text-xs text-[#4A4A4A] mt-1">{tt.campus}</div>
+              </div>
+            );
+          })}
         </div>
-        <div className="mt-10"><Link to="/temoignages" className="inline-flex items-center gap-2 text-[#580505] border-b border-[#580505] pb-0.5">Voir tous les témoignages <ArrowRight size={14}/></Link></div>
+        <div className="mt-10"><Link to="/temoignages" className="inline-flex items-center gap-2 text-[#580505] border-b border-[#580505] pb-0.5">{t("home.testimonials_cta")} <ArrowRight size={14}/></Link></div>
       </section>
 
       {/* Campuses */}
       <section className="bg-[#FAFAFA] border-y border-[#580505]/10">
         <div className="max-w-[1400px] mx-auto px-5 lg:px-10 py-20">
-          <SectionTitle eyebrow="Nos campus" title="6 implantations au Bénin." caps />
+          <SectionTitle eyebrow={t("home.campuses_eyebrow")} title={t("home.campuses_title")} caps />
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
             {CAMPUSES.map((c) => (
               <Link key={c.id} to="/campus" className="mpk-card overflow-hidden group">
@@ -153,12 +155,12 @@ export default function Home() {
 
       {/* Final CTA */}
       <section className="max-w-[1400px] mx-auto px-5 lg:px-10 py-24 text-center">
-        <Eyebrow>Rejoignez le réseau</Eyebrow>
-        <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#2F0808] mt-4 leading-[1.05] uppercase tracking-tight">Votre prochain niveau commence ici.</h2>
-        <p className="mt-6 max-w-2xl mx-auto text-[#4A4A4A] font-light text-lg">Inscrivez-vous sur le campus de votre choix ou en ligne. Notre équipe vous accompagne dans la définition du parcours adapté.</p>
+        <Eyebrow>{t("home.final_eyebrow")}</Eyebrow>
+        <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#2F0808] mt-4 leading-[1.05] uppercase tracking-tight">{t("home.final_title")}</h2>
+        <p className="mt-6 max-w-2xl mx-auto text-[#4A4A4A] font-light text-lg">{t("home.final_kicker")}</p>
         <div className="mt-10 flex flex-wrap justify-center gap-4">
-          <CTA to="/contact" label="S'inscrire" testid="final-cta-register" />
-          <CTA to="/boutique" label="Voir les bundles & cartes cadeaux" variant="ghost" testid="final-cta-shop" />
+          <CTA to="/contact" label={t("home.final_register")} testid="final-cta-register" />
+          <CTA to="/boutique" label={t("home.final_shop")} variant="ghost" testid="final-cta-shop" />
         </div>
       </section>
     </>

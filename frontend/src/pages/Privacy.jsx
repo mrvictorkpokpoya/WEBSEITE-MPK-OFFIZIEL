@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { PageHero } from "@/components/Common";
 
 const Section = ({ n, title, children }) => (
@@ -11,15 +12,16 @@ const Section = ({ n, title, children }) => (
 );
 
 export default function Privacy() {
+  const { t } = useTranslation();
   return (
     <>
       <PageHero
-        eyebrow="Conformité"
-        title="Politique de confidentialité"
-        kicker="MULTIPLIKATOR Institut de Langues, en tant que responsable de traitement, s'engage à protéger la vie privée et les données personnelles de ses apprenant.e.s, candidat.e.s, visiteurs et partenaires."
+        eyebrow={t("privacy.hero_eyebrow")}
+        title={t("privacy.hero_title")}
+        kicker={t("privacy.hero_kicker")}
       />
       <section className="max-w-[900px] mx-auto px-4 sm:px-5 lg:px-10 py-10 lg:py-14 space-y-8 sm:space-y-10 text-sm sm:text-base">
-        <div className="text-xs sm:text-sm text-[#4A4A4A]/80 italic">Dernière mise à jour : juin 2026 — Version 1.1</div>
+        <div className="text-xs sm:text-sm text-[#4A4A4A]/80 italic">{t("privacy.updated")}</div>
 
         <Section n="1" title="Responsable du traitement">
           <p>Le présent site (multiplikator-world.com) et l'ensemble des données collectées sont sous la responsabilité de :</p>

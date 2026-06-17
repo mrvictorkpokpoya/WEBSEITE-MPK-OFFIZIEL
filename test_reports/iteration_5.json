@@ -1,0 +1,68 @@
+{
+  "summary": "Frontend-only i18n testing for FR/EN/DE across 27 pages on MULTIPLIKATOR site. All language switching, translations, and price formatting work correctly. Hero titles render properly in all 3 languages (visually confirmed via screenshots). 'MPK Shop' label correctly appears in EN/DE while 'Boutique MPK' shows in FR. Shop and TrainingPlus prices use dots as thousand separators (no space leaks). Contact form, Login, Register, Alumni filters, and Legal page H1s are all translated. Legal page bodies intentionally remain in French per spec.",
+  "backend_issues": { "critical": [], "minor": [] },
+  "frontend_issues": {
+    "ui_bugs": [],
+    "integration_issues": [],
+    "design_issues": []
+  },
+  "i18n_validation": {
+    "header_navigation": {
+      "fr": "L'Institut / Service / Communauté / Contact — OK",
+      "en": "The Institute / Service / Community / Contact — OK",
+      "de": "Das Institut / Service / Community / Kontakt — OK"
+    },
+    "hero_title": {
+      "fr": "'MULTIPLIKATOR\\nInstitut de Langues' — OK (visually confirmed in screenshot)",
+      "en": "'MULTIPLIKATOR\\nLanguage Institute' — OK (visually confirmed in screenshot)",
+      "de": "'MULTIPLIKATOR\\nSprachinstitut' — OK (visually confirmed in screenshot)"
+    },
+    "shop_link_label": {
+      "fr": "Boutique MPK — OK",
+      "en": "MPK Shop — OK",
+      "de": "MPK Shop — OK"
+    },
+    "price_formatting_shop": "24 dot-formatted XOF prices found (e.g. '172.800 FCFA', '198.000 FCFA', '265.200 FCFA'). 0 space-formatted prices. PASS",
+    "price_formatting_trainingplus": "All 9 expected prices present with dot separator: 192.000, 172.800, 265.200, 200.000, 215.000, 92.000, 100.000, 120.000, 135.000. PASS",
+    "course_titles_trainingplus": {
+      "fr": "'Allemand A1.1' present — OK",
+      "en": "'German A1.1' present — OK",
+      "de": "'Deutsch A1.1' present — OK"
+    },
+    "contact_form_labels": {
+      "fr": "Prénom*, Nom*, Email*, Téléphone (optionnel), Message* — OK",
+      "en": "First name*, Last name*, Email*, Phone (optional), Message* — OK",
+      "de": "Vorname*, Nachname*, E-Mail*, Telefon (optional), Nachricht* — OK"
+    },
+    "login_register_h1": {
+      "fr": "'Connexion.' / 'Rejoignez l'espace apprenant MPK.' — OK",
+      "en": "'Log in.' / 'Join the MPK Learner Area.' — OK",
+      "de": "'Einloggen.' / 'Treten Sie dem MPK-Lernbereich bei.' — OK"
+    },
+    "alumni_filters": "All three languages render correct filter labels (Tous/All/Alle, Allemagne/Germany/Deutschland, Autriche/Austria/Österreich). PASS",
+    "legal_pages_hero_h1": {
+      "en": "Privacy Policy / Terms of Use / Data Processing Policy — OK",
+      "de": "Datenschutzerklärung / Nutzungsbedingungen / Datenverarbeitungsrichtlinie — OK",
+      "note": "Legal body text intentionally remains in French as specified by user."
+    },
+    "leak_detection": {
+      "result": "NO unwanted FR text leaks into EN or DE views across 27 tested pages. The only 'cross-language' string detected in DE is 'MPK Shop' which is the explicitly requested label for EN/DE. The 'Téléphone' and 'Inscription' tokens found on /confidentialite and /conditions-utilisation are part of the French legal text body that the user explicitly requested to keep in French."
+    },
+    "language_switcher": "Found data-testid='lang-switcher' in Header. Switching via localStorage('mpk-lang', ...) successfully changes all visible text on reload across all tested pages."
+  },
+  "console_errors_observed": "132 'Failed to load resource: 401' errors — all originating from auth endpoints (expected when not logged in). No React error overlay, no red JS errors triggered by language switching.",
+  "test_report_links": [],
+  "action_items": [],
+  "critical_code_review_comments": [
+    "Locale files fr/en/de.json are 713+ lines each — consider splitting by namespace (header/footer/pages/forms) if they grow further to keep maintainable.",
+    "Contact form submit button does not have type='submit' attribute (button text could not be located via button[type=submit] selector). Functionality likely fine but adding type='submit' would improve a11y and native form behaviour.",
+    "Consider also updating <html lang='...'> attribute on language change for SEO/accessibility (currently i18n changes text but does not sync the HTML lang attribute).",
+    "i18n fallbackLng='fr' means any missing key on EN/DE silently falls back to French — none observed in this run, but worth adding a CI lint to detect missing keys between locale files."
+  ],
+  "updated_files": [],
+  "success_rate": { "backend": "N/A (skipped)", "frontend": "100%" },
+  "seed_data_creation": "None",
+  "retest_needed": false,
+  "should_main_agent_self_test": false,
+  "context_for_next_testing_agent": "i18n is fully functional. Locale key in localStorage = 'mpk-lang'. Switching languages can be done via the lang-switcher data-testid in Header OR by setting localStorage and reloading. Price formatting uses Number.toLocaleString('de-DE'). 'MPK Shop' is the intended label for EN/DE; only 'Boutique MPK' should appear in FR. Legal page bodies (privacy/terms/data) are intentionally in French while their hero/H1 are translated."
+}

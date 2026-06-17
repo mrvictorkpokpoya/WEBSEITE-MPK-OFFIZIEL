@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { PageHero } from "@/components/Common";
 
 const Section = ({ n, title, children }) => (
@@ -11,15 +12,16 @@ const Section = ({ n, title, children }) => (
 );
 
 export default function Terms() {
+  const { t } = useTranslation();
   return (
     <>
       <PageHero
-        eyebrow="Conformité"
-        title="Conditions générales d'utilisation"
-        kicker="Règles et conditions encadrant l'utilisation du site multiplikator-world.com et des services en ligne de MULTIPLIKATOR Institut de Langues."
+        eyebrow={t("terms.hero_eyebrow")}
+        title={t("terms.hero_title")}
+        kicker={t("terms.hero_kicker")}
       />
       <section className="max-w-[900px] mx-auto px-4 sm:px-5 lg:px-10 py-10 lg:py-14 space-y-8 sm:space-y-10 text-sm sm:text-base">
-        <div className="text-xs sm:text-sm text-[#4A4A4A]/80 italic">Dernière mise à jour : juin 2026 — Version 1.0</div>
+        <div className="text-xs sm:text-sm text-[#4A4A4A]/80 italic">{t("terms.updated")}</div>
 
         <Section n="1" title="Objet">
           <p>Les présentes Conditions Générales d'Utilisation (« CGU ») régissent l'accès et l'utilisation du site internet multiplikator-world.com (« le Site ») ainsi que des services en ligne associés (espace apprenant, boutique en ligne, formulaires de contact, etc.).</p>

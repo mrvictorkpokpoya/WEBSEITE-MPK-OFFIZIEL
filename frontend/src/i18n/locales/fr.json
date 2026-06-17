@@ -17,7 +17,7 @@
     "tourism": "MPK Tourism Programm",
     "extra_services": "MPK Extra Services",
     "online_courses": "Cours en ligne",
-    "shop": "Boutique M",
+    "shop": "Boutique MPK",
     "alumnis": "MPK World Alumnis",
     "blog": "Blog & Infos",
     "gallery": "Galerie photos & vidéos",
@@ -71,12 +71,661 @@
     "contact_us": "Nous contacter",
     "coming_soon": "Bientôt disponible",
     "on_quote": "Sur devis",
-    "view_all": "Voir tout"
+    "view_all": "Voir tout",
+    "redirecting": "Redirection...",
+    "loading": "Chargement...",
+    "select_option": "— Choisir —",
+    "read_more": "Lire la suite",
+    "back_home": "Retour à l'accueil",
+    "all": "Tous"
   },
   "lang": {
     "fr": "Français",
     "en": "English",
     "de": "Deutsch",
     "switch": "Langue"
+  },
+  "home": {
+    "about_eyebrow": "Qui sommes-nous",
+    "about_title": "Un réseau institutionnel pensé pour la réussite linguistique.",
+    "about_p1": "Fondé en 2021, MULTIPLIKATOR est devenu en quelques années un réseau d'instituts de langues de référence au Bénin. Six campus actifs, un programme pédagogique structuré et une équipe de formateurs spécialisés accompagnent nos candidat.e.s vers les certifications internationales et la mobilité.",
+    "about_p2": "Notre approche combine rigueur académique, suivi personnalisé et flexibilité — chaque parcours est conçu pour mener à un résultat concret : intégrer une université, obtenir un visa, réussir un examen officiel ou se professionnaliser à l'international.",
+    "about_cta": "En savoir plus sur l'institut",
+    "strengths_eyebrow": "Nos points forts",
+    "strengths_title": "Une exigence académique au service de votre mobilité.",
+    "strengths": [
+      { "t": "Encadrement personnalisé", "d": "Suivi pédagogique individuel sur tout le parcours. Petits effectifs, attention soutenue." },
+      { "t": "6 campus actifs", "d": "GODOMEY PK 14, AKPAKPA, PORTO-NOVO, LOKOSSA, DJOUGOU, PARAKOU — proximité géographique réelle." },
+      { "t": "Certifications officielles", "d": "Goethe, ÖSD, TestDaF, IELTS, TOEFL, DELF/DALF." },
+      { "t": "Présentiel & 100% en ligne", "d": "Une qualité identique, peu importe où vous êtes — diaspora incluse." },
+      { "t": "Mobilité internationale", "d": "Études, FSJ/BFD, Au Pair, regroupement familial, visa touriste." },
+      { "t": "Tarification claire", "d": "Niveaux complets, sous-niveaux accessibles, bundles avantageux." }
+    ],
+    "departments_eyebrow": "Nos départements",
+    "departments_title": "Six pôles d'expertise pour répondre à chaque projet.",
+    "online_eyebrow": "Cours en ligne",
+    "online_title": "Suivre MULTIPLIKATOR depuis n'importe où dans le monde.",
+    "online_desc": "Même encadrement qu'en présentiel, créneaux flexibles adaptables au fuseau horaire, conçu pour la diaspora et les villes sans campus MPK.",
+    "online_cta": "Découvrir les cours en ligne",
+    "testimonials_eyebrow": "Ils ont fait confiance à MULTIPLIKATOR",
+    "testimonials_title": "Témoignages.",
+    "testimonials_cta": "Voir tous les témoignages",
+    "campuses_eyebrow": "Nos campus",
+    "campuses_title": "6 implantations au Bénin.",
+    "final_eyebrow": "Rejoignez le réseau",
+    "final_title": "Votre prochain niveau commence ici.",
+    "final_kicker": "Inscrivez-vous sur le campus de votre choix ou en ligne. Notre équipe vous accompagne dans la définition du parcours adapté.",
+    "final_register": "S'inscrire",
+    "final_shop": "Voir les bundles & cartes cadeaux"
+  },
+  "investment": {
+    "hero_eyebrow": "Appel à investissement",
+    "hero_title": "Investir dans la suite de l'aventure MULTIPLIKATOR.",
+    "hero_kicker": "Vous croyez à l'éducation linguistique premium en Afrique de l'Ouest ? Rejoignez-nous comme investisseur, partenaire institutionnel ou mécène pour accélérer notre déploiement régional.",
+    "projects_eyebrow": "Projets en cours de conception",
+    "projects_title": "Nos chantiers stratégiques.",
+    "projects_intro": "Nous travaillons actuellement à la finalisation des plans détaillés de plusieurs projets structurants. Les modalités d'investissement, montants et formes de partenariat seront discutés au cas par cas avec chaque partenaire potentiel.",
+    "in_design": "En cours de conception",
+    "projects": [
+      { "t": "Nouveaux campus régionaux", "d": "Implantation de campus supplémentaires pour rapprocher la formation linguistique de la jeunesse de l'intérieur du pays." },
+      { "t": "Académie résidentielle MPK", "d": "Construction d'un campus résidentiel premium avec hébergement, restauration et programme immersif intensif — formule unique en Afrique de l'Ouest." },
+      { "t": "Plateforme e-learning MPK Online", "d": "Développement d'une plateforme d'apprentissage propriétaire avec contenus vidéo HD, exercices interactifs et accompagnement à distance pour la diaspora." },
+      { "t": "MPK Tourism — Académie de guides", "d": "Centre de formation dédié aux guides touristiques multilingues, en partenariat avec les autorités béninoises du tourisme." }
+    ],
+    "advantages_eyebrow": "Pourquoi MULTIPLIKATOR ?",
+    "advantages_title": "4 raisons d'investir avec nous.",
+    "advantages": [
+      { "t": "Croissance vérifiée", "d": "Forte progression continue depuis 2022, taux de réussite Goethe supérieur à 90%, présence multi-campus stabilisée." },
+      { "t": "Marché en expansion", "d": "La mobilité Bénin → Allemagne progresse rapidement : besoins croissants en formateurs, traducteurs et accompagnateurs visa." },
+      { "t": "Modèle multi-revenus", "d": "Formations, traductions, consulting visa, boutique en ligne, tourisme, location d'espaces — diversification mature et résiliente." },
+      { "t": "Équipe expérimentée", "d": "Direction exécutive et académique aguerries, équipe technique digitale en place, réseau d'anciens étendu en Allemagne." }
+    ],
+    "partnerships_eyebrow": "Formes de partenariat",
+    "partnerships_title": "Choisissez votre engagement.",
+    "partnerships_intro": "Les modalités exactes (durée, retour, gouvernance) sont définies conjointement lors d'un échange privé avec la Direction Exécutive.",
+    "partnerships": [
+      { "t": "Investisseur Equity", "d": "Prise de participation au capital avec droit de regard sur la gouvernance et accompagnement stratégique." },
+      { "t": "Prêt convertible", "d": "Financement remboursable, convertible en parts sociales selon les performances et les objectifs convenus." },
+      { "t": "Mécène & Partenaire", "d": "Soutien philanthropique, sponsoring de promotions ou parrainage de campus avec visibilité dédiée." }
+    ],
+    "cta_eyebrow": "Démarrer la discussion",
+    "cta_title": "Contactez-nous pour discuter des modalités.",
+    "cta_kicker": "Si vous souhaitez investir dans MULTIPLIKATOR, écrivez-nous pour planifier un échange confidentiel. Nous vous présenterons les projets en détail, leurs budgets et les modalités de partenariat adaptées à votre profil.",
+    "contact_us": "Nous contacter",
+    "direct_email": "Email direct",
+    "whatsapp": "WhatsApp"
+  },
+  "campuses": {
+    "hero_eyebrow": "Où nous trouver ?",
+    "hero_title": "6 campus physiques au Bénin — et en ligne.",
+    "hero_kicker": "GODOMEY PK 14, AKPAKPA, PORTO-NOVO, LOKOSSA, DJOUGOU, PARAKOU — et des cours en ligne pour toutes les autres villes.",
+    "flagship_suffix": " · Campus principal",
+    "whatsapp_community": "Communauté WhatsApp",
+    "map_label": "Plan d'accès",
+    "map_zoom": "Agrandir le plan",
+    "map_soon": "Plan d'accès — bientôt disponible",
+    "map_alt": "Plan d'accès — {{name}}",
+    "register_here": "S'inscrire sur ce campus",
+    "contact_here": "Contacter ce campus",
+    "online_subtitle": "Partout au Bénin & diaspora",
+    "online_slots_label": "Créneaux disponibles",
+    "online_cta": "Découvrir les cours en ligne",
+    "online_desc": "Cours en ligne pour toutes les villes du Bénin et la diaspora."
+  },
+  "training_plus": {
+    "hero_eyebrow": "MPK Training Plus",
+    "hero_title": "Formation linguistique — le département principal.",
+    "hero_kicker": "Allemand, anglais, FLE, chinois. Du semi-intensif accessible au Premium VIP accéléré, structuré par sous-niveaux pour vous laisser entrer à votre rythme.",
+    "courses_eyebrow": "Cours de langues · Allemand · Semi-Intensif",
+    "courses_title": "Achetez votre niveau, sous-niveau par sous-niveau",
+    "courses_intro": "Chaque sous-niveau (A1.1, A1.2, A2.1, A2.2, etc.) est un produit indépendant. Vous pouvez démarrer où vous voulez après évaluation, ou enchaîner les niveaux complets pour profiter des bundles avantageux.",
+    "card_price_label": "Tarif Bénin",
+    "card_price_quote": "Sur devis",
+    "card_buy_quote": "Demander un devis",
+    "card_buy_course": "Acheter ce cours",
+    "courses_note": "NB · Frais d'inscription unique : 5.000 FCFA · Frais de documentation par niveau : 10.000 FCFA · Réduction 15% en paiement comptant.",
+    "exam_eyebrow": "Préparation aux certifications",
+    "exam_title": "Goethe-Zertifikat & ÖSD — voir MPK Exam Prep.",
+    "exam_desc": "Les cours préparatoires (Goethe A1 → B2 et ÖSD A1 → B2) sont gérés par notre département dédié <strong>MPK Exam Prep</strong>, avec tarifs apprenants internes/externes et durée de 03 semaines par niveau.",
+    "exam_cta": "Voir les cours préparatoires →",
+    "full_eyebrow": "Niveau complet · Allemand Semi-Intensif",
+    "full_title": "Choisir un niveau complet (option recommandée)",
+    "full_intro": "Si vous prévoyez de suivre les deux sous-niveaux d'affilée, le niveau complet est plus avantageux.",
+    "full_path": "Parcours complet (.1 + .2)",
+    "full_recommended": "Recommandé",
+    "full_diaspora": "{{eur}} EUR (Diaspora)",
+    "full_register": "S'inscrire",
+    "bundles_eyebrow": "Bundles Allemand · Parcours de progression",
+    "bundles_title": "Packs multi-niveaux — économisez en vous projetant.",
+    "bundles_intro": "Réduction de 10% sur les packs de 2 niveaux et 15% sur les packs de 3 niveaux, en paiement comptant en une seule tranche.",
+    "bundles_best": "Best value",
+    "bundles_save": "Économie de {{save}}",
+    "bundles_choose": "Choisir ce bundle",
+    "vip_eyebrow": "Allemand Premium VIP Accéléré A1 → B1",
+    "vip_title": "4 semaines par niveau · 56 UE par sous-niveau",
+    "vip_intro": "Lundi au jeudi, 08:00 – 14:30 (2 pauses de 20 min). Démarrage possible à partir de 2 candidat.e.s. Frais d'inscription unique : 10.000 FCFA. Réduction 15% en paiement comptant.",
+    "vip_sublevels_title": "Sous-niveaux",
+    "vip_full_title": "Niveau complet",
+    "vip_table_h_sublevel": "Sous-niveau",
+    "vip_table_h_duration": "Durée",
+    "vip_table_h_ue": "UE",
+    "vip_table_h_price": "Tarif",
+    "vip_table_h_level": "Niveau",
+    "vip_c1_on_request": "Sur demande",
+    "vip_weeks_short": "{{n}} sem.",
+    "vip_ue_short": "{{n}} UE",
+    "vip_int_eyebrow": "Premium VIP Intensif Accéléré B2 → C1",
+    "vip_int_title": "214 UE · 8 semaines · 7 UE par séance",
+    "vip_int_intro": "Lundi au jeudi 08:00 – 14:30. Frais d'inscription : 10.000 FCFA. Paiement possible en 2 tranches.",
+    "coming_english": "Cours d'Anglais",
+    "coming_french": "Cours de Français Langue Étrangère",
+    "coming_chinese": "Cours de Chinois",
+    "coming_desc": "Offre en cours de mise à jour — détails disponibles prochainement. Contactez-nous pour être informé.e dès l'ouverture.",
+    "coming_notify": "Me notifier",
+    "cta_eyebrow": "Prêt à commencer ?",
+    "cta_title": "Un conseiller MPK vous guide vers le bon parcours.",
+    "cta_quote": "Demander un devis",
+    "cta_shop": "Voir bundles & cartes",
+    "errors": {
+      "no_url": "Erreur : URL de paiement introuvable",
+      "checkout": "Erreur lors de la création du paiement"
+    }
+  },
+  "exam_prep": {
+    "hero_eyebrow": "MPK Exam Prep",
+    "hero_title": "Préparation aux certifications internationales.",
+    "hero_kicker": "Accompagnement ciblé pour réussir les examens linguistiques officiels reconnus mondialement — du Goethe au TOEFL, en passant par le TestDaF et le DELF.",
+    "courses_eyebrow": "Cours préparatoires · Goethe & ÖSD",
+    "courses_title": "Produits par certification.",
+    "courses_intro": "Cours intensifs courts (03 semaines par niveau) pour décrocher le Goethe-Zertifikat ou l'ÖSD. Tarifs <strong>internes</strong> (apprenants MPK) et <strong>externes</strong> (candidats libres).",
+    "internal": "Interne",
+    "external": "Externe",
+    "volume": "Volume horaire",
+    "buy_internal": "Acheter Interne",
+    "buy_external": "Acheter Externe",
+    "note": "NB · Chaque niveau de cours préparatoires dure 03 semaines.",
+    "modules_eyebrow": "Modules individuels — entraînement ciblé",
+    "modules_title": "Travaillez une compétence spécifique.",
+    "modules_intro": "Pour celles et ceux qui veulent renforcer une compétence précise (oral, écrit, lecture, écoute), sans suivre un parcours complet. Tarif au cas par cas selon le niveau visé et la durée souhaitée.",
+    "price_label": "Tarif",
+    "quote_request": "Demander un devis",
+    "exams_eyebrow": "Autres examens préparés",
+    "exams_title": "Tous les principaux examens internationaux.",
+    "exams_table_exam": "Examen",
+    "exams_table_lang": "Langue",
+    "exams_table_level": "Niveau",
+    "exams_table_org": "Organisme",
+    "exams_others": "Autres",
+    "exams_on_request": "Sur demande",
+    "approach_eyebrow": "Notre approche",
+    "approach_title": "Trois piliers pour décrocher votre certification.",
+    "approach_1_t": "Sessions blanches",
+    "approach_1_d": "Simulations d'examen dans les conditions réelles, corrigées et analysées item par item.",
+    "approach_2_t": "Feedback détaillé",
+    "approach_2_d": "Identification précise des points à renforcer pour chaque section (compréhension, expression, grammaire).",
+    "approach_3_t": "Formateurs certifiés",
+    "approach_3_d": "Préparateurs formés aux exigences spécifiques de chaque organisme et régulièrement mis à jour.",
+    "cta_title": "Engagez votre préparation.",
+    "cta_register": "S'inscrire à une préparation",
+    "cta_quote": "Demander un devis"
+  },
+  "history": {
+    "hero_eyebrow": "Notre histoire",
+    "hero_title": "Du Bénin vers le monde — l'aventure MULTIPLIKATOR.",
+    "hero_kicker": "Cinq ans d'engagement linguistique, six campus actifs, des centaines de réussites — l'histoire d'un réseau béninois qui a fait le pari de l'excellence.",
+    "origin_eyebrow": "L'origine",
+    "origin_title": "Le mot « Multiplikator »",
+    "origin_p1": "« Multiplikator » est un mot allemand qui signifie « multiplicateur » — celui qui transmet, qui amplifie, qui démultiplie. Ce nom traduit notre conviction profonde : <strong>chaque apprenant que nous formons devient à son tour un transmetteur</strong>, un pont entre le Bénin et le monde germanophone, francophone, anglophone.",
+    "origin_p2": "Fondé en 2021 au Bénin, MULTIPLIKATOR est né d'une conviction simple : <strong>la jeunesse béninoise ambitieuse mérite un accès à un enseignement linguistique exigeant, structuré et certifiant</strong> dans les langues étrangères — sans avoir à quitter son pays pour atteindre l'excellence qui la rend pleinement éligible aux opportunités internationales.",
+    "timeline_eyebrow": "Chronologie",
+    "timeline_title": "Cinq années, six campus, mille histoires.",
+    "timeline": [
+      { "y": "2021", "t": "La genèse à Godomey PK 14", "d": "Fondation de MULTIPLIKATOR Institut de Langues à Godomey, dans la banlieue nord de Cotonou. Une vision : offrir un enseignement linguistique premium accessible, ancré au Bénin mais tourné vers le monde." },
+      { "y": "2022", "t": "Premiers succès aux certifications Goethe", "d": "Premiers succès aux certifications officielles de l'Institut Goethe de Lomé. Les premières cohortes décrochent leurs diplômes A1, A2 et B1. Ouverture du second campus à Akpakpa pour répondre à la demande grandissante." },
+      { "y": "2023", "t": "Expansion régionale", "d": "Ouverture des campus de Porto-Novo et Lokossa. MULTIPLIKATOR couvre désormais le Sud du Bénin et inaugure son département MPK Translation Pro pour répondre aux besoins administratifs des candidats à la mobilité." },
+      { "y": "2024", "t": "Le réseau prend forme — cap au Nord", "d": "Naissance des campus de Djougou et Parakou pour desservir le Nord du pays. Lancement du programme Premium VIP Accéléré et structuration des pôles de service de l'institut." },
+      { "y": "2025", "t": "MPK Tourism Programm", "d": "Lancement de l'Académie de formation des guides touristiques et du département Tourisme à travers des phases tests axées sur les sorties récréatives et touristiques sur Ganvié et Grand Popo. Forts de ces expériences de terrain, le département se construit lentement et méthodiquement." },
+      { "y": "2026", "t": "Cap sur l'international", "d": "Ouverture des cours 100% en ligne pour la diaspora, lancement de la boutique en ligne et de la plateforme d'inscription numérique. Vision : devenir LE référent linguistique d'Afrique de l'Ouest." }
+    ],
+    "values_eyebrow": "Ce qui nous porte",
+    "values_title": "Nos valeurs fondatrices.",
+    "values": [
+      { "t": "Excellence académique", "d": "Méthode pédagogique structurée, formateurs spécialisés et suivi individuel pour mener chaque apprenant au succès." },
+      { "t": "Communauté multiplicatrice", "d": "Chaque apprenant devient un ambassadeur — un multiplicateur de cultures, d'opportunités et de réussite." },
+      { "t": "Ouverture sur le monde", "d": "Du Bénin vers l'Allemagne, l'Autriche, la francophonie internationale — nous bâtissons des passerelles." },
+      { "t": "Transmission rigoureuse", "d": "Nos cours suivent les standards du CECRL et préparent aux certifications officielles reconnues mondialement." }
+    ],
+    "cta_title": "Faites partie de la suite.",
+    "cta_kicker": "L'histoire de MULTIPLIKATOR continue à s'écrire — et votre niveau pourrait être le prochain chapitre.",
+    "cta_formations": "Découvrir nos formations",
+    "cta_support": "Soutenir notre développement"
+  },
+  "alumni": {
+    "hero_eyebrow": "MPK World Alumnis",
+    "hero_title": "Ils ont rejoint l'Europe avec MULTIPLIKATOR.",
+    "hero_kicker": "Études, Ausbildung, Au Pair, regroupement familial, contrat CDI — découvrez le parcours de nos anciens apprenants désormais établis en Allemagne et en Autriche.",
+    "filters": { "all": "Tous", "germany": "Allemagne", "austria": "Autriche" },
+    "stats": {
+      "total_eyebrow": "Total",
+      "total_label": "Alumnis partis en Europe",
+      "destination_eyebrow": "Première destination",
+      "destination_label": "Allemagne",
+      "visas_eyebrow": "Visas obtenus",
+      "visas_label": "Taux de succès",
+      "opening_eyebrow": "Ouverture",
+      "opening_label": "Première promotion"
+    },
+    "card_program": "Programme :",
+    "card_arrived": "Arrivée :",
+    "share_invite": "Vous êtes un.e ancien.ne apprenant.e parti.e en Europe ?",
+    "share_link": "Partagez votre parcours avec nous",
+    "share_suffix": "— nous l'ajouterons à cette page."
+  },
+  "extra_services": {
+    "hero_eyebrow": "MPK Extra Services",
+    "hero_title": "Services complémentaires à la carte.",
+    "hero_kicker": "Tout ce qui complète une formation ou un projet international — pris en charge par nos équipes expertes.",
+    "services": [
+      { "t": "Montage de CV", "d": "Rédaction et mise en page professionnelle de votre Curriculum Vitae (FR / DE / EN). Adaptation aux standards européens, américains ou africains selon votre projet." },
+      { "t": "Montage de lettre de motivation", "d": "Cover letter sur-mesure, adaptée au pays, au domaine et au poste ciblé. Travail collaboratif sur le storytelling et l'argumentaire." },
+      { "t": "Coaching spontané", "d": "Séances ponctuelles à la demande pour préparer un entretien, une présentation, un appel téléphonique important ou un échange avec une administration étrangère." },
+      { "t": "Assistance multiples", "d": "Petites tâches administratives, traduction express, prise de rendez-vous, accompagnement téléphonique, démarches en ligne — tout ce dont vous avez besoin au quotidien." },
+      { "t": "University Admission", "d": "Accompagnement complet pour les procédures d'admission universitaire : choix d'établissements, dossiers, plateformes (Uni-Assist, Campus France, etc.), suivi." },
+      { "t": "Conseil mobilité & voyage", "d": "Tout besoin lié à un déplacement ou une mobilité internationale — visa, logement, ouverture de compte, assurance, premiers pas dans le pays d'arrivée." },
+      { "t": "Autres services à la carte", "d": "Sur demande — formations express, accompagnement entrepreneurial, conseil professionnel. Nous consulter pour un besoin spécifique." }
+    ],
+    "cta_title": "Besoin d'un service à la carte ?",
+    "cta_request": "Demander un service",
+    "cta_quote": "Devis personnalisé"
+  },
+  "blog": {
+    "hero_eyebrow": "Blog & Infos",
+    "hero_title": "Conseils, analyses et actualités MULTIPLIKATOR.",
+    "hero_kicker": "Notre rédaction décrypte la mobilité internationale, les examens linguistiques et les coulisses de la pédagogie MPK — pour vous aider à mieux préparer votre projet.",
+    "categories": ["Tous", "Mobilité", "Pédagogie", "Examens", "Témoignages", "Conseils", "Tourisme"],
+    "read_min": "{{n}} min de lecture",
+    "coming": "Bientôt en ligne",
+    "date_soon": "À venir",
+    "collab_text": "Vous souhaitez proposer un sujet, partager une expérience ou collaborer avec notre rédaction ?",
+    "collab_link": "Écrivez-nous",
+    "posts": [
+      { "category": "Mobilité", "title": "Étudier en Allemagne : les étapes-clés du visa étudiant 2026", "excerpt": "Guide pratique pour préparer sereinement votre dossier de visa étudiant : pièces à fournir, délais réalistes, erreurs à éviter et astuces de nos consultants visa." },
+      { "category": "Pédagogie", "title": "Comprendre les sous-niveaux A1.1, A1.2 — pourquoi cette structure ?", "excerpt": "MULTIPLIKATOR a choisi de découper les niveaux CECRL en sous-niveaux. Voici les raisons pédagogiques derrière ce choix et l'avantage pour l'apprenant." },
+      { "category": "Examens", "title": "Goethe vs ÖSD : quelle certification choisir pour votre projet ?", "excerpt": "Deux organismes, deux philosophies. Notre comparatif détaillé pour vous aider à choisir l'examen qui correspond à votre destination et votre profil." },
+      { "category": "Témoignages", "title": "Du Bénin à Munich : 6 mois après son arrivée, Yves K. raconte.", "excerpt": "Notre ancien apprenant Yves K. partage son quotidien en Bavière, ses défis culturels et son adaptation au monde germanophone." },
+      { "category": "Conseils", "title": "10 erreurs à éviter dans votre lettre de motivation pour l'Allemagne", "excerpt": "Les universités allemandes ont leurs propres codes. Voici les erreurs récurrentes que nos consultants identifient dans 80% des dossiers." },
+      { "category": "Tourisme", "title": "Ganvié et Grand Popo : aperçu du programme MPK Tourism Discovery", "excerpt": "Découvrez les coulisses des sorties pilotes du département MPK Tourism — destinations emblématiques du patrimoine béninois." }
+    ]
+  },
+  "downloads": {
+    "hero_eyebrow": "Foire aux téléchargements",
+    "hero_title": "Documents, dépliants et visuels MULTIPLIKATOR.",
+    "hero_kicker": "Retrouvez ici l'ensemble des supports institutionnels de MPK : brochures, syllabus, grilles tarifaires, dépliants commerciaux et visuels haute définition.",
+    "size_label": "Taille :",
+    "download": "Télécharger",
+    "soon": "Bientôt disponible",
+    "missing_text": "Vous cherchez un document particulier qui ne figure pas ici ?",
+    "missing_link": "Écrivez-nous, nous vous le transmettrons",
+    "size_pending": "À venir",
+    "categories": {
+      "brochures": "Brochures & PDFs",
+      "flyers": "Dépliants",
+      "visuals": "Visuels & Réseaux sociaux"
+    },
+    "items": {
+      "dl-brochure-mpk": { "title": "Brochure institutionnelle MPK", "desc": "Présentation complète du réseau MULTIPLIKATOR (16 pages, couleurs)." },
+      "dl-syllabus-allemand": { "title": "Syllabus Allemand A1 → C2", "desc": "Programme pédagogique détaillé par sous-niveau (CECRL)." },
+      "dl-tarifs-2026": { "title": "Grille tarifaire 2026", "desc": "Tous nos tarifs : semi-intensif, VIP, bundles, cartes cadeaux." },
+      "dl-faq-visa": { "title": "FAQ Visa Allemagne — édition 2026", "desc": "Réponses aux 50 questions les plus posées sur la mobilité Bénin → Allemagne." },
+      "dl-flyer-prep-goethe": { "title": "Dépliant Préparation Goethe", "desc": "Format A5 plié — argumentaire pour les candidats." },
+      "dl-flyer-osd": { "title": "Dépliant ÖSD Bénin", "desc": "Format A5 plié — préparation aux examens autrichiens." },
+      "dl-flyer-tourism": { "title": "Dépliant MPK Tourism", "desc": "Formation des guides touristiques multilingues." },
+      "dl-flyer-campus": { "title": "Dépliant Carte des 6 Campus", "desc": "Plans d'accès et coordonnées de tous nos campus." },
+      "dl-logo-pack": { "title": "Pack logos MPK (haute résolution)", "desc": "Logo blanc, noir, couleur, vertical, horizontal. PNG + SVG." },
+      "dl-charte-graphique": { "title": "Charte graphique 2026", "desc": "Polices, couleurs, typographies, règles d'usage." },
+      "dl-wallpapers": { "title": "Fonds d'écran motivation", "desc": "Citations linguistiques en HD pour mobile et desktop." },
+      "dl-posters-rentree": { "title": "Posters de rentrée", "desc": "Affiches A3 imprimables — annonce des prochaines sessions." }
+    }
+  },
+  "about": {
+    "hero_eyebrow": "L'Institut",
+    "hero_title": "Une institution pensée pour la mobilité internationale.",
+    "hero_kicker": "Depuis 2021, MULTIPLIKATOR construit un réseau pédagogique structuré, centré sur la qualité des formations et l'accompagnement complet de chaque candidat.e.",
+    "history_eyebrow": "Notre histoire",
+    "history_title": "De 2021 à aujourd'hui — un réseau qui se déploie.",
+    "history_p1": "MULTIPLIKATOR est né d'une conviction : la maîtrise d'une langue étrangère ouvre des perspectives universitaires, professionnelles et humaines déterminantes. Pour porter cette ambition à grande échelle, nous avons fait le choix d'un modèle multi-campus, déployé étape par étape sur le territoire béninois.",
+    "history_p2": "Quatre années après notre création, ce sont 6 campus actifs et plus de 850 candidat.e.s formé.e.s qui composent notre communauté.",
+    "mvv": {
+      "mission_t": "Mission",
+      "mission_d": "Former des locuteurs et locutrices solides, capables de réussir leur projet d'études, de travail ou d'installation à l'international.",
+      "vision_t": "Vision",
+      "vision_d": "Devenir le réseau d'instituts de langues de référence en Afrique de l'Ouest, conjuguant exigence académique et accessibilité.",
+      "values_t": "Valeurs",
+      "values_d": "Rigueur, accompagnement humain, transparence tarifaire, respect des objectifs individuels."
+    },
+    "stats_campus": "Campus",
+    "stats_candidates": "Candidat.e.s",
+    "stats_years": "Années",
+    "stats_goethe": "Réussite Goethe B1",
+    "approach_eyebrow": "Approche pédagogique",
+    "approach_title": "Une progression structurée par niveaux et sous-niveaux, adossée à l'évaluation continue.",
+    "approach_p": "Le découpage en sous-niveaux (A1.1, A1.2, …) permet d'offrir un point d'entrée accessible, tout en gardant la cohérence d'un parcours complet. Petits effectifs, formateurs dédiés, évaluation régulière : la pédagogie est calibrée pour mener à la certification.",
+    "cta": "Échanger avec un conseiller"
+  },
+  "team": {
+    "hero_eyebrow": "La Team MPK",
+    "hero_title": "L'humain derrière le réseau.",
+    "hero_kicker": "Direction actuelle, équipe technique et anciens collègues maintenant établis en Allemagne — tous engagés dans l'aventure MULTIPLIKATOR.",
+    "categories": {
+      "admin": { "title": "Administration actuelle", "eyebrow": "Direction" },
+      "technique": { "title": "Équipe technique", "eyebrow": "IT & Communication" },
+      "allemagne": { "title": "Collègues résidant en Allemagne", "eyebrow": "Mémoire & héritage" }
+    },
+    "role_position": "Poste",
+    "mr": "M.",
+    "mrs": "Mme",
+    "to_come": "À venir"
+  },
+  "translation_pro": {
+    "hero_eyebrow": "MPK Translation Pro",
+    "hero_title": "Traduction et interprétation professionnelle.",
+    "hero_kicker": "Allemand · Français · Anglais — autres langues sur demande. Confidentialité, précision terminologique et respect des délais.",
+    "services": [
+      { "t": "Traduction officielle", "d": "Documents administratifs, académiques, juridiques. Conformité avec les exigences des autorités." },
+      { "t": "Traduction certifiée", "d": "Pour ambassades et dossiers officiels. Tampon et signature du traducteur agréé." },
+      { "t": "Correspondances professionnelles", "d": "Lettres, e-mails, contrats — traduits dans le ton et le registre attendus." },
+      { "t": "Interprétation", "d": "Consécutive ou de liaison pour réunions, négociations et événements." }
+    ],
+    "service_label": "Service",
+    "quote_eyebrow": "Demande de devis",
+    "quote_title": "Envoyez vos documents en toute confidentialité.",
+    "quote_cta": "Demander un devis"
+  },
+  "consulting_pro": {
+    "hero_eyebrow": "MPK Consulting Pro",
+    "hero_title": "Consultance en mobilité internationale.",
+    "hero_kicker": "MPK Consulting Pro accompagne toute personne souhaitant se déplacer, s'installer ou évoluer à l'international, quel que soit le motif du projet.",
+    "programs": [
+      { "t": "Études à l'étranger", "d": "Orientation, dossier d'admission, visa étudiant." },
+      { "t": "Formation professionnelle", "d": "Programmes de formation en Allemagne et en Europe." },
+      { "t": "Volontariat", "d": "FSJ, BFD, programmes de volontariat international." },
+      { "t": "Au Pair", "d": "Accompagnement dossier, mise en relation, préparation." },
+      { "t": "Regroupement familial / conjugal", "d": "Conseil, procédures, documents requis." },
+      { "t": "Visite touristique", "d": "Préparation de séjour, demande de visa touriste." },
+      { "t": "Autres mobilités", "d": "Sur demande — tout type de projet international." }
+    ],
+    "program_label": "Programme",
+    "cta_title": "Prenez rendez-vous avec un conseiller.",
+    "cta_rdv": "Prendre rendez-vous",
+    "cta_contact": "Nous contacter"
+  },
+  "tourism": {
+    "hero_eyebrow": "MPK Tourism Programm",
+    "hero_title": "Académie de guides touristiques & programmes d'excursions.",
+    "hero_kicker": "À la fois école de formation pour guides professionnels et organisateur de sorties au Bénin et dans la sous-région.",
+    "services": [
+      { "t": "Formation de guides touristiques", "d": "Programme professionnalisant pour devenir guide certifié au Bénin et dans la sous-région." },
+      { "t": "Sorties & excursions", "d": "Excursions organisées sur les sites majeurs (Abomey, Ouidah, Pendjari, Ganvié…)." },
+      { "t": "Conseil planification voyage", "d": "Itinéraires, logistique, recommandations selon profil voyageur." },
+      { "t": "Programmes sur mesure", "d": "Groupes scolaires, entreprises, touristes individuels." }
+    ],
+    "offer_label": "Offre",
+    "cta_title": "Réservez votre excursion ou intégrez l'académie.",
+    "cta_discover": "Découvrir le programme",
+    "cta_book": "Réserver une excursion"
+  },
+  "online_courses": {
+    "hero_eyebrow": "Cours en ligne",
+    "hero_title": "Toute la qualité MPK, accessible depuis n'importe où.",
+    "hero_kicker": "Pour la diaspora, les villes sans campus MPK, et tous les profils nécessitant flexibilité — sans aucun compromis sur l'encadrement.",
+    "programs_title": "Programmes disponibles en ligne",
+    "p1_t": "Allemand Semi-Intensif",
+    "p1_d": "Tous niveaux A1 à C1, structure identique au présentiel.",
+    "p2_t": "Préparation aux examens",
+    "p2_d": "Goethe, ÖSD, IELTS, TestDaF, DSH, DELF.",
+    "p3_t": "Programme Premium VIP",
+    "p3_d": "sur demande, avec créneaux personnalisés.",
+    "advantages": [
+      { "t": "Même encadrement", "d": "Formateurs MPK certifiés, méthode identique au présentiel." },
+      { "t": "Suivi personnalisé", "d": "Évaluation continue, retours individuels réguliers." },
+      { "t": "Créneaux flexibles", "d": "Adaptables au fuseau horaire de chaque apprenant.e." },
+      { "t": "Accès mondial", "d": "Diaspora, étudiants en mobilité, professionnels expatriés." }
+    ],
+    "cta_title": "S'inscrire aux cours en ligne.",
+    "cta_kicker": "Un conseiller vous recontacte pour caler le créneau adapté.",
+    "cta_register": "S'inscrire en ligne"
+  },
+  "shop": {
+    "hero_eyebrow": "Boutique MPK",
+    "hero_title": "Bundles, niveaux, cartes cadeaux — tout en un.",
+    "hero_kicker": "Paiement sécurisé via Stripe. Cartes cadeaux à offrir à un proche, bundles avantageux pour se projeter sur un parcours complet.",
+    "cat_offer": "À offrir",
+    "cat_buy": "À acheter",
+    "categories": {
+      "Bundles Allemand": "Bundles Allemand",
+      "Niveaux complets Semi-Intensif": "Niveaux complets Semi-Intensif",
+      "Sous-niveaux": "Sous-niveaux",
+      "Cartes cadeaux": "Cartes cadeaux"
+    },
+    "buy": "Acheter",
+    "secured": "Paiement sécurisé Stripe",
+    "catalog_error": "Catalogue indisponible",
+    "checkout_error": "Erreur lors de la création du paiement"
+  },
+  "gallery": {
+    "hero_eyebrow": "Galerie",
+    "hero_title": "Photos & vidéos.",
+    "hero_kicker": "Vie de campus, événements, remises de certificats — un aperçu visuel du réseau MULTIPLIKATOR.",
+    "campus_filters": ["Tous", "GODOMEY PK 14", "AKPAKPA", "PORTO-NOVO", "LOKOSSA", "DJOUGOU", "PARAKOU", "EN LIGNE"],
+    "type_filters": ["Tous", "Vie de campus", "Événements", "Remises de certificats"],
+    "empty": "Aucun média avec ce filtre."
+  },
+  "testimonials": {
+    "hero_eyebrow": "Témoignages",
+    "hero_title": "Ils ont fait confiance à MULTIPLIKATOR.",
+    "hero_kicker": "Des parcours réels, sur tous les campus et en ligne — la preuve concrète d'une méthode qui fonctionne.",
+    "cta_title": "Vous aussi, rejoignez nos apprenant.e.s.",
+    "cta_register": "S'inscrire"
+  },
+  "news": {
+    "hero_eyebrow": "Actualités & Concours",
+    "hero_title": "Le pouls du réseau MULTIPLIKATOR.",
+    "hero_kicker": "Rentrées, ouvertures de campus, concours, résultats — toutes les informations institutionnelles.",
+    "read_more": "Lire la suite",
+    "concours_eyebrow": "Concours en cours",
+    "concours_title": "Bourse MULTIPLIKATOR 2026 — 5 formations A1 offertes.",
+    "concours_desc": "Participez avant le 28 février. Tirage au sort le 1er mars sur le campus de GODOMEY PK 14.",
+    "concours_cta": "Participer au concours",
+    "items": {
+      "rentree-2026": { "title": "Rentrée de Mars 2026 — Inscriptions ouvertes", "excerpt": "Toutes les nouvelles cohortes Allemand Semi-Intensif et Premium VIP démarrent le premier lundi de mars sur tous les campus.", "tag": "Rentrée" },
+      "campus-parakou": { "title": "Nouveau Campus Parakou — Inauguration officielle", "excerpt": "MULTIPLIKATOR s'installe officiellement à Parakou pour servir la région du Borgou.", "tag": "Réseau" },
+      "concours-bourse": { "title": "Concours Bourse MPK 2026 — 5 places offertes", "excerpt": "Tentez de gagner une formation Allemand A1 complète offerte par MULTIPLIKATOR. Inscriptions jusqu'au 28 février.", "tag": "Concours" },
+      "goethe-results": { "title": "98% de réussite au Goethe-Zertifikat B1 — session décembre", "excerpt": "Nos candidat.e.s ont brillamment réussi la session de fin d'année du Goethe-Institut.", "tag": "Résultats" }
+    }
+  },
+  "social": {
+    "hero_eyebrow": "Réseaux sociaux",
+    "hero_title": "Rejoignez la communauté MPK.",
+    "hero_kicker": "Suivez nos rentrées, événements, témoignages et conseils linguistiques en direct depuis vos plateformes favorites.",
+    "follow_us": "Suivez-nous sur"
+  },
+  "contact": {
+    "hero_eyebrow": "Contact",
+    "hero_title": "Échangeons sur votre projet.",
+    "hero_kicker": "Notre équipe vous répond sur tous les canaux : formulaire, WhatsApp, email ou téléphone.",
+    "first_name": "Prénom*",
+    "last_name": "Nom*",
+    "email": "Email*",
+    "phone": "Téléphone (optionnel)",
+    "campus_field": "Campus concerné",
+    "department_field": "Département concerné",
+    "message": "Message*",
+    "online_courses": "Cours en ligne",
+    "submit": "Envoyer le message",
+    "submitting": "Envoi...",
+    "reply_note": "Notre équipe vous répondra dans les plus brefs délais.",
+    "direct_eyebrow": "Contact direct",
+    "address": "GODOMEY PK14 — 2ème VONS APRÈS STATION ORYNX",
+    "whatsapp_direct": "WhatsApp direct",
+    "visit_eyebrow": "Vous préférez passer ?",
+    "visit_text": "Tous nos 6 campus sont ouverts du lundi au samedi. Aucun rendez-vous nécessaire pour une visite d'orientation.",
+    "compliance_eyebrow": "Conformité",
+    "privacy_link": "Politique de confidentialité",
+    "data_link": "Traitement des données",
+    "terms_link": "Conditions générales d'utilisation",
+    "errors": {
+      "required": "Veuillez remplir les champs obligatoires.",
+      "send_error": "Erreur lors de l'envoi.",
+      "success": "Message envoyé. Notre équipe vous répondra rapidement."
+    }
+  },
+  "auth": {
+    "login": {
+      "hero_eyebrow": "Espace apprenant",
+      "hero_title": "Connexion.",
+      "hero_kicker": "Accédez à votre tableau de bord, suivez votre parcours et retrouvez vos ressources.",
+      "email": "Email",
+      "password": "Mot de passe",
+      "submit": "Se connecter",
+      "submitting": "Connexion...",
+      "or": "ou",
+      "google": "Continuer avec Google",
+      "no_account": "Pas encore de compte ?",
+      "create_account": "Créer un compte",
+      "success": "Connexion réussie",
+      "error": "Erreur de connexion"
+    },
+    "register": {
+      "hero_eyebrow": "Créer un compte",
+      "hero_title": "Rejoignez l'espace apprenant MPK.",
+      "hero_kicker": "Gratuit. Suivez vos formations, certifications et démarches mobilité depuis un tableau de bord unique.",
+      "name": "Nom complet",
+      "email": "Email",
+      "password": "Mot de passe",
+      "submit": "Créer mon compte",
+      "submitting": "Création...",
+      "already": "Déjà inscrit ?",
+      "login_link": "Se connecter",
+      "success": "Compte créé.",
+      "error": "Erreur d'inscription",
+      "pwd_min": "Mot de passe : min. 6 caractères"
+    },
+    "dashboard": {
+      "hero_eyebrow": "Espace apprenant",
+      "hero_welcome": "Bienvenue, {{name}}",
+      "hero_kicker": "Votre tableau de bord centralise vos formations, certifications et démarches mobilité.",
+      "cards": [
+        { "t": "Mes formations", "d": "Suivez vos cours en présentiel ou en ligne. Bientôt disponible." },
+        { "t": "Mes certifications", "d": "Préparation en cours et résultats officiels. Bientôt disponible." },
+        { "t": "Mobilité & démarches", "d": "Suivi de vos dossiers visa, FSJ, Au Pair. Bientôt disponible." }
+      ],
+      "logout": "Se déconnecter"
+    }
+  },
+  "payment": {
+    "hero_eyebrow": "Paiement",
+    "hero_title": "Confirmation de votre achat.",
+    "checking": "Vérification du paiement…",
+    "paid_title": "Paiement confirmé.",
+    "paid_desc": "Merci ! Vous recevrez sous peu les instructions pour démarrer votre formation.",
+    "details": "Détails",
+    "pending_title": "Paiement en cours de traitement.",
+    "pending_desc": "Vous recevrez un email de confirmation dès validation.",
+    "error_title": "Session expirée ou erreur.",
+    "back_shop": "Retour à la boutique",
+    "back_home": "Retour à l'accueil"
+  },
+  "privacy": {
+    "hero_eyebrow": "Conformité",
+    "hero_title": "Politique de confidentialité",
+    "hero_kicker": "MULTIPLIKATOR Institut de Langues, en tant que responsable de traitement, s'engage à protéger la vie privée et les données personnelles de ses apprenant.e.s, candidat.e.s, visiteurs et partenaires.",
+    "updated": "Dernière mise à jour : juin 2026 — Version 1.1"
+  },
+  "terms": {
+    "hero_eyebrow": "Conformité",
+    "hero_title": "Conditions générales d'utilisation",
+    "hero_kicker": "Règles et conditions encadrant l'utilisation du site multiplikator-world.com et des services en ligne de MULTIPLIKATOR Institut de Langues.",
+    "updated": "Dernière mise à jour : juin 2026 — Version 1.0"
+  },
+  "data_policy": {
+    "hero_eyebrow": "Conformité",
+    "hero_title": "Politique de traitement des données",
+    "hero_kicker": "Conditions de traitement, de stockage et de sécurisation des données personnelles collectées par MULTIPLIKATOR Institut de Langues."
+  },
+  "departments": {
+    "training-plus": {
+      "tagline": "Formation linguistique",
+      "desc": "Cours d'allemand, anglais, FLE et chinois — du semi-intensif au Premium VIP accéléré."
+    },
+    "exam-prep": {
+      "tagline": "Préparation aux certifications",
+      "desc": "Goethe, ÖSD, TestDaF, DSH, IELTS, TOEFL, DELF/DALF."
+    },
+    "translation-pro": {
+      "tagline": "Traduction & interprétation",
+      "desc": "Documents officiels, certifiés, correspondances. DE / FR / EN."
+    },
+    "consulting-pro": {
+      "tagline": "Mobilité internationale",
+      "desc": "Études, FSJ/BFD, Au Pair, regroupement familial, visa."
+    },
+    "tourism": {
+      "tagline": "Tourisme & excursions",
+      "desc": "Académie de guides touristiques & sorties au Bénin et sous-région."
+    },
+    "extra": {
+      "tagline": "Services à la carte",
+      "desc": "CV, lettre de motivation, admissions universitaires."
+    }
+  },
+  "courses": {
+    "semi_a1_1": { "title": "Allemand A1.1", "desc": "Premier contact, structures de base, présentation, vie quotidienne." },
+    "semi_a1_2": { "title": "Allemand A1.2", "desc": "Renforcement A1 — interactions simples, voyages, environnement proche." },
+    "semi_a2_1": { "title": "Allemand A2.1", "desc": "Communication courante, expériences personnelles et habitudes." },
+    "semi_a2_2": { "title": "Allemand A2.2", "desc": "Consolidation A2 — descriptions, narration au passé, opinions." },
+    "semi_b1_1": { "title": "Allemand B1.1", "desc": "Autonomie linguistique — études, travail, vie sociale en allemand." },
+    "semi_b1_2": { "title": "Allemand B1.2", "desc": "Préparation au seuil Goethe B1 — argumentation et compréhension fine." },
+    "semi_b2_1": { "title": "Allemand B2.1", "desc": "Niveau universitaire — textes complexes, débats, expression abstraite." },
+    "semi_b2_2": { "title": "Allemand B2.2", "desc": "Préparation TestDaF/DSH — maîtrise académique avancée." },
+    "lang_c1_1": { "title": "Allemand C1.1", "desc": "Niveau supérieur — nuances, registres, productions structurées." },
+    "lang_c1_2": { "title": "Allemand C1.2", "desc": "Maîtrise quasi-native — préparation Goethe C1 / TestDaF 5x5." },
+    "lang_c2_1": { "title": "Allemand C2.1", "desc": "Niveau d'excellence — interprétation, traduction, enseignement." },
+    "lang_c2_2": { "title": "Allemand C2.2", "desc": "Niveau natif certifié — Goethe C2 / Großes Deutsches Sprachdiplom." },
+    "duration_4w": "4 semaines · 64 UE"
+  },
+  "prep": {
+    "prep_goethe_a1": { "title": "Prepa Goethe Zertifikat A1", "desc": "Préparation ciblée à l'examen Goethe-Zertifikat A1 — compréhension orale/écrite et productions." },
+    "prep_goethe_a2": { "title": "Prepa Goethe Zertifikat A2", "desc": "Entraînement complet sur les 4 compétences du Goethe-Zertifikat A2." },
+    "prep_goethe_b1": { "title": "Prepa Goethe Zertifikat B1", "desc": "Préparation intensive B1 — examen modulaire (lire, écouter, écrire, parler)." },
+    "prep_goethe_b2": { "title": "Prepa Goethe Zertifikat B2", "desc": "Préparation rigoureuse B2 — exigences universitaires et professionnelles." },
+    "prep_osd_a1": { "title": "Prepa ÖSD Benin A1", "desc": "Préparation ÖSD A1 — adapté aux candidats visant l'Autriche." },
+    "prep_osd_a2": { "title": "Prepa ÖSD Benin A2", "desc": "Entraînement ÖSD A2 — situations quotidiennes et productions guidées." },
+    "prep_osd_b1": { "title": "Prepa ÖSD Benin B1", "desc": "Préparation ÖSD B1 — passage clé pour les visas et études en Autriche." },
+    "prep_osd_b2": { "title": "Prepa ÖSD Benin B2", "desc": "Préparation ÖSD B2 — niveau professionnel et universitaire." },
+    "duration_3w": "03 semaines"
+  },
+  "modules": {
+    "module_sprechen": { "title": "Module Sprechen", "competence": "Expression orale", "desc": "Entraînement intensif à la production orale : monologue, dialogue, présentation, examen blanc." },
+    "module_schreiben": { "title": "Module Schreiben", "competence": "Expression écrite", "desc": "Travail ciblé sur la rédaction : email, lettre formelle, dissertation, correction individualisée." },
+    "module_lesen": { "title": "Module Lesen", "competence": "Compréhension écrite", "desc": "Techniques de lecture rapide, repérage d'informations, articles authentiques et textes d'examen." },
+    "module_hoeren": { "title": "Module Hören", "competence": "Compréhension orale", "desc": "Entraînement à l'écoute active sur supports authentiques (radio, dialogues, conférences)." }
+  },
+  "alumnis": {
+    "al-01": { "quote": "Le suivi pédagogique MPK m'a permis de décrocher mon visa étudiant en moins d'un an." },
+    "al-02": { "quote": "Programme intensif vraiment exigeant mais payant. Goethe B1 réussi du premier coup." },
+    "al-03": { "quote": "Depuis le Bénin, j'ai pu suivre les cours MPK avec la même qualité qu'en présentiel." },
+    "al-04": { "quote": "Méthode claire, ambiance studieuse. Ma préparation à l'ÖSD A2 a été décisive." },
+    "al-05": { "quote": "Préparation très ciblée, je suis passée de 5.5 à 7.5 à l'IELTS en quatre mois." },
+    "al-06": { "quote": "Le découpage en sous-niveaux m'a permis de progresser sans pression." },
+    "al-07": { "quote": "L'équipe MPK m'a accompagnée de l'apprentissage à l'obtention du visa." },
+    "al-08": { "quote": "Une école sérieuse qui respecte ses promesses pédagogiques." }
+  },
+  "testimonials_data": {
+    "0": { "text": "Le suivi pédagogique m'a permis d'obtenir mon visa étudiant pour l'Allemagne en moins d'un an. Encadrement très professionnel." },
+    "1": { "text": "Programme intensif vraiment exigeant mais payant. J'ai passé le Goethe B1 avec succès." },
+    "2": { "text": "Depuis Berlin, j'ai pu suivre les cours MPK avec la même qualité qu'en présentiel. Excellent." },
+    "3": { "text": "Formateurs disponibles, méthode claire, ambiance studieuse. Je recommande vivement." },
+    "4": { "text": "Préparation très ciblée, je suis passée de 5.5 à 7.5 en quatre mois." },
+    "5": { "text": "Le découpage en sous-niveaux m'a permis de progresser à mon rythme sans pression." }
   }
 }

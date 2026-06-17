@@ -1,13 +1,15 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { PageHero } from "@/components/Common";
 
 export default function DataPolicy() {
+  const { t } = useTranslation();
   return (
     <>
       <PageHero
-        eyebrow="Conformité"
-        title="Politique de traitement des données"
-        kicker="Conditions de traitement, de stockage et de sécurisation des données personnelles collectées par MULTIPLIKATOR Institut de Langues."
+        eyebrow={t("data_policy.hero_eyebrow")}
+        title={t("data_policy.hero_title")}
+        kicker={t("data_policy.hero_kicker")}
       />
       <section className="max-w-[900px] mx-auto px-5 lg:px-10 py-12 space-y-8 text-[#4A4A4A] leading-relaxed font-light">
         <div>
