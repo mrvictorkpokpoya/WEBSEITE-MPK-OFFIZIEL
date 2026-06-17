@@ -58,7 +58,7 @@ export default function Contact() {
             </Field>
           </div>
           <Field label={t("contact.message")}><textarea data-testid="contact-message" required rows={6} value={form.message} onChange={update("message")} className="input resize-none" /></Field>
-          <button data-testid="contact-submit" disabled={loading} className="btn-primary">{loading ? t("contact.submitting") : t("contact.submit")} <Send size={16}/></button>
+          <button data-testid="contact-submit" type="submit" disabled={loading} className="btn-primary">{loading ? t("contact.submitting") : t("contact.submit")} <Send size={16}/></button>
           <p className="text-xs text-[#4A4A4A] mt-2">{t("contact.reply_note")}</p>
         </form>
         <aside className="lg:col-span-5 space-y-5">

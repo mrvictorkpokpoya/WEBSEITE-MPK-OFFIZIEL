@@ -86,6 +86,17 @@ Créer le site web officiel, premium et institutionnel de MULTIPLIKATOR Institut
 ### P0
 - Plan d'accès du campus PARAKOU (1 image manquante)
 - Validation client des prix langues (estimations actuelles à confirmer)
+### Session 5 (17 février 2026) — Internationalisation complète
+- **i18n complet sur 27 pages** : Home, Investment, Campuses, TrainingPlus, ExamPrep, History, Alumni, ExtraServices, Blog, Downloads, About, Team, TranslationPro, ConsultingPro, TourismProgramm, OnlineCourses, Shop, Gallery, Testimonials, News, Social, Contact, Login, Register, Dashboard, PaymentSuccess, Privacy/Terms/DataPolicy (hero)
+- **3 locales remplies** (`fr.json`, `en.json`, `de.json` — ~715 lignes chacune) avec traductions natives professionnelles EN et DE
+- **Marquage produit** : "Boutique MPK" en FR / "MPK Shop" en EN/DE (demande explicite client)
+- **Formatage prix** : remplacement de tous les espaces par des points comme séparateurs de milliers (46.000 et non 46 000) dans `data.js`, Shop.jsx (`toLocaleString('de-DE')`), PaymentSuccess.jsx
+- **HTML lang attribute** : synchronisé automatiquement avec la langue active (SEO + a11y) via `i18n.on('languageChanged', ...)`
+- **Données dynamiques traduites** : titres/descriptions cours (LANGUAGE_COURSES, PREP_COURSES, PREP_MODULES), citations alumnis, articles blog, news, downloads, témoignages, départements — tous via clés i18n indexées par ID
+- **Test agent itération 5** : 100% PASS frontend (FR/EN/DE sur 27 pages, 0 leak de langue, prix avec points OK)
+- **Noms propres préservés** dans toutes les langues : MULTIPLIKATOR, GODOMEY PK 14, AKPAKPA, PORTO-NOVO, LOKOSSA, DJOUGOU, PARAKOU, noms d'équipe
+
+
 - Fournir le nom du Directeur du Tourisme (placeholder « À venir »)
 - Validation client du contenu de la chronologie /notre-histoire (jalons 2021-2026 actuellement rédigés par l'IA, à corriger si besoin)
 - Validation client du contenu de /appel-a-investissement (montants, projets, formes de partenariat — à ajuster aux vraies orientations stratégiques de la direction)

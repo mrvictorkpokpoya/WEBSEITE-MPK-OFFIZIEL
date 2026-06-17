@@ -25,4 +25,11 @@ i18n
     },
   });
 
+// Keep <html lang="..."> in sync with active language (SEO + a11y)
+if (typeof document !== "undefined") {
+  const apply = (lng) => { document.documentElement.lang = (lng || "fr").split("-")[0]; };
+  apply(i18n.language);
+  i18n.on("languageChanged", apply);
+}
+
 export default i18n;
