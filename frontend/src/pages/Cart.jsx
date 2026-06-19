@@ -155,11 +155,18 @@ export default function Cart() {
               onClick={onCheckout}
               disabled={loading || cart.items.length === 0}
               data-testid="cart-checkout"
-              className="mt-6 w-full inline-flex items-center justify-center gap-2 px-4 py-3 bg-[#580505] text-[#C4D2ED] border-[1.5px] border-[#580505] text-sm font-semibold hover:bg-[#2F0808] transition disabled:opacity-50"
+              className="mt-6 w-full inline-flex items-center justify-center gap-2 px-4 py-3.5 bg-[#580505] text-[#C4D2ED] border-[1.5px] border-[#580505] text-base font-semibold hover:bg-[#2F0808] transition disabled:opacity-50 uppercase tracking-wider"
             >
-              {loading ? <Loader2 size={14} className="animate-spin"/> : <CheckCircle2 size={14}/>}
-              {loading ? "Redirection..." : `Payer ${formatXof(grandTotal)} F`}
+              {loading ? <Loader2 size={16} className="animate-spin"/> : <CheckCircle2 size={16}/>}
+              {loading ? "Redirection..." : `Passer à la caisse · ${formatXof(grandTotal)} F`}
             </button>
+            <Link
+              to="/departements/training-plus"
+              data-testid="cart-continue-shopping"
+              className="mt-3 w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-white text-[#580505] border-[1.5px] border-[#580505] text-sm font-semibold hover:bg-[#FAFAFA] transition"
+            >
+              ← Continuer mes achats
+            </Link>
             <p className="mt-3 text-[10px] text-center text-[#4A4A4A]/70 tracking-wider uppercase">Paiement sécurisé Stripe</p>
           </div>
         </aside>

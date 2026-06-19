@@ -560,7 +560,7 @@ async def _next_client_number() -> str:
     return f"MPK-{year}-{seq:05d}"
 
 
-async def _ensure_client_number(customer_email: str, user_id: Optional[str] = None) -> str:
+async def _ensure_client_number(customer_email: str, user_id: Optional[str] = None, order_items: Optional[list] = None, order_amount: Optional[float] = None) -> str:
     existing = await db.clients.find_one({"email": customer_email})
     if existing and existing.get("client_no"):
         return existing["client_no"]
@@ -579,6 +579,46 @@ async def _ensure_client_number(customer_email: str, user_id: Optional[str] = No
     )
     if user_id:
         await db.users.update_one({"user_id": user_id}, {"$set": {"client_no": client_no}})
+    # Send confirmation email with client_no + order details
+    if RESEND_API_KEY and customer_email:
+        try:
+            items_html = ""
+            if order_items:
+                rows = "".join([
+                    f"<tr><td style='padding:6px 0;border-bottom:1px solid #eee'>{i.get('label','')}</td>"
+                    f"<td style='padding:6px 0;border-bottom:1px solid #eee;text-align:right'>{int(i.get('amount',0)):,} FCFA</td></tr>".replace(",", ".")
+                    for i in order_items
+                ])
+                items_html = f"<table style='width:100%;border-collapse:collapse;margin:12px 0'>{rows}</table>"
+            total_str = f"{int(order_amount):,}".replace(",", ".") if order_amount else "—"
+            html = f"""
+            <div style="font-family:Georgia,serif;max-width:600px;margin:0 auto;padding:24px;color:#2F0808">
+              <h1 style="color:#580505;font-size:24px;letter-spacing:-0.5px">Bienvenue chez MULTIPLIKATOR !</h1>
+              <p style="font-size:16px;line-height:1.6">Merci pour votre paiement. Votre inscription est confirmée.</p>
+              <div style="background:#FAFAFA;border-left:4px solid #580505;padding:16px;margin:20px 0">
+                <div style="text-transform:uppercase;letter-spacing:0.2em;font-size:11px;color:#580505;font-weight:bold">Votre numéro client</div>
+                <div style="font-size:28px;color:#2F0808;margin-top:6px">{client_no}</div>
+                <div style="font-size:12px;color:#666;margin-top:8px">Conservez ce numéro — il vous suivra pour toutes vos prochaines inscriptions.</div>
+              </div>
+              <h2 style="color:#580505;font-size:18px;margin-top:24px">Détails de votre commande</h2>
+              {items_html}
+              <p style="font-size:16px"><strong>Total payé : {total_str} FCFA</strong></p>
+              <hr style="border:0;border-top:1px solid #eee;margin:24px 0"/>
+              <p style="font-size:14px;color:#666">Notre équipe vous contactera sous 48h pour démarrer votre formation. Pour toute question : contact@multiplikator-world.com · WhatsApp +229 01 96 59 38 66.</p>
+              <p style="font-size:12px;color:#999;margin-top:24px">© MULTIPLIKATOR Institut de Langues — Bénin</p>
+            </div>
+            """
+            await asyncio.get_event_loop().run_in_executor(
+                None,
+                lambda: resend.Emails.send({
+                    "from": SENDER_EMAIL,
+                    "to": [customer_email],
+                    "subject": f"MULTIPLIKATOR · Votre numéro client {client_no}",
+                    "html": html,
+                })
+            )
+        except Exception as e:
+            logger.error(f"Client confirmation email failed: {e}")
     return client_no
 
 
@@ -741,7 +781,12 @@ async def cart_finalize(session_id: str, http_request: Request):
         email = tx.get("customer_email") or status_resp.metadata.get("customer_email") or ""
         if email:
             existing_user = await db.users.find_one({"email": email}, {"user_id": 1})
-            client_no = await _ensure_client_number(email, user_id=existing_user.get("user_id") if existing_user else None)
+            client_no = await _ensure_client_number(
+                email,
+                user_id=existing_user.get("user_id") if existing_user else None,
+                order_items=tx.get("items"),
+                order_amount=tx.get("amount"),
+            )
         # clear cart
         if tx.get("cart_token"):
             await db.carts.delete_one({"cart_token": tx["cart_token"]})

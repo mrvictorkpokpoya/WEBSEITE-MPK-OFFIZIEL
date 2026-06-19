@@ -1,0 +1,47 @@
+{
+  "summary": "Phase 5 — Cart UI extension to LanguageEnglish/ExamPrep/Shop + Resend client_no email on finalize + header alignment + Cart page CTAs. Backend: 23/23 phase4 regression PASSED + 53/53 phase5 (cart-add coverage for 27 English IDs, 16 ExamPrep IDs, 6 gift IDs + 3 client_no tests + 1 finalize 404 path). _ensure_client_number verified to (a) generate MPK-YYYY-NNNNN format, (b) be idempotent across calls, (c) not crash when RESEND_API_KEY empty (current state) — no 'Client confirmation email failed' errors in backend logs. Frontend: Header heights confirmed h-10 (40px exact) for header-cart, lang-switcher, header-mympk. /langues/anglais shows 27 cart buttons (8 sublevels + 10 VIP + 9 bundles). Click course-cart-eng_a1_1 → toast 'Ajouté au panier' + badge=1 + token persisted. /panier renders item, primary CTA 'PASSER À LA CAISSE · 51.800 F' (uppercase via CSS, includes 5k+10k upsell), secondary CTA '← Continuer mes achats' → /departements/training-plus preserves cart token. /departements/exam-prep shows 8 PrepCards × 2 cart buttons = 16 (prep-cart-{id}-int / -ext); clicking prep-cart-prep_goethe_a1-int correctly adds product 'prep_goethe_a1_int' (verified via API). /boutique shows 6 gift cart buttons + 6 buy buttons; clicking cart-gift_25k shows toast. End-to-end Stripe redirect flow not re-exercised (already validated in iteration 8, no relevant code changes).",
+  "backend_issues": {
+    "critical": [],
+    "minor": [
+      {"endpoint": "/api/cart/finalize/{session_id}", "issue": "Returns 500 (raw CheckoutError trace) instead of structured 4xx when session_id does not exist on Stripe. Acceptable since this endpoint is called only after a real paid checkout, but consider wrapping stripe_checkout.get_checkout_status in try/except to return 404."},
+      {"endpoint": "general", "issue": "RESEND_API_KEY is currently empty in /app/backend/.env — email branch silently skipped (as designed). To actually exercise Resend send path, the key must be configured."}
+    ]
+  },
+  "frontend_issues": {
+    "ui_bugs": [],
+    "integration_issues": [],
+    "design_issues": []
+  },
+  "test_report_links": [
+    "/app/backend/tests/test_phase5_email_and_cart.py",
+    "/app/backend/tests/test_phase4_cart.py",
+    "/app/test_reports/pytest/phase5_results.xml",
+    "/app/test_reports/pytest/phase5_regression.xml"
+  ],
+  "action_items": [
+    "(Optional) Wrap /api/cart/finalize Stripe call in try/except → return 404 instead of 500 for unknown session_ids.",
+    "(Optional, carried over) Set RESEND_API_KEY in backend/.env so client-number confirmation emails actually go out. Code path is verified safe when key is absent.",
+    "(Carried over from iter 8) server.py is 856 lines — consider splitting into routers/cart, routers/payments, services/client_number."
+  ],
+  "critical_code_review_comments": [
+    "_ensure_client_number now accepts order_items + order_amount and builds a styled HTML email with the items table + total + client_no; wrapped in try/except so Resend failures are logged but don't break finalize.",
+    "Email send subject correctly matches spec: 'MULTIPLIKATOR · Votre numéro client {client_no}'.",
+    "Idempotency guarantee: db.clients.find_one({email}) check before counter increment → second finalize call returns the same client_no AND skips the email block (because the early return short-circuits before reaching the resend block).",
+    "Header alignment: confirmed via DOM measurement — header-cart=40px, lang-switcher=40px, header-mympk=40px (all h-10).",
+    "ExamPrep PrepCard uses 2-row layout: top row (buy int/ext, larger) + bottom row (panier int/ext, smaller) — correct as per spec.",
+    "Minor: LanguageEnglish.jsx reuses data-testid='course-buy-{id}' for both the 'Request a quote' Link (when on-request) AND the 'Acheter' button (when priced). Conditional rendering means only one is in DOM at any time → safe for testing, but consider distinct testids (course-quote-{id} vs course-buy-{id}) for clarity."
+  ],
+  "updated_files": [
+    "/app/backend/tests/test_phase5_email_and_cart.py (new — 53 tests: 49 catalog cart-add + 3 client_no + 1 finalize)"
+  ],
+  "success_rate": {
+    "backend": "100% (53/53 phase5 + 23/23 phase4 regression)",
+    "frontend": "100% — all 10 review_request frontend bullet points verified"
+  },
+  "test_credentials": "N/A — auth not in scope.",
+  "seed_data_creation": "Test created ~3 db.clients records with TEST_ prefix for client_no idempotency tests; each test cleans up via pymongo delete_many. db.client_counters incremented 3 times (counter is monotonic, no rollback expected).",
+  "retest_needed": false,
+  "should_main_agent_self_test": false,
+  "context_for_next_testing_agent": "Phase 5 fully validated. Cart system now covers TrainingPlus, LanguageEnglish, ExamPrep, Shop. To exercise real email delivery: set RESEND_API_KEY in backend/.env then run pytest backend/tests/test_phase5_email_and_cart.py::test_ensure_client_number_generates_mpk_format and inspect resend dashboard. Phase5 test file uses a helper _run_ensure_client_number that creates a fresh motor client per test (avoids cross-test event-loop reuse pitfall). All 76 tests run in ~13s total.",
+  "rca of the issue": "N/A — no blocking issues found."
+}

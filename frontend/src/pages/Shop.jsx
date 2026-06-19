@@ -3,7 +3,8 @@ import axios from "axios";
 import { toast } from "sonner";
 import { useTranslation } from "react-i18next";
 import { PageHero, Eyebrow } from "@/components/Common";
-import { Gift, Package } from "lucide-react";
+import { Gift, Package, Plus } from "lucide-react";
+import { apiAddToCart } from "@/lib/cart";
 
 const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
 
@@ -61,9 +62,14 @@ export default function Shop() {
                     <h3 className="font-serif text-xl text-[#2F0808]">{it.label}</h3>
                     <div className="mt-4 font-serif text-2xl text-[#580505]">{display}</div>
                     <div className="text-xs text-[#4A4A4A] mt-1">{t("shop.secured")}</div>
-                    <button onClick={() => buy(id)} disabled={loading === id} data-testid={`buy-${id}`} className="btn-primary mt-6 text-sm">
-                      {loading === id ? t("common.redirecting") : t("shop.buy")}
-                    </button>
+                    <div className="mt-6 grid grid-cols-2 gap-2">
+                      <button onClick={async () => { try { await apiAddToCart(id); toast.success("Ajouté au panier"); } catch { toast.error("Erreur ajout"); } }} data-testid={`cart-${id}`} className="inline-flex items-center justify-center gap-1 px-2 py-2 bg-white text-[#580505] border-[1.5px] border-[#580505] text-xs font-semibold hover:bg-[#FAFAFA] transition">
+                        <Plus size={12} /> Panier
+                      </button>
+                      <button onClick={() => buy(id)} disabled={loading === id} data-testid={`buy-${id}`} className="inline-flex items-center justify-center gap-1 px-2 py-2 bg-[#580505] text-[#C4D2ED] border-[1.5px] border-[#580505] text-xs font-semibold hover:bg-[#2F0808] transition disabled:opacity-60">
+                        {loading === id ? t("common.redirecting") : t("shop.buy")}
+                      </button>
+                    </div>
                   </div>
                 );
               })}

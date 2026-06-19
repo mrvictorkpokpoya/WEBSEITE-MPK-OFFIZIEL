@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import axios from "axios";
 import { toast } from "sonner";
 import { useTranslation, Trans } from "react-i18next";
-import { Award, ShoppingCart, Loader2, ClipboardCheck, MessageSquareDashed, UsersRound, MessageCircle, Pencil, BookOpen, Headphones } from "lucide-react";
+import { Award, ShoppingCart, Loader2, ClipboardCheck, MessageSquareDashed, UsersRound, MessageCircle, Pencil, BookOpen, Headphones, Plus } from "lucide-react";
 import { Link } from "react-router-dom";
 import { PageHero, Eyebrow, CTA, SectionTitle, CleanCard } from "@/components/Common";
 import { EXAMS, PREP_COURSES, PREP_PRICING, PREP_MODULES } from "@/lib/data";
+import { apiAddToCart } from "@/lib/cart";
 
 const MODULE_ICON = { MessageCircle, Pencil, BookOpen, Headphones };
 
@@ -83,6 +84,20 @@ function PrepCard({ course }) {
           className="inline-flex items-center justify-center gap-1.5 px-3 py-2 bg-white text-[#580505] border-[1.5px] border-[#580505] text-xs font-semibold hover:bg-[#FAFAFA] transition disabled:opacity-60"
         >
           {loading ? <Loader2 size={12} className="animate-spin" /> : <ShoppingCart size={12} />} {t("exam_prep.buy_external")}
+        </button>
+        <button
+          onClick={async () => { try { await apiAddToCart(`${course.id}_int`); toast.success("Ajouté au panier"); } catch { toast.error("Erreur ajout"); } }}
+          data-testid={`prep-cart-${course.id}-int`}
+          className="inline-flex items-center justify-center gap-1.5 px-3 py-2 bg-white text-[#580505] border-[1.5px] border-[#580505]/40 text-[10px] font-semibold hover:border-[#580505] hover:bg-[#FAFAFA] transition"
+        >
+          <Plus size={10} /> Panier (Interne)
+        </button>
+        <button
+          onClick={async () => { try { await apiAddToCart(`${course.id}_ext`); toast.success("Ajouté au panier"); } catch { toast.error("Erreur ajout"); } }}
+          data-testid={`prep-cart-${course.id}-ext`}
+          className="inline-flex items-center justify-center gap-1.5 px-3 py-2 bg-white text-[#580505] border-[1.5px] border-[#580505]/40 text-[10px] font-semibold hover:border-[#580505] hover:bg-[#FAFAFA] transition"
+        >
+          <Plus size={10} /> Panier (Externe)
         </button>
       </div>
     </div>
