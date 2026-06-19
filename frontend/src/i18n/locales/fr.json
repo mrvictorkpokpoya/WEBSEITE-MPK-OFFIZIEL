@@ -10,6 +10,9 @@
     "team": "La Team MPK",
     "campuses": "Nos Campus",
     "investment": "Appel à investissement",
+    "work_mpk": "Travailler avec MPK",
+    "work_internships": "Offres de Stages à MPK",
+    "work_jobs": "Offres d'Emplois à MPK",
     "training_plus": "MPK Training Plus",
     "exam_prep": "MPK Exam Prep",
     "translation_pro": "MPK Translation Pro",
@@ -466,6 +469,124 @@
     "cta_title": "Toutes nos formations en un clic.",
     "cta_kicker": "Choisissez votre cours, ajoutez au panier et payez en ligne — vous recevrez immédiatement votre Client ID par email.",
     "cta_btn": "Voir la boutique"
+  },
+  "careers": {
+    "apply": "Postuler",
+    "cta_btn": "Envoyer ma candidature",
+    "intern": {
+      "hero_eyebrow": "Travailler avec MPK",
+      "hero_title": "Stages à l'Institut MULTIPLIKATOR.",
+      "hero_kicker": "Rejoignez nos équipes pédagogiques, marketing et opérations le temps d'un stage formateur — en présentiel ou hybride, sur l'un de nos 6 campus.",
+      "why_eyebrow": "Pourquoi MPK ?",
+      "why_title": "Une expérience riche, encadrée, valorisante.",
+      "why_kicker": "MULTIPLIKATOR forme la nouvelle génération d'éducateurs, communicants et opérateurs de mobilité au Bénin. Nos stages sont conçus comme de véritables tremplins professionnels.",
+      "perks": [
+        { "title": "Tutorat individuel", "desc": "Un encadrant senior dédié à votre progression, avec bilans hebdomadaires et plan d'apprentissage personnalisé." },
+        { "title": "Équipe inclusive", "desc": "Vous travaillez avec une équipe multiculturelle issue de plusieurs campus et nationalités." },
+        { "title": "Projets concrets", "desc": "Vous contribuez à de vrais livrables : cours, supports, campagnes, événements institutionnels." },
+        { "title": "Attestation valorisée", "desc": "À l'issue du stage, une attestation officielle MPK reconnue par nos partenaires nationaux et internationaux." }
+      ],
+      "roles_eyebrow": "Stages ouverts",
+      "roles_title": "Postes en cours de recrutement.",
+      "roles_kicker": "Découvrez les profils que nous recherchons activement. D'autres opportunités peuvent émerger en cours d'année — n'hésitez pas à candidater spontanément.",
+      "roles": {
+        "s1": {
+          "type": "Pédagogie",
+          "title": "Assistant Pédagogique Allemand",
+          "desc": "Accompagner les formateurs en classe, préparer les supports pédagogiques et participer aux évaluations.",
+          "location": "Godomey / Akpakpa",
+          "duration": "3 mois"
+        },
+        "s2": {
+          "type": "Marketing",
+          "title": "Stagiaire Community Manager",
+          "desc": "Animer nos réseaux sociaux, produire des visuels, suivre les campagnes et reporter les KPI.",
+          "location": "Tous campus",
+          "duration": "6 mois"
+        },
+        "s3": {
+          "type": "Opérations",
+          "title": "Assistant Coordination Mobilité",
+          "desc": "Soutenir l'équipe MPK Consulting Pro dans le suivi des dossiers de mobilité internationale.",
+          "location": "Godomey",
+          "duration": "4 mois"
+        },
+        "s4": {
+          "type": "Tourisme",
+          "title": "Stagiaire MPK Tourism",
+          "desc": "Participer à l'organisation des sorties touristiques et au développement des contenus de découverte.",
+          "location": "Cotonou / Ouidah",
+          "duration": "3 mois"
+        }
+      },
+      "cta_eyebrow": "Candidature spontanée",
+      "cta_title": "Un autre profil ? Postulez quand même.",
+      "cta_kicker": "Nous accueillons les candidatures spontanées toute l'année. Envoyez-nous votre CV et lettre de motivation via le formulaire de contact."
+    },
+    "job": {
+      "hero_eyebrow": "Travailler avec MPK",
+      "hero_title": "Carrières chez MULTIPLIKATOR.",
+      "hero_kicker": "Rejoignez un réseau béninois en pleine croissance, leader sur la formation linguistique et la mobilité internationale, présent sur 6 campus.",
+      "values_eyebrow": "Pourquoi nous rejoindre",
+      "values_title": "Nos valeurs d'employeur.",
+      "values_kicker": "Une culture exigeante et bienveillante, tournée vers l'excellence et la transformation des trajectoires de nos apprenants.",
+      "values": [
+        { "title": "Croissance", "desc": "Une institution en plein essor, avec de réelles perspectives d'évolution interne." },
+        { "title": "Bienveillance", "desc": "Une équipe soudée, où chacun trouve son rôle et son rythme." },
+        { "title": "Ouverture", "desc": "Un environnement international avec des partenariats en Europe, Asie et Afrique." },
+        { "title": "Excellence", "desc": "Standards pédagogiques élevés, formation continue obligatoire pour tous les collaborateurs." }
+      ],
+      "roles_eyebrow": "Postes ouverts",
+      "roles_title": "Recrutements en cours.",
+      "roles_kicker": "Découvrez nos offres d'emploi à durée déterminée ou indéterminée, en présentiel ou hybride.",
+      "roles": {
+        "e1": {
+          "type": "CDI",
+          "title": "Formateur Allemand A1-C1",
+          "desc": "Concevoir et animer les cours d'allemand sur tous les niveaux du CECRL. Expérience pédagogique requise.",
+          "location": "Godomey",
+          "deadline": "Clôture : 31 juill. 2026"
+        },
+        "e2": {
+          "type": "CDI",
+          "title": "Formateur Anglais A1-C1",
+          "desc": "Concevoir et animer les cours d'anglais avec orientation TOEFL / IELTS. Diplôme bac+4 minimum.",
+          "location": "Akpakpa",
+          "deadline": "Clôture : 31 juill. 2026"
+        },
+        "e3": {
+          "type": "CDD",
+          "title": "Conseiller en mobilité internationale",
+          "desc": "Accompagner les apprenants dans leurs procédures de visa, admissions universitaires, bourses.",
+          "location": "Godomey",
+          "deadline": "Clôture : 15 août 2026"
+        },
+        "e4": {
+          "type": "CDI",
+          "title": "Responsable Marketing & Digital",
+          "desc": "Piloter la stratégie de communication, marketing, partenariats et campagnes digitales du réseau.",
+          "location": "Cotonou",
+          "deadline": "Clôture : 30 sept. 2026"
+        },
+        "e5": {
+          "type": "CDD",
+          "title": "Coordinateur Campus",
+          "desc": "Gérer les opérations quotidiennes d'un campus : équipe, planning, qualité, relation client.",
+          "location": "Parakou / Djougou",
+          "deadline": "Clôture : 31 août 2026"
+        },
+        "e6": {
+          "type": "CDI",
+          "title": "Traducteur Senior FR/EN/DE",
+          "desc": "Effectuer les traductions officielles, certifiées, et gérer le département MPK Translation Pro.",
+          "location": "Godomey",
+          "deadline": "Clôture : 30 sept. 2026"
+        }
+      },
+      "cta_eyebrow": "Candidature spontanée",
+      "cta_title": "Vous n'avez pas trouvé votre poste ?",
+      "cta_kicker": "Envoyez-nous votre CV et lettre de motivation — nous étudions chaque dossier avec attention et reviendrons vers vous dès qu'une opportunité correspond."
+    }
   },
   "downloads": {
     "hero_eyebrow": "Foire aux téléchargements",

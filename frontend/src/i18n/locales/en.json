@@ -10,6 +10,9 @@
     "team": "The MPK Team",
     "campuses": "Our Campuses",
     "investment": "Investment Call",
+    "work_mpk": "Work with MPK",
+    "work_internships": "Internship offers at MPK",
+    "work_jobs": "Job offers at MPK",
     "training_plus": "MPK Training Plus",
     "exam_prep": "MPK Exam Prep",
     "translation_pro": "MPK Translation Pro",
@@ -466,6 +469,64 @@
     "cta_title": "All our courses, one click away.",
     "cta_kicker": "Pick a course, add to cart and pay online — your Client ID will be emailed instantly.",
     "cta_btn": "Browse the shop"
+  },
+  "careers": {
+    "apply": "Apply",
+    "cta_btn": "Send my application",
+    "intern": {
+      "hero_eyebrow": "Work with MPK",
+      "hero_title": "Internships at MULTIPLIKATOR Institute.",
+      "hero_kicker": "Join our teaching, marketing or operations teams for a hands-on internship — on-site or hybrid, on one of our 6 campuses.",
+      "why_eyebrow": "Why MPK?",
+      "why_title": "A rich, mentored, value-driven experience.",
+      "why_kicker": "MULTIPLIKATOR trains the next generation of educators, communicators and mobility operators in Benin. Our internships are designed as real professional springboards.",
+      "perks": [
+        { "title": "1-on-1 mentoring", "desc": "A dedicated senior mentor for your progress, with weekly reviews and a personalised learning plan." },
+        { "title": "Inclusive team", "desc": "You work with a multicultural team across several campuses and nationalities." },
+        { "title": "Concrete projects", "desc": "You contribute to real deliverables: courses, materials, campaigns, institutional events." },
+        { "title": "Valued certificate", "desc": "An official MPK certificate at the end, recognised by our national and international partners." }
+      ],
+      "roles_eyebrow": "Open internships",
+      "roles_title": "Roles currently recruiting.",
+      "roles_kicker": "Explore the profiles we're actively seeking. New opportunities may emerge — feel free to send a spontaneous application.",
+      "roles": {
+        "s1": { "type": "Pedagogy", "title": "German Teaching Assistant", "desc": "Support trainers in class, prepare teaching materials and contribute to assessments.", "location": "Godomey / Akpakpa", "duration": "3 months" },
+        "s2": { "type": "Marketing", "title": "Community Manager Intern", "desc": "Run our social networks, produce visuals, monitor campaigns and report KPIs.", "location": "All campuses", "duration": "6 months" },
+        "s3": { "type": "Operations", "title": "Mobility Coordination Assistant", "desc": "Support MPK Consulting Pro in handling international mobility files.", "location": "Godomey", "duration": "4 months" },
+        "s4": { "type": "Tourism", "title": "MPK Tourism Intern", "desc": "Help organise tourism outings and develop discovery content.", "location": "Cotonou / Ouidah", "duration": "3 months" }
+      },
+      "cta_eyebrow": "Spontaneous application",
+      "cta_title": "A different profile? Apply anyway.",
+      "cta_kicker": "We welcome spontaneous applications all year long. Send your CV and cover letter via the contact form."
+    },
+    "job": {
+      "hero_eyebrow": "Work with MPK",
+      "hero_title": "Careers at MULTIPLIKATOR.",
+      "hero_kicker": "Join a fast-growing Beninese network — a leader in language training and international mobility, present across 6 campuses.",
+      "values_eyebrow": "Why join us",
+      "values_title": "Our employer values.",
+      "values_kicker": "A demanding yet caring culture, focused on excellence and transforming the trajectories of our learners.",
+      "values": [
+        { "title": "Growth", "desc": "A booming institution with genuine internal evolution prospects." },
+        { "title": "Care", "desc": "A close-knit team where everyone finds their role and rhythm." },
+        { "title": "Openness", "desc": "An international environment with partners across Europe, Asia and Africa." },
+        { "title": "Excellence", "desc": "High pedagogical standards and mandatory continuous training for all team members." }
+      ],
+      "roles_eyebrow": "Open positions",
+      "roles_title": "Current openings.",
+      "roles_kicker": "Discover our permanent and fixed-term roles, on-site or hybrid.",
+      "roles": {
+        "e1": { "type": "Permanent", "title": "German Trainer A1-C1", "desc": "Design and deliver German courses across all CEFR levels. Teaching experience required.", "location": "Godomey", "deadline": "Closes: July 31, 2026" },
+        "e2": { "type": "Permanent", "title": "English Trainer A1-C1", "desc": "Design and deliver English courses with TOEFL / IELTS focus. Min. Bachelor +4 required.", "location": "Akpakpa", "deadline": "Closes: July 31, 2026" },
+        "e3": { "type": "Fixed-term", "title": "International Mobility Advisor", "desc": "Guide learners through visa procedures, university admissions and scholarship applications.", "location": "Godomey", "deadline": "Closes: Aug 15, 2026" },
+        "e4": { "type": "Permanent", "title": "Head of Marketing & Digital", "desc": "Lead the network's communication, marketing, partnerships and digital strategy.", "location": "Cotonou", "deadline": "Closes: Sep 30, 2026" },
+        "e5": { "type": "Fixed-term", "title": "Campus Coordinator", "desc": "Run the daily operations of a campus: team, planning, quality, client relationship.", "location": "Parakou / Djougou", "deadline": "Closes: Aug 31, 2026" },
+        "e6": { "type": "Permanent", "title": "Senior Translator FR/EN/DE", "desc": "Deliver official and certified translations, lead the MPK Translation Pro department.", "location": "Godomey", "deadline": "Closes: Sep 30, 2026" }
+      },
+      "cta_eyebrow": "Spontaneous application",
+      "cta_title": "Didn't find your role?",
+      "cta_kicker": "Send us your CV and cover letter — we review each file with care and will get back to you as soon as an opportunity matches."
+    }
   },
   "downloads": {
     "hero_eyebrow": "Downloads",

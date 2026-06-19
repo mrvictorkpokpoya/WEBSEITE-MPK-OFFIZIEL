@@ -39,6 +39,8 @@ import Downloads from "@/pages/Downloads";
 import Blog from "@/pages/Blog";
 import BlogInfos from "@/pages/BlogInfos";
 import ConcoursPromotions from "@/pages/ConcoursPromotions";
+import OffresStages from "@/pages/OffresStages";
+import OffresEmplois from "@/pages/OffresEmplois";
 import LanguageEnglish from "@/pages/LanguageEnglish";
 import LanguageFrench from "@/pages/LanguageFrench";
 import LanguageChinese from "@/pages/LanguageChinese";
@@ -94,6 +96,8 @@ function AppRouter() {
       <Route path="/blog" element={<Layout><Blog /></Layout>} />
       <Route path="/blog-infos" element={<Layout><BlogInfos /></Layout>} />
       <Route path="/concours-promotions" element={<Layout><ConcoursPromotions /></Layout>} />
+      <Route path="/travailler-mpk/stages" element={<Layout><OffresStages /></Layout>} />
+      <Route path="/travailler-mpk/emplois" element={<Layout><OffresEmplois /></Layout>} />
       <Route path="/connexion" element={<Layout><Login /></Layout>} />
       <Route path="/inscription" element={<Layout><Register /></Layout>} />
       <Route path="/espace-apprenant" element={<Protected><Layout><Dashboard /></Layout></Protected>} />

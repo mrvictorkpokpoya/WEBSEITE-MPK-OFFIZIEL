@@ -10,6 +10,9 @@
     "team": "Das MPK-Team",
     "campuses": "Unsere Standorte",
     "investment": "Investitionsaufruf",
+    "work_mpk": "Bei MPK arbeiten",
+    "work_internships": "Praktikumsangebote bei MPK",
+    "work_jobs": "Stellenangebote bei MPK",
     "training_plus": "MPK Training Plus",
     "exam_prep": "MPK Exam Prep",
     "translation_pro": "MPK Translation Pro",
@@ -466,6 +469,64 @@
     "cta_title": "Alle Kurse mit einem Klick.",
     "cta_kicker": "Wählen Sie Ihren Kurs, legen Sie ihn in den Warenkorb und zahlen Sie online — Ihre Client ID erhalten Sie sofort per E-Mail.",
     "cta_btn": "Zum Shop"
+  },
+  "careers": {
+    "apply": "Bewerben",
+    "cta_btn": "Bewerbung senden",
+    "intern": {
+      "hero_eyebrow": "Bei MPK arbeiten",
+      "hero_title": "Praktika am MULTIPLIKATOR-Institut.",
+      "hero_kicker": "Werden Sie Teil unserer pädagogischen, Marketing- oder Operations-Teams — Präsenz oder hybrid, auf einem unserer 6 Campusse.",
+      "why_eyebrow": "Warum MPK?",
+      "why_title": "Eine reichhaltige, begleitete und wertvolle Erfahrung.",
+      "why_kicker": "MULTIPLIKATOR bildet die nächste Generation von Pädagogen, Kommunikatoren und Mobilitätsexperten in Benin aus. Unsere Praktika sind echte berufliche Sprungbretter.",
+      "perks": [
+        { "title": "Individuelles Mentoring", "desc": "Ein engagierter Senior-Mentor mit wöchentlichen Reviews und individuellem Lernplan." },
+        { "title": "Inklusives Team", "desc": "Sie arbeiten mit einem multikulturellen Team über mehrere Campusse und Nationalitäten." },
+        { "title": "Konkrete Projekte", "desc": "Sie tragen zu echten Ergebnissen bei: Kurse, Materialien, Kampagnen, Veranstaltungen." },
+        { "title": "Wertvolles Zertifikat", "desc": "Am Ende erhalten Sie ein offizielles MPK-Zertifikat, anerkannt von unseren nationalen und internationalen Partnern." }
+      ],
+      "roles_eyebrow": "Offene Praktika",
+      "roles_title": "Aktuell ausgeschriebene Stellen.",
+      "roles_kicker": "Entdecken Sie die Profile, die wir aktiv suchen. Weitere Chancen können sich ergeben — initiative Bewerbungen jederzeit willkommen.",
+      "roles": {
+        "s1": { "type": "Pädagogik", "title": "Assistenz Deutschunterricht", "desc": "Trainer im Unterricht unterstützen, Materialien vorbereiten und an Bewertungen mitwirken.", "location": "Godomey / Akpakpa", "duration": "3 Monate" },
+        "s2": { "type": "Marketing", "title": "Community Manager Praktikum", "desc": "Soziale Netzwerke betreuen, Visuals produzieren, Kampagnen und KPIs verfolgen.", "location": "Alle Campusse", "duration": "6 Monate" },
+        "s3": { "type": "Operations", "title": "Assistenz Mobilitätskoordination", "desc": "Das MPK Consulting Pro-Team bei internationalen Mobilitätsanträgen unterstützen.", "location": "Godomey", "duration": "4 Monate" },
+        "s4": { "type": "Tourismus", "title": "Praktikum MPK Tourism", "desc": "Organisation von Touristikausflügen und Entwicklung von Entdeckerinhalten.", "location": "Cotonou / Ouidah", "duration": "3 Monate" }
+      },
+      "cta_eyebrow": "Initiativbewerbung",
+      "cta_title": "Ein anderes Profil? Bewerben Sie sich trotzdem.",
+      "cta_kicker": "Wir akzeptieren ganzjährig Initiativbewerbungen. Senden Sie Ihren Lebenslauf und Ihr Motivationsschreiben über das Kontaktformular."
+    },
+    "job": {
+      "hero_eyebrow": "Bei MPK arbeiten",
+      "hero_title": "Karriere bei MULTIPLIKATOR.",
+      "hero_kicker": "Werden Sie Teil eines wachsenden beninischen Netzwerks — führend in Sprachausbildung und internationaler Mobilität, präsent auf 6 Campussen.",
+      "values_eyebrow": "Warum bei uns",
+      "values_title": "Unsere Arbeitgeberwerte.",
+      "values_kicker": "Eine anspruchsvolle und wohlwollende Kultur, ausgerichtet auf Exzellenz und die Veränderung der Werdegänge unserer Lernenden.",
+      "values": [
+        { "title": "Wachstum", "desc": "Eine Institution im Aufschwung mit echten internen Entwicklungschancen." },
+        { "title": "Fürsorge", "desc": "Ein eingespieltes Team, in dem jeder seinen Platz und Rhythmus findet." },
+        { "title": "Weltoffenheit", "desc": "Internationales Umfeld mit Partnern in Europa, Asien und Afrika." },
+        { "title": "Exzellenz", "desc": "Hohe pädagogische Standards, verpflichtende Fortbildung für alle Mitarbeitenden." }
+      ],
+      "roles_eyebrow": "Offene Stellen",
+      "roles_title": "Aktuelle Ausschreibungen.",
+      "roles_kicker": "Entdecken Sie unsere unbefristeten und befristeten Stellen, Präsenz oder hybrid.",
+      "roles": {
+        "e1": { "type": "Unbefristet", "title": "Deutschtrainer A1-C1", "desc": "Konzeption und Durchführung von Deutschkursen auf allen GER-Stufen. Lehrerfahrung erforderlich.", "location": "Godomey", "deadline": "Schluss: 31. Juli 2026" },
+        "e2": { "type": "Unbefristet", "title": "Englischtrainer A1-C1", "desc": "Konzeption und Durchführung von Englischkursen mit TOEFL / IELTS-Ausrichtung. Mindestens Bachelor +4.", "location": "Akpakpa", "deadline": "Schluss: 31. Juli 2026" },
+        "e3": { "type": "Befristet", "title": "Berater für internationale Mobilität", "desc": "Lernende bei Visa-, Universitäts- und Stipendienverfahren begleiten.", "location": "Godomey", "deadline": "Schluss: 15. Aug. 2026" },
+        "e4": { "type": "Unbefristet", "title": "Leitung Marketing & Digital", "desc": "Strategie für Kommunikation, Marketing, Partnerschaften und Digitalkampagnen steuern.", "location": "Cotonou", "deadline": "Schluss: 30. Sep. 2026" },
+        "e5": { "type": "Befristet", "title": "Campus-Koordinator", "desc": "Tägliche Operations eines Campus: Team, Planung, Qualität, Kundenbeziehung.", "location": "Parakou / Djougou", "deadline": "Schluss: 31. Aug. 2026" },
+        "e6": { "type": "Unbefristet", "title": "Senior-Übersetzer FR/EN/DE", "desc": "Offizielle und beglaubigte Übersetzungen, Leitung der Abteilung MPK Translation Pro.", "location": "Godomey", "deadline": "Schluss: 30. Sep. 2026" }
+      },
+      "cta_eyebrow": "Initiativbewerbung",
+      "cta_title": "Keine passende Stelle gefunden?",
+      "cta_kicker": "Senden Sie uns Ihren Lebenslauf und Ihr Motivationsschreiben — wir prüfen jede Bewerbung sorgfältig und melden uns, sobald eine Gelegenheit passt."
+    }
   },
   "downloads": {
     "hero_eyebrow": "Downloads",

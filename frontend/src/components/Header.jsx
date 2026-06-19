@@ -91,6 +91,10 @@ export default function Header() {
       { to: "/campus", label: t("nav.campuses") },
       { to: "/appel-a-investissement", label: t("nav.investment") },
     ]},
+    { key: "work", label: t("nav.work_mpk"), items: [
+      { to: "/travailler-mpk/stages", label: t("nav.work_internships") },
+      { to: "/travailler-mpk/emplois", label: t("nav.work_jobs") },
+    ]},
     { key: "service", label: t("nav.service"), items: [
       { to: "/departements/training-plus", label: t("nav.training_plus") },
       { to: "/departements/exam-prep", label: t("nav.exam_prep") },
