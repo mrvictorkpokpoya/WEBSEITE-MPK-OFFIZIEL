@@ -17,7 +17,7 @@ export default function Home() {
         <div className="absolute inset-0 opacity-60">
           <img src="https://customer-assets.emergentagent.com/job_langues-benin/artifacts/au40q6vj_WhatsApp%20Image%202026-06-13%20at%2001.24.36.jpeg" alt="L'équipe MULTIPLIKATOR célèbre la réussite" className="w-full h-full object-cover" />
         </div>
-        <div className="absolute inset-0" style={{background: "linear-gradient(180deg, rgba(47,8,8,0.65) 0%, rgba(88,5,5,0.55) 100%)"}} />
+        <div className="absolute inset-0" style={{background: "linear-gradient(180deg, rgba(47,8,8,0.78) 0%, rgba(88,5,5,0.70) 100%)"}} />
         <div className="relative max-w-[1400px] mx-auto px-4 sm:px-5 lg:px-10 py-16 sm:py-20 lg:py-36 text-white">
           <div className="max-w-4xl fade-up">
             <Eyebrow><span className="text-white/70">{t("hero.eyebrow")}</span></Eyebrow>
@@ -29,9 +29,20 @@ export default function Home() {
               {t("hero.subtitle")}
             </p>
             <div className="mt-6 sm:mt-10 flex flex-wrap gap-3 sm:gap-4">
-              <Link to="/departements/training-plus" data-testid="hero-cta-formations" className="inline-flex items-center gap-2 px-4 sm:px-6 py-3 sm:py-3.5 bg-[#580505] text-[#C4D2ED] border-[1.5px] border-[#580505] text-sm sm:text-base font-semibold tracking-wide hover:bg-[#2F0808] transition shadow-lg">{t("hero.cta_formations")} <ArrowRight size={16} /></Link>
+              <Link to="/departements/training-plus" data-testid="hero-cta-formations" className="inline-flex items-center gap-2 px-4 sm:px-6 py-3 sm:py-3.5 bg-[#580505] text-[#C4D2ED] border-[1.5px] border-[#C4D2ED] text-sm sm:text-base font-semibold tracking-wide hover:bg-[#2F0808] hover:border-[#C4D2ED] transition shadow-lg">{t("hero.cta_formations")} <ArrowRight size={16} /></Link>
               <Link to="/contact" data-testid="hero-cta-contact" className="inline-flex items-center gap-2 px-4 sm:px-6 py-3 sm:py-3.5 bg-transparent text-[#C4D2ED] border-[1.5px] border-[#C4D2ED] text-sm sm:text-base font-semibold tracking-wide hover:bg-[#C4D2ED]/10 transition">{t("hero.cta_contact")} <ArrowRight size={16} /></Link>
             </div>
+
+            {/* News badge — subtle frame for upcoming announcements */}
+            <Link to="/actualites" data-testid="hero-news-badge" className="mt-8 sm:mt-10 inline-flex items-center gap-3 px-4 py-2.5 border border-[#C4D2ED]/35 bg-white/5 backdrop-blur-sm hover:bg-white/10 hover:border-[#C4D2ED]/55 transition group max-w-xl">
+              <span className="inline-flex items-center gap-1.5 px-2 py-0.5 bg-[#C4D2ED] text-[#580505] text-[10px] tracking-[0.2em] uppercase font-bold">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#580505] animate-pulse" /> Actu
+              </span>
+              <span className="text-xs sm:text-sm text-white/90 font-light flex-grow">
+                Rentrée Mars 2026 — inscriptions ouvertes sur tous les campus
+              </span>
+              <ArrowRight size={14} className="text-[#C4D2ED] group-hover:translate-x-0.5 transition-transform" />
+            </Link>
           </div>
         </div>
         {/* Stats overlap */}

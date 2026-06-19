@@ -301,15 +301,14 @@ export const ENGLISH_VIP_FULL = [
 ];
 
 export const ENGLISH_BUNDLES = [
-  { id: "bundle_eng_a1_a2", title: "Pack A1 + A2", levels: "A1 + A2", weeks: "8 sem.", normal: "138.240", discounted: "124.416", save: "10%", tone: "#3A0000" },
-  { id: "bundle_eng_a2_b1", title: "Pack A2 + B1", levels: "A2 + B1", weeks: "8 sem.", normal: "176.000", discounted: "158.400", save: "10%", tone: "#430000" },
-  { id: "bundle_eng_b1_b2", title: "Pack B1 + B2", levels: "B1 + B2", weeks: "8 sem.", normal: "204.000", discounted: "183.600", save: "10%", tone: "#4B0000" },
   { id: "bundle_eng_a1_b1", title: "Parcours A1 → B1", levels: "A1 + A2 + B1", weeks: "12 sem.", normal: "249.600", discounted: "212.160", save: "15%", tone: "#2B0000", featured: true },
   { id: "bundle_eng_a1_b2", title: "Parcours A1 → B2", levels: "A1 + A2 + B1 + B2", weeks: "16 sem.", normal: "357.600", discounted: "303.960", save: "15%", tone: "#320000" },
   { id: "bundle_eng_a1_c1", title: "Parcours A1 → C1", levels: "A1 + A2 + B1 + B2 + C1", weeks: "20 sem.", normal: "481.600", discounted: "409.360", save: "15%", tone: "#000000" },
-  { id: "bundle_eng_a2_b1_b2", title: "Parcours A2 → B2", levels: "A2 + B1 + B2", weeks: "12 sem.", normal: "284.000", discounted: "241.400", save: "15%", tone: "#540000" },
+  { id: "bundle_eng_a2_b1", title: "Parcours A2 → B1", levels: "A2 + B1", weeks: "8 sem.", normal: "176.000", discounted: "158.400", save: "10%", tone: "#430000" },
+  { id: "bundle_eng_a2_b2", title: "Parcours A2 → B2", levels: "A2 + B1 + B2", weeks: "12 sem.", normal: "284.000", discounted: "241.400", save: "15%", tone: "#540000" },
   { id: "bundle_eng_a2_c1", title: "Parcours A2 → C1", levels: "A2 + B1 + B2 + C1", weeks: "16 sem.", normal: "408.000", discounted: "346.800", save: "15%", tone: "#3A0000" },
-  { id: "bundle_eng_b1_c1", title: "Parcours B1 → C1", levels: "B1 + B2 + C1", weeks: "12 sem.", normal: "328.000", discounted: "278.800", save: "15%", tone: "#4B0000" },
+  { id: "bundle_eng_b1_b2", title: "Parcours B1 → B2", levels: "B1 + B2", weeks: "8 sem.", normal: "204.000", discounted: "183.600", save: "10%", tone: "#4B0000" },
+  { id: "bundle_eng_b1_c1", title: "Parcours B1 → C1", levels: "B1 + B2 + C1", weeks: "12 sem.", normal: "328.000", discounted: "278.800", save: "15%", tone: "#2F0808" },
 ];
 
 const buildPlaceholderSublevels = (langLabel, status) => [
@@ -332,15 +331,14 @@ export const KIDS_ENGLISH = {
 // ----- Bundles enrichis (variations subtiles bordeaux) -----
 // Tints from palette: #2B0000 / #320000 / #3A0000 / #430000 / #4B0000 / #540000 (deepest to brightest)
 export const BUNDLES = [
-  { id: "bundle_a1_a2", title: "Pack A1 + A2", levels: "A1 + A2", weeks: "8 semaines", normal: "192.000", discounted: "172.800", save: "10%", tone: "#3A0000" },
-  { id: "bundle_a2_b1", title: "Pack A2 + B1", levels: "A2 + B1", weeks: "8 semaines", normal: "220.000", discounted: "198.000", save: "10%", tone: "#430000" },
-  { id: "bundle_b1_b2", title: "Pack B1 + B2", levels: "B1 + B2", weeks: "8 semaines", normal: "255.000", discounted: "229.500", save: "10%", tone: "#4B0000" },
   { id: "bundle_a1_b1", title: "Parcours A1 → B1", levels: "A1 + A2 + B1", weeks: "12 semaines", normal: "312.000", discounted: "265.200", save: "15%", tone: "#2B0000", featured: true },
   { id: "bundle_a1_b2", title: "Parcours A1 → B2", levels: "A1 + A2 + B1 + B2", weeks: "16 semaines", normal: "447.000", discounted: "379.950", save: "15%", tone: "#320000" },
   { id: "bundle_a1_c1", title: "Parcours A1 → C1", levels: "A1 + A2 + B1 + B2 + C1", weeks: "20 semaines", normal: "602.000", discounted: "511.700", save: "15%", tone: "#000000" },
-  { id: "bundle_a2_b1_b2", title: "Parcours A2 → B2", levels: "A2 + B1 + B2", weeks: "12 semaines", normal: "355.000", discounted: "301.750", save: "15%", tone: "#540000" },
+  { id: "bundle_a2_b1", title: "Parcours A2 → B1", levels: "A2 + B1", weeks: "8 semaines", normal: "220.000", discounted: "198.000", save: "10%", tone: "#430000" },
+  { id: "bundle_a2_b2", title: "Parcours A2 → B2", levels: "A2 + B1 + B2", weeks: "12 semaines", normal: "355.000", discounted: "301.750", save: "15%", tone: "#540000" },
   { id: "bundle_a2_c1", title: "Parcours A2 → C1", levels: "A2 + B1 + B2 + C1", weeks: "16 semaines", normal: "510.000", discounted: "433.500", save: "15%", tone: "#3A0000" },
-  { id: "bundle_b1_c1", title: "Parcours B1 → C1", levels: "B1 + B2 + C1", weeks: "12 semaines", normal: "410.000", discounted: "348.500", save: "15%", tone: "#4B0000" },
+  { id: "bundle_b1_b2", title: "Parcours B1 → B2", levels: "B1 + B2", weeks: "8 semaines", normal: "255.000", discounted: "229.500", save: "10%", tone: "#4B0000" },
+  { id: "bundle_b1_c1", title: "Parcours B1 → C1", levels: "B1 + B2 + C1", weeks: "12 semaines", normal: "410.000", discounted: "348.500", save: "15%", tone: "#2F0808" },
 ];
 
 // Cours préparatoires — prix interne/externe + temps/jour

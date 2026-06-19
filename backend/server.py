@@ -190,17 +190,17 @@ CATALOG: Dict[str, Dict[str, Any]] = {
     "kids_english": {"label": "MPK Kids English Training (1 mois)", "amount": 15000.0, "currency": "xof"},
     "kids_english_reg": {"label": "Inscription Kids English", "amount": 2500.0, "currency": "xof"},
     # Bundles — enriched combinations (10% off pair, 15% off 3+ levels)
-    "bundle_a1_a2": {"label": "Pack A1 + A2 (-10%)", "amount": 172800.0, "currency": "xof"},
-    "bundle_a2_b1": {"label": "Pack A2 + B1 (-10%)", "amount": 198000.0, "currency": "xof"},
-    "bundle_b1_b2": {"label": "Pack B1 + B2 (-10%)", "amount": 229500.0, "currency": "xof"},
     "bundle_a1_b1": {"label": "Parcours A1 → B1 (-15%)", "amount": 265200.0, "currency": "xof"},
     "bundle_a1_b2": {"label": "Parcours A1 → B2 (-15%)", "amount": 379950.0, "currency": "xof"},
     "bundle_a1_c1": {"label": "Parcours A1 → C1 (-15%)", "amount": 511700.0, "currency": "xof"},
-    "bundle_a2_b1_b2": {"label": "Parcours A2 → B2 (-15%)", "amount": 301750.0, "currency": "xof"},
+    "bundle_a2_b1": {"label": "Parcours A2 → B1 (-10%)", "amount": 198000.0, "currency": "xof"},
+    "bundle_a2_b2": {"label": "Parcours A2 → B2 (-15%)", "amount": 301750.0, "currency": "xof"},
     "bundle_a2_c1": {"label": "Parcours A2 → C1 (-15%)", "amount": 433500.0, "currency": "xof"},
+    "bundle_b1_b2": {"label": "Parcours B1 → B2 (-10%)", "amount": 229500.0, "currency": "xof"},
     "bundle_b1_c1": {"label": "Parcours B1 → C1 (-15%)", "amount": 348500.0, "currency": "xof"},
-    # Legacy alias (in case any UI still references the old id)
+    # Legacy aliases for backward compat (old UI IDs still resolve)
     "bundle_a1_a2_b1": {"label": "Parcours A1 → B1 (-15%)", "amount": 265200.0, "currency": "xof"},
+    "bundle_a2_b1_b2": {"label": "Parcours A2 → B2 (-15%)", "amount": 301750.0, "currency": "xof"},
     # ----- ENGLISH (-20% vs German, 3×3h/week) -----
     "eng_a1_1": {"label": "Anglais A1.1 (4 sem · 3×3h/sem)", "amount": 36800.0, "currency": "xof"},
     "eng_a1_2": {"label": "Anglais A1.2 (4 sem · 3×3h/sem)", "amount": 36800.0, "currency": "xof"},
@@ -233,15 +233,17 @@ CATALOG: Dict[str, Dict[str, Any]] = {
     "vip_eng_b2": {"label": "Anglais Premium VIP B2 (6 sem)", "amount": 200000.0, "currency": "xof"},
     "vip_eng_c1": {"label": "Anglais Premium VIP C1 (6 sem)", "amount": 224000.0, "currency": "xof"},
     # English Bundles (-20% vs German)
-    "bundle_eng_a1_a2": {"label": "Pack Anglais A1 + A2 (-10%)", "amount": 124416.0, "currency": "xof"},
-    "bundle_eng_a2_b1": {"label": "Pack Anglais A2 + B1 (-10%)", "amount": 158400.0, "currency": "xof"},
-    "bundle_eng_b1_b2": {"label": "Pack Anglais B1 + B2 (-10%)", "amount": 183600.0, "currency": "xof"},
     "bundle_eng_a1_b1": {"label": "Parcours Anglais A1 → B1 (-15%)", "amount": 212160.0, "currency": "xof"},
     "bundle_eng_a1_b2": {"label": "Parcours Anglais A1 → B2 (-15%)", "amount": 303960.0, "currency": "xof"},
     "bundle_eng_a1_c1": {"label": "Parcours Anglais A1 → C1 (-15%)", "amount": 409360.0, "currency": "xof"},
-    "bundle_eng_a2_b1_b2": {"label": "Parcours Anglais A2 → B2 (-15%)", "amount": 241400.0, "currency": "xof"},
+    "bundle_eng_a2_b1": {"label": "Parcours Anglais A2 → B1 (-10%)", "amount": 158400.0, "currency": "xof"},
+    "bundle_eng_a2_b2": {"label": "Parcours Anglais A2 → B2 (-15%)", "amount": 241400.0, "currency": "xof"},
     "bundle_eng_a2_c1": {"label": "Parcours Anglais A2 → C1 (-15%)", "amount": 346800.0, "currency": "xof"},
+    "bundle_eng_b1_b2": {"label": "Parcours Anglais B1 → B2 (-10%)", "amount": 183600.0, "currency": "xof"},
     "bundle_eng_b1_c1": {"label": "Parcours Anglais B1 → C1 (-15%)", "amount": 278800.0, "currency": "xof"},
+    # Legacy aliases (compat)
+    "bundle_eng_a1_a2": {"label": "Pack Anglais A1 + A2 (legacy)", "amount": 124416.0, "currency": "xof"},
+    "bundle_eng_a2_b1_b2": {"label": "Parcours Anglais A2 → B2 (-15%)", "amount": 241400.0, "currency": "xof"},
     # ----- Upsell / Frais administratifs -----
     "registration_fee": {"label": "Frais d'inscription (unique)", "amount": 5000.0, "currency": "xof"},
     "documentation_fee": {"label": "Frais de documentation (par niveau)", "amount": 10000.0, "currency": "xof"},
