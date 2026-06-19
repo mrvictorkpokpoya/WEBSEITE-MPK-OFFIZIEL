@@ -37,6 +37,9 @@ import Terms from "@/pages/Terms";
 import Alumni from "@/pages/Alumni";
 import Downloads from "@/pages/Downloads";
 import Blog from "@/pages/Blog";
+import LanguageEnglish from "@/pages/LanguageEnglish";
+import LanguageFrench from "@/pages/LanguageFrench";
+import LanguageChinese from "@/pages/LanguageChinese";
 
 function Protected({ children }) {
   const { user, loading } = useAuth();
@@ -59,6 +62,9 @@ function AppRouter() {
       <Route path="/team" element={<Layout><Team /></Layout>} />
       <Route path="/campus" element={<Layout><Campuses /></Layout>} />
       <Route path="/departements/training-plus" element={<Layout><TrainingPlus /></Layout>} />
+      <Route path="/langues/anglais" element={<Layout><LanguageEnglish /></Layout>} />
+      <Route path="/langues/francais" element={<Layout><LanguageFrench /></Layout>} />
+      <Route path="/langues/chinois" element={<Layout><LanguageChinese /></Layout>} />
       <Route path="/departements/exam-prep" element={<Layout><ExamPrep /></Layout>} />
       <Route path="/departements/translation-pro" element={<Layout><TranslationPro /></Layout>} />
       <Route path="/departements/consulting-pro" element={<Layout><ConsultingPro /></Layout>} />

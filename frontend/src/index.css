@@ -75,10 +75,11 @@ h1, h2, h3, h4, h5, .font-serif { font-family: 'Poppins', sans-serif; font-weigh
 
 .mpk-card {
   background: #fff;
-  border: 1px solid rgba(88,5,5,0.10);
-  transition: border-color 0.3s ease, transform 0.3s ease;
+  border: 1px solid rgba(88,5,5,0.22);
+  box-shadow: 0 12px 26px -14px rgba(88,5,5,0.30);
+  transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
-.mpk-card:hover { border-color: rgba(88,5,5,0.35); }
+.mpk-card:hover { border-color: rgba(88,5,5,0.45); box-shadow: 0 20px 40px -14px rgba(88,5,5,0.38); }
 
 .fade-up { animation: fadeUp 0.7s ease both; }
 @keyframes fadeUp { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }

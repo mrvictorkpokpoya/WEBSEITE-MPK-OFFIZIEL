@@ -207,6 +207,82 @@ export const LANGUAGE_COURSES = [
   { id: "lang_c2_2", level: "C2.2", title: "Allemand C2.2", desc: "Niveau natif certifié — Goethe C2 / Großes Deutsches Sprachdiplom.", priceFcfa: "sur devis", duration: "4 semaines · 64 UE" },
 ];
 
+// Estimated internal prices used for bundle calculations (C1=155K, C2=175K base level)
+export const SEMI_FULL = [
+  { level: "A1", fcfa: "92.000", eur: "260", pkg: "semi_a1" },
+  { level: "A2", fcfa: "100.000", eur: "300", pkg: "semi_a2" },
+  { level: "B1", fcfa: "120.000", eur: "385", pkg: "semi_b1" },
+  { level: "B2", fcfa: "135.000", eur: "450", pkg: "semi_b2" },
+  { level: "C1", fcfa: "sur devis", eur: "sur devis", pkg: null },
+  { level: "C2", fcfa: "sur devis", eur: "sur devis", pkg: null },
+];
+
+// Premium VIP Accéléré — Sublevels A1.1 → C2.2 (half duration of Semi-Intensif)
+// A1-B1 = 2 sem/sublevel ; B2-C1 = 3 sem/sublevel ; C2 = sur demande
+export const VIP_SUBLEVELS = [
+  { id: "vip_a1_1", level: "A1.1", weeks: 2, ue: 56, fcfa: "100.000" },
+  { id: "vip_a1_2", level: "A1.2", weeks: 2, ue: 56, fcfa: "100.000" },
+  { id: "vip_a2_1", level: "A2.1", weeks: 2, ue: 56, fcfa: "100.000" },
+  { id: "vip_a2_2", level: "A2.2", weeks: 2, ue: 56, fcfa: "100.000" },
+  { id: "vip_b1_1", level: "B1.1", weeks: 2, ue: 56, fcfa: "107.500" },
+  { id: "vip_b1_2", level: "B1.2", weeks: 2, ue: 56, fcfa: "107.500" },
+  { id: "vip_b2_1", level: "B2.1", weeks: 3, ue: 107, fcfa: "125.000" },
+  { id: "vip_b2_2", level: "B2.2", weeks: 3, ue: 107, fcfa: "125.000" },
+  { id: "vip_c1_1", level: "C1.1", weeks: 3, ue: 107, fcfa: "140.000" },
+  { id: "vip_c1_2", level: "C1.2", weeks: 3, ue: 107, fcfa: "140.000" },
+  { id: "vip_c2_1", level: "C2.1", weeks: 3, ue: 107, fcfa: "sur demande" },
+  { id: "vip_c2_2", level: "C2.2", weeks: 3, ue: 107, fcfa: "sur demande" },
+];
+
+// VIP — Niveau complet (corrigé d'après client)
+export const VIP_FULL = [
+  { level: "A1", weeks: 4, fcfa: "200.000", pkg: "vip_a1" },
+  { level: "A2", weeks: 4, fcfa: "200.000", pkg: "vip_a2" },
+  { level: "B1", weeks: 4, fcfa: "215.000", pkg: "vip_b1" },
+  { level: "B2", weeks: 6, fcfa: "250.000", pkg: "vip_b2" },
+  { level: "C1", weeks: 6, fcfa: "280.000", pkg: "vip_c1" },
+  { level: "C2", weeks: 6, fcfa: "sur demande", pkg: null },
+];
+
+// (Kept for backward compat — same as VIP_FULL B2/C1)
+export const VIP_INTENSIVE = [
+  { level: "B2", ue: 214, weeks: 6, fcfa: "250.000", pkg: "vip_b2" },
+  { level: "C1", ue: 214, weeks: 6, fcfa: "280.000", pkg: "vip_c1" },
+];
+
+// ----- Other languages — same sublevel structure (status placeholder) -----
+const buildSublevels = (langLabel, status) => [
+  "A1.1","A1.2","A2.1","A2.2","B1.1","B1.2","B2.1","B2.2","C1.1","C1.2","C2.1","C2.2",
+].map((lv) => ({ level: lv, title: `${langLabel} ${lv}`, status }));
+
+export const ENGLISH_COURSES = buildSublevels("Anglais", "coming");
+export const FRENCH_COURSES = buildSublevels("Français", "design");
+export const CHINESE_COURSES = buildSublevels("Chinois", "design");
+
+// MPK Kids English Training
+export const KIDS_ENGLISH = {
+  id: "kids_english",
+  title: "MPK Kids English Training",
+  duration: "1 mois",
+  priceFcfa: "15.000",
+  registrationFcfa: "2.500",
+  desc: "Initiation ludique à l'anglais pour les enfants — vocabulaire, comptines, premières conversations.",
+};
+
+// ----- Bundles enrichis (variations subtiles bordeaux) -----
+// Tints from palette: #2B0000 / #320000 / #3A0000 / #430000 / #4B0000 / #540000 (deepest to brightest)
+export const BUNDLES = [
+  { id: "bundle_a1_a2", title: "Pack A1 + A2", levels: "A1 + A2", weeks: "8 semaines", normal: "192.000", discounted: "172.800", save: "10%", tone: "#3A0000" },
+  { id: "bundle_a2_b1", title: "Pack A2 + B1", levels: "A2 + B1", weeks: "8 semaines", normal: "220.000", discounted: "198.000", save: "10%", tone: "#430000" },
+  { id: "bundle_b1_b2", title: "Pack B1 + B2", levels: "B1 + B2", weeks: "8 semaines", normal: "255.000", discounted: "229.500", save: "10%", tone: "#4B0000" },
+  { id: "bundle_a1_b1", title: "Parcours A1 → B1", levels: "A1 + A2 + B1", weeks: "12 semaines", normal: "312.000", discounted: "265.200", save: "15%", tone: "#2B0000", featured: true },
+  { id: "bundle_a1_b2", title: "Parcours A1 → B2", levels: "A1 + A2 + B1 + B2", weeks: "16 semaines", normal: "447.000", discounted: "379.950", save: "15%", tone: "#320000" },
+  { id: "bundle_a1_c1", title: "Parcours A1 → C1", levels: "A1 + A2 + B1 + B2 + C1", weeks: "20 semaines", normal: "602.000", discounted: "511.700", save: "15%", tone: "#000000" },
+  { id: "bundle_a2_b1_b2", title: "Parcours A2 → B2", levels: "A2 + B1 + B2", weeks: "12 semaines", normal: "355.000", discounted: "301.750", save: "15%", tone: "#540000" },
+  { id: "bundle_a2_c1", title: "Parcours A2 → C1", levels: "A2 + B1 + B2 + C1", weeks: "16 semaines", normal: "510.000", discounted: "433.500", save: "15%", tone: "#3A0000" },
+  { id: "bundle_b1_c1", title: "Parcours B1 → C1", levels: "B1 + B2 + C1", weeks: "12 semaines", normal: "410.000", discounted: "348.500", save: "15%", tone: "#4B0000" },
+];
+
 // Cours préparatoires — prix interne/externe + temps/jour
 // Durée par niveau : 03 semaines
 export const PREP_PRICING = {
@@ -235,42 +311,6 @@ export const PREP_MODULES = [
   { id: "module_schreiben", title: "Module Schreiben", short: "Écrit", competence: "Expression écrite", desc: "Travail ciblé sur la rédaction : email, lettre formelle, dissertation, correction individualisée.", icon: "Pencil" },
   { id: "module_lesen", title: "Module Lesen", short: "Lecture", competence: "Compréhension écrite", desc: "Techniques de lecture rapide, repérage d'informations, articles authentiques et textes d'examen.", icon: "BookOpen" },
   { id: "module_hoeren", title: "Module Hören", short: "Audio", competence: "Compréhension orale", desc: "Entraînement à l'écoute active sur supports authentiques (radio, dialogues, conférences).", icon: "Headphones" },
-];
-
-export const SEMI_FULL = [
-  { level: "A1", fcfa: "92.000", eur: "260", pkg: "semi_a1" },
-  { level: "A2", fcfa: "100.000", eur: "300", pkg: "semi_a2" },
-  { level: "B1", fcfa: "120.000", eur: "385", pkg: "semi_b1" },
-  { level: "B2", fcfa: "135.000", eur: "450", pkg: "semi_b2" },
-  { level: "C1", fcfa: "sur devis", eur: "sur devis", pkg: null },
-];
-
-export const VIP_SUBLEVELS = [
-  { level: "A1.1", weeks: 2, ue: 56, fcfa: "100.000" },
-  { level: "A1.2", weeks: 2, ue: 56, fcfa: "100.000" },
-  { level: "A2.1", weeks: 2, ue: 56, fcfa: "100.000" },
-  { level: "A2.2", weeks: 2, ue: 56, fcfa: "100.000" },
-  { level: "B1.1", weeks: 2, ue: 56, fcfa: "107.500" },
-  { level: "B1.2", weeks: 2, ue: 56, fcfa: "107.500" },
-];
-
-export const VIP_FULL = [
-  { level: "A1", fcfa: "200.000", pkg: "vip_a1" },
-  { level: "A2", fcfa: "200.000", pkg: "vip_a2" },
-  { level: "B1", fcfa: "215.000", pkg: "vip_b1" },
-];
-
-export const VIP_INTENSIVE = [
-  { level: "B2", ue: 214, weeks: 8, fcfa: "250.000", pkg: "vip_b2" },
-  { level: "C1", ue: 214, weeks: 8, fcfa: "280.000", pkg: "vip_c1" },
-];
-
-export const BUNDLES = [
-  { id: "bundle_a1_a2", title: "Pack A1 + A2", levels: "A1 → A2", weeks: "16 semaines", normal: "192.000", discounted: "172.800", save: "10%" },
-  { id: "bundle_a2_b1", title: "Pack A2 + B1", levels: "A2 → B1", weeks: "16 semaines", normal: "220.000", discounted: "198.000", save: "10%" },
-  { id: "bundle_b1_b2", title: "Pack B1 + B2", levels: "B1 → B2", weeks: "16 semaines", normal: "255.000", discounted: "229.500", save: "10%" },
-  { id: "bundle_a1_a2_b1", title: "Parcours A1 → B1", levels: "A1 + A2 + B1", weeks: "24 semaines", normal: "312.000", discounted: "265.200", save: "15%", featured: true },
-  { id: "bundle_a2_b1_b2", title: "Parcours A2 → B2", levels: "A2 + B1 + B2", weeks: "24 semaines", normal: "356.000", discounted: "302.750", save: "15%" },
 ];
 
 export const EXAMS = [

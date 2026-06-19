@@ -1,0 +1,64 @@
+{
+  "summary": "Phase 2 backend + frontend testing for MULTIPLIKATOR TrainingPlus restructure. Backend: 31/31 pytest assertions PASSED — catalog includes all new VIP sublevels (vip_a1_1..vip_c1_2), corrected VIP fulls (vip_b2=250K, vip_c1=280K), all 9 new bundle IDs with exact discounted amounts, kids_english (15K) + kids_english_reg (2.5K). Every new ID produces a valid Stripe checkout session (https://checkout.stripe.com/...). Legacy bundle_a1_a2_b1 alias kept. vip_c2_1 correctly rejected with 400. Frontend: /departements/training-plus shows the new H2 'Cours d'allemand · Semi-Intensif' as the FIRST section H2, all 12 semi sublevel cards A1.1→C2.2, all 24 expected dot-formatted prices (46.000, 50.000, 60.000, 67.500, 92.000, 100.000, 120.000, 135.000, 200.000, 215.000, 250.000, 280.000, 107.500, 125.000, 140.000, 172.800, 198.000, 229.500, 265.200, 379.950, 511.700, 301.750, 433.500, 348.500), 9 bundles with correct titles and 'Best value' badge on bundle_a1_b1, 18 'Acheter ce cours' + 7 'Demander un devis' buttons, 3 'Découvrir' CTAs (no 'Me notifier'), MPK Exam Prep callout positioned AFTER language nav cards (idx 352524 > 343883). Language pages /langues/anglais (Kids English card 15.000 FCFA, 2.500 FCFA registration, 1 mois, all 12 sublevels), /langues/francais (FLE H1, En cours de conception placeholders), /langues/chinois (Cours de Chinois H1, placeholders) all render correctly with working back links. i18n verified: FR='Cours d'allemand · Semi-Intensif', EN='German Courses · Semi-Intensive', DE='Deutschkurse · Semi-Intensiv'; languages.discover keys present (Découvrir/Discover/Entdecken).",
+  "backend_issues": { "critical": [], "minor": [] },
+  "frontend_issues": {
+    "ui_bugs": [],
+    "integration_issues": [],
+    "design_issues": [
+      {"screen": "/departements/training-plus (DE locale)", "issues": ["VIP section H2 reads 'Premium VIP Accéléré · Deutsch' — 'Accéléré' (FR) is not translated to 'Beschleunigt'/'Schnell-Track'. Not in the scope of this iteration's required keys but worth flagging."]}
+    ]
+  },
+  "backend_validation": {
+    "catalog_endpoint": "/api/catalog returns 200, list of all expected IDs (new VIP sublevels, 9 bundles, kids_english, vip_b2=250K, vip_c1=280K).",
+    "stripe_checkout_results": "9/9 bundles + 10/10 VIP sublevels + vip_b2 + vip_c1 + kids_english + kids_english_reg all return 200 with valid checkout.stripe.com URLs.",
+    "unknown_package_rejection": "vip_c2_1 correctly returns 400 (not in catalog — quote-only)."
+  },
+  "frontend_validation": {
+    "trainingplus_h2_order": [
+      "Cours d'allemand · Semi-Intensif",
+      "Choisir un niveau complet (option recommandée)",
+      "Premium VIP Accéléré · Allemand",
+      "Packs multi-niveaux — économisez en vous projetant.",
+      "Goethe-Zertifikat & ÖSD — voir MPK Exam Prep.",
+      "Un conseiller MPK vous guide vers le bon parcours."
+    ],
+    "exam_prep_after_languages": true,
+    "bundle_titles_found": "9/9 (Pack A1+A2, Pack A2+B1, Pack B1+B2, Parcours A1→B1, A1→B2, A1→C1, A2→B2, A2→C1, B1→C1)",
+    "best_value_badge": "1 occurrence on bundle_a1_b1",
+    "decouvrir_cta_count": 3,
+    "me_notifier_count": 0,
+    "language_links": {"anglais": 1, "francais": 1, "chinois": 1},
+    "language_english_page": "H1 'Cours d'anglais' OK; Kids English Training card with 15.000 FCFA + 2.500 FCFA registration + 1 mois OK; 12 sublevel cards A1.1-C2.2 with 'Bientôt disponible' badge; back link OK.",
+    "language_french_page": "H1 'Cours de Français (FLE)' OK; 12 sublevels with 'En cours de conception' placeholders; back link OK.",
+    "language_chinese_page": "H1 'Cours de Chinois' OK; 12 sublevels with 'En cours de conception' placeholders; back link OK.",
+    "i18n": {
+      "section_german_title": {"fr": "Cours d'allemand · Semi-Intensif", "en": "German Courses · Semi-Intensive", "de": "Deutschkurse · Semi-Intensiv"},
+      "languages_discover": {"fr": "Découvrir", "en": "Discover", "de": "Entdecken"}
+    },
+    "price_formatting": "All prices use dot separator (de-DE locale): 46.000, 100.000, 172.800, 511.700, etc. — no leaks."
+  },
+  "test_report_links": [
+    "/app/backend/tests/test_phase2_catalog_stripe.py",
+    "/app/test_reports/pytest/phase2_results.xml"
+  ],
+  "action_items": [
+    "OPTIONAL: Translate 'Accéléré' → 'Schnell-Track'/'Beschleunigt' in DE locale for vip_section_title (currently reads 'Premium VIP Accéléré · Deutsch')."
+  ],
+  "critical_code_review_comments": [
+    "TrainingPlus.jsx is now likely 700+ lines with BundleCard, VipSublevelCard, CourseProductCard, LangNavCard inline. Consider extracting these subcomponents to /components for reusability and to keep page file under the 700-line guideline.",
+    "Bundle 'tone' colours are hardcoded hex strings in data.js — consider mapping to a shared design-token file (e.g., theme.bordeaux) to keep palette centralised.",
+    "Backend CATALOG is a 70-line in-memory dict — fine for now, but adding price changes will require code redeploys. Long-term consider moving prices to MongoDB so admin/CMS can edit.",
+    "VIP_INTENSIVE constant in data.js duplicates VIP_FULL B2/C1 — kept for backward compat but should be deleted in a follow-up cleanup PR (DRY).",
+    "Backend test file added at /app/backend/tests/test_phase2_catalog_stripe.py — covers catalog + checkout regression. Keep alongside existing backend_test.py."
+  ],
+  "updated_files": [
+    "/app/backend/tests/test_phase2_catalog_stripe.py (new)"
+  ],
+  "success_rate": { "backend": "100% (31/31)", "frontend": "100% (all assertions pass)" },
+  "test_credentials": "Admin admin@multiplikator.bj / Multiplikator2026! (not used this iteration; auth not in scope).",
+  "seed_data_creation": "None",
+  "retest_needed": false,
+  "should_main_agent_self_test": false,
+  "context_for_next_testing_agent": "Phase 2 verified end-to-end. Backend catalog has 9 new bundles + 10 new VIP sublevels + corrected vip_b2/vip_c1 + kids_english(_reg). Frontend TrainingPlus has 6 H2 sections in this order: German Semi-Intensif sublevels → German full levels → VIP sublevels → Bundles → Language nav cards (EN/FR/CN cards with 'Découvrir' CTA) → Exam Prep callout → CTA. Stripe XOF /100 division still active and correct. Legacy bundle_a1_a2_b1 alias retained. Note: vip_c2_1/vip_c2_2 are intentionally NOT in catalog (quote-only). Minor: DE locale still shows 'Accéléré' in VIP section H2 — non-blocking.",
+  "rca of the issue": "N/A — no bugs found."
+}
