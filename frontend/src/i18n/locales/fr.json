@@ -39,7 +39,12 @@
     "title_line2": "Institut de Langues",
     "subtitle": "Formation linguistique premium, préparation aux certifications internationales et accompagnement complet vers la mobilité internationale, notamment en Allemagne et vers pleins d'autres destinations — 6 campus actifs au Bénin, ouverts au monde.",
     "cta_formations": "Découvrir nos formations",
-    "cta_contact": "Nous contacter"
+    "cta_contact": "Nous contacter",
+    "actu_label": "Actu",
+    "actu_messages": [
+      "Rentrée prochaine : 06.07.2026 sur tous les campus",
+      "Congés : du 19.06. au 30.06.2026"
+    ]
   },
   "stats": {
     "implantations": "Implantations",

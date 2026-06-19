@@ -39,7 +39,12 @@
     "title_line2": "Language Institute",
     "subtitle": "Premium language training, preparation for international certifications and end-to-end guidance toward international mobility — notably to Germany and many other destinations — 6 active campuses in Benin, open to the world.",
     "cta_formations": "Discover our programs",
-    "cta_contact": "Get in touch"
+    "cta_contact": "Get in touch",
+    "actu_label": "News",
+    "actu_messages": [
+      "Next intake: 06.07.2026 across all campuses",
+      "Holidays: from 19.06. to 30.06.2026"
+    ]
   },
   "stats": {
     "implantations": "Locations",

@@ -39,7 +39,12 @@
     "title_line2": "Sprachinstitut",
     "subtitle": "Premium-Sprachausbildung, Vorbereitung auf internationale Zertifikate und umfassende Begleitung zur internationalen Mobilität – insbesondere nach Deutschland und in viele weitere Länder – 6 aktive Standorte in Benin, offen für die Welt.",
     "cta_formations": "Unsere Programme entdecken",
-    "cta_contact": "Kontakt aufnehmen"
+    "cta_contact": "Kontakt aufnehmen",
+    "actu_label": "Aktuell",
+    "actu_messages": [
+      "Nächster Kursstart: 06.07.2026 auf allen Campussen",
+      "Ferien: vom 19.06. bis 30.06.2026"
+    ]
   },
   "stats": {
     "implantations": "Standorte",

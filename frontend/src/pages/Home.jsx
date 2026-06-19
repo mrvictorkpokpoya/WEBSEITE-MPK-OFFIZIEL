@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { ArrowRight, GraduationCap, Award, Languages, Globe, Map, FileText, Star, MapPin } from "lucide-react";
@@ -10,6 +10,14 @@ const ICONS = { GraduationCap, Award, Languages, Globe, Map, FileText };
 export default function Home() {
   const { t } = useTranslation();
   const strengths = t("home.strengths", { returnObjects: true });
+  const actuMessages = t("hero.actu_messages", { returnObjects: true, defaultValue: [] });
+  const [actuIdx, setActuIdx] = useState(0);
+  useEffect(() => {
+    if (!Array.isArray(actuMessages) || actuMessages.length < 2) return undefined;
+    const id = setInterval(() => setActuIdx((i) => (i + 1) % actuMessages.length), 5000);
+    return () => clearInterval(id);
+  }, [actuMessages]);
+  const currentActu = Array.isArray(actuMessages) && actuMessages.length > 0 ? actuMessages[actuIdx] : "";
   return (
     <>
       {/* Hero */}
@@ -33,15 +41,15 @@ export default function Home() {
               <Link to="/contact" data-testid="hero-cta-contact" className="inline-flex items-center gap-2 px-4 sm:px-6 py-3 sm:py-3.5 bg-transparent text-[#C4D2ED] border-[1.5px] border-[#C4D2ED] text-sm sm:text-base font-semibold tracking-wide hover:bg-[#C4D2ED]/10 transition">{t("hero.cta_contact")} <ArrowRight size={16} /></Link>
             </div>
 
-            {/* News badge — subtle frame for upcoming announcements */}
-            <Link to="/actualites" data-testid="hero-news-badge" className="mt-8 sm:mt-10 inline-flex items-center gap-3 px-4 py-2.5 border border-[#C4D2ED]/35 bg-white/5 backdrop-blur-sm hover:bg-white/10 hover:border-[#C4D2ED]/55 transition group max-w-xl">
-              <span className="inline-flex items-center gap-1.5 px-2 py-0.5 bg-[#C4D2ED] text-[#580505] text-[10px] tracking-[0.2em] uppercase font-bold">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#580505] animate-pulse" /> Actu
+            {/* News badge — rotating ticker for upcoming announcements */}
+            <Link to="/blog-infos" data-testid="hero-news-badge" className="mt-8 sm:mt-10 inline-flex items-center gap-3 px-4 py-2.5 border border-[#C4D2ED]/35 bg-white/5 backdrop-blur-sm hover:bg-white/10 hover:border-[#C4D2ED]/55 transition group max-w-xl">
+              <span className="inline-flex items-center gap-1.5 px-2 py-0.5 bg-[#C4D2ED] text-[#580505] text-[10px] tracking-[0.2em] uppercase font-bold shrink-0">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#580505] animate-pulse" /> {t("hero.actu_label", { defaultValue: "Actu" })}
               </span>
-              <span className="text-xs sm:text-sm text-white/90 font-light flex-grow">
-                Rentrée Mars 2026 — inscriptions ouvertes sur tous les campus
+              <span key={actuIdx} data-testid="hero-news-text" className="text-xs sm:text-sm text-white/90 font-light flex-grow animate-fade-in">
+                {currentActu}
               </span>
-              <ArrowRight size={14} className="text-[#C4D2ED] group-hover:translate-x-0.5 transition-transform" />
+              <ArrowRight size={14} className="text-[#C4D2ED] group-hover:translate-x-0.5 transition-transform shrink-0" />
             </Link>
           </div>
         </div>
