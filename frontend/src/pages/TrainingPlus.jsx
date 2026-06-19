@@ -174,10 +174,14 @@ function BundleCard({ b }) {
 // ---- Language navigation card (Anglais / Français / Chinois) ----
 function LangNavCard({ to, title, kicker, status, testid }) {
   const { t } = useTranslation();
-  const isDesign = status === "design";
+  const labelMap = {
+    available: "Disponible — A1.1 → C2.2",
+    design: t("languages.in_progress"),
+    coming: t("languages.coming_soon"),
+  };
   return (
     <Link to={to} data-testid={testid} className="block bg-white rounded-sm p-6 border border-[#580505]/25 shadow-[0_14px_30px_-12px_rgba(88,5,5,0.30)] hover:shadow-[0_22px_44px_-12px_rgba(88,5,5,0.40)] hover:border-[#580505]/50 transition-all duration-300 group">
-      <div className="text-[10px] tracking-[0.2em] uppercase font-semibold text-[#580505]">{isDesign ? t("languages.in_progress") : t("languages.coming_soon")}</div>
+      <div className="text-[10px] tracking-[0.2em] uppercase font-semibold text-[#580505]">{labelMap[status] || labelMap.coming}</div>
       <h3 className="font-serif text-2xl text-[#2F0808] mt-2 group-hover:text-[#580505] transition">{title}</h3>
       <p className="text-sm text-[#4A4A4A] mt-2 font-light leading-relaxed">{kicker}</p>
       <span className="inline-flex items-center gap-1.5 mt-5 text-sm text-[#580505] border-b border-[#580505] pb-0.5">
@@ -300,7 +304,7 @@ export default function TrainingPlus() {
           testid="lang-card-english"
           title={t("languages.english_title")}
           kicker={t("languages.english_kicker")}
-          status="coming"
+          status="available"
         />
         <LangNavCard
           to="/langues/francais"

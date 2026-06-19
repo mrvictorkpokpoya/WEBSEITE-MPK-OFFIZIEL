@@ -78,6 +78,7 @@ export default function Header() {
     ]},
     { key: "community", label: t("nav.community"), items: [
       { to: "/alumnis", label: t("nav.alumnis") },
+      { to: "/clubs", label: t("nav.clubs") },
       { to: "/blog", label: t("nav.blog") },
       { to: "/galerie", label: t("nav.gallery") },
       { to: "/temoignages", label: t("nav.testimonials") },

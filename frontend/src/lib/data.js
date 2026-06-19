@@ -99,6 +99,7 @@ export const TEAM_CATEGORIES = [
     title: "Administration actuelle",
     members: [
       { name: "Dr. Lambert Amagnon SEHOUBO", role: "Directeur Exécutif", gender: "M" },
+      { name: "Mme Tessilatou GBADAMASSI", role: "Secrétaire-Comptable", gender: "F" },
       { name: "Charles ABI OBOSSOU", role: "Directeur Académique", gender: "M" },
       { name: "À venir", role: "Directeur du Tourisme", gender: "M", placeholder: true },
     ],
@@ -250,14 +251,73 @@ export const VIP_INTENSIVE = [
   { level: "C1", ue: 214, weeks: 6, fcfa: "280.000", pkg: "vip_c1" },
 ];
 
-// ----- Other languages — same sublevel structure (status placeholder) -----
-const buildSublevels = (langLabel, status) => [
+// ----- ENGLISH — fully available (-20% vs German, 3×3h/week schedule) -----
+export const ENGLISH_COURSES = [
+  { id: "eng_a1_1", level: "A1.1", title: "Anglais A1.1", desc: "Premier contact, structures de base, présentation, vie quotidienne.", priceFcfa: "36.800", duration: "4 semaines · 36 UE (3×3h/sem)" },
+  { id: "eng_a1_2", level: "A1.2", title: "Anglais A1.2", desc: "Renforcement A1 — interactions simples, voyages, environnement proche.", priceFcfa: "36.800", duration: "4 semaines · 36 UE (3×3h/sem)" },
+  { id: "eng_a2_1", level: "A2.1", title: "Anglais A2.1", desc: "Communication courante, expériences personnelles et habitudes.", priceFcfa: "40.000", duration: "4 semaines · 36 UE (3×3h/sem)" },
+  { id: "eng_a2_2", level: "A2.2", title: "Anglais A2.2", desc: "Consolidation A2 — descriptions, narration au passé, opinions.", priceFcfa: "40.000", duration: "4 semaines · 36 UE (3×3h/sem)" },
+  { id: "eng_b1_1", level: "B1.1", title: "Anglais B1.1", desc: "Autonomie linguistique — études, travail, vie sociale en anglais.", priceFcfa: "48.000", duration: "4 semaines · 36 UE (3×3h/sem)" },
+  { id: "eng_b1_2", level: "B1.2", title: "Anglais B1.2", desc: "Préparation Cambridge PET / IELTS niveau seuil.", priceFcfa: "48.000", duration: "4 semaines · 36 UE (3×3h/sem)" },
+  { id: "eng_b2_1", level: "B2.1", title: "Anglais B2.1", desc: "Niveau universitaire — textes complexes, débats, expression nuancée.", priceFcfa: "54.000", duration: "4 semaines · 36 UE (3×3h/sem)" },
+  { id: "eng_b2_2", level: "B2.2", title: "Anglais B2.2", desc: "Préparation IELTS 6.5+ / TOEFL / Cambridge FCE.", priceFcfa: "54.000", duration: "4 semaines · 36 UE (3×3h/sem)" },
+  { id: "eng_c1_1", level: "C1.1", title: "Anglais C1.1", desc: "Niveau supérieur — registres, nuances, productions structurées.", priceFcfa: "sur devis", duration: "4 semaines · 36 UE (3×3h/sem)" },
+  { id: "eng_c1_2", level: "C1.2", title: "Anglais C1.2", desc: "Préparation Cambridge CAE / IELTS 7.5+.", priceFcfa: "sur devis", duration: "4 semaines · 36 UE (3×3h/sem)" },
+  { id: "eng_c2_1", level: "C2.1", title: "Anglais C2.1", desc: "Maîtrise quasi-native — interprétation, traduction, enseignement.", priceFcfa: "sur devis", duration: "4 semaines · 36 UE (3×3h/sem)" },
+  { id: "eng_c2_2", level: "C2.2", title: "Anglais C2.2", desc: "Niveau natif certifié — Cambridge CPE / IELTS 9.", priceFcfa: "sur devis", duration: "4 semaines · 36 UE (3×3h/sem)" },
+];
+
+export const ENGLISH_FULL = [
+  { level: "A1", fcfa: "73.600", eur: "210", pkg: "eng_a1" },
+  { level: "A2", fcfa: "80.000", eur: "240", pkg: "eng_a2" },
+  { level: "B1", fcfa: "96.000", eur: "310", pkg: "eng_b1" },
+  { level: "B2", fcfa: "108.000", eur: "365", pkg: "eng_b2" },
+  { level: "C1", fcfa: "sur devis", eur: "sur devis", pkg: null },
+  { level: "C2", fcfa: "sur devis", eur: "sur devis", pkg: null },
+];
+
+export const ENGLISH_VIP_SUBLEVELS = [
+  { id: "vip_eng_a1_1", level: "A1.1", weeks: 2, ue: 45, fcfa: "80.000" },
+  { id: "vip_eng_a1_2", level: "A1.2", weeks: 2, ue: 45, fcfa: "80.000" },
+  { id: "vip_eng_a2_1", level: "A2.1", weeks: 2, ue: 45, fcfa: "80.000" },
+  { id: "vip_eng_a2_2", level: "A2.2", weeks: 2, ue: 45, fcfa: "80.000" },
+  { id: "vip_eng_b1_1", level: "B1.1", weeks: 2, ue: 45, fcfa: "86.000" },
+  { id: "vip_eng_b1_2", level: "B1.2", weeks: 2, ue: 45, fcfa: "86.000" },
+  { id: "vip_eng_b2_1", level: "B2.1", weeks: 3, ue: 86, fcfa: "100.000" },
+  { id: "vip_eng_b2_2", level: "B2.2", weeks: 3, ue: 86, fcfa: "100.000" },
+  { id: "vip_eng_c1_1", level: "C1.1", weeks: 3, ue: 86, fcfa: "112.000" },
+  { id: "vip_eng_c1_2", level: "C1.2", weeks: 3, ue: 86, fcfa: "112.000" },
+  { id: "vip_eng_c2_1", level: "C2.1", weeks: 3, ue: 86, fcfa: "sur demande" },
+  { id: "vip_eng_c2_2", level: "C2.2", weeks: 3, ue: 86, fcfa: "sur demande" },
+];
+
+export const ENGLISH_VIP_FULL = [
+  { level: "A1", weeks: 4, fcfa: "160.000", pkg: "vip_eng_a1" },
+  { level: "A2", weeks: 4, fcfa: "160.000", pkg: "vip_eng_a2" },
+  { level: "B1", weeks: 4, fcfa: "172.000", pkg: "vip_eng_b1" },
+  { level: "B2", weeks: 6, fcfa: "200.000", pkg: "vip_eng_b2" },
+  { level: "C1", weeks: 6, fcfa: "224.000", pkg: "vip_eng_c1" },
+  { level: "C2", weeks: 6, fcfa: "sur demande", pkg: null },
+];
+
+export const ENGLISH_BUNDLES = [
+  { id: "bundle_eng_a1_a2", title: "Pack A1 + A2", levels: "A1 + A2", weeks: "8 sem.", normal: "138.240", discounted: "124.416", save: "10%", tone: "#3A0000" },
+  { id: "bundle_eng_a2_b1", title: "Pack A2 + B1", levels: "A2 + B1", weeks: "8 sem.", normal: "176.000", discounted: "158.400", save: "10%", tone: "#430000" },
+  { id: "bundle_eng_b1_b2", title: "Pack B1 + B2", levels: "B1 + B2", weeks: "8 sem.", normal: "204.000", discounted: "183.600", save: "10%", tone: "#4B0000" },
+  { id: "bundle_eng_a1_b1", title: "Parcours A1 → B1", levels: "A1 + A2 + B1", weeks: "12 sem.", normal: "249.600", discounted: "212.160", save: "15%", tone: "#2B0000", featured: true },
+  { id: "bundle_eng_a1_b2", title: "Parcours A1 → B2", levels: "A1 + A2 + B1 + B2", weeks: "16 sem.", normal: "357.600", discounted: "303.960", save: "15%", tone: "#320000" },
+  { id: "bundle_eng_a1_c1", title: "Parcours A1 → C1", levels: "A1 + A2 + B1 + B2 + C1", weeks: "20 sem.", normal: "481.600", discounted: "409.360", save: "15%", tone: "#000000" },
+  { id: "bundle_eng_a2_b1_b2", title: "Parcours A2 → B2", levels: "A2 + B1 + B2", weeks: "12 sem.", normal: "284.000", discounted: "241.400", save: "15%", tone: "#540000" },
+  { id: "bundle_eng_a2_c1", title: "Parcours A2 → C1", levels: "A2 + B1 + B2 + C1", weeks: "16 sem.", normal: "408.000", discounted: "346.800", save: "15%", tone: "#3A0000" },
+  { id: "bundle_eng_b1_c1", title: "Parcours B1 → C1", levels: "B1 + B2 + C1", weeks: "12 sem.", normal: "328.000", discounted: "278.800", save: "15%", tone: "#4B0000" },
+];
+
+const buildPlaceholderSublevels = (langLabel, status) => [
   "A1.1","A1.2","A2.1","A2.2","B1.1","B1.2","B2.1","B2.2","C1.1","C1.2","C2.1","C2.2",
 ].map((lv) => ({ level: lv, title: `${langLabel} ${lv}`, status }));
 
-export const ENGLISH_COURSES = buildSublevels("Anglais", "coming");
-export const FRENCH_COURSES = buildSublevels("Français", "design");
-export const CHINESE_COURSES = buildSublevels("Chinois", "design");
+export const FRENCH_COURSES = buildPlaceholderSublevels("Français", "design");
+export const CHINESE_COURSES = buildPlaceholderSublevels("Chinois", "design");
 
 // MPK Kids English Training
 export const KIDS_ENGLISH = {
