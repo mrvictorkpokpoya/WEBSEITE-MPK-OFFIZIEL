@@ -748,5 +748,26 @@
     "premium_vip_title": "Premium VIP Schnell-Track",
     "premium_vip_kicker": "Gleiche Progression A1.1 → C2.2 — halbe Dauer (intensive Schnellformel). Mo-Do 08:00 – 14:30. Ab 2 Kandidat:innen.",
     "full_levels_title": "Volles Niveau"
+  },
+  "clubs_page": {
+    "hero_eyebrow": "MPK Community",
+    "hero_title": "Sport- & Sprachclubs.",
+    "hero_kicker": "Über den Unterricht hinaus pflegt MULTIPLIKATOR ein echtes Gemeinschaftsleben: Sport, kultureller Austausch und immersive Sprachpraxis. Fünf Clubs, offen für alle Lernenden und Alumni.",
+    "sport_eyebrow": "01 · Sport",
+    "sport_title": "MPK Sport Clubs",
+    "sport_kicker": "Regelmäßige sportliche Aktivität gehört zur MULTIPLIKATOR-Erfahrung. Disziplin, Teamgeist und Zusammenhalt — unsere drei Clubs nehmen alle Niveaus auf.",
+    "lang_eyebrow": "02 · Sprachpraxis",
+    "lang_title": "MPK Language Clubs",
+    "lang_kicker": "Eine Sprache wird ebenso gelebt wie gelernt. Unsere immersiven Konversationsclubs lassen Sie in entspannter Atmosphäre üben — innerhalb oder außerhalb des Unterrichts.",
+    "join_btn": "Club beitreten",
+    "cta_eyebrow": "Werden Sie Teil der Community",
+    "cta_title": "Sport, Kultur und lebendige Sprachen — alles beginnt hier.",
+    "cta_join": "Einem Club beitreten",
+    "cta_social": "Unseren Netzwerken folgen",
+    "mfc_desc": "Der offizielle Fußballclub des MULTIPLIKATOR-Netzwerks. Wöchentliches Training, Inter-Campus-Turniere und Freundschaftsspiele mit anderen Institutionen Benins.",
+    "mbc_desc": "Regelmäßiges Basketballtraining für Lernende und Alumni. Teamgeist, Selbstüberwindung und Teilnahme an lokalen Meisterschaften.",
+    "mvc_desc": "Gemischtes Volleyball und Wettbewerb, offen für alle Niveaus. Festliche Ausflüge, Turniere und Feier des MPK-Gemeinschaftsgeistes.",
+    "mec_desc": "Immersive Englisch-Konversation — themenbezogene Diskussionen, Debatten, Kulturwerkstätten und Filmabende in Originalfassung. Geleitet von Muttersprachlern und zertifizierten Trainern.",
+    "mdk_desc": "Der Deutschclub: Stammtisch, Kreativschreibwerkstätten, kultureller Austausch mit der deutschsprachigen Community Benins und unseren Alumni in Deutschland."
   }
 }

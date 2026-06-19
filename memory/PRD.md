@@ -118,6 +118,20 @@ Créer le site web officiel, premium et institutionnel de MULTIPLIKATOR Institut
 ### P1
 - Blocs « En construction » pour cours Anglais, FLE, Chinois
 - Liens réels des communautés WhatsApp par campus (provisoire : wa.me numéro principal)
+### Session 7 (19 février 2026) — Anglais opérationnel + MPK Clubs
+- **Programme anglais entièrement disponible** : 12 sous-niveaux Semi-Intensif (A1.1-C2.2 ; A1-B2 avec prix, C1-C2 sur devis), 6 niveaux complets, 12 sous-niveaux Premium VIP, 6 niveaux complets VIP, 9 bundles. Tarification à **-20% par rapport à l'allemand**, format 3×3h/semaine.
+  - Semi-Intensif sublevels: A1=36.800 / A2=40.000 / B1=48.000 / B2=54.000 ; complets A1=73.600 / A2=80.000 / B1=96.000 / B2=108.000
+  - VIP sublevels: 80.000-112.000 ; complets 160.000-224.000
+  - 36 nouveaux IDs Stripe (eng_*, vip_eng_*, bundle_eng_*) — 48/48 tests pytest passés
+- **Mme Tessilatou GBADAMASSI** ajoutée comme N°2 de l'administration ("Secrétaire-Comptable"), positionnée juste après Dr. Lambert SEHOUBO
+- **Nouvelle page /clubs (MPK Clubs Sport & Langues)** sous Communauté :
+  - **MPK Sport Clubs** : MFC (Football, vert), MBC (Basketball, orange), MVC (Volleyball, bleu)
+  - **MPK Language Clubs** : MEC (English Club, bordeaux), MDK (Deutschklub, bordeaux foncé)
+  - Page entièrement traduite FR/EN/DE (clubs_page namespace)
+- **English nav-card** sur TrainingPlus affiche désormais "Disponible — A1.1 → C2.2" (statut available)
+- **Test agent itération 7** : Backend 48/48 PASS, frontend 100% + i18n /clubs corrigée
+
+
 - Plans d'accès des 5 autres campus (en attente du client)
 - Vrais liens réseaux sociaux (Facebook/Instagram/YouTube/TikTok actuellement génériques)
 

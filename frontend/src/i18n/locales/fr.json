@@ -766,5 +766,26 @@
     "premium_vip_title": "Premium VIP Accéléré",
     "premium_vip_kicker": "Même progression A1.1 → C2.2 — durée /2 (formule accélérée intensive). Lundi-jeudi 08:00 – 14:30. À partir de 2 candidat.e.s.",
     "full_levels_title": "Niveau complet"
+  },
+  "clubs_page": {
+    "hero_eyebrow": "MPK Community",
+    "hero_title": "Clubs sportifs & linguistiques.",
+    "hero_kicker": "Au-delà des cours, MULTIPLIKATOR cultive une vraie vie communautaire : sport, échanges culturels et pratique linguistique en immersion. Cinq clubs ouverts à tous les apprenants et alumni.",
+    "sport_eyebrow": "01 · Sport",
+    "sport_title": "MPK Sport Clubs",
+    "sport_kicker": "La pratique sportive régulière fait partie intégrante de l'expérience MULTIPLIKATOR. Discipline, esprit d'équipe et cohésion — nos trois clubs accueillent tous les niveaux.",
+    "lang_eyebrow": "02 · Pratique linguistique",
+    "lang_title": "MPK Language Clubs",
+    "lang_kicker": "La langue se vit autant qu'elle s'apprend. Nos clubs de conversation immersive vous permettent de pratiquer dans un cadre détendu, après ou en dehors des cours.",
+    "join_btn": "Rejoindre le club",
+    "cta_eyebrow": "Rejoignez la communauté",
+    "cta_title": "Sport, culture et langues vivantes — tout commence ici.",
+    "cta_join": "Rejoindre un club",
+    "cta_social": "Suivre nos réseaux",
+    "mfc_desc": "Le club de football officiel du réseau MULTIPLIKATOR. Entraînements hebdomadaires, tournois inter-campus et matchs amicaux avec d'autres institutions du Bénin.",
+    "mbc_desc": "Pratique régulière du basketball pour apprenant.e.s et alumni. Esprit d'équipe, dépassement de soi et participation aux championnats locaux.",
+    "mvc_desc": "Volleyball mixte et compétition, ouvert à tous les niveaux. Sorties festives, tournois et célébration de la cohésion communautaire MPK.",
+    "mec_desc": "Conversation immersive en anglais — discussions thématiques, débats, ateliers culturels et soirées cinéma en VO. Animé par des natifs et des formateurs certifiés.",
+    "mdk_desc": "Le club allemand : Stammtisch, ateliers d'écriture créative, échanges culturels avec la communauté germanophone du Bénin et nos alumni en Allemagne."
   }
 }

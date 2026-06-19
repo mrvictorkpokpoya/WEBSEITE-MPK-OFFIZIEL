@@ -748,5 +748,26 @@
     "premium_vip_title": "Premium VIP Fast-Track",
     "premium_vip_kicker": "Same A1.1 → C2.2 progression — half the duration (intensive fast-track format). Monday-Thursday 08:00 – 14:30. From 2 candidates onwards.",
     "full_levels_title": "Full level"
+  },
+  "clubs_page": {
+    "hero_eyebrow": "MPK Community",
+    "hero_title": "Sport & language clubs.",
+    "hero_kicker": "Beyond the classroom, MULTIPLIKATOR cultivates a real community life: sport, cultural exchange and immersive language practice. Five clubs open to every learner and alumni.",
+    "sport_eyebrow": "01 · Sport",
+    "sport_title": "MPK Sport Clubs",
+    "sport_kicker": "Regular sport is part of the MULTIPLIKATOR experience. Discipline, team spirit and cohesion — our three clubs welcome all levels.",
+    "lang_eyebrow": "02 · Language practice",
+    "lang_title": "MPK Language Clubs",
+    "lang_kicker": "A language is lived as much as it is learned. Our immersive conversation clubs let you practise in a relaxed setting, in or outside of class.",
+    "join_btn": "Join the club",
+    "cta_eyebrow": "Join the community",
+    "cta_title": "Sport, culture and living languages — it all starts here.",
+    "cta_join": "Join a club",
+    "cta_social": "Follow our networks",
+    "mfc_desc": "The official MULTIPLIKATOR football club. Weekly training, inter-campus tournaments and friendly matches with other institutions across Benin.",
+    "mbc_desc": "Regular basketball practice for learners and alumni. Team spirit, self-challenge and participation in local championships.",
+    "mvc_desc": "Mixed volleyball and competition, open to every level. Festive outings, tournaments and a celebration of MPK community spirit.",
+    "mec_desc": "Immersive English conversation — themed discussions, debates, cultural workshops and original-version movie nights. Led by natives and certified trainers.",
+    "mdk_desc": "The German club: Stammtisch, creative writing workshops, cultural exchange with Benin's German-speaking community and our alumni in Germany."
   }
 }
