@@ -12,7 +12,7 @@ import {
   LANGUAGE_COURSES,
 } from "@/lib/data";
 import { Star, ShoppingCart, GraduationCap, Award, Loader2, ArrowRight, Sparkles, Package, Plus } from "lucide-react";
-import { apiAddToCart } from "@/lib/cart";
+import { apiAddToCart, addToCartWithToast } from "@/lib/cart";
 
 const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
 
@@ -69,7 +69,7 @@ function CourseProductCard({ course }) {
         </Link>
       ) : (
         <div className="mt-5 grid grid-cols-2 gap-2">
-          <button onClick={async () => { try { await apiAddToCart(course.id); toast.success("Ajouté au panier"); } catch { toast.error("Erreur ajout"); } }} data-testid={`course-cart-${course.id}`} className="inline-flex items-center justify-center gap-1 px-2 py-2 bg-white text-[#580505] border-[1.5px] border-[#580505] text-xs font-semibold hover:bg-[#FAFAFA] transition">
+          <button onClick={() => addToCartWithToast(course.id)} data-testid={`course-cart-${course.id}`} className="inline-flex items-center justify-center gap-1 px-2 py-2 bg-white text-[#580505] border-[1.5px] border-[#580505] text-xs font-semibold hover:bg-[#FAFAFA] transition">
             <Plus size={12} /> Panier
           </button>
           <button onClick={() => onBuy(course.id)} disabled={loading} data-testid={`course-buy-${course.id}`} className="inline-flex items-center justify-center gap-1 px-2 py-2 bg-[#580505] text-[#C4D2ED] border-[1.5px] border-[#580505] text-xs font-semibold hover:bg-[#2F0808] transition disabled:opacity-60">
@@ -119,7 +119,7 @@ function VipSublevelCard({ vip }) {
         </Link>
       ) : (
         <div className="mt-5 grid grid-cols-2 gap-2">
-          <button onClick={async () => { try { await apiAddToCart(vip.id); toast.success("Ajouté au panier"); } catch { toast.error("Erreur ajout"); } }} data-testid={`vip-cart-${vip.id}`} className="inline-flex items-center justify-center gap-1 px-2 py-2 bg-white text-[#580505] border-[1.5px] border-[#580505] text-xs font-semibold hover:bg-[#FAFAFA] transition">
+          <button onClick={() => addToCartWithToast(vip.id)} data-testid={`vip-cart-${vip.id}`} className="inline-flex items-center justify-center gap-1 px-2 py-2 bg-white text-[#580505] border-[1.5px] border-[#580505] text-xs font-semibold hover:bg-[#FAFAFA] transition">
             <Plus size={12} /> Panier
           </button>
           <button onClick={onBuy} disabled={loading} data-testid={`vip-buy-${vip.id}`} className="inline-flex items-center justify-center gap-1 px-2 py-2 bg-[#580505] text-[#C4D2ED] border-[1.5px] border-[#580505] text-xs font-semibold hover:bg-[#2F0808] transition disabled:opacity-60">
@@ -175,7 +175,7 @@ function BundleCard({ b }) {
         <div className="flex-grow" />
         <div className="flex-grow" />
         <div className="mt-6 grid grid-cols-2 gap-2">
-          <button onClick={async () => { try { await apiAddToCart(b.id); toast.success("Pack ajouté au panier"); } catch { toast.error("Erreur ajout"); } }} data-testid={`bundle-cart-${b.id}`} className="inline-flex items-center justify-center gap-1 px-2 py-2.5 bg-white border-[1.5px] text-xs font-semibold transition" style={{ color: tone, borderColor: tone }}>
+          <button onClick={() => addToCartWithToast(b.id, "Pack ajouté au panier")} data-testid={`bundle-cart-${b.id}`} className="inline-flex items-center justify-center gap-1 px-2 py-2.5 bg-white border-[1.5px] text-xs font-semibold transition" style={{ color: tone, borderColor: tone }}>
             <Plus size={12} /> Panier
           </button>
           <button onClick={onBuy} disabled={loading} data-testid={`bundle-buy-${b.id}`} className="inline-flex items-center justify-center gap-1 px-2 py-2.5 text-[#C4D2ED] border-[1.5px] text-xs font-semibold transition disabled:opacity-60" style={{ background: tone, borderColor: tone }}>

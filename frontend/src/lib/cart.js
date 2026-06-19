@@ -1,4 +1,5 @@
 import axios from "axios";
+import { toast } from "sonner";
 
 const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
 const TOKEN_KEY = "mpk-cart-token";
@@ -54,3 +55,22 @@ export const apiCartFinalize = async (sessionId) => {
 };
 
 export const formatXof = (n) => Number(n).toLocaleString("de-DE");
+
+/**
+ * Add to cart + show a toast that includes a "View my cart" CTA button.
+ * Critical UX on mobile/tablet where the cart icon is harder to spot.
+ */
+export const addToCartWithToast = async (packageId, successLabel = "Ajouté au panier") => {
+  try {
+    await apiAddToCart(packageId);
+    toast.success(successLabel, {
+      duration: 4500,
+      action: {
+        label: "Voir mon panier →",
+        onClick: () => { window.location.href = "/panier"; },
+      },
+    });
+  } catch {
+    toast.error("Erreur ajout");
+  }
+};

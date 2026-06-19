@@ -165,9 +165,12 @@ export default function Header() {
           )}
         </div>
 
-        <button data-testid="header-mobile-toggle" className="lg:hidden text-[#2F0808]" onClick={() => setOpen(!open)}>
-          {open ? <X /> : <Menu />}
-        </button>
+        <div className="flex lg:hidden items-center gap-2">
+          <CartIcon />
+          <button data-testid="header-mobile-toggle" className="text-[#2F0808] p-1" onClick={() => setOpen(!open)} aria-label="Menu">
+            {open ? <X /> : <Menu />}
+          </button>
+        </div>
       </div>
 
       {open && (
