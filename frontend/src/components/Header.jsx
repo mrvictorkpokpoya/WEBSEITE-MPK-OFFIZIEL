@@ -89,11 +89,9 @@ export default function Header() {
       { to: "/notre-histoire", label: t("nav.history") },
       { to: "/team", label: t("nav.team") },
       { to: "/campus", label: t("nav.campuses") },
-      { to: "/appel-a-investissement", label: t("nav.investment") },
-    ]},
-    { key: "work", label: t("nav.work_mpk"), items: [
       { to: "/travailler-mpk/stages", label: t("nav.work_internships") },
       { to: "/travailler-mpk/emplois", label: t("nav.work_jobs") },
+      { to: "/appel-a-investissement", label: t("nav.investment") },
     ]},
     { key: "service", label: t("nav.service"), items: [
       { to: "/departements/training-plus", label: t("nav.training_plus") },
