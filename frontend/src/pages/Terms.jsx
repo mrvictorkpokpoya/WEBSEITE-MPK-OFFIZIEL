@@ -29,7 +29,7 @@ export default function Terms() {
         </Section>
 
         <Section n="2" title="Éditeur du Site">
-          <p><strong>MULTIPLIKATOR START UP GROUP</strong><br/>Réseau d'instituts de langues — multi-campus<br/>Siège social : GODOMEY PK 14, 2ème vons après station Orynx, Cotonou (Bénin)<br/>Email : contact@multiplikator-world.com<br/>Téléphone : +229 01 96 59 38 66 / +229 01 99 93 33 33</p>
+          <p><strong>MULTIPLIKATOR START UP GROUP</strong><br/>Réseau d'instituts de langues — multi-campus<br/>Siège social : GODOMEY PK14 2è VONS APRÈS ORYNX, Cotonou (Bénin)<br/>Email : contact@multiplikator-world.com<br/>Téléphone : +229 01 96 59 38 66 / +229 01 99 93 33 33</p>
           <p>Directeur de la publication : Direction Exécutive de MULTIPLIKATOR Institut de Langues.</p>
         </Section>
 
