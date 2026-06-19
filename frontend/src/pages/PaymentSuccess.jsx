@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 import { useLocation, Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import axios from "axios";
-import { CheckCircle2, Clock, XCircle } from "lucide-react";
+import { CheckCircle2, Clock, XCircle, BadgeCheck } from "lucide-react";
 import { PageHero, Eyebrow } from "@/components/Common";
+import { apiCartFinalize } from "@/lib/cart";
 
 const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
 
@@ -13,6 +14,7 @@ export default function PaymentSuccess() {
   const { t } = useTranslation();
   const loc = useLocation();
   const [status, setStatus] = useState({ state: "checking" });
+  const [clientNo, setClientNo] = useState(null);
 
   useEffect(() => {
     const params = new URLSearchParams(loc.search);
@@ -22,7 +24,15 @@ export default function PaymentSuccess() {
     const poll = async () => {
       try {
         const { data } = await axios.get(`${API}/payments/checkout/status/${sid}`);
-        if (data.payment_status === "paid") { setStatus({ state: "paid", data }); return; }
+        if (data.payment_status === "paid") {
+          setStatus({ state: "paid", data });
+          // Finalize cart (generates client_no + clears cart token)
+          try {
+            const fin = await apiCartFinalize(sid);
+            if (fin.client_no) setClientNo(fin.client_no);
+          } catch { /* not a cart payment, ignore */ }
+          return;
+        }
         if (data.status === "expired") { setStatus({ state: "expired" }); return; }
         if (attempts >= 8) { setStatus({ state: "pending", data }); return; }
         attempts++; setTimeout(poll, 2000);
@@ -41,6 +51,15 @@ export default function PaymentSuccess() {
             <CheckCircle2 className="mx-auto text-[#580505]" size={48}/>
             <h2 className="font-serif text-3xl text-[#2F0808] mt-4">{t("payment.paid_title")}</h2>
             <p className="mt-3 text-[#4A4A4A]">{t("payment.paid_desc")}</p>
+            {clientNo && (
+              <div className="mt-6 mpk-card p-5 inline-flex items-center gap-3 bg-[#FAFAFA]" data-testid="client-no-block">
+                <BadgeCheck className="text-[#580505]" size={24}/>
+                <div className="text-left">
+                  <div className="text-[10px] tracking-[0.2em] uppercase text-[#580505] font-semibold">Votre numéro client MPK</div>
+                  <div className="font-serif text-2xl text-[#2F0808] mt-1" data-testid="client-no-value">{clientNo}</div>
+                </div>
+              </div>
+            )}
             <div className="mt-6 mpk-card p-5 text-left">
               <Eyebrow>{t("payment.details")}</Eyebrow>
               <div className="mt-2 text-sm text-[#2F0808]">{status.data?.label}</div>

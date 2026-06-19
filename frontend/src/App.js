@@ -41,6 +41,7 @@ import LanguageEnglish from "@/pages/LanguageEnglish";
 import LanguageFrench from "@/pages/LanguageFrench";
 import LanguageChinese from "@/pages/LanguageChinese";
 import MpkClubs from "@/pages/MpkClubs";
+import Cart from "@/pages/Cart";
 
 function Protected({ children }) {
   const { user, loading } = useAuth();
@@ -67,6 +68,7 @@ function AppRouter() {
       <Route path="/langues/francais" element={<Layout><LanguageFrench /></Layout>} />
       <Route path="/langues/chinois" element={<Layout><LanguageChinese /></Layout>} />
       <Route path="/clubs" element={<Layout><MpkClubs /></Layout>} />
+      <Route path="/panier" element={<Layout><Cart /></Layout>} />
       <Route path="/departements/exam-prep" element={<Layout><ExamPrep /></Layout>} />
       <Route path="/departements/translation-pro" element={<Layout><TranslationPro /></Layout>} />
       <Route path="/departements/consulting-pro" element={<Layout><ConsultingPro /></Layout>} />

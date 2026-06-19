@@ -1,15 +1,40 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { Menu, X, ChevronDown, Globe } from "lucide-react";
+import { Menu, X, ChevronDown, Globe, ShoppingCart } from "lucide-react";
 import { useAuth } from "@/contexts/AuthContext";
 import { LOGO_MARK } from "@/lib/data";
+import { apiGetCart } from "@/lib/cart";
 
 const LANGS = [
   { code: "fr", label: "FR" },
   { code: "en", label: "EN" },
   { code: "de", label: "DE" },
 ];
+
+function CartIcon() {
+  const [count, setCount] = React.useState(0);
+  React.useEffect(() => {
+    const refresh = async () => {
+      try {
+        const c = await apiGetCart();
+        setCount((c.items || []).length);
+      } catch { /* ignore */ }
+    };
+    refresh();
+    const handler = () => refresh();
+    window.addEventListener("mpk-cart-updated", handler);
+    return () => window.removeEventListener("mpk-cart-updated", handler);
+  }, []);
+  return (
+    <Link to="/panier" data-testid="header-cart" className="relative inline-flex items-center justify-center w-9 h-9 border border-[#580505]/20 hover:border-[#580505]/40 text-[#2F0808] hover:text-[#580505] transition">
+      <ShoppingCart size={16} />
+      {count > 0 && (
+        <span data-testid="header-cart-count" className="absolute -top-2 -right-2 bg-[#580505] text-white text-[10px] font-bold w-5 h-5 rounded-full grid place-items-center">{count}</span>
+      )}
+    </Link>
+  );
+}
 
 function LangSwitcher({ onChange }) {
   const { i18n, t } = useTranslation();
@@ -124,6 +149,7 @@ export default function Header() {
         </nav>
 
         <div className="hidden lg:flex items-center gap-3">
+          <CartIcon />
           <LangSwitcher />
           {user ? (
             <>

@@ -145,7 +145,7 @@ export default function LanguageEnglish() {
       <section className="max-w-[1400px] mx-auto px-4 sm:px-5 lg:px-10 py-8">
         <Eyebrow>{t("languages.kids_tagline")}</Eyebrow>
         <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl text-[#2F0808] mt-3 uppercase tracking-tight">{t("languages.kids_title")}</h2>
-        <div className="mt-8 mpk-card p-6 sm:p-8 grid sm:grid-cols-12 gap-6 items-center bg-[#FAFAFA]" data-testid="kids-english-card">
+        <div className="mt-8 mpk-card p-6 sm:p-8 grid sm:grid-cols-12 gap-6 items-center" style={{ background: "#FFFFFF" }} data-testid="kids-english-card">
           <div className="sm:col-span-2 flex justify-center">
             <div className="w-20 h-20 rounded-full bg-[#580505] grid place-items-center text-white">
               <Baby size={32} strokeWidth={1.5} />

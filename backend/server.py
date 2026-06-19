@@ -242,6 +242,9 @@ CATALOG: Dict[str, Dict[str, Any]] = {
     "bundle_eng_a2_b1_b2": {"label": "Parcours Anglais A2 → B2 (-15%)", "amount": 241400.0, "currency": "xof"},
     "bundle_eng_a2_c1": {"label": "Parcours Anglais A2 → C1 (-15%)", "amount": 346800.0, "currency": "xof"},
     "bundle_eng_b1_c1": {"label": "Parcours Anglais B1 → C1 (-15%)", "amount": 278800.0, "currency": "xof"},
+    # ----- Upsell / Frais administratifs -----
+    "registration_fee": {"label": "Frais d'inscription (unique)", "amount": 5000.0, "currency": "xof"},
+    "documentation_fee": {"label": "Frais de documentation (par niveau)", "amount": 10000.0, "currency": "xof"},
     # Gift cards
     "gift_a1_1": {"label": "Carte cadeau A1.1", "amount": 46000.0, "currency": "xof"},
     "gift_a1": {"label": "Carte cadeau A1 complet", "amount": 92000.0, "currency": "xof"},
@@ -504,6 +507,255 @@ async def webhook_stripe(request: Request):
         logger.error(f"Webhook error: {e}")
     return {"ok": True}
 
+# ---------- Cart + Client Number + Upsell ----------
+UPSELL_ITEMS = ["registration_fee", "documentation_fee"]
+
+
+class CartAddRequest(BaseModel):
+    package_id: str
+    cart_token: Optional[str] = None
+    customer_email: Optional[str] = None
+
+
+class CartCheckoutRequest(BaseModel):
+    cart_token: str
+    origin_url: str
+    customer_email: Optional[str] = None
+    include_upsell: bool = True
+
+
+async def _get_or_create_cart(cart_token: Optional[str]) -> Dict[str, Any]:
+    if cart_token:
+        cart = await db.carts.find_one({"cart_token": cart_token})
+        if cart:
+            return cart
+    new_cart = {
+        "cart_token": f"cart_{uuid.uuid4().hex[:16]}",
+        "items": [],
+        "created_at": datetime.now(timezone.utc).isoformat(),
+    }
+    await db.carts.insert_one(new_cart)
+    return new_cart
+
+
+async def _is_first_time_buyer(customer_email: Optional[str]) -> bool:
+    if not customer_email:
+        return True  # treat anonymous/no-email as first-time
+    paid = await db.payment_transactions.find_one({
+        "customer_email": customer_email,
+        "payment_status": "paid",
+    })
+    return paid is None
+
+
+async def _next_client_number() -> str:
+    year = datetime.now(timezone.utc).year
+    counter = await db.client_counters.find_one_and_update(
+        {"_id": f"client_no_{year}"},
+        {"$inc": {"seq": 1}},
+        upsert=True,
+        return_document=True,
+    )
+    seq = counter.get("seq", 1)
+    return f"MPK-{year}-{seq:05d}"
+
+
+async def _ensure_client_number(customer_email: str, user_id: Optional[str] = None) -> str:
+    existing = await db.clients.find_one({"email": customer_email})
+    if existing and existing.get("client_no"):
+        return existing["client_no"]
+    client_no = await _next_client_number()
+    now = datetime.now(timezone.utc).isoformat()
+    await db.clients.update_one(
+        {"email": customer_email},
+        {"$setOnInsert": {
+            "email": customer_email,
+            "user_id": user_id,
+            "client_no": client_no,
+            "first_purchase_at": now,
+            "created_at": now,
+        }},
+        upsert=True,
+    )
+    if user_id:
+        await db.users.update_one({"user_id": user_id}, {"$set": {"client_no": client_no}})
+    return client_no
+
+
+@api.get("/cart")
+async def get_cart(cart_token: Optional[str] = None):
+    if not cart_token:
+        return {"cart_token": None, "items": [], "subtotal": 0, "currency": "xof"}
+    cart = await db.carts.find_one({"cart_token": cart_token}, {"_id": 0})
+    if not cart:
+        return {"cart_token": cart_token, "items": [], "subtotal": 0, "currency": "xof"}
+    subtotal = sum(i.get("amount", 0) * i.get("quantity", 1) for i in cart.get("items", []))
+    return {
+        "cart_token": cart["cart_token"],
+        "items": cart.get("items", []),
+        "subtotal": subtotal,
+        "currency": "xof",
+    }
+
+
+@api.post("/cart/add")
+async def add_to_cart(req: CartAddRequest):
+    if req.package_id not in CATALOG:
+        raise HTTPException(status_code=400, detail="Produit inconnu")
+    if req.package_id in UPSELL_ITEMS:
+        raise HTTPException(status_code=400, detail="Les frais administratifs sont gérés automatiquement au checkout")
+    cart = await _get_or_create_cart(req.cart_token)
+    item = CATALOG[req.package_id]
+    items = cart.get("items", [])
+    # If already in cart, do nothing (avoid duplicates on language courses — one-shot products)
+    if any(i["package_id"] == req.package_id for i in items):
+        return {"cart_token": cart["cart_token"], "added": False, "reason": "already_in_cart"}
+    items.append({
+        "package_id": req.package_id,
+        "label": item["label"],
+        "amount": item["amount"],
+        "currency": item["currency"],
+        "quantity": 1,
+    })
+    await db.carts.update_one({"cart_token": cart["cart_token"]}, {"$set": {"items": items, "updated_at": datetime.now(timezone.utc).isoformat()}})
+    return {"cart_token": cart["cart_token"], "added": True, "items_count": len(items)}
+
+
+@api.delete("/cart/item/{package_id}")
+async def remove_from_cart(package_id: str, cart_token: str):
+    cart = await db.carts.find_one({"cart_token": cart_token})
+    if not cart:
+        raise HTTPException(status_code=404, detail="Panier introuvable")
+    items = [i for i in cart.get("items", []) if i["package_id"] != package_id]
+    await db.carts.update_one({"cart_token": cart_token}, {"$set": {"items": items, "updated_at": datetime.now(timezone.utc).isoformat()}})
+    return {"ok": True, "items_count": len(items)}
+
+
+@api.get("/cart/upsell")
+async def cart_upsell_eligibility(customer_email: Optional[str] = None):
+    """Returns whether the customer is eligible for first-time upsell (registration + documentation fees)."""
+    is_first = await _is_first_time_buyer(customer_email)
+    return {
+        "first_time_buyer": is_first,
+        "upsell_items": [
+            {"id": pid, **CATALOG[pid]} for pid in UPSELL_ITEMS
+        ],
+        "default_checked": is_first,  # auto-check for first-time buyers
+        "fallback_text": "Si décoché, ces frais seront à régler au secrétariat lors de votre inscription en présentiel.",
+    }
+
+
+@api.post("/cart/checkout")
+async def cart_checkout(req: CartCheckoutRequest, http_request: Request):
+    cart = await db.carts.find_one({"cart_token": req.cart_token})
+    if not cart or not cart.get("items"):
+        raise HTTPException(status_code=400, detail="Panier vide")
+
+    items = list(cart["items"])
+    # Auto-inject upsell items if first-time buyer and include_upsell flag
+    upsell_applied = []
+    if req.include_upsell and await _is_first_time_buyer(req.customer_email):
+        for pid in UPSELL_ITEMS:
+            if pid in CATALOG and not any(i["package_id"] == pid for i in items):
+                u = CATALOG[pid]
+                items.append({
+                    "package_id": pid,
+                    "label": u["label"],
+                    "amount": u["amount"],
+                    "currency": u["currency"],
+                    "quantity": 1,
+                    "is_upsell": True,
+                })
+                upsell_applied.append(pid)
+
+    # All items must share the same currency (we only sell in XOF for now)
+    currencies = {i["currency"] for i in items}
+    if len(currencies) > 1:
+        raise HTTPException(status_code=400, detail="Devises mixtes non supportées dans un même panier")
+    currency = items[0]["currency"]
+    subtotal = sum(i["amount"] * i.get("quantity", 1) for i in items)
+
+    # Build a combined Stripe checkout session (single amount line)
+    nb = len(items)
+    labels = ", ".join(i["label"] for i in items)[:140]
+    combined_label = f"Panier MPK · {nb} article{'s' if nb > 1 else ''}"
+
+    host_url = str(http_request.base_url).rstrip("/")
+    webhook_url = f"{host_url}/api/webhook/stripe"
+    stripe_checkout = StripeCheckout(api_key=STRIPE_API_KEY, webhook_url=webhook_url)
+    origin = req.origin_url.rstrip("/")
+    success_url = f"{origin}/payment/success?session_id={{CHECKOUT_SESSION_ID}}"
+    cancel_url = f"{origin}/panier"
+
+    metadata = {
+        "cart_token": req.cart_token,
+        "label": combined_label,
+        "items_count": str(nb),
+        "items_summary": labels,
+        "customer_email": req.customer_email or "",
+        "upsell_applied": ",".join(upsell_applied) if upsell_applied else "",
+    }
+
+    checkout_req = CheckoutSessionRequest(
+        amount=stripe_amount(subtotal, currency),
+        currency=currency,
+        success_url=success_url,
+        cancel_url=cancel_url,
+        metadata=metadata,
+    )
+    session: CheckoutSessionResponse = await stripe_checkout.create_checkout_session(checkout_req)
+
+    await db.payment_transactions.insert_one({
+        "session_id": session.session_id,
+        "cart_token": req.cart_token,
+        "package_id": "cart_checkout",
+        "label": combined_label,
+        "items": items,
+        "amount": subtotal,
+        "currency": currency,
+        "customer_email": req.customer_email,
+        "metadata": metadata,
+        "payment_status": "initiated",
+        "created_at": datetime.now(timezone.utc).isoformat(),
+    })
+
+    return {"url": session.url, "session_id": session.session_id, "subtotal": subtotal, "upsell_applied": upsell_applied}
+
+
+@api.post("/cart/finalize/{session_id}")
+async def cart_finalize(session_id: str, http_request: Request):
+    """Called by frontend after successful payment to (1) refresh status from Stripe, (2) generate client number if first paid order, (3) clear cart."""
+    host_url = str(http_request.base_url).rstrip("/")
+    stripe_checkout = StripeCheckout(api_key=STRIPE_API_KEY, webhook_url=f"{host_url}/api/webhook/stripe")
+    status_resp: CheckoutStatusResponse = await stripe_checkout.get_checkout_status(session_id)
+    tx = await db.payment_transactions.find_one({"session_id": session_id})
+    if not tx:
+        raise HTTPException(status_code=404, detail="Transaction introuvable")
+
+    client_no = None
+    if status_resp.payment_status == "paid":
+        await db.payment_transactions.update_one(
+            {"session_id": session_id},
+            {"$set": {"payment_status": "paid", "status": status_resp.status, "updated_at": datetime.now(timezone.utc).isoformat()}},
+        )
+        email = tx.get("customer_email") or status_resp.metadata.get("customer_email") or ""
+        if email:
+            existing_user = await db.users.find_one({"email": email}, {"user_id": 1})
+            client_no = await _ensure_client_number(email, user_id=existing_user.get("user_id") if existing_user else None)
+        # clear cart
+        if tx.get("cart_token"):
+            await db.carts.delete_one({"cart_token": tx["cart_token"]})
+
+    return {
+        "session_id": session_id,
+        "payment_status": status_resp.payment_status,
+        "client_no": client_no,
+        "items_count": len(tx.get("items", [])),
+        "amount": tx.get("amount"),
+        "currency": tx.get("currency"),
+    }
+
+
 # ---------- Health ----------
 @api.get("/")
 async def root():
@@ -533,6 +785,8 @@ async def on_startup():
     await db.users.create_index("user_id", unique=True)
     await db.user_sessions.create_index("session_token", unique=True)
     await db.payment_transactions.create_index("session_id", unique=True)
+    await db.carts.create_index("cart_token", unique=True)
+    await db.clients.create_index("email", unique=True)
     # Seed admin
     existing = await db.users.find_one({"email": ADMIN_EMAIL})
     if not existing:
