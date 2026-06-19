@@ -102,8 +102,16 @@ export default function Header() {
       { to: "/boutique", label: t("nav.shop") },
     ]},
     { key: "community", label: t("nav.community"), items: [
+      { to: "/alumnis", label: t("nav.alumnis") },
+      { to: "/clubs", label: t("nav.clubs") },
       { to: "/blog-infos", label: t("nav.blog_infos") },
       { to: "/concours-promotions", label: t("nav.concours_promo") },
+      { to: "/blog", label: t("nav.blog") },
+      { to: "/galerie", label: t("nav.gallery") },
+      { to: "/temoignages", label: t("nav.testimonials") },
+      { to: "/actualites", label: t("nav.news") },
+      { to: "/telechargements", label: t("nav.downloads") },
+      { to: "/reseaux", label: t("nav.social") },
     ]},
     { key: "contact", label: t("nav.contact"), to: "/contact" },
   ];
