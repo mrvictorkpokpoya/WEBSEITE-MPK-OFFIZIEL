@@ -100,6 +100,20 @@ Créer le site web officiel, premium et institutionnel de MULTIPLIKATOR Institut
 - Fournir le nom du Directeur du Tourisme (placeholder « À venir »)
 - Validation client du contenu de la chronologie /notre-histoire (jalons 2021-2026 actuellement rédigés par l'IA, à corriger si besoin)
 - Validation client du contenu de /appel-a-investissement (montants, projets, formes de partenariat — à ajuster aux vraies orientations stratégiques de la direction)
+### Session 6 (19 février 2026) — Refonte TrainingPlus + pages langues
+- **Restructure visuelle TrainingPlus** : H2 "Cours d'allemand · Semi-Intensif" devient le gros titre (auparavant eyebrow). CTA inclus dans la description ("Achetez votre cours d'allemand selon votre niveau ici").
+- **Niveaux C1/C2 Semi-Intensif** : 4 sous-niveaux ajoutés (C1.1, C1.2, C2.1, C2.2) — affichage "Sur devis" public ; prix internes 155K/175K base pour bundles
+- **Premium VIP Accéléré restructuré** : 12 cartes sous-niveaux A1.1 → C2.2 (durée /2, format intensif). Prix VIP : A1-A2 sublevels=100K/2sem, B1=107.5K/2sem, B2=125K/3sem, C1=140K/3sem, C2=sur devis. Niveaux complets corrigés : A1=200K/4sem, A2=200K/4sem, B1=215K/4sem, B2=250K/**6sem** (était 8), C1=280K/**6sem** (était 8), C2=sur demande.
+- **Bundles enrichis** : 9 packs (A1+A2, A2+B1, B1+B2, A1→B1, A1→B2, A1→C1, A2→B2, A2→C1, B1→C1) avec variations subtiles de bordeaux (tones #2B0000 → #540000), ruban couleur en haut, ombres renforcées
+- **Cards renforcées** : border 0.22 → 0.45 hover, shadow 12px → 22px hover, plus de profondeur
+- **Pages langues dédiées** : `/langues/anglais` (Kids English Training 15K/1mois + inscriptions 2.5K + 12 sublevels), `/langues/francais` et `/langues/chinois` (structure A1.1→C2.2 placeholder "en cours de conception")
+- **MPK Exam Prep** : déplacé APRÈS les sections cours de langues
+- **Découvrir** remplace "Me notifier" → renvoie vers la page langue
+- **Catalog Stripe** : 9 nouveaux IDs bundles + 10 nouveaux VIP sublevels + kids_english + kids_english_reg, tous opérationnels (testés 100% par testing agent)
+- **i18n complet** : nouvelles clés `training_plus.section_german_*` et namespace `languages.*` dans FR/EN/DE
+- **Test agent itération 6** : 31/31 backend PASS, frontend 100%, 0 régression
+
+
 
 ### P1
 - Blocs « En construction » pour cours Anglais, FLE, Chinois
