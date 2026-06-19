@@ -37,6 +37,8 @@ import Terms from "@/pages/Terms";
 import Alumni from "@/pages/Alumni";
 import Downloads from "@/pages/Downloads";
 import Blog from "@/pages/Blog";
+import BlogInfos from "@/pages/BlogInfos";
+import ConcoursPromotions from "@/pages/ConcoursPromotions";
 import LanguageEnglish from "@/pages/LanguageEnglish";
 import LanguageFrench from "@/pages/LanguageFrench";
 import LanguageChinese from "@/pages/LanguageChinese";
@@ -90,6 +92,8 @@ function AppRouter() {
       <Route path="/alumnis" element={<Layout><Alumni /></Layout>} />
       <Route path="/telechargements" element={<Layout><Downloads /></Layout>} />
       <Route path="/blog" element={<Layout><Blog /></Layout>} />
+      <Route path="/blog-infos" element={<Layout><BlogInfos /></Layout>} />
+      <Route path="/concours-promotions" element={<Layout><ConcoursPromotions /></Layout>} />
       <Route path="/connexion" element={<Layout><Login /></Layout>} />
       <Route path="/inscription" element={<Layout><Register /></Layout>} />
       <Route path="/espace-apprenant" element={<Protected><Layout><Dashboard /></Layout></Protected>} />

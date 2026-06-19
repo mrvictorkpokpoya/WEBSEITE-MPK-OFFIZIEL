@@ -21,6 +21,8 @@
     "alumnis": "MPK World Alumnis",
     "clubs": "MPK Clubs Sport & Langues",
     "blog": "Blog & Infos",
+    "blog_infos": "Blog, Infos et Actualités",
+    "concours_promo": "Concours et Promotions",
     "gallery": "Galerie photos & vidéos",
     "testimonials": "Témoignages",
     "news": "Actualités & Concours",
@@ -360,6 +362,105 @@
       { "category": "Conseils", "title": "10 erreurs à éviter dans votre lettre de motivation pour l'Allemagne", "excerpt": "Les universités allemandes ont leurs propres codes. Voici les erreurs récurrentes que nos consultants identifient dans 80% des dossiers." },
       { "category": "Tourisme", "title": "Ganvié et Grand Popo : aperçu du programme MPK Tourism Discovery", "excerpt": "Découvrez les coulisses des sorties pilotes du département MPK Tourism — destinations emblématiques du patrimoine béninois." }
     ]
+  },
+  "blog_infos": {
+    "hero_eyebrow": "Communauté MPK",
+    "hero_title": "Blog, Infos et Actualités MULTIPLIKATOR.",
+    "hero_kicker": "Tout ce qui se passe au sein du réseau MPK : visuels officiels, articles pédagogiques, dates de rentrée, examens et vie de campus.",
+    "visuals_eyebrow": "Visuels officiels",
+    "visuals_title": "Dépliants & infos pratiques en un coup d'œil.",
+    "visuals_kicker": "Téléchargez, partagez, ou affichez nos visuels officiels — calendriers, congés, encouragements aux examens.",
+    "articles_eyebrow": "Articles",
+    "articles_title": "Conseils, analyses et coulisses MPK.",
+    "news_eyebrow": "Actualités",
+    "news_title": "Les dernières nouvelles du réseau.",
+    "news_tag": "Annonce",
+    "news_default_title": "Actualité MPK",
+    "news_default_excerpt": "Restez informé(e) — la rédaction MPK met à jour cette rubrique régulièrement.",
+    "news_default": [
+      { "title": "Rentrée Juillet 2026 — inscriptions ouvertes", "excerpt": "La session du 06 juillet au 04 septembre 2026 démarre les inscriptions sur tous les campus. Cours du jour et du soir, en présentiel et en ligne." },
+      { "title": "Bonne chance à nos apprenants !", "excerpt": "Toute l'équipe MPK souhaite plein succès à tous les apprenants engagés dans les sessions d'examens Goethe, ÖSD, IELTS et TOEFL en cours." },
+      { "title": "Congés académiques du 19 au 30 juin 2026", "excerpt": "L'Institut MULTIPLIKATOR sera en congé du vendredi 19 juin 2026 au mardi 30 juin 2026. Reprise des cours le mercredi 1er juillet 2026." },
+      { "title": "Nouveaux cours préparatoires A1 → B2", "excerpt": "Sessions de 3 semaines, formules interne / externe, pricing transparent à partir de 35 000 FCFA. Idéal pour booster son niveau avant la rentrée." },
+      { "title": "MPK Clubs — la communauté grandit", "excerpt": "Sport, culture, langues : nos clubs MPK accueillent les apprenants pour des activités hebdomadaires gratuites sur les campus." },
+      { "title": "Calendrier 2026 disponible", "excerpt": "Découvrez le planning complet de toutes les rentrées 2026 et 2027 sur nos visuels institutionnels." }
+    ],
+    "downloads_eyebrow": "Téléchargements",
+    "downloads_title": "Tous nos dépliants officiels en libre accès.",
+    "downloads_kicker": "Brochures institutionnelles, syllabi pédagogiques, grilles tarifaires, posters de rentrée — tout est centralisé dans notre foire aux téléchargements.",
+    "downloads_cta": "Accéder aux téléchargements"
+  },
+  "concours": {
+    "hero_eyebrow": "Communauté MPK",
+    "hero_title": "Concours et Promotions en cours.",
+    "hero_kicker": "Profitez des offres saisonnières MULTIPLIKATOR, participez à nos concours et débloquez des avantages exclusifs sur vos formations.",
+    "offers_eyebrow": "Offres actives",
+    "offers_title": "Les sessions et tarifs du moment.",
+    "offers_kicker": "Cours de langues et cours préparatoires — découvrez nos visuels officiels et formules détaillées.",
+    "contests_eyebrow": "Concours",
+    "contests_title": "Participez et tentez votre chance.",
+    "contests_kicker": "Concours créatifs, défis linguistiques, jeux pédagogiques : remportez bourses, cours gratuits et lots exclusifs.",
+    "contests": {
+      "cta": "Je participe",
+      "c1": {
+        "tag": "Concours photo",
+        "title": "MPK CAMPUS LIFE",
+        "desc": "Postez la plus belle photo de votre quotidien sur l'un de nos 6 campus. Les 3 meilleures clichés gagnent un trimestre gratuit.",
+        "deadline": "Clôture : 30 sept. 2026",
+        "prize": "1 trimestre offert"
+      },
+      "c2": {
+        "tag": "Défi langues",
+        "title": "100 MOTS EN ALLEMAND",
+        "desc": "Apprenez et restituez 100 mots-clés en vidéo. Le jury MPK récompense les performances les plus créatives.",
+        "deadline": "Clôture : 15 août 2026",
+        "prize": "Bourse 50 000 FCFA"
+      },
+      "c3": {
+        "tag": "Bourse mobilité",
+        "title": "JEUNE TALENT MPK",
+        "desc": "Étudiant·e ambitieux·se ? Présentez votre projet de mobilité internationale et tentez de remporter une bourse complète.",
+        "deadline": "Clôture : 31 oct. 2026",
+        "prize": "Bourse complète"
+      }
+    },
+    "promos_eyebrow": "Promotions",
+    "promos_title": "Économies & cadeaux exclusifs.",
+    "promos_kicker": "Réductions saisonnières, parrainage, bundles avantageux — découvrez tous nos bons plans.",
+    "promos": {
+      "p1": {
+        "badge": "OFFRE RENTRÉE",
+        "amount": "-15%",
+        "title": "Inscription anticipée",
+        "desc": "Inscrivez-vous avant le 30 juin pour bénéficier de -15% sur toute formation A1 → C1.",
+        "until": "Jusqu'au 30 juin 2026"
+      },
+      "p2": {
+        "badge": "BUNDLE",
+        "amount": "-20%",
+        "title": "Parcours A1-B2 complet",
+        "desc": "Réservez 4 niveaux d'un coup et économisez 20% sur le pack complet.",
+        "until": "Offre permanente"
+      },
+      "p3": {
+        "badge": "PARRAINAGE",
+        "amount": "10 000 F",
+        "title": "Parrainez un proche",
+        "desc": "Recommandez un apprenant et recevez 10 000 FCFA crédités sur votre prochain cours.",
+        "until": "Sans limite de date"
+      },
+      "p4": {
+        "badge": "FAMILLE",
+        "amount": "-25%",
+        "title": "Tarif famille",
+        "desc": "Inscription simultanée de 2 membres d'une même famille : -25% sur le second.",
+        "until": "Toute l'année"
+      }
+    },
+    "cta_eyebrow": "Boutique MPK",
+    "cta_title": "Toutes nos formations en un clic.",
+    "cta_kicker": "Choisissez votre cours, ajoutez au panier et payez en ligne — vous recevrez immédiatement votre Client ID par email.",
+    "cta_btn": "Voir la boutique"
   },
   "downloads": {
     "hero_eyebrow": "Foire aux téléchargements",

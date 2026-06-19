@@ -21,6 +21,8 @@
     "alumnis": "MPK World Alumnis",
     "clubs": "MPK Sport & Language Clubs",
     "blog": "Blog & News",
+    "blog_infos": "Blog, News & Updates",
+    "concours_promo": "Contests & Promotions",
     "gallery": "Photo & Video Gallery",
     "testimonials": "Testimonials",
     "news": "News & Contests",
@@ -360,6 +362,105 @@
       { "category": "Tips", "title": "10 mistakes to avoid in your cover letter for Germany", "excerpt": "German universities have their own codes. Here are the recurring mistakes our consultants spot in 80% of applications." },
       { "category": "Tourism", "title": "Ganvié and Grand Popo: a glimpse into the MPK Tourism Discovery programme", "excerpt": "Discover the behind-the-scenes of MPK Tourism's pilot outings — iconic destinations of Beninese heritage." }
     ]
+  },
+  "blog_infos": {
+    "hero_eyebrow": "MPK Community",
+    "hero_title": "Blog, News and Updates from MULTIPLIKATOR.",
+    "hero_kicker": "Everything happening inside the MPK network: official visuals, educational articles, intake dates, exams and campus life.",
+    "visuals_eyebrow": "Official visuals",
+    "visuals_title": "Flyers & practical info at a glance.",
+    "visuals_kicker": "Download, share, or display our official visuals — calendars, school breaks, exam encouragement.",
+    "articles_eyebrow": "Articles",
+    "articles_title": "Tips, insights and behind-the-scenes at MPK.",
+    "news_eyebrow": "News",
+    "news_title": "The latest from the network.",
+    "news_tag": "Announcement",
+    "news_default_title": "MPK Update",
+    "news_default_excerpt": "Stay tuned — the MPK editorial team updates this section regularly.",
+    "news_default": [
+      { "title": "July 2026 intake — registrations open", "excerpt": "The July 06 to September 04, 2026 session opens registrations across all campuses. Day & evening classes, in-person and online." },
+      { "title": "Good luck to our learners!", "excerpt": "The MPK team wishes great success to all learners taking part in the current Goethe, ÖSD, IELTS and TOEFL exam sessions." },
+      { "title": "Academic break: June 19 to 30, 2026", "excerpt": "MULTIPLIKATOR Institute will be closed from Friday June 19 to Tuesday June 30, 2026. Classes resume Wednesday July 1st, 2026." },
+      { "title": "New prep courses A1 → B2", "excerpt": "3-week sessions, internal / external pricing, transparent rates from 35,000 FCFA. Perfect to boost your level before the intake." },
+      { "title": "MPK Clubs — the community grows", "excerpt": "Sport, culture, languages: our MPK clubs welcome learners for free weekly activities on campus." },
+      { "title": "2026 calendar available", "excerpt": "Discover the full schedule of all 2026 and 2027 intakes on our institutional visuals." }
+    ],
+    "downloads_eyebrow": "Downloads",
+    "downloads_title": "All our official flyers, freely accessible.",
+    "downloads_kicker": "Institutional brochures, course syllabi, pricing grids, intake posters — all centralised in our downloads hub.",
+    "downloads_cta": "Go to downloads"
+  },
+  "concours": {
+    "hero_eyebrow": "MPK Community",
+    "hero_title": "Contests and Promotions, live now.",
+    "hero_kicker": "Enjoy seasonal MULTIPLIKATOR offers, take part in our contests and unlock exclusive perks on your courses.",
+    "offers_eyebrow": "Active offers",
+    "offers_title": "Current sessions and pricing.",
+    "offers_kicker": "Language courses and preparatory courses — explore our official visuals and detailed packages.",
+    "contests_eyebrow": "Contests",
+    "contests_title": "Take part and try your luck.",
+    "contests_kicker": "Creative contests, language challenges, educational games: win scholarships, free courses and exclusive prizes.",
+    "contests": {
+      "cta": "I take part",
+      "c1": {
+        "tag": "Photo contest",
+        "title": "MPK CAMPUS LIFE",
+        "desc": "Post the most beautiful photo of your daily life on one of our 6 campuses. The top 3 shots win a free term.",
+        "deadline": "Closes: Sep 30, 2026",
+        "prize": "1 term free"
+      },
+      "c2": {
+        "tag": "Language challenge",
+        "title": "100 GERMAN WORDS",
+        "desc": "Learn and recite 100 key words on video. The MPK jury rewards the most creative performances.",
+        "deadline": "Closes: Aug 15, 2026",
+        "prize": "Grant 50,000 FCFA"
+      },
+      "c3": {
+        "tag": "Mobility grant",
+        "title": "MPK YOUNG TALENT",
+        "desc": "Ambitious student? Pitch your international mobility project and try to win a full scholarship.",
+        "deadline": "Closes: Oct 31, 2026",
+        "prize": "Full scholarship"
+      }
+    },
+    "promos_eyebrow": "Promotions",
+    "promos_title": "Savings & exclusive perks.",
+    "promos_kicker": "Seasonal discounts, referrals, bundle deals — discover all our best offers.",
+    "promos": {
+      "p1": {
+        "badge": "INTAKE DEAL",
+        "amount": "-15%",
+        "title": "Early registration",
+        "desc": "Sign up before June 30 to get -15% on any A1 → C1 course.",
+        "until": "Until June 30, 2026"
+      },
+      "p2": {
+        "badge": "BUNDLE",
+        "amount": "-20%",
+        "title": "Full A1-B2 track",
+        "desc": "Book 4 levels at once and save 20% on the full pack.",
+        "until": "Always available"
+      },
+      "p3": {
+        "badge": "REFERRAL",
+        "amount": "10,000 F",
+        "title": "Refer a friend",
+        "desc": "Refer a new learner and receive 10,000 FCFA credited to your next course.",
+        "until": "No deadline"
+      },
+      "p4": {
+        "badge": "FAMILY",
+        "amount": "-25%",
+        "title": "Family rate",
+        "desc": "Two members of the same family register together: -25% on the second.",
+        "until": "All year long"
+      }
+    },
+    "cta_eyebrow": "MPK Shop",
+    "cta_title": "All our courses, one click away.",
+    "cta_kicker": "Pick a course, add to cart and pay online — your Client ID will be emailed instantly.",
+    "cta_btn": "Browse the shop"
   },
   "downloads": {
     "hero_eyebrow": "Downloads",

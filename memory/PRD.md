@@ -151,6 +151,20 @@ Créer le site web officiel, premium et institutionnel de MULTIPLIKATOR Institut
 - **Blanc neige pur #FFFFFF** sur tous les cards intérieurs (Kids English carte de #FAFAFA → blanc pur)
 - **Test agent itération 8** : 23/23 backend pytest PASS (cart CRUD, upsell, idempotency, multi-currency rejection) + frontend E2E (Panier → Header badge → Cart page → Stripe redirect → numéro client display)
 
+### Session 10 (19 juin 2026) — Restructuration menu Communauté + visuels MPK
+- **Menu Communauté** restructuré : ne contient plus que **2 items** au lieu de 8 → `/blog-infos` ("Blog, Infos et Actualités") + `/concours-promotions` ("Concours et Promotions")
+- **Composant `MpkFlyers.jsx`** créé avec **5 dépliants HTML/CSS officiels** (no images) inspirés des flyers WhatsApp client :
+  1. `FlyerLanguageCourses` — Cours de Langues Allemand/Anglais avec dates 06 Juill → 04 Sept 2026
+  2. `FlyerPrepCourses` — Cours Préparatoires A1/A2/B1/B2 avec pricing Interne/Externe + durées
+  3. `FlyerCalendar` — Calendrier Annuel des Rentrées (12 mois colorés bordeaux/bleu marine)
+  4. `FlyerExamGoodLuck` — Bonne Chance examen (gradient sable + drop-shadow bordeaux)
+  5. `FlyerAcademicHolidays` — Congés Académiques du 19 au 30 juin 2026 + reprise 01 juill.
+- **Page `BlogInfos.jsx`** : Hero + section Visuels (3 flyers : Calendrier/Examen/Congés) + Articles blog (catégories filtrables) + Actualités (6 news par défaut) + CTA Téléchargements
+- **Page `ConcoursPromotions.jsx`** : Hero + section Offres (2 flyers : Cours de Langues + Cours Préparatoires) + 3 Concours (Campus Life, 100 mots, Jeune Talent) + 4 Promotions (early bird -15%, bundle -20%, parrainage 10K, famille -25%) + CTA Boutique
+- **i18n FR/EN/DE** : ajout des clés `nav.blog_infos`, `nav.concours_promo`, sections `blog_infos.*` et `concours.*` complètes (titres, kickers, concours, promos, badges, deadlines)
+- **Routes ajoutées** : `/blog-infos` + `/concours-promotions` dans App.js (anciennes routes /blog, /actualites, /telechargements, /alumnis, /clubs, /galerie, /temoignages, /reseaux toujours actives via URL directe et footer)
+
+
 
 - Liens WhatsApp communauté = numéro principal (pas de vrais groupes)
 - Photos campus = images stock
