@@ -40,7 +40,7 @@ export function CleanCard({ icon: Icon, title, children, accent }) {
           <Icon className="text-[#580505]" size={22} strokeWidth={1.5} />
         </div>
       )}
-      <h3 className="font-serif text-lg sm:text-xl text-[#2F0808] leading-snug">{title}</h3>
+      <h3 className="font-serif text-lg sm:text-xl text-[#2F0808] leading-snug uppercase tracking-tight">{title}</h3>
       <div className="mt-3 sm:mt-4 mb-3 sm:mb-4 h-px bg-[#580505]/20 w-full" />
       {accent && <div className="absolute h-0.5 bg-[#580505] mt-[-1.5rem]" style={{width: "60px"}} />}
       <div className="text-sm text-[#4A4A4A] font-light leading-relaxed flex-grow">{children}</div>

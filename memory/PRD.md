@@ -140,6 +140,18 @@ Créer le site web officiel, premium et institutionnel de MULTIPLIKATOR Institut
 - Refactoring : routes backend dans /app/backend/routes, tests pytest dans /app/backend/tests
 
 ## Mocks / placeholders connus
+### Session 8 (19 février 2026) — Cart + Client# + UI polish
+- **Système panier multi-items** : 6 endpoints `/api/cart/*` (add/get/remove/upsell/checkout/finalize), persistence localStorage `mpk-cart-token`, déduplication, anti-mixed-currency
+- **Numéro client auto** format `MPK-YYYY-NNNNN` avec compteur séquentiel MongoDB atomique (`db.client_counters`), idempotent via `$setOnInsert` sur `db.clients`
+- **Upsell automatique** : `registration_fee` (5K) + `documentation_fee` (10K) auto-injectés pour first-time buyers, checkbox UI sur `/panier` avec fallback "régler au secrétariat"
+- **Cart icon** dans Header avec badge live (compte items via custom event `mpk-cart-updated`)
+- **Drapeaux clubs** : UK flag SVG sur MEC, drapeau allemand SVG sur MDK (top-left), couleurs bordeaux préservées
+- **Sport clubs** : contours bordeaux MPK #580505 uniformes, couleurs vert/orange/bleu préservées pour icônes + boutons "Rejoindre"
+- **Header allégé** : fusion "Connexion" + "S'inscrire" en un seul bouton **"MY MPK ❤"** → /connexion (la page Login a déjà un lien "Créer un compte")
+- **Blanc neige pur #FFFFFF** sur tous les cards intérieurs (Kids English carte de #FAFAFA → blanc pur)
+- **Test agent itération 8** : 23/23 backend pytest PASS (cart CRUD, upsell, idempotency, multi-currency rejection) + frontend E2E (Panier → Header badge → Cart page → Stripe redirect → numéro client display)
+
+
 - Liens WhatsApp communauté = numéro principal (pas de vrais groupes)
 - Photos campus = images stock
 - Plans d'accès manquants pour 5 campus

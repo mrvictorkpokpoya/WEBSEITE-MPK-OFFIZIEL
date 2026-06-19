@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { Menu, X, ChevronDown, Globe, ShoppingCart } from "lucide-react";
+import { Menu, X, ChevronDown, Globe, ShoppingCart, Heart } from "lucide-react";
 import { useAuth } from "@/contexts/AuthContext";
 import { LOGO_MARK } from "@/lib/data";
 import { apiGetCart } from "@/lib/cart";
@@ -157,9 +157,10 @@ export default function Header() {
               <button data-testid="header-logout" onClick={logout} className="text-sm text-[#2F0808] hover:text-[#580505]">{t("nav.logout")}</button>
             </>
           ) : (
-            <Link data-testid="header-login" to="/connexion" className="text-sm text-[#2F0808] hover:text-[#580505]">{t("nav.login")}</Link>
+            <Link data-testid="header-mympk" to="/connexion" className="inline-flex items-center gap-1.5 px-4 py-2 bg-[#580505] text-[#C4D2ED] border-[1.5px] border-[#580505] text-sm font-semibold hover:bg-[#2F0808] transition tracking-wide">
+              MY MPK <Heart size={14} fill="#C4D2ED" stroke="#C4D2ED" />
+            </Link>
           )}
-          <Link data-testid="header-register-cta" to="/contact" className="btn-primary text-sm">{t("nav.register")}</Link>
         </div>
 
         <button data-testid="header-mobile-toggle" className="lg:hidden text-[#2F0808]" onClick={() => setOpen(!open)}>
@@ -194,9 +195,10 @@ export default function Header() {
                   <button onClick={() => { logout(); setOpen(false); }} className="text-sm text-left text-[#2F0808]">{t("nav.logout")}</button>
                 </>
               ) : (
-                <Link to="/connexion" onClick={() => setOpen(false)} className="text-sm text-[#2F0808]">{t("nav.login")}</Link>
+                <Link to="/connexion" onClick={() => setOpen(false)} className="inline-flex items-center justify-center gap-1.5 px-4 py-2 bg-[#580505] text-[#C4D2ED] border-[1.5px] border-[#580505] text-sm font-semibold hover:bg-[#2F0808] transition tracking-wide">
+                  MY MPK <Heart size={14} fill="#C4D2ED" stroke="#C4D2ED" />
+                </Link>
               )}
-              <Link to="/contact" onClick={() => setOpen(false)} className="btn-primary text-sm justify-center">{t("nav.register")}</Link>
             </div>
           </div>
         </div>

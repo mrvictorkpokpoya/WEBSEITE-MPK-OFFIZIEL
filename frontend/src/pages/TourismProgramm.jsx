@@ -16,7 +16,7 @@ export default function TourismProgramm() {
         {services.map((s, i) => (
           <div key={i} className="mpk-card p-8">
             <Eyebrow>{t("tourism.offer_label")} 0{i+1}</Eyebrow>
-            <h3 className="font-serif text-2xl mt-3 text-[#2F0808]">{s.t}</h3>
+            <h3 className="font-serif text-2xl mt-3 text-[#2F0808] uppercase tracking-tight">{s.t}</h3>
             <p className="mt-3 text-[#4A4A4A] font-light">{s.d}</p>
           </div>
         ))}

@@ -6,9 +6,9 @@ import { Trophy, Users, Languages, MessageSquare } from "lucide-react";
 import { FaFutbol, FaBasketballBall, FaVolleyballBall } from "react-icons/fa";
 
 const SPORT_CLUBS = [
-  { id: "mfc", abbr: "MFC", nameKey: "MPK Football Club", Icon: FaFutbol, descKey: "mfc_desc", accent: "#1B7A37" },
-  { id: "mbc", abbr: "MBC", nameKey: "MPK Basketball Club", Icon: FaBasketballBall, descKey: "mbc_desc", accent: "#D96A00" },
-  { id: "mvc", abbr: "MVC", nameKey: "MPK Volleyball Club", Icon: FaVolleyballBall, descKey: "mvc_desc", accent: "#1564B5" },
+  { id: "mfc", abbr: "MFC", nameKey: "MPK Football Club", Icon: FaFutbol, descKey: "mfc_desc", accent: "#1B7A37", kind: "sport" },
+  { id: "mbc", abbr: "MBC", nameKey: "MPK Basketball Club", Icon: FaBasketballBall, descKey: "mbc_desc", accent: "#D96A00", kind: "sport" },
+  { id: "mvc", abbr: "MVC", nameKey: "MPK Volleyball Club", Icon: FaVolleyballBall, descKey: "mvc_desc", accent: "#1564B5", kind: "sport" },
 ];
 
 const LANGUAGE_CLUBS = [
@@ -39,13 +39,15 @@ const FLAG_COMPONENTS = { gb: FlagGB, de: FlagDE };
 
 function ClubCard({ club }) {
   const { t } = useTranslation();
-  const { Icon, accent, flagBg, flag } = club;
+  const { Icon, accent, flagBg, flag, kind } = club;
   const FlagSvg = flag ? FLAG_COMPONENTS[flag] : null;
+  // Sport clubs share the MPK bordeaux border for visual cohesion; language clubs use their own accent
+  const borderColor = kind === "sport" ? "#580505" : accent;
   return (
     <article
       data-testid={`club-card-${club.id}`}
       className="relative rounded-sm overflow-hidden border-[1.5px] shadow-[0_14px_30px_-12px_rgba(88,5,5,0.30)] hover:shadow-[0_22px_44px_-12px_rgba(88,5,5,0.42)] transition-all duration-300 flex flex-col h-full"
-      style={{ borderColor: `${accent}55`, background: "#FFFFFF" }}
+      style={{ borderColor: borderColor + (kind === "sport" ? "" : "55"), background: "#FFFFFF" }}
     >
       {FlagSvg && (
         <div className="absolute top-3 left-3 z-10 rounded-sm overflow-hidden shadow-[0_2px_6px_rgba(0,0,0,0.18)] ring-1 ring-black/10" data-testid={`club-flag-${club.id}`}>

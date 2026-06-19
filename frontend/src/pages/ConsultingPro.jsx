@@ -17,7 +17,7 @@ export default function ConsultingPro() {
           {programs.map((p, i) => (
             <div key={i} className={`mpk-card p-7 ${i === 0 ? 'lg:col-span-6' : i === 1 ? 'lg:col-span-6' : 'lg:col-span-4'}`}>
               <Eyebrow>{t("consulting_pro.program_label")}</Eyebrow>
-              <h3 className="font-serif text-2xl mt-2 text-[#2F0808]">{p.t}</h3>
+              <h3 className="font-serif text-2xl mt-2 text-[#2F0808] uppercase tracking-tight">{p.t}</h3>
               <p className="mt-3 text-[#4A4A4A] font-light">{p.d}</p>
             </div>
           ))}

@@ -99,7 +99,7 @@ export const TEAM_CATEGORIES = [
     title: "Administration actuelle",
     members: [
       { name: "Dr. Lambert Amagnon SEHOUBO", role: "Directeur Exécutif", gender: "M" },
-      { name: "Mme Tessilatou GBADAMASSI", role: "Secrétaire-Comptable", gender: "F" },
+      { name: "Tessilatou GBADAMASSI", role: "Secrétaire-Comptable", gender: "F" },
       { name: "Charles ABI OBOSSOU", role: "Directeur Académique", gender: "M" },
       { name: "À venir", role: "Directeur du Tourisme", gender: "M", placeholder: true },
     ],
