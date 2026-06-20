@@ -56,7 +56,7 @@ export default function Cart() {
   return (
     <>
       <PageHero
-        eyebrow="Boutique MPK"
+        eyebrow="MPK Boutique"
         title="Votre panier"
         kicker="Vérifiez vos articles, ajoutez votre email pour recevoir votre numéro client après paiement, puis procédez au paiement sécurisé."
       />

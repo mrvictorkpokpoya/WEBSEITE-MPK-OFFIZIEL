@@ -102,6 +102,7 @@ export default function Header() {
       { to: "/departements/extra-services", label: t("nav.extra_services") },
       { to: "/cours-en-ligne", label: t("nav.online_courses") },
       { to: "/boutique", label: t("nav.shop") },
+      { to: "/cartes-cadeaux", label: t("nav.gift_cards") },
     ]},
     { key: "community", label: t("nav.community"), items: [
       { to: "/alumnis", label: t("nav.alumnis") },

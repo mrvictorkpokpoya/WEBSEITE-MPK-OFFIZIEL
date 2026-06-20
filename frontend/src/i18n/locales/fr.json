@@ -19,8 +19,9 @@
     "consulting_pro": "MPK Consulting Pro",
     "tourism": "MPK Tourism Programm",
     "extra_services": "MPK Extra Services",
-    "online_courses": "Cours en ligne",
-    "shop": "Boutique MPK",
+    "online_courses": "MPK Cours en ligne",
+    "shop": "MPK Boutique",
+    "gift_cards": "MPK Cartes Cadeaux",
     "alumnis": "MPK World Alumnis",
     "clubs": "MPK Clubs Sport & Langues",
     "blog": "Blog & Infos",
@@ -466,7 +467,7 @@
         "until": "Toute l'année"
       }
     },
-    "cta_eyebrow": "Boutique MPK",
+    "cta_eyebrow": "MPK Boutique",
     "cta_title": "Toutes nos formations en un clic.",
     "cta_kicker": "Choisissez votre cours, ajoutez au panier et payez en ligne — vous recevrez immédiatement votre Client ID par email.",
     "cta_btn": "Voir la boutique"
@@ -728,7 +729,7 @@
     "cta_register": "S'inscrire en ligne"
   },
   "shop": {
-    "hero_eyebrow": "Boutique MPK",
+    "hero_eyebrow": "MPK Boutique",
     "hero_title": "Bundles, niveaux, cartes cadeaux — tout en un.",
     "hero_kicker": "Paiement sécurisé via Stripe. Cartes cadeaux à offrir à un proche, bundles avantageux pour se projeter sur un parcours complet.",
     "cat_offer": "À offrir",
@@ -792,7 +793,7 @@
     "campus_field": "Campus concerné",
     "department_field": "Département concerné",
     "message": "Message*",
-    "online_courses": "Cours en ligne",
+    "online_courses": "MPK Cours en ligne",
     "submit": "Envoyer le message",
     "submitting": "Envoi...",
     "reply_note": "Notre équipe vous répondra dans les plus brefs délais.",
