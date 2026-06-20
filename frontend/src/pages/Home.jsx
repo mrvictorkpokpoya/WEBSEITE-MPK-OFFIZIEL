@@ -26,6 +26,10 @@ export default function Home() {
           <img src="https://customer-assets.emergentagent.com/job_langues-benin/artifacts/au40q6vj_WhatsApp%20Image%202026-06-13%20at%2001.24.36.jpeg" alt="L'équipe MULTIPLIKATOR célèbre la réussite" className="w-full h-full object-cover" />
         </div>
         <div className="absolute inset-0" style={{background: "linear-gradient(180deg, rgba(47,8,8,0.78) 0%, rgba(88,5,5,0.70) 100%)"}} />
+        {/* Image credit / Bildnachweis */}
+        <div data-testid="hero-image-credit" className="absolute top-4 right-3 sm:top-5 sm:right-6 text-[9px] sm:text-[10px] tracking-wider uppercase text-white/55 z-10 select-none pointer-events-none">
+          {t("hero.image_credit", { defaultValue: "© MULTIPLIKATOR Institut de Langues" })}
+        </div>
         <div className="relative max-w-[1400px] mx-auto px-4 sm:px-5 lg:px-10 py-16 sm:py-20 lg:py-36 text-white">
           <div className="max-w-4xl fade-up">
             <Eyebrow><span className="text-white/70">{t("hero.eyebrow")}</span></Eyebrow>
