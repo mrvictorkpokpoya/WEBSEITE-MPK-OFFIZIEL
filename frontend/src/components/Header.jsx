@@ -83,37 +83,43 @@ export default function Header() {
   const { t } = useTranslation();
 
   const navGroups = [
-    { key: "institute", label: t("nav.institute"), items: [
-      { to: "/", label: t("nav.home") },
-      { to: "/a-propos", label: t("nav.about") },
-      { to: "/notre-histoire", label: t("nav.history") },
-      { to: "/team", label: t("nav.team") },
-      { to: "/campus", label: t("nav.campuses") },
-      { to: "/travailler-mpk/stages", label: t("nav.work_internships") },
-      { to: "/travailler-mpk/emplois", label: t("nav.work_jobs") },
-      { to: "/appel-a-investissement", label: t("nav.investment") },
-    ]},
-    { key: "service", label: t("nav.service"), items: [
-      { to: "/departements/training-plus", label: t("nav.training_plus") },
-      { to: "/departements/exam-prep", label: t("nav.exam_prep") },
-      { to: "/departements/translation-pro", label: t("nav.translation_pro") },
-      { to: "/departements/consulting-pro", label: t("nav.consulting_pro") },
-      { to: "/departements/tourism", label: t("nav.tourism") },
-      { to: "/departements/extra-services", label: t("nav.extra_services") },
-      { to: "/cours-en-ligne", label: t("nav.online_courses") },
-      { to: "/boutique", label: t("nav.shop") },
-      { to: "/cartes-cadeaux", label: t("nav.gift_cards") },
-    ]},
-    { key: "community", label: t("nav.community"), items: [
-      { to: "/alumnis", label: t("nav.alumnis") },
-      { to: "/clubs", label: t("nav.clubs") },
-      { to: "/blog-infos", label: t("nav.blog_infos") },
-      { to: "/concours-promotions", label: t("nav.concours_promo") },
-      { to: "/galerie", label: t("nav.gallery") },
-      { to: "/temoignages", label: t("nav.testimonials") },
-      { to: "/telechargements", label: t("nav.downloads") },
-      { to: "/reseaux", label: t("nav.social") },
-    ]},
+    {
+      key: "institute", label: t("nav.institute"), items: [
+        { to: "/", label: t("nav.home") },
+        { to: "/a-propos", label: t("nav.about") },
+        { to: "/notre-histoire", label: t("nav.history") },
+        { to: "/team", label: t("nav.team") },
+        { to: "/campus", label: t("nav.campuses") },
+        { to: "/travailler-mpk/stages", label: t("nav.work_internships") },
+        { to: "/travailler-mpk/emplois", label: t("nav.work_jobs") },
+        { to: "/appel-a-investissement", label: t("nav.investment") },
+      ]
+    },
+    {
+      key: "service", label: t("nav.service"), items: [
+        { to: "/departements/training-plus", label: t("nav.training_plus") },
+        { to: "/departements/exam-prep", label: t("nav.exam_prep") },
+        { to: "/departements/translation-pro", label: t("nav.translation_pro") },
+        { to: "/departements/consulting-pro", label: t("nav.consulting_pro") },
+        { to: "/departements/tourism", label: t("nav.tourism") },
+        { to: "/departements/extra-services", label: t("nav.extra_services") },
+        { to: "/cours-en-ligne", label: t("nav.online_courses") },
+        { to: "/boutique", label: t("nav.shop") },
+        { to: "/cartes-cadeaux", label: t("nav.gift_cards") },
+      ]
+    },
+    {
+      key: "community", label: t("nav.community"), items: [
+        { to: "/alumnis", label: t("nav.alumnis") },
+        { to: "/clubs", label: t("nav.clubs") },
+        { to: "/blog-infos", label: t("nav.blog_infos") },
+        { to: "/concours-promotions", label: t("nav.concours_promo") },
+        { to: "/galerie", label: t("nav.gallery") },
+        { to: "/temoignages", label: t("nav.testimonials") },
+        { to: "/telechargements", label: t("nav.downloads") },
+        { to: "/reseaux", label: t("nav.social") },
+      ]
+    },
     { key: "contact", label: t("nav.contact"), to: "/contact" },
   ];
 
@@ -145,7 +151,7 @@ export default function Header() {
               )}
             </div>
           ) : (
-            <NavLink key={g.key} to={g.to} data-testid={`nav-${g.key}`} className={({isActive}) => `px-4 py-2 text-sm font-medium uppercase tracking-wider ${isActive ? 'text-[#580505]' : 'text-[#2F0808] hover:text-[#580505]'}`}>
+            <NavLink key={g.key} to={g.to} data-testid={`nav-${g.key}`} className={({ isActive }) => `px-4 py-2 text-sm font-medium uppercase tracking-wider ${isActive ? 'text-[#580505]' : 'text-[#2F0808] hover:text-[#580505]'}`}>
               {g.label}
             </NavLink>
           ))}
